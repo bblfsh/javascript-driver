@@ -1,0 +1,31 @@
+{
+  "name": "babelfish-js-driver",
+  "version": "0.0.1",
+  "description": "Babelfish driver for JavaScript",
+  "main": "lib/index.js",
+  "repository": "https://github.com/src-d/babelfish-js-driver",
+  "author": "Sergio Arbeo",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run clean && rollup -c",
+    "clean": "rimraf lib",
+    "test": "npm run build && npm run test-only",
+    "test-only": "ava"
+  },
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "rimraf": "^2.5.4",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0"
+  },
+  "ava": {
+      "files": [
+          "test/**/*.js"
+      ],
+      "source": [
+          "src/**/*.js"
+      ]
+  }
+}
