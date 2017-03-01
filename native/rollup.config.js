@@ -3,7 +3,7 @@ import nodeResolve from "rollup-plugin-node-resolve";
 import commonJS from 'rollup-plugin-commonjs';
 
 export default {
-  entry: "src/index.js",
+  entry: "src/parser.js",
   dest: "lib/index.js",
   exports: 'named',
   plugins: [
