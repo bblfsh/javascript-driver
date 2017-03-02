@@ -28,15 +28,14 @@ const GUESSING_ORDER = [
 ];
 
 export function guessParsing(code) {
+  let exceptions = [];
   for(let [fn, opts] of GUESSING_ORDER) {
     try {
       return fn(code, opts);
     } catch (ex) {
-      continue;
+      exceptions.push(ex)
     }
   }
+  throw new Error(exceptions.map((x) => x.message).join(","));
 }
-
-// Always give some meaning to the default export
-export default 42;
 

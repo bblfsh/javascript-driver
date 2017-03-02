@@ -1,12 +1,15 @@
 import babel from "rollup-plugin-babel";
 import nodeResolve from "rollup-plugin-node-resolve";
 import commonJS from 'rollup-plugin-commonjs';
+import multientry from 'rollup-plugin-multi-entry';
 
 export default {
-  entry: "src/parser.js",
+  entry: "src/*.js",
   dest: "lib/index.js",
+  banner: '#!/usr/bin/env node',
   exports: 'named',
   plugins: [
+    multientry(),
     babel(),
     nodeResolve({
       jsnext: true,
@@ -17,4 +20,5 @@ export default {
   ],
   format: "cjs",
   treeshake: false,
+  external: ['split', 'map-stream'],
 };
