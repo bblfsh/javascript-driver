@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+    - "6"
+    - "7"
+
+before_install: npm install -g yarn && cd native
+
+install: yarn
+
+cache:
+    yarn: true

@@ -19,11 +19,11 @@ function* getAllFiles(path) {
 }
 
 // TODO: Improve once this is working
-function snapshotDir(path, cb) {
+function snapshotDir(t, path, cb) {
   for(let filepath of getAllFiles(path)) {
     if (!filepath.endsWith('.gitkeep')) {
       fs.readFile(filepath, 'utf8', function(err, content) {
-        test(`could read ${filepath}`, t => t.ifError(err));
+        t.ifError(err, `could not read ${filepath}`);
 
         if (!err) {
           cb(filepath, content);
@@ -34,7 +34,7 @@ function snapshotDir(path, cb) {
 }
 
 test(`snapshot fixtures`, t => {
-  snapshotDir(`${__dirname}/fixtures`, function(filepath, content) {
+  snapshotDir(t, `${__dirname}/fixtures`, function(filepath, content) {
     let ast = parse(content);
     t.snapshot(ast, `snapshot for ${filepath}`)
     t.truthy(ast, `${filepath} produced an ast`);
