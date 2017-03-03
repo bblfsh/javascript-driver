@@ -1,27 +1,21 @@
 import { guessParsing } from "./parser";
 import { error, ok } from "./response";
-import split from 'split';
-import map from 'map-stream';
 
-function parse(data, cb) {
+function parse(data) {
   try {
     let { content } = JSON.parse(data)
     let ast = guessParsing(content);
-    cb(null, ok(ast));
+    return  ok(ast);
   } catch (ex) {
-    cb(null, error(ex));
+    return error(ex);
   }
 }
 
-function jsonify(data, cb) {
-  cb(null, `${JSON.stringify(data)}
-`);
+function jsonify(data) {
+  return `${JSON.stringify(data)}
+`;
 }
 
-export function handler(readStream, writeStream) {
-  readStream
-    .pipe(split())
-    .pipe(map(parse))
-    .pipe(map(jsonify))
-    .pipe(writeStream);
+export function handler(input) {
+  return console.log(jsonify(parse(input)));
 }

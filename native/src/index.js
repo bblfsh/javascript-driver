@@ -1,3 +1,10 @@
 import { handler } from './handler';
+import readline from 'readline';
 
-handler(process.stdin, process.stdout);
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+  terminal: false
+});
+
+rl.on('line', handler);

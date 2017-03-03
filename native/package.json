@@ -34,7 +34,5 @@
     ]
   },
   "dependencies": {
-    "map-stream": "^0.0.6",
-    "split": "^1.0.0"
   }
 }

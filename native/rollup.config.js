@@ -20,5 +20,5 @@ export default {
   ],
   format: "cjs",
   treeshake: false,
-  external: ['split', 'map-stream'],
+  external: ['readline'],
 };
