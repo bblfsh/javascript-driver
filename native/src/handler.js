@@ -14,7 +14,8 @@ function parse(data, cb) {
 }
 
 function jsonify(data, cb) {
-  cb(null, JSON.stringify(data))
+  cb(null, `${JSON.stringify(data)}
+`);
 }
 
 export function handler(readStream, writeStream) {
