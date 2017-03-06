@@ -29,7 +29,7 @@ const GUESSING_ORDER = [
 
 export function guessParsing(code) {
   let exceptions = [];
-  for(let [fn, opts] of GUESSING_ORDER) {
+  for (let [fn, opts] of GUESSING_ORDER) {
     try {
       return fn(code, opts);
     } catch (ex) {
