@@ -1,5 +1,5 @@
-export function error({ message }) {
-  return responsify({ "status": "error", "errors": [message]});
+export function error( errors ) {
+  return responsify({ "status": "error", errors });
 }
 
 export function fatal({ message }) {

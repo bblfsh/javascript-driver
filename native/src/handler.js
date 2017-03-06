@@ -1,4 +1,4 @@
-import { guessParsing } from "./parser";
+import { guessParsing, GuessParsingError } from "./parser";
 import { error, ok } from "./response";
 
 function parse(data) {
@@ -7,7 +7,10 @@ function parse(data) {
     let ast = guessParsing(content);
     return  ok(ast);
   } catch (ex) {
-    return error(ex);
+    if (ex instanceof GuessParsingError) {
+      return  error(ex.allMessages);
+    }
+    return error([ex.message]);
   }
 }
 

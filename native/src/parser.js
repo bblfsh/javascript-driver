@@ -27,6 +27,14 @@ const GUESSING_ORDER = [
   [parse, { sourceType: 'script', allowReturnOutsideFunction: true }],
 ];
 
+export class GuessParsingError extends Error {
+  constructor(...messages) {
+    super(messages.join(', '));
+
+    this.allMessages = message;
+  }
+}
+
 export function guessParsing(code) {
   let exceptions = [];
   for (let [fn, opts] of GUESSING_ORDER) {
@@ -36,6 +44,6 @@ export function guessParsing(code) {
       exceptions.push(ex)
     }
   }
-  throw new Error(exceptions.map((x) => x.message).join(","));
+  throw new GuessParsingError(exceptions.map((x) => x.message));
 }
 

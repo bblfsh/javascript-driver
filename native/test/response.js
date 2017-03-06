@@ -2,10 +2,11 @@ import test from 'ava';
 import { error, fatal, ok } from '../lib';
 
 test('error returns a valid response with error status and the given message', t => {
-  let res = error(new Error('not valid'));
+  let res = error(['not valid', 'really not valid']);
 
   t.is(res.status, 'error', 'status is error');
-  t.true(res.errors.includes('not valid'), 'contains the passed message');
+  t.true(res.errors.includes('not valid'), 'contains the first passed message');
+  t.true(res.errors.includes('really not valid'), 'contains the second passed message');
 });
 
 test('fatal returns a valid response with fatal status and the given message', t => {
