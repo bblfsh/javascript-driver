@@ -7,4 +7,4 @@ const rl = readline.createInterface({
   terminal: false
 });
 
-rl.on('line', handler);
+rl.on('line', l => console.log(handler(l)));
