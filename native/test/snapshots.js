@@ -33,7 +33,9 @@ function snapshotDir(t, path, cb) {
   }
 }
 
-test(`snapshot fixtures`, t => {
+// Skip until avajs/ava#1223 gets solved. For now, snapshots are unreliable for
+// our use case.
+test.skip(`snapshot fixtures`, t => {
   snapshotDir(t, `${__dirname}/fixtures`, function(filepath, content) {
     let ast = parse(content);
     t.snapshot(ast, `snapshot for ${filepath}`)

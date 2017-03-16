@@ -27,16 +27,23 @@ const GUESSING_ORDER = [
   [parse, { sourceType: 'script', allowReturnOutsideFunction: true }],
 ];
 
-export function guessParsing(code) {
-  for(let [fn, opts] of GUESSING_ORDER) {
-    try {
-      return fn(code, opts);
-    } catch (ex) {
-      continue;
-    }
+export class GuessParsingError extends Error {
+  constructor(...messages) {
+    super(messages.join(', '));
+
+    this.allMessages = message;
   }
 }
 
-// Always give some meaning to the default export
-export default 42;
+export function guessParsing(code) {
+  let exceptions = [];
+  for (let [fn, opts] of GUESSING_ORDER) {
+    try {
+      return fn(code, opts);
+    } catch (ex) {
+      exceptions.push(ex)
+    }
+  }
+  throw new GuessParsingError(exceptions.map((x) => x.message));
+}
 
