@@ -27,4 +27,4 @@ go_version = "1.8"
 
 # native_version describes the version or versions being use to build and
 # execute the native code, you should define at least one. (eg.: "1.8").
-native_version = []
+native_version = ["6.10.3-r1"]
