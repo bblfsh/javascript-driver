@@ -1,12 +1,18 @@
-language: node_js
+language: go
 
-node_js:
-    - "6"
-    - "7"
+go:
+  - 1.8
 
-before_install: npm install -g yarn && cd native
+services:
+  - docker
 
-install: yarn
+before_script:
+  - go get -v gopkg.in/bblfsh/sdk.v1/...
+  - bblfsh-sdk prepare-build .
+  - go get -v -t ./...
 
-cache:
-    yarn: true
+script:
+  - make test integration-test
+
+after_success:
+  - make push
