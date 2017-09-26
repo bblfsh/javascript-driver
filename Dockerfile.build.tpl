@@ -14,10 +14,15 @@ FROM alpine:3.6
 RUN mkdir -p /opt/driver/src && \
     adduser ${BUILD_USER} -u ${BUILD_UID} -D -h /opt/driver/src
 
+ARG RUNTIME_NATIVE_VERSION
+ENV RUNTIME_NATIVE_VERSION $RUNTIME_NATIVE_VERSION
 
 # As minimal build tools you need: make, curl and git, install using the same
 # command the specific tools required to build the driver.
-RUN apk add --no-cache make git curl ca-certificates
+RUN apk --update upgrade && apk add --no-cache make git curl ca-certificates bash
+
+RUN apk add --no-cache nodejs="$RUNTIME_NATIVE_VERSION" && apk add --no-cache nodejs-npm
+RUN npm install -g yarn
 
 
 # The volume with the full source code is mounted at `/opt/driver/src` so, we

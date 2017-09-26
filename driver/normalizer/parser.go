@@ -6,7 +6,16 @@ import (
 )
 
 // ToNoder specifies the driver options. Driver programmers should fill it
-var ToNoder = &native.ObjectToNoder{}
+var ToNoder = &native.ObjectToNoder{
+	InternalTypeKey: "type",
+	OffsetKey:       "start",
+	EndOffsetKey:    "end",
+	LineKey:         "loc.start.line",
+	EndLineKey:      "loc.end.line",
+	ColumnKey:       "loc.start.column",
+	EndColumnKey:    "loc.end.column",
+	PositionFill:    native.None,
+}
 
 // ParserBuilder creates a parser that transform source code files into *uast.Node.
 func ParserBuilder(opts driver.ParserOptions) (parser driver.Parser, err error) {

@@ -9,4 +9,11 @@
 #   bblfsh/<language>-driver-build
 FROM alpine:3.6
 
+ARG RUNTIME_NATIVE_VERSION
+ENV RUNTIME_NATIVE_VERSION $RUNTIME_NATIVE_VERSION
+
+RUN apk add --no-cache nodejs="$RUNTIME_NATIVE_VERSION"
+
+ADD build /opt/driver/bin
+
 CMD /opt/driver/bin/driver
