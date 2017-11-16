@@ -9,7 +9,7 @@ test-native-internal:
 build-native-internal:
 	cd native; \
 	yarn && yarn build && \
-	cp lib/index.js $(BUILD_PATH)/index.js && \
-	cp native.sh $(BUILD_PATH)/native && \
-	cp -R node_modules $(BUILD_PATH)/node_modules && \
-	chmod +x $(BUILD_PATH)/native
+	cp lib/index.js $(BUILD_PATH)/bin/index.js && \
+	cp native.sh $(BUILD_PATH)/bin/native && \
+	cp -R node_modules $(BUILD_PATH)/bin/node_modules && \
+	chmod +x $(BUILD_PATH)/bin/native

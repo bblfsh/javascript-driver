@@ -15,8 +15,7 @@ function parse(data) {
 }
 
 function jsonify(data) {
-  return `${JSON.stringify(data)}
-`;
+  return `${JSON.stringify(data)}`;
 }
 
 export function handler(input) {
