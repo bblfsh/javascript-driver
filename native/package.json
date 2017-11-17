@@ -4,7 +4,7 @@
   "description": "Babelfish driver for JavaScript",
   "main": "lib/index.js",
   "bin": {
-      "javascript-driver": "./lib/index.js"
+    "javascript-driver": "./lib/index.js"
   },
   "repository": "https://github.com/src-d/babelfish-js-driver",
   "author": "Sergio Arbeo",
@@ -34,5 +34,6 @@
     ]
   },
   "dependencies": {
+    "babylon": "^7.0.0-beta.31"
   }
 }

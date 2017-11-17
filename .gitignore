@@ -1,4 +1,6 @@
 .yarnrc
+.yarn
 .cache
 .sdk
+.config
 build

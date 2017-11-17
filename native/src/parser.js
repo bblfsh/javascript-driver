@@ -23,8 +23,8 @@ export function parseExpression(code, option) {
 }
 
 const GUESSING_ORDER = [
-  [parse, { sourceType: 'module', allowImportExportEverywhere: true }],
-  [parse, { sourceType: 'script', allowReturnOutsideFunction: true }],
+  [parse, { sourceType: 'module', allowImportExportEverywhere: true, tokens: false }],
+  [parse, { sourceType: 'script', allowReturnOutsideFunction: true, tokens: false }],
 ];
 
 export class GuessParsingError extends Error {
