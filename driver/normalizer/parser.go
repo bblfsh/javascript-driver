@@ -7,14 +7,12 @@ import (
 
 // ToNoder specifies the driver options. Driver programmers should fill it
 var ToNoder = &native.ObjectToNoder{
-	InternalTypeKey: "type",
-	OffsetKey:       "start",
-	EndOffsetKey:    "end",
-	LineKey:         "loc.start.line",
-	EndLineKey:      "loc.end.line",
-	ColumnKey:       "loc.start.column",
-	EndColumnKey:    "loc.end.column",
-	PositionFill:    native.None,
+	InternalTypeKey:    "type",
+	OffsetKey:          "start",
+	EndOffsetKey:       "end",
+	TopLevelIsRootNode: true,
+	TokenKeys:          map[string]bool{},
+	PositionFill:       native.LineColFromOffset,
 }
 
 // ParserBuilder creates a parser that transform source code files into *uast.Node.
