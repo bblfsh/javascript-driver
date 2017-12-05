@@ -3,6 +3,7 @@ package babylon
 import "gopkg.in/bblfsh/sdk.v1/uast/ann"
 
 var (
+	File                     = ann.HasInternalType("File")
 	Identifier               = ann.HasInternalType("Identifier")
 	PrivateName              = ann.HasInternalType("PrivateName")
 	Literal                  = ann.HasInternalType("Literal")
