@@ -10,7 +10,7 @@ import (
 
 func TestAnnotate(t *testing.T) {
 	require := require.New(t)
-	n, err := annotatedFixture("example_js1.json")
+	n, err := annotatedFixture("hello.js.json")
 	require.NoError(err)
 
 	missingRole := make(map[string]bool)

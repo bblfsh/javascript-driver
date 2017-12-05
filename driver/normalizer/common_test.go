@@ -38,7 +38,7 @@ func annotatedFixture(fixture string) (*uast.Node, error) {
 		return nil, err
 	}
 
-	n, err := ToNoder.ToNode(f)
+	n, err := ToNode.ToNode(f)
 	if err != nil {
 		return nil, err
 	}
