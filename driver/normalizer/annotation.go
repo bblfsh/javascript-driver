@@ -36,7 +36,7 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.FunctionExpression).Roles(uast.Expression, uast.Function),
 		On(babylon.CallExpression).Roles(uast.Expression, uast.Call),
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
-		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary)
+		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary),
 		On(babylon.BinaryExpression).Roles(uast.Expression, uast.Binary),
 
 		// Object properties
