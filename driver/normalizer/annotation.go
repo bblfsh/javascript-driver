@@ -23,6 +23,8 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 	On(babylon.Program).Roles(uast.Module).Descendants(
 		// Statements
 		On(babylon.ExpressionStatement).Roles(uast.Statement),
+		On(babylon.BlockStatement).Roles(uast.Statement, uast.Block, uast.Scope),
+		On(babylon.EmptyStatement).Roles(uast.Statement),
 
 		// Expressions
 		On(babylon.Super).Roles(uast.Expression, uast.Identifier),
