@@ -4,11 +4,11 @@
     "errors": [],
     "ast": {
         "comments": [],
-        "end": 69,
+        "end": 61,
         "loc": {
             "end": {
                 "column": 0,
-                "line": 10
+                "line": 9
             },
             "start": {
                 "column": 0,
@@ -519,49 +519,14 @@
                     },
                     "start": 46,
                     "type": "ExpressionStatement"
-                },
-                {
-                    "argument": {
-                        "end": 68,
-                        "extra": {
-                            "raw": "0",
-                            "rawValue": 0
-                        },
-                        "loc": {
-                            "end": {
-                                "column": 7,
-                                "line": 9
-                            },
-                            "start": {
-                                "column": 6,
-                                "line": 9
-                            }
-                        },
-                        "start": 67,
-                        "type": "NumericLiteral",
-                        "value": 0
-                    },
-                    "end": 68,
-                    "loc": {
-                        "end": {
-                            "column": 7,
-                            "line": 9
-                        },
-                        "start": {
-                            "column": 0,
-                            "line": 9
-                        }
-                    },
-                    "start": 61,
-                    "type": "ThrowStatement"
                 }
             ],
             "directives": [],
-            "end": 69,
+            "end": 61,
             "loc": {
                 "end": {
                     "column": 0,
-                    "line": 10
+                    "line": 9
                 },
                 "start": {
                     "column": 0,

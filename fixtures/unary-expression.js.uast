@@ -10,8 +10,8 @@ File {
 .  .  Col: 1
 .  }
 .  EndPosition: {
-.  .  Offset: 69
-.  .  Line: 10
+.  .  Offset: 61
+.  .  Line: 9
 .  .  Col: 1
 .  }
 .  Children: {
@@ -23,8 +23,8 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 69
-.  .  .  .  Line: 10
+.  .  .  .  Offset: 61
+.  .  .  .  Line: 9
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
@@ -540,41 +540,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  8: ThrowStatement {
-.  .  .  .  .  Roles: Unannotated
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 68
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: NumericLiteral {
-.  .  .  .  .  .  .  Roles: Unannotated
-.  .  .  .  .  .  .  TOKEN "0"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 67
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 68
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: argument
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
