@@ -30,6 +30,12 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.PropertyObject).Roles(uast.Incomplete),
 		),
 
+		// Control flow
+		On(babylon.ReturnStatement).Roles(uast.Statement, uast.Return),
+		On(babylon.LabeledStatement).Roles(uast.Statement, uast.Incomplete),
+		On(babylon.BreakStatement).Roles(uast.Statement, uast.Break),
+		On(babylon.ContinueStatement).Roles(uast.Statement, uast.Continue),
+
 		// Expressions
 		On(babylon.Super).Roles(uast.Expression, uast.Identifier),
 		On(babylon.Import).Roles(uast.Expression, uast.Import),
