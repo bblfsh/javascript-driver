@@ -175,7 +175,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 25
 .  .  .  .  .  .  .  .  Line: 2
@@ -191,7 +191,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  .  .  .  .  Line: 2
@@ -229,7 +229,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: EmptyStatement {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 41
 .  .  .  .  .  .  Line: 2
@@ -245,7 +245,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: BlockStatement {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 43
 .  .  .  .  .  .  Line: 3
@@ -261,7 +261,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: LabeledStatement {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 44
 .  .  .  .  .  .  .  .  Line: 3
@@ -358,12 +358,11 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: expressions
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 62
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -379,7 +378,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 64
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -461,7 +460,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: EmptyStatement {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 81
 .  .  .  .  .  .  Line: 3

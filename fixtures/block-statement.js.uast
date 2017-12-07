@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BlockStatement {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1

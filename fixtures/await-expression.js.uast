@@ -64,7 +64,6 @@ File {
 .  .  .  .  .  .  .  .  async: true
 .  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {

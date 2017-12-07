@@ -64,7 +64,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -103,7 +102,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -333,7 +332,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  2: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -441,7 +440,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -568,7 +566,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -590,7 +587,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 83
 .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -606,7 +603,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 85
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -678,7 +675,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -700,7 +696,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 103
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -716,7 +712,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 105
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -788,7 +784,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -862,12 +857,11 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 132
 .  .  .  .  .  .  .  .  .  .  Line: 6
@@ -883,7 +877,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 134
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 6
@@ -955,7 +949,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -1068,7 +1061,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -1142,7 +1134,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  3: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 181
 .  .  .  .  .  .  .  .  .  .  Line: 8
@@ -1158,7 +1150,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 183
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
@@ -1230,7 +1222,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -1392,7 +1383,6 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {

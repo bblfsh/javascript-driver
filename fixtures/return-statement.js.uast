@@ -64,12 +64,11 @@ File {
 .  .  .  .  .  .  .  .  async: false
 .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  id: <nil>
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 6
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -85,7 +84,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
