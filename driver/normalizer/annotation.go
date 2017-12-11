@@ -36,6 +36,19 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.BreakStatement).Roles(uast.Statement, uast.Break),
 		On(babylon.ContinueStatement).Roles(uast.Statement, uast.Continue),
 
+		// Choice
+		On(babylon.IfStatement).Roles(uast.Statement, uast.If).Children(
+			On(babylon.PropertyTest).Roles(uast.If, uast.Condition),
+			On(babylon.PropertyConsequent).Roles(uast.If, uast.Then, uast.Body),
+			On(babylon.PropertyAlternate).Roles(uast.If, uast.Else, uast.Body),
+		),
+		On(babylon.SwitchStatement).Roles(uast.Statement, uast.Switch).Children(
+			On(babylon.PropertyDiscriminant).Roles(uast.Switch, uast.Condition),
+		),
+		On(babylon.SwitchCase).Roles(uast.Switch, uast.Case).Children(
+			On(babylon.PropertyTest).Roles(uast.Case, uast.Condition),
+		),
+
 		// Expressions
 		On(babylon.Super).Roles(uast.Expression, uast.Identifier),
 		On(babylon.Import).Roles(uast.Expression, uast.Import),
