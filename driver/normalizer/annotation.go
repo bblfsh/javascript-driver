@@ -56,6 +56,26 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		),
 		On(babylon.CatchClause).Roles(uast.Try, uast.Catch),
 
+		// Loops
+		On(babylon.WhileStatement).Roles(uast.Statement, uast.While).Children(
+			On(babylon.PropertyTest).Roles(uast.While, uast.Condition),
+			On(babylon.PropertyBody).Roles(uast.While, uast.Body),
+		),
+		On(babylon.DoWhileStatement).Roles(uast.Statement, uast.DoWhile).Children(
+			On(babylon.PropertyTest).Roles(uast.DoWhile, uast.Condition),
+			On(babylon.PropertyBody).Roles(uast.DoWhile, uast.Body),
+		),
+		On(babylon.ForStatement).Roles(uast.Statement, uast.For).Children(
+			On(babylon.PropertyInit).Roles(uast.For, uast.Initialization),
+			On(babylon.PropertyTest).Roles(uast.For, uast.Condition),
+			On(babylon.PropertyUpdate).Roles(uast.For, uast.Update),
+		),
+		On(Or(babylon.ForInStatement, babylon.ForOfStatement)).Roles(uast.Statement, uast.For, uast.Iterator).Children(
+			On(babylon.PropertyLeft).Roles(uast.For, uast.Iterator),
+			On(babylon.PropertyRight).Roles(uast.For),
+			On(babylon.PropertyBody).Roles(uast.For, uast.Body),
+		),
+
 		// Expressions
 		On(babylon.Super).Roles(uast.Expression, uast.Identifier),
 		On(babylon.Import).Roles(uast.Expression, uast.Import),
