@@ -20,27 +20,27 @@ var Transformers = []transformer.Tranformer{
 // https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/ann
 // AnnotationRules annotate a UAST with roles.
 var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
-	// Identifiers
-	On(babylon.Identifier).Roles(uast.Expression, uast.Identifier),
-
-	// Literals
-	On(babylon.RegExpLiteral).Roles(uast.Expression, uast.Literal, uast.Regexp),
-	On(babylon.NullLiteral).Roles(uast.Expression, uast.Literal, uast.Null),
-	On(babylon.StringLiteral).Roles(uast.Expression, uast.Literal, uast.String),
-	On(babylon.BooleanLiteral).Roles(uast.Expression, uast.Literal, uast.Boolean),
-	On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
-
-	// Functions
-	On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression)).Roles(uast.Declaration, uast.Function).Children(
-		On(babylon.PropertyId).Roles(uast.Function, uast.Name),
-		On(babylon.PropertyParams).Roles(uast.Function, uast.Argument).Self(
-			On(babylon.RestElement).Roles(uast.ArgsList),
-		),
-		On(babylon.PropertyBody).Roles(uast.Function, uast.Body),
-	),
-	On(babylon.FunctionDeclaration).Roles(uast.Statement),
-
 	On(babylon.Program).Roles(uast.Module).Descendants(
+		// Identifiers
+		On(babylon.Identifier).Roles(uast.Expression, uast.Identifier),
+
+		// Literals
+		On(babylon.RegExpLiteral).Roles(uast.Expression, uast.Literal, uast.Regexp),
+		On(babylon.NullLiteral).Roles(uast.Expression, uast.Literal, uast.Null),
+		On(babylon.StringLiteral).Roles(uast.Expression, uast.Literal, uast.String),
+		On(babylon.BooleanLiteral).Roles(uast.Expression, uast.Literal, uast.Boolean),
+		On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
+
+		// Functions
+		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression)).Roles(uast.Declaration, uast.Function).Children(
+			On(babylon.PropertyId).Roles(uast.Function, uast.Name),
+			On(babylon.PropertyParams).Roles(uast.Function, uast.Argument).Self(
+				On(babylon.RestElement).Roles(uast.ArgsList),
+			),
+			On(babylon.PropertyBody).Roles(uast.Function, uast.Body),
+		),
+		On(babylon.FunctionDeclaration).Roles(uast.Statement),
+
 		// Statements
 		On(babylon.ExpressionStatement).Roles(uast.Statement),
 		On(babylon.BlockStatement).Roles(uast.Statement, uast.Block, uast.Scope),
