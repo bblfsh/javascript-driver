@@ -20,6 +20,9 @@ var Transformers = []transformer.Tranformer{
 // https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/ann
 // AnnotationRules annotate a UAST with roles.
 var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
+	// Identifiers
+	On(babylon.Identifier).Roles(uast.Expression, uast.Identifier),
+
 	On(babylon.Program).Roles(uast.Module).Descendants(
 		// Statements
 		On(babylon.ExpressionStatement).Roles(uast.Statement),
