@@ -79,7 +79,7 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		// Expressions
 		On(babylon.Super).Roles(uast.Expression, uast.Identifier, uast.Base),
 		On(babylon.Import).Roles(uast.Expression, uast.Import),
-		On(babylon.ThisExpression).Roles(uast.Expression, uast.Identifier),
+		On(babylon.ThisExpression).Roles(uast.Expression, uast.This),
 		On(babylon.ArrowFunctionExpression).Roles(uast.Expression, uast.Function),
 		On(babylon.YieldExpression).Roles(uast.Expression, uast.Return, uast.Incomplete),
 		On(babylon.AwaitExpression).Roles(uast.Expression, uast.Incomplete),
