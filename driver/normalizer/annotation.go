@@ -30,6 +30,16 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 	On(babylon.BooleanLiteral).Roles(uast.Expression, uast.Literal, uast.Boolean),
 	On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
 
+	// Functions
+	On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression)).Roles(uast.Declaration, uast.Function).Children(
+		On(babylon.PropertyId).Roles(uast.Function, uast.Name),
+		On(babylon.PropertyParams).Roles(uast.Function, uast.Argument).Self(
+			On(babylon.RestElement).Roles(uast.ArgsList),
+		),
+		On(babylon.PropertyBody).Roles(uast.Function, uast.Body),
+	),
+	On(babylon.FunctionDeclaration).Roles(uast.Statement),
+
 	On(babylon.Program).Roles(uast.Module).Descendants(
 		// Statements
 		On(babylon.ExpressionStatement).Roles(uast.Statement),
@@ -90,12 +100,12 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.Super).Roles(uast.Expression, uast.Identifier, uast.Base),
 		On(babylon.Import).Roles(uast.Expression, uast.Import),
 		On(babylon.ThisExpression).Roles(uast.Expression, uast.This),
-		On(babylon.ArrowFunctionExpression).Roles(uast.Expression, uast.Function),
+		On(babylon.ArrowFunctionExpression).Roles(uast.Expression),
 		On(babylon.YieldExpression).Roles(uast.Expression, uast.Return, uast.Incomplete),
 		On(babylon.AwaitExpression).Roles(uast.Expression, uast.Incomplete),
 		On(babylon.ArrayExpression).Roles(uast.Expression, uast.Initialization, uast.List, uast.Literal),
 		On(babylon.ObjectExpression).Roles(uast.Expression, uast.Initialization, uast.Literal),
-		On(babylon.FunctionExpression).Roles(uast.Expression, uast.Function),
+		On(babylon.FunctionExpression).Roles(uast.Expression),
 		On(babylon.CallExpression).Roles(uast.Expression, uast.Call),
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
 		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary),
