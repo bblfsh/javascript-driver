@@ -39,7 +39,6 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			),
 			On(babylon.PropertyBody).Roles(uast.Function, uast.Body),
 		),
-		On(babylon.FunctionDeclaration).Roles(uast.Statement),
 
 		// Statements
 		On(babylon.ExpressionStatement).Roles(uast.Statement),
@@ -94,6 +93,13 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.PropertyLeft).Roles(uast.For, uast.Iterator),
 			On(babylon.PropertyRight).Roles(uast.For),
 			On(babylon.PropertyBody).Roles(uast.For, uast.Body),
+		),
+
+		// Declarations
+		On(babylon.FunctionDeclaration).Roles(uast.Statement),
+		On(babylon.VariableDeclaration).Roles(uast.Statement, uast.Declaration, uast.Variable),
+		On(babylon.VariableDeclarator).Roles(uast.Declaration, uast.Variable).Children(
+			On(babylon.PropertyInit).Roles(uast.Initialization),
 		),
 
 		// Expressions
