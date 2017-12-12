@@ -82,7 +82,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BooleanLiteral {
-.  .  .  .  .  .  .  .  .  Roles: While,Condition
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Boolean,While,Condition
 .  .  .  .  .  .  .  .  .  TOKEN "true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 14

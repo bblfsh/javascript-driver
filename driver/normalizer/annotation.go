@@ -23,6 +23,13 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 	// Identifiers
 	On(babylon.Identifier).Roles(uast.Expression, uast.Identifier),
 
+	// Literals
+	On(babylon.RegExpLiteral).Roles(uast.Expression, uast.Literal, uast.Regexp),
+	On(babylon.NullLiteral).Roles(uast.Expression, uast.Literal, uast.Null),
+	On(babylon.StringLiteral).Roles(uast.Expression, uast.Literal, uast.String),
+	On(babylon.BooleanLiteral).Roles(uast.Expression, uast.Literal, uast.Boolean),
+	On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
+
 	On(babylon.Program).Roles(uast.Module).Descendants(
 		// Statements
 		On(babylon.ExpressionStatement).Roles(uast.Statement),
