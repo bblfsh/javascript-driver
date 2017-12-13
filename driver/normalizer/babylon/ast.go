@@ -110,6 +110,7 @@ var (
 var (
 	PropertyAlternate    = ann.HasInternalRole("alternate")
 	PropertyArgument     = ann.HasInternalRole("argument")
+	PropertyArguments    = ann.HasInternalRole("arguments")
 	PropertyBlock        = ann.HasInternalRole("block")
 	PropertyBody         = ann.HasInternalRole("body")
 	PropertyCases        = ann.HasInternalRole("cases")

@@ -1,1 +1,6 @@
-const a = function() { return 3; }()
+a();
+a(x);
+a(...x);
+class A extends B { constructor() { super(); } }
+import('');
+

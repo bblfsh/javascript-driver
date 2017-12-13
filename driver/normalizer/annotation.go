@@ -117,7 +117,11 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.ArrayExpression).Roles(uast.Expression, uast.Initialization, uast.List, uast.Literal),
 		On(babylon.ObjectExpression).Roles(uast.Expression, uast.Initialization, uast.Literal),
 		On(babylon.FunctionExpression).Roles(uast.Expression),
-		On(babylon.CallExpression).Roles(uast.Expression, uast.Call),
+		On(babylon.CallExpression).Roles(uast.Expression, uast.Call).Children(
+			On(babylon.PropertyCallee).Roles(uast.Call, uast.Callee),
+			On(babylon.PropertyArguments).Roles(uast.Call, uast.Argument),
+			On(babylon.SpreadElement).Roles(uast.ArgsList),
+		),
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
 		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary),
 		On(babylon.BinaryExpression).Roles(uast.Expression, uast.Binary),
