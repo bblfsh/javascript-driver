@@ -216,5 +216,10 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.PropertyLeft).Roles(uast.Boolean, uast.Binary, uast.Left),
 			On(babylon.PropertyRight).Roles(uast.Boolean, uast.Binary, uast.Right),
 		),
+
+		// Template literals
+		On(babylon.TemplateLiteral).Roles(uast.Expression, uast.Literal, uast.Incomplete),
+		On(babylon.TaggedTemplateExpression).Roles(uast.Expression, uast.Literal, uast.Incomplete),
+		On(babylon.TemplateElement).Roles(uast.Literal, uast.String, uast.Incomplete),
 	),
 )
