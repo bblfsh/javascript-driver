@@ -102,6 +102,11 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.PropertyInit).Roles(uast.Initialization),
 		),
 
+		// Misc
+		On(babylon.Decorator).Roles(uast.Incomplete),
+		On(babylon.Directive).Roles(uast.Incomplete),
+		On(babylon.DirectiveLiteral).Roles(uast.Expression, uast.Literal, uast.Incomplete),
+
 		// Expressions
 		On(babylon.Super).Roles(uast.Expression, uast.Identifier, uast.Base),
 		On(babylon.Import).Roles(uast.Expression, uast.Import),
