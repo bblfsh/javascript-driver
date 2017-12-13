@@ -32,7 +32,7 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
 
 		// Functions
-		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression)).Roles(uast.Declaration, uast.Function).Children(
+		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression, babylon.ObjectMethod)).Roles(uast.Declaration, uast.Function).Children(
 			On(babylon.PropertyId).Roles(uast.Function, uast.Name),
 			On(babylon.PropertyParams).Roles(uast.Function, uast.Argument).Self(
 				On(babylon.RestElement).Roles(uast.ArgsList),
@@ -115,7 +115,19 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.YieldExpression).Roles(uast.Expression, uast.Return, uast.Incomplete),
 		On(babylon.AwaitExpression).Roles(uast.Expression, uast.Incomplete),
 		On(babylon.ArrayExpression).Roles(uast.Expression, uast.Initialization, uast.List, uast.Literal),
-		On(babylon.ObjectExpression).Roles(uast.Expression, uast.Initialization, uast.Literal),
+		On(babylon.ObjectExpression).Roles(uast.Expression, uast.Initialization, uast.Map, uast.Literal),
+
+		// Object properties
+		On(babylon.ObjectMethod).Roles(uast.Map).Children(
+			On(babylon.PropertyKey).Roles(uast.Map, uast.Key, uast.Function, uast.Name),
+			On(babylon.PropertyBody).Roles(uast.Map, uast.Value),
+		),
+		On(babylon.ObjectProperty).Roles(uast.Map).Children(
+			On(babylon.PropertyKey).Roles(uast.Map, uast.Key),
+			On(babylon.PropertyValue).Roles(uast.Map, uast.Value),
+		),
+
+		// Function expressions
 		On(babylon.FunctionExpression).Roles(uast.Expression),
 		On(babylon.CallExpression).Roles(uast.Expression, uast.Call).Children(
 			On(babylon.PropertyCallee).Roles(uast.Call, uast.Callee),
@@ -125,9 +137,5 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
 		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary),
 		On(babylon.BinaryExpression).Roles(uast.Expression, uast.Binary),
-
-		// Object properties
-		On(babylon.ObjectMethod).Roles(uast.Function, uast.Assignment),
-		On(babylon.ObjectProperty).Roles(uast.Identifier, uast.Assignment),
 	),
 )
