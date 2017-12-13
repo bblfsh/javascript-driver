@@ -135,7 +135,7 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.SpreadElement).Roles(uast.ArgsList),
 		),
 
-		// Unary expressions
+		// Unary operations
 		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary, uast.Operator).Self(
 			On(HasProperty("prefix", "false")).Roles(uast.Postfix),
 
@@ -154,7 +154,58 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(HasProperty("operator", "--")).Roles(uast.Arithmetic, uast.Decrement),
 		),
 
+		// Binary operations
+		On(babylon.BinaryExpression).Roles(uast.Expression, uast.Operator, uast.Binary).Self(
+			On(HasProperty("operator", "==")).Roles(uast.Relational, uast.Equal),
+			On(HasProperty("operator", "!=")).Roles(uast.Relational, uast.Equal, uast.Not),
+			On(HasProperty("operator", "===")).Roles(uast.Relational, uast.Identical),
+			On(HasProperty("operator", "!==")).Roles(uast.Relational, uast.Identical, uast.Not),
+			On(HasProperty("operator", "<")).Roles(uast.Relational, uast.LessThan),
+			On(HasProperty("operator", "<=")).Roles(uast.Relational, uast.LessThanOrEqual),
+			On(HasProperty("operator", ">")).Roles(uast.Relational, uast.GreaterThan),
+			On(HasProperty("operator", ">=")).Roles(uast.Relational, uast.GreaterThanOrEqual),
+			On(HasProperty("operator", "<<")).Roles(uast.Bitwise, uast.LeftShift),
+			On(HasProperty("operator", ">>")).Roles(uast.Bitwise, uast.RightShift),
+			On(HasProperty("operator", ">>>")).Roles(uast.Bitwise, uast.RightShift, uast.Unsigned),
+			On(HasProperty("operator", "+")).Roles(uast.Arithmetic, uast.Add),
+			On(HasProperty("operator", "-")).Roles(uast.Arithmetic, uast.Substract),
+			On(HasProperty("operator", "*")).Roles(uast.Arithmetic, uast.Multiply),
+			On(HasProperty("operator", "/")).Roles(uast.Arithmetic, uast.Divide),
+			On(HasProperty("operator", "%")).Roles(uast.Arithmetic, uast.Modulo),
+			On(HasProperty("operator", "|")).Roles(uast.Bitwise, uast.Or),
+			On(HasProperty("operator", "^")).Roles(uast.Bitwise, uast.Xor),
+			On(HasProperty("operator", "&")).Roles(uast.Bitwise, uast.And),
+			On(HasProperty("operator", "instanceof")).Roles(uast.Type),
+			On(HasProperty("operator", "|>")).Roles(uast.Incomplete),
+		).Children(
+			On(babylon.PropertyLeft).Roles(uast.Binary, uast.Left),
+			On(babylon.PropertyRight).Roles(uast.Binary, uast.Right),
+		),
+		On(babylon.AssignmentExpression).Roles(uast.Expression, uast.Assignment, uast.Operator, uast.Binary).Self(
+			On(HasProperty("operator", "+=")).Roles(uast.Arithmetic, uast.Add),
+			On(HasProperty("operator", "-=")).Roles(uast.Arithmetic, uast.Substract),
+			On(HasProperty("operator", "*=")).Roles(uast.Arithmetic, uast.Multiply),
+			On(HasProperty("operator", "/=")).Roles(uast.Arithmetic, uast.Divide),
+			On(HasProperty("operator", "%=")).Roles(uast.Arithmetic, uast.Modulo),
+			On(HasProperty("operator", "<<=")).Roles(uast.Bitwise, uast.LeftShift),
+			On(HasProperty("operator", ">>=")).Roles(uast.Bitwise, uast.RightShift),
+			On(HasProperty("operator", ">>>=")).Roles(uast.Bitwise, uast.RightShift, uast.Unsigned),
+			On(HasProperty("operator", "|=")).Roles(uast.Bitwise, uast.Or),
+			On(HasProperty("operator", "^=")).Roles(uast.Bitwise, uast.Xor),
+			On(HasProperty("operator", "&=")).Roles(uast.Bitwise, uast.And),
+		).Children(
+			On(babylon.PropertyLeft).Roles(uast.Assignment, uast.Binary, uast.Left),
+			On(babylon.PropertyRight).Roles(uast.Assignment, uast.Binary, uast.Right),
+		),
+		On(babylon.LogicalExpression).Roles(uast.Boolean, uast.Expression, uast.Operator, uast.Binary).Self(
+			On(HasProperty("operator", "||")).Roles(uast.Or),
+			On(HasProperty("operator", "&&")).Roles(uast.And),
+			On(HasProperty("operator", "??")).Roles(uast.Incomplete),
+		).Children(
+			On(babylon.PropertyLeft).Roles(uast.Boolean, uast.Binary, uast.Left),
+			On(babylon.PropertyRight).Roles(uast.Boolean, uast.Binary, uast.Right),
+		),
+
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
-		On(babylon.BinaryExpression).Roles(uast.Expression, uast.Binary),
 	),
 )
