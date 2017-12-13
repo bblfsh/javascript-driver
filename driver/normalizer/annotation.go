@@ -134,8 +134,27 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.PropertyArguments).Roles(uast.Call, uast.Argument),
 			On(babylon.SpreadElement).Roles(uast.ArgsList),
 		),
+
+		// Unary expressions
+		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary, uast.Operator).Self(
+			On(HasProperty("prefix", "false")).Roles(uast.Postfix),
+
+			// Unary operators
+			On(HasProperty("operator", "-")).Roles(uast.Arithmetic, uast.Negative),
+			On(HasProperty("operator", "+")).Roles(uast.Arithmetic, uast.Positive),
+			On(HasProperty("operator", "!")).Roles(uast.Boolean, uast.Not),
+			On(HasProperty("operator", "~")).Roles(uast.Bitwise, uast.Not),
+			On(HasProperty("operator", "typeof")).Roles(uast.Type),
+			On(HasProperty("operator", "void")).Roles(uast.Null),
+			On(HasProperty("operator", "delete")).Roles(uast.Incomplete),
+			On(HasProperty("operator", "throw")).Roles(uast.Throw),
+
+			// Update operators
+			On(HasProperty("operator", "++")).Roles(uast.Arithmetic, uast.Increment),
+			On(HasProperty("operator", "--")).Roles(uast.Arithmetic, uast.Decrement),
+		),
+
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
-		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary),
 		On(babylon.BinaryExpression).Roles(uast.Expression, uast.Binary),
 	),
 )

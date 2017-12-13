@@ -173,7 +173,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: UpdateExpression {
-.  .  .  .  .  .  .  Roles: For,Update,Expression,Unary
+.  .  .  .  .  .  .  Roles: For,Update,Expression,Unary,Operator,Postfix
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  .  .  Line: 1

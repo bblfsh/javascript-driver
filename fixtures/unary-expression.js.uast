@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Arithmetic,Positive
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -104,7 +104,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Arithmetic,Negative
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 4
 .  .  .  .  .  .  .  .  Line: 2
@@ -159,7 +159,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Boolean,Not
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  .  .  Line: 3
@@ -214,7 +214,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Bitwise,Not
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  .  .  Line: 4
@@ -269,7 +269,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Type
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 16
 .  .  .  .  .  .  .  .  Line: 5
@@ -324,7 +324,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Null
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  Line: 6
@@ -379,7 +379,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
 .  .  .  .  .  .  .  .  Line: 7
@@ -470,7 +470,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 46
 .  .  .  .  .  .  .  .  Line: 8
