@@ -82,7 +82,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: SpreadElement {
-.  .  .  .  .  .  .  .  .  Roles: Call,Argument,ArgsList,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Incomplete,Call,Argument,ArgsList
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 2
 .  .  .  .  .  .  .  .  .  .  Line: 1

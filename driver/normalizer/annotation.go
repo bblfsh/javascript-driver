@@ -56,11 +56,12 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.ContinueStatement).Roles(uast.Statement, uast.Continue),
 
 		// Choice
-		On(babylon.IfStatement).Roles(uast.Statement, uast.If).Children(
+		On(Or(babylon.IfStatement, babylon.ConditionalExpression)).Roles(uast.If).Children(
 			On(babylon.PropertyTest).Roles(uast.If, uast.Condition),
 			On(babylon.PropertyConsequent).Roles(uast.If, uast.Then, uast.Body),
 			On(babylon.PropertyAlternate).Roles(uast.If, uast.Else, uast.Body),
 		),
+		On(babylon.IfStatement).Roles(uast.Statement),
 		On(babylon.SwitchStatement).Roles(uast.Statement, uast.Switch).Children(
 			On(babylon.PropertyDiscriminant).Roles(uast.Switch, uast.Condition),
 		),
@@ -116,6 +117,14 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.AwaitExpression).Roles(uast.Expression, uast.Incomplete),
 		On(babylon.ArrayExpression).Roles(uast.Expression, uast.Initialization, uast.List, uast.Literal),
 		On(babylon.ObjectExpression).Roles(uast.Expression, uast.Initialization, uast.Map, uast.Literal),
+		On(babylon.SpreadElement).Roles(uast.Incomplete),
+		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
+		On(babylon.BindExpression).Roles(uast.Expression, uast.Incomplete),
+		On(babylon.ConditionalExpression).Roles(uast.Expression),
+		On(babylon.SequenceExpression).Roles(uast.Expression, uast.List),
+		On(babylon.DoExpression).Roles(uast.Expression, uast.Incomplete).Children(
+			On(babylon.PropertyBody).Roles(uast.Body),
+		),
 
 		// Object properties
 		On(babylon.ObjectMethod).Roles(uast.Map).Children(
@@ -205,9 +214,5 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.PropertyLeft).Roles(uast.Boolean, uast.Binary, uast.Left),
 			On(babylon.PropertyRight).Roles(uast.Boolean, uast.Binary, uast.Right),
 		),
-
-		On(babylon.SpreadElement).Roles(uast.Incomplete),
-
-		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
 	),
 )
