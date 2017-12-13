@@ -19,3 +19,4 @@
 0 & 0;
 0 in 0;
 0 instanceof 0;
+a |> a;

@@ -4,11 +4,11 @@
     "errors": [],
     "ast": {
         "comments": [],
-        "end": 169,
+        "end": 177,
         "loc": {
             "end": {
                 "column": 0,
-                "line": 22
+                "line": 23
             },
             "start": {
                 "column": 0,
@@ -1507,14 +1507,79 @@
                     },
                     "start": 153,
                     "type": "ExpressionStatement"
+                },
+                {
+                    "end": 176,
+                    "expression": {
+                        "end": 175,
+                        "left": {
+                            "end": 170,
+                            "loc": {
+                                "end": {
+                                    "column": 1,
+                                    "line": 22
+                                },
+                                "identifierName": "a",
+                                "start": {
+                                    "column": 0,
+                                    "line": 22
+                                }
+                            },
+                            "name": "a",
+                            "start": 169,
+                            "type": "Identifier"
+                        },
+                        "loc": {
+                            "end": {
+                                "column": 6,
+                                "line": 22
+                            },
+                            "start": {
+                                "column": 0,
+                                "line": 22
+                            }
+                        },
+                        "operator": "|>",
+                        "right": {
+                            "end": 175,
+                            "loc": {
+                                "end": {
+                                    "column": 6,
+                                    "line": 22
+                                },
+                                "identifierName": "a",
+                                "start": {
+                                    "column": 5,
+                                    "line": 22
+                                }
+                            },
+                            "name": "a",
+                            "start": 174,
+                            "type": "Identifier"
+                        },
+                        "start": 169,
+                        "type": "BinaryExpression"
+                    },
+                    "loc": {
+                        "end": {
+                            "column": 7,
+                            "line": 22
+                        },
+                        "start": {
+                            "column": 0,
+                            "line": 22
+                        }
+                    },
+                    "start": 169,
+                    "type": "ExpressionStatement"
                 }
             ],
             "directives": [],
-            "end": 169,
+            "end": 177,
             "loc": {
                 "end": {
                     "column": 0,
-                    "line": 22
+                    "line": 23
                 },
                 "start": {
                     "column": 0,
