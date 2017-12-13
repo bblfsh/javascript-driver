@@ -122,6 +122,7 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
 		On(babylon.BindExpression).Roles(uast.Expression, uast.Incomplete),
 		On(babylon.ConditionalExpression).Roles(uast.Expression),
+		On(babylon.NewExpression).Roles(uast.Expression, uast.Incomplete),
 		On(babylon.SequenceExpression).Roles(uast.Expression, uast.List),
 		On(babylon.DoExpression).Roles(uast.Expression, uast.Incomplete).Children(
 			On(babylon.PropertyBody).Roles(uast.Body),
