@@ -172,7 +172,6 @@
                         "type": "BlockStatement"
                     },
                     "end": 49,
-                    "expression": false,
                     "generator": true,
                     "id": {
                         "end": 11,

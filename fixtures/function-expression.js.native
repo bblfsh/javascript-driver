@@ -94,7 +94,6 @@
                                     "type": "BlockStatement"
                                 },
                                 "end": 34,
-                                "expression": false,
                                 "generator": false,
                                 "id": null,
                                 "loc": {

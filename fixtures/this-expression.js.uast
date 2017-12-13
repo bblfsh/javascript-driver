@@ -152,7 +152,6 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  async: false
-.  .  .  .  .  .  expression: false
 .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  internalRole: body
 .  .  .  .  .  }
@@ -356,7 +355,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: expressions
 .  .  .  .  .  .  .  .  .  .  .  .  .  }

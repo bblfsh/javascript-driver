@@ -167,7 +167,6 @@
                         "type": "BlockStatement"
                     },
                     "end": 41,
-                    "expression": false,
                     "generator": false,
                     "id": {
                         "end": 22,
@@ -327,7 +326,6 @@
                                                 "type": "BlockStatement"
                                             },
                                             "end": 80,
-                                            "expression": false,
                                             "generator": false,
                                             "id": null,
                                             "loc": {

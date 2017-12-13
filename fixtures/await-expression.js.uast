@@ -62,7 +62,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: true
-.  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }

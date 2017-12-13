@@ -41,7 +41,6 @@
                                 },
                                 "computed": false,
                                 "end": 16,
-                                "expression": false,
                                 "generator": false,
                                 "id": null,
                                 "key": {
@@ -195,7 +194,6 @@
                                 },
                                 "computed": false,
                                 "end": 65,
-                                "expression": false,
                                 "generator": false,
                                 "id": null,
                                 "key": {
@@ -398,7 +396,6 @@
                                 },
                                 "computed": false,
                                 "end": 106,
-                                "expression": false,
                                 "generator": false,
                                 "id": null,
                                 "key": {

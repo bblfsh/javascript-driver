@@ -62,7 +62,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -438,7 +437,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -564,7 +562,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -673,7 +670,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -782,7 +778,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -855,7 +850,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -947,7 +941,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -1059,7 +1052,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -1220,7 +1212,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }
@@ -1381,7 +1372,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  expression: true
 .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  internalRole: expression
 .  .  .  .  .  .  .  }

@@ -105,7 +105,6 @@
                         "type": "BlockStatement"
                     },
                     "end": 44,
-                    "expression": false,
                     "generator": false,
                     "id": {
                         "end": 10,

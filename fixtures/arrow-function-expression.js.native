@@ -305,7 +305,6 @@
                             "type": "BlockStatement"
                         },
                         "end": 57,
-                        "expression": false,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -425,7 +424,6 @@
                             "type": "BinaryExpression"
                         },
                         "end": 74,
-                        "expression": true,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -545,7 +543,6 @@
                             "type": "BlockStatement"
                         },
                         "end": 96,
-                        "expression": false,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -648,7 +645,6 @@
                             "type": "BlockStatement"
                         },
                         "end": 116,
-                        "expression": false,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -718,7 +714,6 @@
                             "type": "Identifier"
                         },
                         "end": 124,
-                        "expression": true,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -824,7 +819,6 @@
                             "type": "BlockStatement"
                         },
                         "end": 145,
-                        "expression": false,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -935,7 +929,6 @@
                             "type": "ObjectExpression"
                         },
                         "end": 160,
-                        "expression": true,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -1020,7 +1013,6 @@
                             "type": "BlockStatement"
                         },
                         "end": 197,
-                        "expression": false,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -1172,7 +1164,6 @@
                             "type": "BinaryExpression"
                         },
                         "end": 218,
-                        "expression": true,
                         "generator": false,
                         "id": null,
                         "loc": {
@@ -1360,7 +1351,6 @@
                             "type": "BinaryExpression"
                         },
                         "end": 271,
-                        "expression": true,
                         "generator": false,
                         "id": null,
                         "loc": {

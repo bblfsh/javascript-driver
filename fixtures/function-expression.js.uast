@@ -96,7 +96,6 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  .  .  expression: false
 .  .  .  .  .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  .  .  .  .  internalRole: init
 .  .  .  .  .  .  .  .  .  }
