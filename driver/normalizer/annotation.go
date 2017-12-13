@@ -206,6 +206,8 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 			On(babylon.PropertyRight).Roles(uast.Boolean, uast.Binary, uast.Right),
 		),
 
+		On(babylon.SpreadElement).Roles(uast.Incomplete),
+
 		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
 	),
 )

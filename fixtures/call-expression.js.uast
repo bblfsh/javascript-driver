@@ -205,7 +205,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: SpreadElement {
-.  .  .  .  .  .  .  .  .  Roles: Call,Argument,ArgsList
+.  .  .  .  .  .  .  .  .  Roles: Call,Argument,ArgsList,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  .  .  .  .  Line: 3
