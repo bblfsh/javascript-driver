@@ -33,7 +33,8 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
 
 		// Functions
-		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression, babylon.ObjectMethod, babylon.ClassMethod, babylon.ClassPrivateMethod)).
+		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression, babylon.ObjectMethod,
+			babylon.ClassMethod, babylon.ClassPrivateMethod, babylon.OptFunctionDeclaration)).
 			Roles(uast.Declaration, uast.Function).Children(
 			On(babylon.PropertyId).Roles(uast.Function, uast.Name),
 			On(babylon.PropertyParams).Roles(uast.Function, uast.Argument).Self(
@@ -231,7 +232,7 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 
 		// Classes
 		On(babylon.ClassBody).Roles(uast.Type, uast.Body),
-		On(Or(babylon.ClassDeclaration, babylon.ClassExpression)).Roles(uast.Declaration, uast.Type).Children(
+		On(Or(babylon.ClassDeclaration, babylon.ClassExpression, babylon.OptClasDeclaration)).Roles(uast.Declaration, uast.Type).Children(
 			On(babylon.PropertyId).Roles(uast.Type, uast.Name),
 			On(babylon.PropertySuperClass).Roles(uast.Type, uast.Base),
 		),
@@ -247,5 +248,30 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		),
 
 		On(babylon.MetaProperty).Roles(uast.Expression, uast.Incomplete),
+
+		// Modules
+		On(babylon.ImportDeclaration).Roles(uast.Statement, uast.Declaration, uast.Import).Children(
+			On(babylon.PropertySpecifiers).Roles(uast.Import),
+			On(babylon.PropertySource).Roles(uast.Import, uast.Pathname),
+		),
+		On(Or(babylon.ImportSpecifier, babylon.ImportDefaultSpecifier, babylon.ImportNamespaceSpecifier)).Roles(uast.Import).Children(
+			On(babylon.PropertyLocal).Roles(uast.Import),
+		),
+		On(babylon.ImportSpecifier).Children(
+			On(babylon.PropertyImported).Roles(uast.Import),
+		),
+		On(Or(babylon.ExportNamedDeclaration, babylon.ExportDefaultDeclaration, babylon.ExportAllDeclaration)).Roles(uast.Statement, uast.Declaration, uast.Visibility, uast.Module, uast.Incomplete),
+		On(babylon.ExportNamedDeclaration).Roles(uast.Statement, uast.Declaration, uast.Visibility, uast.Module, uast.Incomplete).Children(
+			On(babylon.PropertyDeclaration).Roles(uast.Incomplete),
+			On(babylon.PropertySpecifiers).Roles(uast.Incomplete),
+			On(babylon.PropertySource).Roles(uast.Pathname, uast.Incomplete),
+		),
+		On(babylon.ExportSpecifier).Children(
+			On(babylon.PropertyLocal).Roles(uast.Incomplete),
+			On(babylon.PropertyExported).Roles(uast.Incomplete),
+		),
+		On(Or(babylon.OptFunctionDeclaration, babylon.OptClasDeclaration)).Roles(uast.Statement, uast.Incomplete).Children(
+			On(babylon.PropertyId).Roles(uast.Name, uast.Incomplete),
+		),
 	),
 )
