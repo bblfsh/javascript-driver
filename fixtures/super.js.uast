@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ClassDeclaration {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration,Type,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Name
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 6
@@ -66,7 +66,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: ClassBody {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Type,Body
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  .  .  Line: 1
@@ -82,7 +82,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: ClassMethod {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -103,7 +103,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 10
@@ -120,7 +120,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope,Value
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -142,7 +142,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: ClassDeclaration {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration,Type,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 19
 .  .  .  .  .  .  Line: 2
@@ -158,7 +158,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Name
 .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 25
@@ -175,7 +175,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Base
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 35
@@ -192,7 +192,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: ClassBody {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Type,Body
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 37
 .  .  .  .  .  .  .  .  Line: 2
@@ -208,7 +208,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: ClassMethod {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 39
 .  .  .  .  .  .  .  .  .  .  Line: 2
@@ -229,7 +229,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "constructor"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 39
@@ -246,7 +246,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope,Value
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 53
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 2
@@ -322,7 +322,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: ClassDeclaration {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration,Type,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 68
 .  .  .  .  .  .  Line: 3
@@ -338,7 +338,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Name
 .  .  .  .  .  .  .  TOKEN "C"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 74
@@ -355,7 +355,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Base
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 84
@@ -372,7 +372,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: ClassBody {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Type,Body
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 86
 .  .  .  .  .  .  .  .  Line: 3
@@ -388,7 +388,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: ClassMethod {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 88
 .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -409,7 +409,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 88
@@ -426,7 +426,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope,Value
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 92
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 3

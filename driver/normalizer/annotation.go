@@ -33,7 +33,8 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
 
 		// Functions
-		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression, babylon.ObjectMethod)).Roles(uast.Declaration, uast.Function).Children(
+		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression, babylon.ObjectMethod, babylon.ClassMethod, babylon.ClassPrivateMethod)).
+			Roles(uast.Declaration, uast.Function).Children(
 			On(babylon.PropertyId).Roles(uast.Function, uast.Name),
 			On(babylon.PropertyParams).Roles(uast.Function, uast.Argument).Self(
 				On(babylon.RestElement).Roles(uast.ArgsList),
@@ -221,5 +222,30 @@ var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
 		On(babylon.TemplateLiteral).Roles(uast.Expression, uast.Literal, uast.Incomplete),
 		On(babylon.TaggedTemplateExpression).Roles(uast.Expression, uast.Literal, uast.Incomplete),
 		On(babylon.TemplateElement).Roles(uast.Literal, uast.String, uast.Incomplete),
+
+		// Patterns
+		On(babylon.ObjectPattern).Roles(uast.Incomplete),
+		On(babylon.ArrayPattern).Roles(uast.Incomplete),
+		On(babylon.RestElement).Roles(uast.Incomplete),
+		On(babylon.AssignmentPattern).Roles(uast.Assignment, uast.Incomplete),
+
+		// Classes
+		On(babylon.ClassBody).Roles(uast.Type, uast.Body),
+		On(Or(babylon.ClassDeclaration, babylon.ClassExpression)).Roles(uast.Declaration, uast.Type).Children(
+			On(babylon.PropertyId).Roles(uast.Type, uast.Name),
+			On(babylon.PropertySuperClass).Roles(uast.Type, uast.Base),
+		),
+		On(babylon.ClassDeclaration).Roles(uast.Statement),
+		On(babylon.ClassExpression).Roles(uast.Expression),
+		On(Or(babylon.ClassMethod, babylon.ClassPrivateMethod)).Roles(uast.Statement).Children(
+			On(babylon.PropertyKey).Roles(uast.Key, uast.Name),
+			On(babylon.PropertyBody).Roles(uast.Value),
+		),
+		On(Or(babylon.ClassProperty, babylon.ClassPrivateProperty)).Roles(uast.Variable).Children(
+			On(babylon.PropertyKey).Roles(uast.Key, uast.Name),
+			On(babylon.PropertyValue).Roles(uast.Value, uast.Initialization),
+		),
+
+		On(babylon.MetaProperty).Roles(uast.Expression, uast.Incomplete),
 	),
 )

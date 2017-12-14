@@ -10,7 +10,7 @@ File {
 .  .  Col: 1
 .  }
 .  EndPosition: {
-.  .  Offset: 14
+.  .  Offset: 11
 .  .  Line: 2
 .  .  Col: 1
 .  }
@@ -23,7 +23,7 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 14
+.  .  .  .  Offset: 11
 .  .  .  .  Line: 2
 .  .  .  .  Col: 1
 .  .  .  }
@@ -40,77 +40,42 @@ File {
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  Col: 11
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: body
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Decorator {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 2
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: decorators
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "d"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 1
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 2
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Identifier {
+.  .  .  .  .  .  0: Identifier {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Name
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  .  .  Offset: 6
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  .  Col: 7
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 10
+.  .  .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: id
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  2: ClassBody {
+.  .  .  .  .  .  1: ClassBody {
 .  .  .  .  .  .  .  Roles: Type,Body
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 11
+.  .  .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: body

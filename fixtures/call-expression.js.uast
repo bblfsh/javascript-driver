@@ -244,7 +244,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: ClassDeclaration {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration,Type,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  Line: 4
@@ -260,7 +260,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Name
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
@@ -277,7 +277,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type,Base
 .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 36
@@ -294,7 +294,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: ClassBody {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Type,Body
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 38
 .  .  .  .  .  .  .  .  Line: 4
@@ -310,7 +310,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: ClassMethod {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 40
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -331,7 +331,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "constructor"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 40
@@ -348,7 +348,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope,Value
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 54
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 4

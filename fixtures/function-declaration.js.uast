@@ -85,7 +85,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: AssignmentPattern {
-.  .  .  .  .  .  .  Roles: Function,Argument
+.  .  .  .  .  .  .  Roles: Function,Argument,Assignment,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  Line: 1
@@ -137,7 +137,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: RestElement {
-.  .  .  .  .  .  .  Roles: Function,Argument,ArgsList
+.  .  .  .  .  .  .  Roles: Function,Argument,ArgsList,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  .  .  Line: 1

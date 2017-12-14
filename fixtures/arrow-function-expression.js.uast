@@ -1091,7 +1091,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: RestElement {
-.  .  .  .  .  .  .  .  .  Roles: Function,Argument,ArgsList
+.  .  .  .  .  .  .  .  .  Roles: Function,Argument,ArgsList,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 169
 .  .  .  .  .  .  .  .  .  .  Line: 8
@@ -1234,7 +1234,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: AssignmentPattern {
-.  .  .  .  .  .  .  .  .  Roles: Function,Argument
+.  .  .  .  .  .  .  .  .  Roles: Function,Argument,Assignment,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 203
 .  .  .  .  .  .  .  .  .  .  Line: 9
@@ -1377,7 +1377,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: AssignmentPattern {
-.  .  .  .  .  .  .  .  .  Roles: Function,Argument
+.  .  .  .  .  .  .  .  .  Roles: Function,Argument,Assignment,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 221
 .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -1393,7 +1393,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ArrayPattern {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 221
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -1499,7 +1499,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: AssignmentPattern {
-.  .  .  .  .  .  .  .  .  Roles: Function,Argument
+.  .  .  .  .  .  .  .  .  Roles: Function,Argument,Assignment,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 238
 .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -1515,7 +1515,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ObjectPattern {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 238
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
