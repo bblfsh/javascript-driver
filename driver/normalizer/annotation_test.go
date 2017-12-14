@@ -1,6 +1,7 @@
 package normalizer
 
 import (
+	"bytes"
 	"fmt"
 	"testing"
 
@@ -26,5 +27,41 @@ func TestAnnotate(t *testing.T) {
 
 	for k := range missingRole {
 		fmt.Println("NO ROLE", k)
+	}
+}
+
+func TestAnnotatePrettyAnnotationsOnly(t *testing.T) {
+	require := require.New(t)
+
+	f, err := getFixture("hello.js.json")
+	require.NoError(err)
+
+	n, err := ToNode.ToNode(f)
+	require.NoError(err)
+	require.NotNil(n)
+
+	err = AnnotationRules.Apply(n)
+	require.NoError(err)
+
+	buf := bytes.NewBuffer(nil)
+	err = uast.Pretty(n, buf, uast.IncludeAnnotations|uast.IncludeChildren|uast.IncludeTokens)
+	require.NoError(err)
+	fmt.Println(buf.String())
+}
+
+func TestNodeTokens(t *testing.T) {
+	require := require.New(t)
+
+	f, err := getFixture("hello.js.json")
+	require.NoError(err)
+
+	n, err := ToNode.ToNode(f)
+	require.NoError(err)
+	require.NotNil(n)
+
+	tokens := uast.Tokens(n)
+	require.True(len(tokens) > 0)
+	for _, tk := range tokens {
+		fmt.Println("TOKEN", tk)
 	}
 }
