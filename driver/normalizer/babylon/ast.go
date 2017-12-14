@@ -104,6 +104,8 @@ var (
 	OptClasDeclaration       = ann.HasInternalType("OptClasDeclaration")
 	ExportDefaultDeclaration = ann.HasInternalType("ExportDefaultDeclaration")
 	ExportAllDeclaration     = ann.HasInternalType("ExportAllDeclaration")
+	CommentLine              = ann.HasInternalType("CommentLine")
+	CommentBlock             = ann.HasInternalType("CommentBlock")
 )
 
 // Babylon structural property IDs.
