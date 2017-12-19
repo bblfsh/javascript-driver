@@ -5,13 +5,23 @@ export const ALL_PLUGINS = [
   'flow',
   'doExpressions',
   'objectRestSpread',
-  //'decorators' // leaving them out since they are based on an old standard
+  'decorators2',
   'classProperties',
+  'classPrivateProperties',
+  'classPrivateMethods',
   'exportExtensions',
   'asyncGenerators',
   'functionBind',
   'functionSend',
   'dynamicImport',
+  'numericSeparator',
+  'optionalChaining',
+  'importMeta',
+  'bigInt',
+  'optionalCatchBinding',
+  'throwExpressions',
+  'pipelineOperator',
+  'nullishCoalescingOperator',
 ];
 
 export function parse(code, options) {
