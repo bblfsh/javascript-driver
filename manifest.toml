@@ -1,5 +1,7 @@
+name = "JavaScript"
 language = "javascript"
-status = "alpha"
+status = "beta"
+features = ["ast","uast","roles"]
 
 [documentation]
 description  = """
