@@ -1,0 +1,105 @@
+{
+    "status": "ok",
+    "language": "javascript",
+    "errors": [],
+    "ast": {
+        "comments": [],
+        "end": 24,
+        "loc": {
+            "end": {
+                "column": 24,
+                "line": 1
+            },
+            "start": {
+                "column": 0,
+                "line": 1
+            }
+        },
+        "program": {
+            "body": [
+                {
+                    "body": {
+                        "body": [],
+                        "end": 24,
+                        "loc": {
+                            "end": {
+                                "column": 24,
+                                "line": 1
+                            },
+                            "start": {
+                                "column": 22,
+                                "line": 1
+                            }
+                        },
+                        "start": 22,
+                        "type": "ClassBody"
+                    },
+                    "end": 24,
+                    "id": {
+                        "end": 9,
+                        "loc": {
+                            "end": {
+                                "column": 9,
+                                "line": 1
+                            },
+                            "identifierName": "Foo",
+                            "start": {
+                                "column": 6,
+                                "line": 1
+                            }
+                        },
+                        "name": "Foo",
+                        "start": 6,
+                        "type": "Identifier"
+                    },
+                    "loc": {
+                        "end": {
+                            "column": 24,
+                            "line": 1
+                        },
+                        "start": {
+                            "column": 0,
+                            "line": 1
+                        }
+                    },
+                    "start": 0,
+                    "superClass": {
+                        "end": 21,
+                        "loc": {
+                            "end": {
+                                "column": 21,
+                                "line": 1
+                            },
+                            "identifierName": "Bar",
+                            "start": {
+                                "column": 18,
+                                "line": 1
+                            }
+                        },
+                        "name": "Bar",
+                        "start": 18,
+                        "type": "Identifier"
+                    },
+                    "type": "ClassDeclaration"
+                }
+            ],
+            "directives": [],
+            "end": 24,
+            "loc": {
+                "end": {
+                    "column": 24,
+                    "line": 1
+                },
+                "start": {
+                    "column": 0,
+                    "line": 1
+                }
+            },
+            "sourceType": "module",
+            "start": 0,
+            "type": "Program"
+        },
+        "start": 0,
+        "type": "File"
+    }
+}
