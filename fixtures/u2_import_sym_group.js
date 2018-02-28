@@ -1,0 +1,1 @@
+import { foo as f, bar as b } from 'file';
