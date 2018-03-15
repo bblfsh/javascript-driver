@@ -11,4 +11,4 @@ JavaScript driver for [babelfish](https://github.com/bblfsh/bblfshd).
 [runtime]
 os = "alpine"
 go_version = "1.9"
-native_version = ["6.10.3-r1"]
+native_version = ["8.9.3-r0"]
