@@ -4,7 +4,7 @@
     "errors": [],
     "ast": {
         "comments": [],
-        "end": 23,
+        "end": 29,
         "loc": {
             "end": {
                 "column": 0,
@@ -18,46 +18,46 @@
         "program": {
             "body": [
                 {
-                    "async": false,
+                    "async": true,
                     "body": {
                         "body": [],
                         "directives": [],
-                        "end": 22,
+                        "end": 28,
                         "loc": {
                             "end": {
-                                "column": 22,
+                                "column": 28,
                                 "line": 1
                             },
                             "start": {
-                                "column": 20,
+                                "column": 26,
                                 "line": 1
                             }
                         },
-                        "start": 20,
+                        "start": 26,
                         "type": "BlockStatement"
                     },
-                    "end": 22,
+                    "end": 28,
                     "generator": false,
                     "id": {
-                        "end": 17,
+                        "end": 23,
                         "loc": {
                             "end": {
-                                "column": 17,
+                                "column": 23,
                                 "line": 1
                             },
                             "identifierName": "testfnc1",
                             "start": {
-                                "column": 9,
+                                "column": 15,
                                 "line": 1
                             }
                         },
                         "name": "testfnc1",
-                        "start": 9,
+                        "start": 15,
                         "type": "Identifier"
                     },
                     "loc": {
                         "end": {
-                            "column": 22,
+                            "column": 28,
                             "line": 1
                         },
                         "start": {
@@ -71,7 +71,7 @@
                 }
             ],
             "directives": [],
-            "end": 23,
+            "end": 29,
             "loc": {
                 "end": {
                     "column": 0,

@@ -10,7 +10,7 @@ File {
 .  .  Col: 1
 .  }
 .  EndPosition: {
-.  .  Offset: 23
+.  .  Offset: 16
 .  .  Line: 2
 .  .  Col: 1
 .  }
@@ -23,7 +23,7 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 23
+.  .  .  .  Offset: 16
 .  .  .  .  Line: 2
 .  .  .  .  Col: 1
 .  .  .  }
@@ -32,55 +32,37 @@ File {
 .  .  .  .  sourceType: module
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: FunctionDeclaration {
-.  .  .  .  .  Roles: Declaration,Function,Statement
+.  .  .  .  0: ImportDeclaration {
+.  .  .  .  .  Roles: Statement,Declaration,Import
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  async: false
-.  .  .  .  .  .  generator: false
 .  .  .  .  .  .  internalRole: body
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
-.  .  .  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  .  .  0: StringLiteral {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  .  .  TOKEN "file1"
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 17
+.  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 18
+.  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 23
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
+.  .  .  .  .  .  .  .  internalRole: source
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

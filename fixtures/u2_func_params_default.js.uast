@@ -10,8 +10,8 @@ File {
 .  .  Col: 1
 .  }
 .  EndPosition: {
-.  .  Offset: 41
-.  .  Line: 4
+.  .  Offset: 29
+.  .  Line: 2
 .  .  Col: 1
 .  }
 .  Children: {
@@ -23,8 +23,8 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 41
-.  .  .  .  Line: 4
+.  .  .  .  Offset: 29
+.  .  .  .  Line: 2
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
@@ -40,9 +40,9 @@ File {
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  Offset: 28
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 29
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  async: false
@@ -84,74 +84,72 @@ File {
 .  .  .  .  .  .  .  .  internalRole: params
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  2: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Argument
-.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  2: AssignmentPattern {
+.  .  .  .  .  .  .  Roles: Function,Argument,Assignment,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  .  .  Col: 22
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  .  .  Col: 25
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Identifier {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 21
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: NumericLiteral {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  TOKEN "1"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 23
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 24
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: BlockStatement {
 .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  .  Col: 27
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  .  .  Offset: 28
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 29
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  Roles: Statement,Return
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: NumericLiteral {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "1"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 37
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: argument
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

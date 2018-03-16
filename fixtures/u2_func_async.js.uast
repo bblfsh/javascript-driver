@@ -10,7 +10,7 @@ File {
 .  .  Col: 1
 .  }
 .  EndPosition: {
-.  .  Offset: 23
+.  .  Offset: 29
 .  .  Line: 2
 .  .  Col: 1
 .  }
@@ -23,7 +23,7 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 23
+.  .  .  .  Offset: 29
 .  .  .  .  Line: 2
 .  .  .  .  Col: 1
 .  .  .  }
@@ -40,12 +40,12 @@ File {
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  Offset: 28
 .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  Col: 29
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  async: false
+.  .  .  .  .  .  async: true
 .  .  .  .  .  .  generator: false
 .  .  .  .  .  .  internalRole: body
 .  .  .  .  .  }
@@ -54,14 +54,14 @@ File {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
 .  .  .  .  .  .  .  TOKEN "testfnc1"
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  .  Col: 16
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 17
+.  .  .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 18
+.  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: id
@@ -70,14 +70,14 @@ File {
 .  .  .  .  .  .  1: BlockStatement {
 .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 20
+.  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 21
+.  .  .  .  .  .  .  .  Col: 27
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  .  .  Offset: 28
 .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  .  .  Col: 29
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: body

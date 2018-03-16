@@ -4,7 +4,7 @@
     "errors": [],
     "ast": {
         "comments": [],
-        "end": 41,
+        "end": 49,
         "loc": {
             "end": {
                 "column": 0,
@@ -23,14 +23,11 @@
                         "body": [
                             {
                                 "argument": {
-                                    "end": 38,
-                                    "extra": {
-                                        "raw": "1",
-                                        "rawValue": 1
-                                    },
+                                    "computed": true,
+                                    "end": 45,
                                     "loc": {
                                         "end": {
-                                            "column": 12,
+                                            "column": 23,
                                             "line": 2
                                         },
                                         "start": {
@@ -38,14 +35,50 @@
                                             "line": 2
                                         }
                                     },
-                                    "start": 37,
-                                    "type": "NumericLiteral",
-                                    "value": 1
+                                    "object": {
+                                        "end": 42,
+                                        "loc": {
+                                            "end": {
+                                                "column": 20,
+                                                "line": 2
+                                            },
+                                            "identifierName": "arguments",
+                                            "start": {
+                                                "column": 11,
+                                                "line": 2
+                                            }
+                                        },
+                                        "name": "arguments",
+                                        "start": 33,
+                                        "type": "Identifier"
+                                    },
+                                    "property": {
+                                        "end": 44,
+                                        "extra": {
+                                            "raw": "0",
+                                            "rawValue": 0
+                                        },
+                                        "loc": {
+                                            "end": {
+                                                "column": 22,
+                                                "line": 2
+                                            },
+                                            "start": {
+                                                "column": 21,
+                                                "line": 2
+                                            }
+                                        },
+                                        "start": 43,
+                                        "type": "NumericLiteral",
+                                        "value": 0
+                                    },
+                                    "start": 33,
+                                    "type": "MemberExpression"
                                 },
-                                "end": 38,
+                                "end": 46,
                                 "loc": {
                                     "end": {
-                                        "column": 12,
+                                        "column": 24,
                                         "line": 2
                                     },
                                     "start": {
@@ -53,26 +86,26 @@
                                         "line": 2
                                     }
                                 },
-                                "start": 30,
+                                "start": 26,
                                 "type": "ReturnStatement"
                             }
                         ],
                         "directives": [],
-                        "end": 40,
+                        "end": 48,
                         "loc": {
                             "end": {
                                 "column": 1,
                                 "line": 3
                             },
                             "start": {
-                                "column": 24,
+                                "column": 20,
                                 "line": 1
                             }
                         },
-                        "start": 24,
+                        "start": 20,
                         "type": "BlockStatement"
                     },
-                    "end": 40,
+                    "end": 48,
                     "generator": false,
                     "id": {
                         "end": 17,
@@ -101,48 +134,13 @@
                             "line": 1
                         }
                     },
-                    "params": [
-                        {
-                            "end": 19,
-                            "loc": {
-                                "end": {
-                                    "column": 19,
-                                    "line": 1
-                                },
-                                "identifierName": "a",
-                                "start": {
-                                    "column": 18,
-                                    "line": 1
-                                }
-                            },
-                            "name": "a",
-                            "start": 18,
-                            "type": "Identifier"
-                        },
-                        {
-                            "end": 22,
-                            "loc": {
-                                "end": {
-                                    "column": 22,
-                                    "line": 1
-                                },
-                                "identifierName": "b",
-                                "start": {
-                                    "column": 21,
-                                    "line": 1
-                                }
-                            },
-                            "name": "b",
-                            "start": 21,
-                            "type": "Identifier"
-                        }
-                    ],
+                    "params": [],
                     "start": 0,
                     "type": "FunctionDeclaration"
                 }
             ],
             "directives": [],
-            "end": 41,
+            "end": 49,
             "loc": {
                 "end": {
                     "column": 0,

@@ -1,1 +1,0 @@
-var Foo = class Foo {};
