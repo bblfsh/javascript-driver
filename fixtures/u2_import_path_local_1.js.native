@@ -1,0 +1,76 @@
+{
+    "status": "ok",
+    "language": "javascript",
+    "errors": [],
+    "ast": {
+        "comments": [],
+        "end": 22,
+        "loc": {
+            "end": {
+                "column": 22,
+                "line": 1
+            },
+            "start": {
+                "column": 0,
+                "line": 1
+            }
+        },
+        "program": {
+            "body": [
+                {
+                    "end": 22,
+                    "loc": {
+                        "end": {
+                            "column": 22,
+                            "line": 1
+                        },
+                        "start": {
+                            "column": 0,
+                            "line": 1
+                        }
+                    },
+                    "source": {
+                        "end": 21,
+                        "extra": {
+                            "raw": "'./local/file'",
+                            "rawValue": "./local/file"
+                        },
+                        "loc": {
+                            "end": {
+                                "column": 21,
+                                "line": 1
+                            },
+                            "start": {
+                                "column": 7,
+                                "line": 1
+                            }
+                        },
+                        "start": 7,
+                        "type": "StringLiteral",
+                        "value": "./local/file"
+                    },
+                    "specifiers": [],
+                    "start": 0,
+                    "type": "ImportDeclaration"
+                }
+            ],
+            "directives": [],
+            "end": 22,
+            "loc": {
+                "end": {
+                    "column": 22,
+                    "line": 1
+                },
+                "start": {
+                    "column": 0,
+                    "line": 1
+                }
+            },
+            "sourceType": "module",
+            "start": 0,
+            "type": "Program"
+        },
+        "start": 0,
+        "type": "File"
+    }
+}
