@@ -4,11 +4,11 @@
     "errors": [],
     "ast": {
         "comments": [],
-        "end": 41,
+        "end": 29,
         "loc": {
             "end": {
                 "column": 0,
-                "line": 4
+                "line": 2
             },
             "start": {
                 "column": 0,
@@ -20,59 +20,23 @@
                 {
                     "async": false,
                     "body": {
-                        "body": [
-                            {
-                                "argument": {
-                                    "end": 38,
-                                    "extra": {
-                                        "raw": "1",
-                                        "rawValue": 1
-                                    },
-                                    "loc": {
-                                        "end": {
-                                            "column": 12,
-                                            "line": 2
-                                        },
-                                        "start": {
-                                            "column": 11,
-                                            "line": 2
-                                        }
-                                    },
-                                    "start": 37,
-                                    "type": "NumericLiteral",
-                                    "value": 1
-                                },
-                                "end": 38,
-                                "loc": {
-                                    "end": {
-                                        "column": 12,
-                                        "line": 2
-                                    },
-                                    "start": {
-                                        "column": 4,
-                                        "line": 2
-                                    }
-                                },
-                                "start": 30,
-                                "type": "ReturnStatement"
-                            }
-                        ],
+                        "body": [],
                         "directives": [],
-                        "end": 40,
+                        "end": 28,
                         "loc": {
                             "end": {
-                                "column": 1,
-                                "line": 3
+                                "column": 28,
+                                "line": 1
                             },
                             "start": {
-                                "column": 24,
+                                "column": 26,
                                 "line": 1
                             }
                         },
-                        "start": 24,
+                        "start": 26,
                         "type": "BlockStatement"
                     },
-                    "end": 40,
+                    "end": 28,
                     "generator": false,
                     "id": {
                         "end": 17,
@@ -93,8 +57,8 @@
                     },
                     "loc": {
                         "end": {
-                            "column": 1,
-                            "line": 3
+                            "column": 28,
+                            "line": 1
                         },
                         "start": {
                             "column": 0,
@@ -120,21 +84,56 @@
                             "type": "Identifier"
                         },
                         {
-                            "end": 22,
+                            "end": 24,
+                            "left": {
+                                "end": 22,
+                                "loc": {
+                                    "end": {
+                                        "column": 22,
+                                        "line": 1
+                                    },
+                                    "identifierName": "b",
+                                    "start": {
+                                        "column": 21,
+                                        "line": 1
+                                    }
+                                },
+                                "name": "b",
+                                "start": 21,
+                                "type": "Identifier"
+                            },
                             "loc": {
                                 "end": {
-                                    "column": 22,
+                                    "column": 24,
                                     "line": 1
                                 },
-                                "identifierName": "b",
                                 "start": {
                                     "column": 21,
                                     "line": 1
                                 }
                             },
-                            "name": "b",
+                            "right": {
+                                "end": 24,
+                                "extra": {
+                                    "raw": "1",
+                                    "rawValue": 1
+                                },
+                                "loc": {
+                                    "end": {
+                                        "column": 24,
+                                        "line": 1
+                                    },
+                                    "start": {
+                                        "column": 23,
+                                        "line": 1
+                                    }
+                                },
+                                "start": 23,
+                                "type": "NumericLiteral",
+                                "value": 1
+                            },
                             "start": 21,
-                            "type": "Identifier"
+                            "type": "AssignmentPattern"
                         }
                     ],
                     "start": 0,
@@ -142,11 +141,11 @@
                 }
             ],
             "directives": [],
-            "end": 41,
+            "end": 29,
             "loc": {
                 "end": {
                     "column": 0,
-                    "line": 4
+                    "line": 2
                 },
                 "start": {
                     "column": 0,

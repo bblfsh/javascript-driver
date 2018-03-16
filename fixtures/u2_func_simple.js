@@ -1,3 +1,3 @@
-function foo(a) {
-    return a
+function testfnc1(a, b) {
+    return 1
 }

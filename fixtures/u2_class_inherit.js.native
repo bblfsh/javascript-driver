@@ -4,7 +4,7 @@
     "errors": [],
     "ast": {
         "comments": [],
-        "end": 23,
+        "end": 35,
         "loc": {
             "end": {
                 "column": 0,
@@ -18,46 +18,43 @@
         "program": {
             "body": [
                 {
-                    "async": false,
                     "body": {
                         "body": [],
-                        "directives": [],
-                        "end": 22,
+                        "end": 34,
                         "loc": {
                             "end": {
-                                "column": 22,
+                                "column": 34,
                                 "line": 1
                             },
                             "start": {
-                                "column": 20,
+                                "column": 32,
                                 "line": 1
                             }
                         },
-                        "start": 20,
-                        "type": "BlockStatement"
+                        "start": 32,
+                        "type": "ClassBody"
                     },
-                    "end": 22,
-                    "generator": false,
+                    "end": 34,
                     "id": {
-                        "end": 17,
+                        "end": 14,
                         "loc": {
                             "end": {
-                                "column": 17,
+                                "column": 14,
                                 "line": 1
                             },
-                            "identifierName": "testfnc1",
+                            "identifierName": "testcls1",
                             "start": {
-                                "column": 9,
+                                "column": 6,
                                 "line": 1
                             }
                         },
-                        "name": "testfnc1",
-                        "start": 9,
+                        "name": "testcls1",
+                        "start": 6,
                         "type": "Identifier"
                     },
                     "loc": {
                         "end": {
-                            "column": 22,
+                            "column": 34,
                             "line": 1
                         },
                         "start": {
@@ -65,13 +62,29 @@
                             "line": 1
                         }
                     },
-                    "params": [],
                     "start": 0,
-                    "type": "FunctionDeclaration"
+                    "superClass": {
+                        "end": 31,
+                        "loc": {
+                            "end": {
+                                "column": 31,
+                                "line": 1
+                            },
+                            "identifierName": "testcls2",
+                            "start": {
+                                "column": 23,
+                                "line": 1
+                            }
+                        },
+                        "name": "testcls2",
+                        "start": 23,
+                        "type": "Identifier"
+                    },
+                    "type": "ClassDeclaration"
                 }
             ],
             "directives": [],
-            "end": 23,
+            "end": 35,
             "loc": {
                 "end": {
                     "column": 0,
