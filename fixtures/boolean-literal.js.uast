@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BooleanLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Boolean
+.  .  .  .  .  .  .  Roles: Boolean,Expression,Literal
 .  .  .  .  .  .  .  TOKEN "true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
@@ -84,7 +84,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BooleanLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Boolean
+.  .  .  .  .  .  .  Roles: Boolean,Expression,Literal
 .  .  .  .  .  .  .  TOKEN "false"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 6

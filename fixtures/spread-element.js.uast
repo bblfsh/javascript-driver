@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: CallExpression {
-.  .  .  .  .  .  .  Roles: Expression,Call
+.  .  .  .  .  .  .  Roles: Call,Expression
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -65,7 +65,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Call,Callee
+.  .  .  .  .  .  .  .  .  Roles: Call,Callee,Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 0
@@ -82,7 +82,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: SpreadElement {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete,Call,Argument,ArgsList
+.  .  .  .  .  .  .  .  .  Roles: ArgsList,Argument,Call,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 2
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -192,7 +192,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: VariableDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Variable
+.  .  .  .  .  Roles: Declaration,Statement,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  Line: 3
@@ -242,7 +242,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: ObjectExpression {
-.  .  .  .  .  .  .  .  .  Roles: Initialization,Expression,Map,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,Initialization,Literal,Map
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 25
 .  .  .  .  .  .  .  .  .  .  Line: 3

@@ -1,280 +1,569 @@
 package normalizer
 
 import (
-	"github.com/bblfsh/javascript-driver/driver/normalizer/babylon"
 	"gopkg.in/bblfsh/sdk.v1/uast"
-	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer/annotatter"
+	"gopkg.in/bblfsh/sdk.v1/uast/role"
+	. "gopkg.in/bblfsh/sdk.v1/uast/transformer"
+	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 )
 
-// Transformers is the list of `transformer.Transfomer` to apply to a UAST, to
-// learn more about the Transformers and the available ones take a look to:
-// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/transformers
-var Transformers = []transformer.Tranformer{
-	annotatter.NewAnnotatter(AnnotationRules),
+// Native is the of list `transformer.Transformer` to apply to a native AST.
+// To learn more about the Transformers and the available ones take a look to:
+// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/transformer
+var Native = Transformers([][]Transformer{
+	{
+		// ResponseMetadata is a transform that trims response metadata from AST.
+		//
+		// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast#ResponseMetadata
+		ResponseMetadata{
+			TopLevelIsRootNode: true,
+		},
+		Mappings(
+			ASTMap("remove loc",
+				Part("_", Obj{"loc": AnyNode(Obj{})}),
+				Part("_", Obj{}),
+			),
+			ASTMap("remove extra",
+				Part("_", Obj{"extra": AnyNode(Obj{})}),
+				Part("_", Obj{}),
+			),
+		),
+	},
+	// The main block of transformation rules.
+	{Mappings(Annotations...)},
+	{
+		// RolesDedup is used to remove duplicate roles assigned by multiple
+		// transformation rules.
+		RolesDedup(),
+	},
+}...)
+
+// Code is a special block of transformations that are applied at the end
+// and can access original source code file. It can be used to improve or
+// fix positional information.
+//
+// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner
+var Code = []CodeTransformer{
+	positioner.NewFillLineColFromOffset(),
 }
 
-// AnnotationRules describes how a UAST should be annotated with `uast.Role`.
-//
-// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/ann
-// AnnotationRules annotate a UAST with roles.
-var AnnotationRules = On(babylon.File).Roles(uast.File).Descendants(
-	// Comments
-	On(babylon.CommentLine).Roles(uast.Comment),
-	On(babylon.CommentBlock).Roles(uast.Comment, uast.Block),
-	On(babylon.Program).Roles(uast.Module).Descendants(
-		// Identifiers
-		On(babylon.Identifier).Roles(uast.Expression, uast.Identifier),
-		On(babylon.PrivateName).Roles(uast.Expression, uast.Identifier, uast.Qualified, uast.Visibility, uast.Instance),
+// mapAST is a helper for describing a single AST transformation for a given node type.
+func mapAST(typ string, ast, norm ObjectOp, roles ...role.Role) Mapping {
+	return mapASTCustom(typ, ast, norm, nil, roles...)
+}
 
-		// Literals
-		On(babylon.RegExpLiteral).Roles(uast.Expression, uast.Literal, uast.Regexp),
-		On(babylon.NullLiteral).Roles(uast.Expression, uast.Literal, uast.Null),
-		On(babylon.StringLiteral).Roles(uast.Expression, uast.Literal, uast.String),
-		On(babylon.BooleanLiteral).Roles(uast.Expression, uast.Literal, uast.Boolean),
-		On(babylon.NumericLiteral).Roles(uast.Expression, uast.Literal, uast.Number),
+func mapASTCustom(typ string, ast, norm ObjectOp, rop ArrayOp, roles ...role.Role) Mapping {
+	return ASTMap(typ,
+		ASTObjectLeft(typ, ast),
+		ASTObjectRight(typ, norm, rop, roles...),
+	)
+}
 
-		// Functions
-		On(Or(babylon.FunctionDeclaration, babylon.ArrowFunctionExpression, babylon.FunctionExpression, babylon.ObjectMethod,
-			babylon.ClassMethod, babylon.ClassPrivateMethod, babylon.OptFunctionDeclaration)).
-			Roles(uast.Declaration, uast.Function).Children(
-			On(babylon.PropertyId).Roles(uast.Function, uast.Name),
-			On(babylon.PropertyParams).Roles(uast.Function, uast.Argument).Self(
-				On(babylon.RestElement).Roles(uast.ArgsList),
-			),
-			On(babylon.PropertyBody).Roles(uast.Function, uast.Body),
-		),
+var (
+	unaryRoles = StringToRolesMap(map[string][]role.Role{
+		// Unary operators
+		"-":      {role.Arithmetic, role.Negative},
+		"+":      {role.Arithmetic, role.Positive},
+		"!":      {role.Boolean, role.Not},
+		"~":      {role.Bitwise, role.Not},
+		"typeof": {role.Type},
+		"void":   {role.Null},
+		"delete": {role.Incomplete},
+		"throw":  {role.Throw},
 
-		// Statements
-		On(babylon.ExpressionStatement).Roles(uast.Statement),
-		On(babylon.BlockStatement).Roles(uast.Statement, uast.Block, uast.Scope),
-		On(babylon.EmptyStatement).Roles(uast.Statement),
-		On(babylon.DebuggerStatement).Roles(uast.Statement, uast.Incomplete),
-		On(babylon.WithStatement).Roles(uast.Statement, uast.Scope, uast.Block, uast.Incomplete).Children(
-			On(babylon.PropertyObject).Roles(uast.Incomplete),
-		),
-
-		// Control flow
-		On(babylon.ReturnStatement).Roles(uast.Statement, uast.Return),
-		On(babylon.LabeledStatement).Roles(uast.Statement, uast.Incomplete),
-		On(babylon.BreakStatement).Roles(uast.Statement, uast.Break),
-		On(babylon.ContinueStatement).Roles(uast.Statement, uast.Continue),
-
-		// Choice
-		On(Or(babylon.IfStatement, babylon.ConditionalExpression)).Roles(uast.If).Children(
-			On(babylon.PropertyTest).Roles(uast.If, uast.Condition),
-			On(babylon.PropertyConsequent).Roles(uast.If, uast.Then, uast.Body),
-			On(babylon.PropertyAlternate).Roles(uast.If, uast.Else, uast.Body),
-		),
-		On(babylon.IfStatement).Roles(uast.Statement),
-		On(babylon.SwitchStatement).Roles(uast.Statement, uast.Switch).Children(
-			On(babylon.PropertyDiscriminant).Roles(uast.Switch, uast.Condition),
-		),
-		On(babylon.SwitchCase).Roles(uast.Switch, uast.Case).Children(
-			On(babylon.PropertyTest).Roles(uast.Case, uast.Condition),
-		),
-
-		// Exception
-		On(babylon.ThrowStatement).Roles(uast.Statement, uast.Throw),
-		On(babylon.TryStatement).Roles(uast.Statement, uast.Try).Children(
-			On(babylon.PropertyFinalizer).Roles(uast.Try, uast.Finally),
-		),
-		On(babylon.CatchClause).Roles(uast.Try, uast.Catch),
-
-		// Loops
-		On(babylon.WhileStatement).Roles(uast.Statement, uast.While).Children(
-			On(babylon.PropertyTest).Roles(uast.While, uast.Condition),
-			On(babylon.PropertyBody).Roles(uast.While, uast.Body),
-		),
-		On(babylon.DoWhileStatement).Roles(uast.Statement, uast.DoWhile).Children(
-			On(babylon.PropertyTest).Roles(uast.DoWhile, uast.Condition),
-			On(babylon.PropertyBody).Roles(uast.DoWhile, uast.Body),
-		),
-		On(babylon.ForStatement).Roles(uast.Statement, uast.For).Children(
-			On(babylon.PropertyInit).Roles(uast.For, uast.Initialization),
-			On(babylon.PropertyTest).Roles(uast.For, uast.Condition),
-			On(babylon.PropertyUpdate).Roles(uast.For, uast.Update),
-		),
-		On(Or(babylon.ForInStatement, babylon.ForOfStatement)).Roles(uast.Statement, uast.For, uast.Iterator).Children(
-			On(babylon.PropertyLeft).Roles(uast.For, uast.Iterator),
-			On(babylon.PropertyRight).Roles(uast.For),
-			On(babylon.PropertyBody).Roles(uast.For, uast.Body),
-		),
-
-		// Declarations
-		On(babylon.FunctionDeclaration).Roles(uast.Statement),
-		On(babylon.VariableDeclaration).Roles(uast.Statement, uast.Declaration, uast.Variable),
-		On(babylon.VariableDeclarator).Roles(uast.Declaration, uast.Variable).Children(
-			On(babylon.PropertyInit).Roles(uast.Initialization),
-		),
-
-		// Misc
-		On(babylon.Decorator).Roles(uast.Incomplete),
-		On(babylon.Directive).Roles(uast.Incomplete),
-		On(babylon.DirectiveLiteral).Roles(uast.Expression, uast.Literal, uast.Incomplete),
-
-		// Expressions
-		On(babylon.Super).Roles(uast.Expression, uast.Identifier, uast.Base),
-		On(babylon.Import).Roles(uast.Expression, uast.Import),
-		On(babylon.ThisExpression).Roles(uast.Expression, uast.This),
-		On(babylon.ArrowFunctionExpression).Roles(uast.Expression),
-		On(babylon.YieldExpression).Roles(uast.Expression, uast.Return, uast.Incomplete),
-		On(babylon.AwaitExpression).Roles(uast.Expression, uast.Incomplete),
-		On(babylon.ArrayExpression).Roles(uast.Expression, uast.Initialization, uast.List, uast.Literal),
-		On(babylon.ObjectExpression).Roles(uast.Expression, uast.Initialization, uast.Map, uast.Literal),
-		On(babylon.SpreadElement).Roles(uast.Incomplete),
-		On(babylon.MemberExpression).Roles(uast.Qualified, uast.Expression, uast.Identifier),
-		On(babylon.BindExpression).Roles(uast.Expression, uast.Incomplete),
-		On(babylon.ConditionalExpression).Roles(uast.Expression),
-		On(babylon.NewExpression).Roles(uast.Expression, uast.Incomplete),
-		On(babylon.SequenceExpression).Roles(uast.Expression, uast.List),
-		On(babylon.DoExpression).Roles(uast.Expression, uast.Incomplete).Children(
-			On(babylon.PropertyBody).Roles(uast.Body),
-		),
-
-		// Object properties
-		On(babylon.ObjectMethod).Roles(uast.Map).Children(
-			On(babylon.PropertyKey).Roles(uast.Map, uast.Key, uast.Function, uast.Name),
-			On(babylon.PropertyBody).Roles(uast.Map, uast.Value),
-		),
-		On(babylon.ObjectProperty).Roles(uast.Map).Children(
-			On(babylon.PropertyKey).Roles(uast.Map, uast.Key),
-			On(babylon.PropertyValue).Roles(uast.Map, uast.Value),
-		),
-
-		// Function expressions
-		On(babylon.FunctionExpression).Roles(uast.Expression),
-		On(babylon.CallExpression).Roles(uast.Expression, uast.Call).Children(
-			On(babylon.PropertyCallee).Roles(uast.Call, uast.Callee),
-			On(babylon.PropertyArguments).Roles(uast.Call, uast.Argument),
-			On(babylon.SpreadElement).Roles(uast.ArgsList),
-		),
-
-		// Unary operations
-		On(Or(babylon.UnaryExpression, babylon.UpdateExpression)).Roles(uast.Expression, uast.Unary, uast.Operator).Self(
-			On(HasProperty("prefix", "false")).Roles(uast.Postfix),
-
-			// Unary operators
-			On(HasProperty("operator", "-")).Roles(uast.Arithmetic, uast.Negative),
-			On(HasProperty("operator", "+")).Roles(uast.Arithmetic, uast.Positive),
-			On(HasProperty("operator", "!")).Roles(uast.Boolean, uast.Not),
-			On(HasProperty("operator", "~")).Roles(uast.Bitwise, uast.Not),
-			On(HasProperty("operator", "typeof")).Roles(uast.Type),
-			On(HasProperty("operator", "void")).Roles(uast.Null),
-			On(HasProperty("operator", "delete")).Roles(uast.Incomplete),
-			On(HasProperty("operator", "throw")).Roles(uast.Throw),
-
-			// Update operators
-			On(HasProperty("operator", "++")).Roles(uast.Arithmetic, uast.Increment),
-			On(HasProperty("operator", "--")).Roles(uast.Arithmetic, uast.Decrement),
-		),
-
-		// Binary operations
-		On(babylon.BinaryExpression).Roles(uast.Expression, uast.Operator, uast.Binary).Self(
-			On(HasProperty("operator", "==")).Roles(uast.Relational, uast.Equal),
-			On(HasProperty("operator", "!=")).Roles(uast.Relational, uast.Equal, uast.Not),
-			On(HasProperty("operator", "===")).Roles(uast.Relational, uast.Identical),
-			On(HasProperty("operator", "!==")).Roles(uast.Relational, uast.Identical, uast.Not),
-			On(HasProperty("operator", "<")).Roles(uast.Relational, uast.LessThan),
-			On(HasProperty("operator", "<=")).Roles(uast.Relational, uast.LessThanOrEqual),
-			On(HasProperty("operator", ">")).Roles(uast.Relational, uast.GreaterThan),
-			On(HasProperty("operator", ">=")).Roles(uast.Relational, uast.GreaterThanOrEqual),
-			On(HasProperty("operator", "<<")).Roles(uast.Bitwise, uast.LeftShift),
-			On(HasProperty("operator", ">>")).Roles(uast.Bitwise, uast.RightShift),
-			On(HasProperty("operator", ">>>")).Roles(uast.Bitwise, uast.RightShift, uast.Unsigned),
-			On(HasProperty("operator", "+")).Roles(uast.Arithmetic, uast.Add),
-			On(HasProperty("operator", "-")).Roles(uast.Arithmetic, uast.Substract),
-			On(HasProperty("operator", "*")).Roles(uast.Arithmetic, uast.Multiply),
-			On(HasProperty("operator", "/")).Roles(uast.Arithmetic, uast.Divide),
-			On(HasProperty("operator", "%")).Roles(uast.Arithmetic, uast.Modulo),
-			On(HasProperty("operator", "|")).Roles(uast.Bitwise, uast.Or),
-			On(HasProperty("operator", "^")).Roles(uast.Bitwise, uast.Xor),
-			On(HasProperty("operator", "&")).Roles(uast.Bitwise, uast.And),
-			On(HasProperty("operator", "instanceof")).Roles(uast.Type),
-			On(HasProperty("operator", "|>")).Roles(uast.Incomplete),
-		).Children(
-			On(babylon.PropertyLeft).Roles(uast.Binary, uast.Left),
-			On(babylon.PropertyRight).Roles(uast.Binary, uast.Right),
-		),
-		On(babylon.AssignmentExpression).Roles(uast.Expression, uast.Assignment, uast.Operator, uast.Binary).Self(
-			On(HasProperty("operator", "+=")).Roles(uast.Arithmetic, uast.Add),
-			On(HasProperty("operator", "-=")).Roles(uast.Arithmetic, uast.Substract),
-			On(HasProperty("operator", "*=")).Roles(uast.Arithmetic, uast.Multiply),
-			On(HasProperty("operator", "/=")).Roles(uast.Arithmetic, uast.Divide),
-			On(HasProperty("operator", "%=")).Roles(uast.Arithmetic, uast.Modulo),
-			On(HasProperty("operator", "<<=")).Roles(uast.Bitwise, uast.LeftShift),
-			On(HasProperty("operator", ">>=")).Roles(uast.Bitwise, uast.RightShift),
-			On(HasProperty("operator", ">>>=")).Roles(uast.Bitwise, uast.RightShift, uast.Unsigned),
-			On(HasProperty("operator", "|=")).Roles(uast.Bitwise, uast.Or),
-			On(HasProperty("operator", "^=")).Roles(uast.Bitwise, uast.Xor),
-			On(HasProperty("operator", "&=")).Roles(uast.Bitwise, uast.And),
-		).Children(
-			On(babylon.PropertyLeft).Roles(uast.Assignment, uast.Binary, uast.Left),
-			On(babylon.PropertyRight).Roles(uast.Assignment, uast.Binary, uast.Right),
-		),
-		On(babylon.LogicalExpression).Roles(uast.Boolean, uast.Expression, uast.Operator, uast.Binary).Self(
-			On(HasProperty("operator", "||")).Roles(uast.Or),
-			On(HasProperty("operator", "&&")).Roles(uast.And),
-			On(HasProperty("operator", "??")).Roles(uast.Incomplete),
-		).Children(
-			On(babylon.PropertyLeft).Roles(uast.Boolean, uast.Binary, uast.Left),
-			On(babylon.PropertyRight).Roles(uast.Boolean, uast.Binary, uast.Right),
-		),
-
-		// Template literals
-		On(babylon.TemplateLiteral).Roles(uast.Expression, uast.Literal, uast.Incomplete),
-		On(babylon.TaggedTemplateExpression).Roles(uast.Expression, uast.Literal, uast.Incomplete),
-		On(babylon.TemplateElement).Roles(uast.Literal, uast.String, uast.Incomplete),
-
-		// Patterns
-		On(babylon.ObjectPattern).Roles(uast.Incomplete),
-		On(babylon.ArrayPattern).Roles(uast.Incomplete),
-		On(babylon.RestElement).Roles(uast.Incomplete),
-		On(babylon.AssignmentPattern).Roles(uast.Assignment, uast.Incomplete),
-
-		// Classes
-		On(babylon.ClassBody).Roles(uast.Type, uast.Body),
-		On(Or(babylon.ClassDeclaration, babylon.ClassExpression, babylon.OptClasDeclaration)).Roles(uast.Declaration, uast.Type).Children(
-			On(babylon.PropertyId).Roles(uast.Type, uast.Name),
-			On(babylon.PropertySuperClass).Roles(uast.Type, uast.Base),
-		),
-		On(babylon.ClassDeclaration).Roles(uast.Statement),
-		On(babylon.ClassExpression).Roles(uast.Expression),
-		On(Or(babylon.ClassMethod, babylon.ClassPrivateMethod)).Roles(uast.Statement).Children(
-			On(babylon.PropertyKey).Roles(uast.Key, uast.Name),
-			On(babylon.PropertyBody).Roles(uast.Value),
-		),
-		On(Or(babylon.ClassProperty, babylon.ClassPrivateProperty)).Roles(uast.Variable).Children(
-			On(babylon.PropertyKey).Roles(uast.Key, uast.Name),
-			On(babylon.PropertyValue).Roles(uast.Value, uast.Initialization),
-		),
-
-		On(babylon.MetaProperty).Roles(uast.Expression, uast.Incomplete),
-
-		// Modules
-		On(babylon.ImportDeclaration).Roles(uast.Statement, uast.Declaration, uast.Import).Children(
-			On(babylon.PropertySpecifiers).Roles(uast.Import),
-			On(babylon.PropertySource).Roles(uast.Import, uast.Pathname),
-		),
-		On(Or(babylon.ImportSpecifier, babylon.ImportDefaultSpecifier, babylon.ImportNamespaceSpecifier)).Roles(uast.Import).Children(
-			On(babylon.PropertyLocal).Roles(uast.Import),
-		),
-		On(babylon.ImportSpecifier).Children(
-			On(babylon.PropertyImported).Roles(uast.Import),
-		),
-		On(Or(babylon.ExportNamedDeclaration, babylon.ExportDefaultDeclaration, babylon.ExportAllDeclaration)).Roles(uast.Statement, uast.Declaration, uast.Visibility, uast.Module, uast.Incomplete),
-		On(babylon.ExportNamedDeclaration).Roles(uast.Statement, uast.Declaration, uast.Visibility, uast.Module, uast.Incomplete).Children(
-			On(babylon.PropertyDeclaration).Roles(uast.Incomplete),
-			On(babylon.PropertySpecifiers).Roles(uast.Incomplete),
-			On(babylon.PropertySource).Roles(uast.Pathname, uast.Incomplete),
-		),
-		On(babylon.ExportSpecifier).Children(
-			On(babylon.PropertyLocal).Roles(uast.Incomplete),
-			On(babylon.PropertyExported).Roles(uast.Incomplete),
-		),
-		On(Or(babylon.OptFunctionDeclaration, babylon.OptClasDeclaration)).Roles(uast.Statement, uast.Incomplete).Children(
-			On(babylon.PropertyId).Roles(uast.Name, uast.Incomplete),
-		),
-	),
+		// Update operators
+		"++": {role.Arithmetic, role.Increment},
+		"--": {role.Arithmetic, role.Decrement},
+	})
+	binaryRoles = StringToRolesMap(map[string][]role.Role{
+		"in":         {},
+		"==":         {role.Relational, role.Equal},
+		"!=":         {role.Relational, role.Equal, role.Not},
+		"===":        {role.Relational, role.Identical},
+		"!==":        {role.Relational, role.Identical, role.Not},
+		"<":          {role.Relational, role.LessThan},
+		"<=":         {role.Relational, role.LessThanOrEqual},
+		">":          {role.Relational, role.GreaterThan},
+		">=":         {role.Relational, role.GreaterThanOrEqual},
+		"<<":         {role.Bitwise, role.LeftShift},
+		">>":         {role.Bitwise, role.RightShift},
+		">>>":        {role.Bitwise, role.RightShift, role.Unsigned},
+		"+":          {role.Arithmetic, role.Add},
+		"-":          {role.Arithmetic, role.Substract},
+		"*":          {role.Arithmetic, role.Multiply},
+		"/":          {role.Arithmetic, role.Divide},
+		"%":          {role.Arithmetic, role.Modulo},
+		"|":          {role.Bitwise, role.Or},
+		"^":          {role.Bitwise, role.Xor},
+		"&":          {role.Bitwise, role.And},
+		"instanceof": {role.Type},
+		"|>":         {role.Incomplete},
+	})
+	assignRoles = StringToRolesMap(map[string][]role.Role{
+		"=":    {},
+		"+=":   {role.Arithmetic, role.Add},
+		"-=":   {role.Arithmetic, role.Substract},
+		"*=":   {role.Arithmetic, role.Multiply},
+		"/=":   {role.Arithmetic, role.Divide},
+		"%=":   {role.Arithmetic, role.Modulo},
+		"<<=":  {role.Bitwise, role.LeftShift},
+		">>=":  {role.Bitwise, role.RightShift},
+		">>>=": {role.Bitwise, role.RightShift, role.Unsigned},
+		"|=":   {role.Bitwise, role.Or},
+		"^=":   {role.Bitwise, role.Xor},
+		"&=":   {role.Bitwise, role.And},
+	})
+	logicalRoles = StringToRolesMap(map[string][]role.Role{
+		"||": {role.Or},
+		"&&": {role.And},
+		"??": {role.Incomplete},
+	})
 )
+
+func literal(typ string, roles ...role.Role) Mapping {
+	return mapAST(typ, Obj{
+		"value": Var("val"),
+	}, Obj{
+		uast.KeyToken: Var("val"),
+	}, roles...)
+}
+
+func function(typ string) Mapping {
+	return mapAST(typ, Obj{
+		"id":     OptObjectRoles("id"),
+		"body":   ObjectRoles("body"),
+		"params": EachObjectRolesByType("param", nil),
+	}, Obj{
+		"id":   OptObjectRoles("id", role.Function, role.Name),
+		"body": ObjectRoles("body", role.Function, role.Body),
+		// TODO: AnnotateType("RestElement", nil, role.ArgsList),
+		"params": EachObjectRolesByType("param", map[string][]role.Role{
+			"RestElement": {role.ArgsList},
+			"":            {},
+		}, role.Function, role.Argument),
+	}, role.Declaration, role.Function)
+}
+
+// Annotations is a list of individual transformations to annotate a native AST with roles.
+var Annotations = []Mapping{
+	// ObjectToNode defines how to normalize common fields of native AST
+	// (like node type, token, positional information).
+	//
+	// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast#ObjectToNode
+	ObjectToNode{
+		InternalTypeKey: "type",
+		OffsetKey:       "start",
+		EndOffsetKey:    "end",
+	}.Mapping(),
+
+	AnnotateType("File", nil, role.File),
+	AnnotateType("Program", nil, role.Module),
+
+	// Comments
+	mapAST("CommentLine", Obj{
+		"value": UncommentCLike("text"),
+	}, Obj{
+		uast.KeyToken: Var("text"),
+	}, role.Comment),
+
+	mapAST("CommentBlock", Obj{
+		"value": UncommentCLike("text"),
+	}, Obj{
+		uast.KeyToken: Var("text"),
+	}, role.Comment, role.Block),
+
+	// Identifiers
+	AnnotateTypeFields("Identifier",
+		FieldRoles{
+			"name": {Rename: uast.KeyToken},
+		},
+		role.Expression, role.Identifier,
+	),
+	AnnotateType("PrivateName", nil, role.Expression, role.Identifier, role.Qualified, role.Visibility, role.Instance),
+
+	// Literals
+	AnnotateTypeFields("RegExpLiteral",
+		FieldRoles{
+			"pattern": {Rename: uast.KeyToken},
+		},
+		role.Expression, role.Literal, role.Regexp,
+	),
+	AnnotateType("NullLiteral", nil, role.Expression, role.Literal, role.Null),
+	literal("StringLiteral", role.Expression, role.Literal, role.String),
+	literal("BooleanLiteral", role.Expression, role.Literal, role.Boolean),
+	literal("NumericLiteral", role.Expression, role.Literal, role.Number),
+
+	// Functions
+	function("FunctionDeclaration"),
+	function("ArrowFunctionExpression"),
+	function("FunctionExpression"),
+	function("ObjectMethod"),
+	function("ClassMethod"),
+	function("ClassPrivateMethod"),
+	function("OptFunctionDeclaration"),
+
+	// Statements
+	AnnotateType("ExpressionStatement", nil, role.Statement),
+	AnnotateType("BlockStatement", nil, role.Statement, role.Block, role.Scope),
+	AnnotateType("EmptyStatement", nil, role.Statement),
+	AnnotateType("DebuggerStatement", nil, role.Statement, role.Incomplete),
+
+	AnnotateType("WithStatement",
+		ObjRoles{
+			"object": {role.Incomplete},
+		},
+		role.Statement, role.Scope, role.Block, role.Incomplete,
+	),
+
+	// Control flow
+	AnnotateType("ReturnStatement", nil, role.Statement, role.Return),
+	AnnotateType("LabeledStatement", nil, role.Statement, role.Incomplete),
+	AnnotateType("BreakStatement", nil, role.Statement, role.Break),
+	AnnotateType("ContinueStatement", nil, role.Statement, role.Continue),
+
+	// Choice
+	AnnotateType("IfStatement",
+		ObjRoles{
+			"test":       {role.If, role.Condition},
+			"consequent": {role.If, role.Then, role.Body},
+			"alternate":  {role.If, role.Else, role.Body},
+		},
+		role.If,
+	),
+	AnnotateType("ConditionalExpression",
+		ObjRoles{
+			"test":       {role.If, role.Condition},
+			"consequent": {role.If, role.Then, role.Body},
+			"alternate":  {role.If, role.Else, role.Body},
+		},
+		role.If,
+	),
+	AnnotateType("IfStatement", nil, role.Statement),
+	AnnotateType("SwitchStatement",
+		ObjRoles{
+			"discriminant": {role.Switch, role.Condition},
+		},
+		role.Statement, role.Switch,
+	),
+	AnnotateType("SwitchCase",
+		ObjRoles{
+			"test": {role.Case, role.Condition},
+		},
+		role.Switch, role.Case,
+	),
+
+	// Exception
+	AnnotateType("ThrowStatement", nil, role.Statement, role.Throw),
+	AnnotateType("TryStatement",
+		ObjRoles{
+			"finalizer": {role.Try, role.Finally},
+		},
+		role.Statement, role.Try,
+	),
+	AnnotateType("CatchClause", nil, role.Try, role.Catch),
+
+	// Loops
+	AnnotateType("WhileStatement",
+		ObjRoles{
+			"test": {role.While, role.Condition},
+			"body": {role.While, role.Body},
+		},
+		role.Statement, role.While,
+	),
+	AnnotateType("DoWhileStatement",
+		ObjRoles{
+			"test": {role.DoWhile, role.Condition},
+			"body": {role.DoWhile, role.Body},
+		},
+		role.Statement, role.DoWhile,
+	),
+	AnnotateType("ForStatement",
+		ObjRoles{
+			"init":   {role.For, role.Initialization},
+			"test":   {role.For, role.Condition},
+			"update": {role.For, role.Update},
+		},
+		role.Statement, role.For,
+	),
+	AnnotateType("ForInStatement",
+		ObjRoles{
+			"left":  {role.For, role.Iterator},
+			"right": {role.For},
+			"body":  {role.For, role.Body},
+		},
+		role.Statement, role.For, role.Iterator,
+	),
+	AnnotateType("ForOfStatement",
+		ObjRoles{
+			"left":  {role.For, role.Iterator},
+			"right": {role.For},
+			"body":  {role.For, role.Body},
+		},
+		role.Statement, role.For, role.Iterator,
+	),
+
+	// Declarations
+	AnnotateType("FunctionDeclaration", nil, role.Statement),
+	AnnotateType("VariableDeclaration", nil, role.Statement, role.Declaration, role.Variable),
+	AnnotateType("VariableDeclarator",
+		ObjRoles{
+			"init": {role.Initialization},
+		},
+		role.Declaration, role.Variable,
+	),
+
+	// Misc
+	AnnotateType("Decorator", nil, role.Incomplete),
+	AnnotateType("Directive", nil, role.Incomplete),
+	AnnotateTypeFields("DirectiveLiteral",
+		FieldRoles{
+			"value": {Rename: uast.KeyToken},
+		},
+		role.Expression, role.Literal, role.Incomplete,
+	),
+
+	// Expressions
+	AnnotateType("Super", nil, role.Expression, role.Identifier, role.Base),
+	AnnotateType("Import", nil, role.Expression, role.Import),
+	AnnotateType("ThisExpression", nil, role.Expression, role.This),
+	AnnotateType("ArrowFunctionExpression", nil, role.Expression),
+	AnnotateType("YieldExpression", nil, role.Expression, role.Return, role.Incomplete),
+	AnnotateType("AwaitExpression", nil, role.Expression, role.Incomplete),
+	AnnotateType("ArrayExpression", nil, role.Expression, role.Initialization, role.List, role.Literal),
+	AnnotateType("ObjectExpression", nil, role.Expression, role.Initialization, role.Map, role.Literal),
+	AnnotateType("SpreadElement", nil, role.Incomplete),
+	AnnotateType("MemberExpression", nil, role.Qualified, role.Expression, role.Identifier),
+	AnnotateType("BindExpression", nil, role.Expression, role.Incomplete),
+	AnnotateType("ConditionalExpression", nil, role.Expression),
+	AnnotateType("NewExpression", nil, role.Expression, role.Incomplete),
+	AnnotateType("SequenceExpression", nil, role.Expression, role.List),
+	AnnotateType("DoExpression",
+		ObjRoles{
+			"body": {role.Body},
+		},
+		role.Expression, role.Incomplete,
+	),
+
+	// Object properties
+	AnnotateType("ObjectMethod",
+		ObjRoles{
+			"key":  {role.Map, role.Key, role.Function, role.Name},
+			"body": {role.Map, role.Value},
+		},
+		role.Map,
+	),
+	AnnotateType("ObjectProperty",
+		ObjRoles{
+			"key":   {role.Map, role.Key},
+			"value": {role.Map, role.Value},
+		},
+		role.Map,
+	),
+
+	// Function expressions
+	AnnotateType("FunctionExpression", nil, role.Expression),
+	mapAST("CallExpression", Obj{
+		"callee":    ObjectRoles("callee"),
+		"arguments": EachObjectRolesByType("argument", nil),
+	}, Obj{
+		"callee": ObjectRoles("callee", role.Call, role.Callee),
+		"arguments": EachObjectRolesByType("argument", map[string][]role.Role{
+			"SpreadElement": {role.ArgsList},
+			"":              {},
+		}, role.Call, role.Argument),
+	}, role.Expression, role.Call),
+
+	// Unary operations
+	mapASTCustom("UnaryExpression", Obj{
+		"operator": Var("op"),
+	}, Fields{ // ->
+		//{Name:"prefix", Op:  String("true")},
+		{Name: "operator", Op: Operator("op", unaryRoles, role.Unary)},
+	}, LookupArrOpVar("op", unaryRoles), role.Expression, role.Unary, role.Operator),
+
+	mapASTCustom("UpdateExpression", Obj{
+		"operator": Var("op"),
+	}, Fields{ // ->
+		//{Name:"prefix", Op:  String("true")},
+		{Name: "operator", Op: Operator("op", unaryRoles, role.Unary)},
+	}, LookupArrOpVar("op", unaryRoles), role.Expression, role.Unary, role.Operator),
+
+	AnnotateTypeFields("UnaryExpression",
+		FieldRoles{
+			"prefix": {Op: Bool(false)},
+		},
+		role.Postfix,
+	),
+
+	AnnotateTypeFields("UpdateExpression",
+		FieldRoles{
+			"prefix": {Op: Bool(false)},
+		},
+		role.Postfix,
+	),
+
+	// Binary operations
+	mapASTCustom("BinaryExpression", Obj{
+		"operator": Var("op"),
+		"left":     ObjectRoles("left"),
+		"right":    ObjectRoles("right"),
+	}, Fields{ // ->
+		{Name: "operator", Op: Operator("op", binaryRoles, role.Binary)},
+		{Name: "left", Op: ObjectRoles("left", role.Binary, role.Left)},
+		{Name: "right", Op: ObjectRoles("right", role.Binary, role.Right)},
+	}, LookupArrOpVar("op", binaryRoles), role.Expression, role.Operator, role.Binary),
+
+	mapASTCustom("AssignmentExpression", Obj{
+		"operator": Var("op"),
+		"left":     ObjectRoles("left"),
+		"right":    ObjectRoles("right"),
+	}, Fields{ // ->
+		{Name: "operator", Op: Operator("op", assignRoles, role.Assignment, role.Binary)},
+		{Name: "left", Op: ObjectRoles("left", role.Assignment, role.Binary, role.Left)},
+		{Name: "right", Op: ObjectRoles("right", role.Assignment, role.Binary, role.Right)},
+	}, LookupArrOpVar("op", assignRoles), role.Expression, role.Assignment, role.Operator, role.Binary),
+
+	mapASTCustom("LogicalExpression", Obj{
+		"operator": Var("op"),
+		"left":     ObjectRoles("left"),
+		"right":    ObjectRoles("right"),
+	}, Fields{ // ->
+		{Name: "operator", Op: Operator("op", logicalRoles, role.Boolean, role.Binary)},
+		{Name: "left", Op: ObjectRoles("left", role.Boolean, role.Binary, role.Left)},
+		{Name: "right", Op: ObjectRoles("right", role.Boolean, role.Binary, role.Right)},
+	}, LookupArrOpVar("op", logicalRoles), role.Boolean, role.Expression, role.Operator, role.Binary),
+
+	// Template literals
+	AnnotateType("TemplateLiteral", nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType("TaggedTemplateExpression", nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateTypeFields("TemplateElement",
+		FieldRoles{
+			"value": {Skip: true}, // drop value field
+		},
+		role.Literal, role.String, role.Incomplete,
+	),
+
+	// Patterns
+	AnnotateType("ObjectPattern", nil, role.Incomplete),
+	AnnotateType("ArrayPattern", nil, role.Incomplete),
+	AnnotateType("RestElement", nil, role.Incomplete),
+	AnnotateType("AssignmentPattern", nil, role.Assignment, role.Incomplete),
+
+	// Classes
+	AnnotateType("ClassBody", nil, role.Type, role.Body),
+	AnnotateType("ClassDeclaration",
+		ObjRoles{
+			"id":         {role.Type, role.Name},
+			"superClass": {role.Type, role.Base},
+		},
+		role.Declaration, role.Type,
+	),
+	AnnotateType("ClassExpression",
+		ObjRoles{
+			"id":         {role.Type, role.Name},
+			"superClass": {role.Type, role.Base},
+		},
+		role.Declaration, role.Type,
+	),
+	AnnotateType("OptClasDeclaration",
+		ObjRoles{
+			"id":         {role.Type, role.Name},
+			"superClass": {role.Type, role.Base},
+		},
+		role.Declaration, role.Type,
+	),
+	AnnotateType("ClassDeclaration", nil, role.Statement),
+	AnnotateType("ClassExpression", nil, role.Expression),
+	AnnotateType("ClassMethod",
+		ObjRoles{
+			"key":  {role.Key, role.Name},
+			"body": {role.Value},
+		},
+		role.Statement,
+	),
+	AnnotateType("ClassPrivateMethod",
+		ObjRoles{
+			"key":  {role.Key, role.Name},
+			"body": {role.Value},
+		},
+		role.Statement,
+	),
+	AnnotateType("ClassProperty",
+		ObjRoles{
+			"key":   {role.Key, role.Name},
+			"value": {role.Value, role.Initialization},
+		},
+		role.Variable,
+	),
+	AnnotateType("ClassPrivateProperty",
+		ObjRoles{
+			"key":   {role.Key, role.Name},
+			"value": {role.Value, role.Initialization},
+		},
+		role.Variable,
+	),
+
+	AnnotateType("MetaProperty", nil, role.Expression, role.Incomplete),
+
+	// Modules
+	AnnotateTypeFields("ImportDeclaration",
+		FieldRoles{
+			"specifiers": {Arr: true, Roles: role.Roles{role.Import}},
+			"source":     {Roles: role.Roles{role.Import, role.Pathname}},
+		},
+		role.Statement, role.Declaration, role.Import,
+	),
+	AnnotateType("ImportSpecifier",
+		ObjRoles{
+			"local": {role.Import},
+		},
+		role.Import,
+	),
+	AnnotateType("ImportDefaultSpecifier",
+		ObjRoles{
+			"local": {role.Import},
+		},
+		role.Import,
+	),
+	AnnotateType("ImportNamespaceSpecifier",
+		ObjRoles{
+			"local": {role.Import},
+		},
+		role.Import,
+	),
+	AnnotateType("ImportSpecifier",
+		ObjRoles{
+			"imported": {role.Import},
+		},
+	),
+	AnnotateType("ExportNamedDeclaration", nil, role.Statement, role.Declaration, role.Visibility, role.Module, role.Incomplete),
+	AnnotateType("ExportDefaultDeclaration", nil, role.Statement, role.Declaration, role.Visibility, role.Module, role.Incomplete),
+	AnnotateType("ExportAllDeclaration", nil, role.Statement, role.Declaration, role.Visibility, role.Module, role.Incomplete),
+	AnnotateTypeFields("ExportNamedDeclaration",
+		FieldRoles{
+			"declaration": {Roles: role.Roles{role.Incomplete}},
+			"specifiers":  {Arr: true, Roles: role.Roles{role.Incomplete}},
+			"source":      {Opt: true, Roles: role.Roles{role.Pathname, role.Incomplete}},
+		},
+		role.Statement, role.Declaration, role.Visibility, role.Module, role.Incomplete,
+	),
+	AnnotateType("ExportSpecifier",
+		ObjRoles{
+			"local":    {role.Incomplete},
+			"exported": {role.Incomplete},
+		},
+		role.Incomplete,
+	),
+	AnnotateType("OptFunctionDeclaration",
+		ObjRoles{
+			"id": {role.Name, role.Incomplete},
+		},
+		role.Statement, role.Incomplete,
+	),
+	AnnotateType("OptClasDeclaration",
+		ObjRoles{
+			"id": {role.Name, role.Incomplete},
+		},
+		role.Statement, role.Incomplete,
+	),
+}

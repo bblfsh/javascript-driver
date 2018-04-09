@@ -51,7 +51,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "testfnc1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 9
@@ -68,7 +68,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Argument
+.  .  .  .  .  .  .  Roles: Argument,Expression,Function,Identifier
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 18
@@ -85,7 +85,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: AssignmentPattern {
-.  .  .  .  .  .  .  Roles: Function,Argument,Assignment,Incomplete
+.  .  .  .  .  .  .  Roles: Argument,Assignment,Function,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  .  .  Line: 1
@@ -137,7 +137,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: BlockStatement {
-.  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
+.  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  Line: 1

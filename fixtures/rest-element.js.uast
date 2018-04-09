@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: AssignmentExpression {
-.  .  .  .  .  .  .  Roles: Expression,Assignment,Operator,Binary
+.  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -62,11 +62,17 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: =
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ArrayPattern {
-.  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Left,Incomplete
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
+.  .  .  .  .  .  .  .  .  TOKEN "="
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: ArrayPattern {
+.  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Incomplete,Left
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -118,8 +124,8 @@ File {
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: ArrayExpression {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Initialization,List,Literal,Assignment,Binary,Right
+.  .  .  .  .  .  .  .  2: ArrayExpression {
+.  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Initialization,List,Literal,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 9
 .  .  .  .  .  .  .  .  .  .  Line: 1

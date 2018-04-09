@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BlockStatement {
-.  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  Roles: Block,Scope,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1

@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: VariableDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Variable
+.  .  .  .  .  Roles: Declaration,Statement,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -83,7 +83,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: ObjectExpression {
-.  .  .  .  .  .  .  .  .  Roles: Initialization,Expression,Map,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,Initialization,Literal,Map
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -120,7 +120,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Map,Key,Function,Name
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Key,Map,Name
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 11
@@ -137,7 +137,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope,Map,Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Map,Scope,Statement,Value
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -153,7 +153,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Return,Statement
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1

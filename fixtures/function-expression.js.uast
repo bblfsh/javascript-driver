@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: VariableDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Variable
+.  .  .  .  .  Roles: Declaration,Statement,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -83,7 +83,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: FunctionExpression {
-.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Initialization,Expression
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Expression,Function,Initialization
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -101,7 +101,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -117,7 +117,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Return
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Return,Statement
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1

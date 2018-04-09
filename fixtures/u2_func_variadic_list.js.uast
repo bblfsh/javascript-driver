@@ -51,7 +51,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "testfnc1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 9
@@ -68,7 +68,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
+.  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  .  .  Line: 1
@@ -84,7 +84,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  Roles: Statement,Return
+.  .  .  .  .  .  .  .  .  Roles: Return,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  .  .  Line: 2
@@ -100,7 +100,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: MemberExpression {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Qualified,Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Qualified
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 33
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 2

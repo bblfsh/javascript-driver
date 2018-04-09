@@ -51,7 +51,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 10
@@ -68,7 +68,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
+.  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  Line: 1
@@ -100,7 +100,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: YieldExpression {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Return,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 18
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 2
@@ -135,7 +135,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: YieldExpression {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Return,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -189,7 +189,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: YieldExpression {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Return,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete,Return
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 38
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 4

@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: VariableDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Variable
+.  .  .  .  .  Roles: Declaration,Statement,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -83,7 +83,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: ObjectExpression {
-.  .  .  .  .  .  .  .  .  Roles: Initialization,Expression,Map,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,Initialization,Literal,Map
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -118,7 +118,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Map,Key
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key,Map
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 11
@@ -135,7 +135,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: NumericLiteral {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Map,Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Map,Number,Value
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 14

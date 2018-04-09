@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Arithmetic,Positive
+.  .  .  .  .  .  .  Roles: Arithmetic,Expression,Operator,Positive,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -62,11 +62,17 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: +
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: NumericLiteral {
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Expression,Operator,Positive,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "+"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: NumericLiteral {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -104,7 +110,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Arithmetic,Negative
+.  .  .  .  .  .  .  Roles: Arithmetic,Expression,Negative,Operator,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 4
 .  .  .  .  .  .  .  .  Line: 2
@@ -117,11 +123,17 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: -
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: NumericLiteral {
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Expression,Negative,Operator,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "-"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: NumericLiteral {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -159,7 +171,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Boolean,Not
+.  .  .  .  .  .  .  Roles: Boolean,Expression,Not,Operator,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  .  .  Line: 3
@@ -172,11 +184,17 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: !
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: NumericLiteral {
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Boolean,Expression,Not,Operator,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "!"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: NumericLiteral {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -214,7 +232,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Bitwise,Not
+.  .  .  .  .  .  .  Roles: Bitwise,Expression,Not,Operator,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  .  .  Line: 4
@@ -227,11 +245,17 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: ~
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: NumericLiteral {
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Bitwise,Expression,Not,Operator,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "~"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: NumericLiteral {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -269,7 +293,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Type
+.  .  .  .  .  .  .  Roles: Expression,Operator,Type,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 16
 .  .  .  .  .  .  .  .  Line: 5
@@ -282,11 +306,17 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: typeof
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: NumericLiteral {
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Operator,Type,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "typeof"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: NumericLiteral {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -324,7 +354,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Null
+.  .  .  .  .  .  .  Roles: Expression,Null,Operator,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  Line: 6
@@ -337,11 +367,17 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: void
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: NumericLiteral {
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Null,Operator,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "void"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: NumericLiteral {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -379,7 +415,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Incomplete,Operator,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
 .  .  .  .  .  .  .  .  Line: 7
@@ -392,12 +428,18 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: delete
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: MemberExpression {
-.  .  .  .  .  .  .  .  .  Roles: Qualified,Expression,Identifier
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete,Operator,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "delete"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: MemberExpression {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Qualified
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 41
 .  .  .  .  .  .  .  .  .  .  Line: 7
@@ -470,7 +512,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: UnaryExpression {
-.  .  .  .  .  .  .  Roles: Expression,Unary,Operator,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Incomplete,Operator,Unary
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 46
 .  .  .  .  .  .  .  .  Line: 8
@@ -483,12 +525,18 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  operator: delete
 .  .  .  .  .  .  .  .  prefix: true
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: MemberExpression {
-.  .  .  .  .  .  .  .  .  Roles: Qualified,Expression,Identifier
+.  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete,Operator,Unary
+.  .  .  .  .  .  .  .  .  TOKEN "delete"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: MemberExpression {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Qualified
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 53
 .  .  .  .  .  .  .  .  .  .  Line: 8

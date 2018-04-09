@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: VariableDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Variable
+.  .  .  .  .  Roles: Declaration,Statement,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -83,7 +83,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: ClassExpression {
-.  .  .  .  .  .  .  .  .  Roles: Initialization,Declaration,Type,Expression
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Expression,Initialization,Type
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -99,7 +99,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: ClassBody {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Type,Body
+.  .  .  .  .  .  .  .  .  .  .  Roles: Body,Type
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1

@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: DirectiveLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Incomplete,Literal
 .  .  .  .  .  .  .  TOKEN "use strict"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0

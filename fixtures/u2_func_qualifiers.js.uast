@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ExportNamedDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Visibility,Module,Incomplete
+.  .  .  .  .  Roles: Declaration,Incomplete,Module,Statement,Visibility
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -50,7 +50,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FunctionDeclaration {
-.  .  .  .  .  .  .  Roles: Declaration,Function,Statement,Incomplete
+.  .  .  .  .  .  .  Roles: Declaration,Function,Incomplete,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  .  .  Line: 1
@@ -68,7 +68,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
 .  .  .  .  .  .  .  .  .  TOKEN "testfnc1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 16
@@ -85,7 +85,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Function,Body,Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  .  .  .  .  Line: 1

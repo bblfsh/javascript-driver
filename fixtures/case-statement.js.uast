@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BooleanLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Boolean,Switch,Condition
+.  .  .  .  .  .  .  Roles: Boolean,Condition,Expression,Literal,Switch
 .  .  .  .  .  .  .  TOKEN "true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 7
@@ -66,7 +66,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: SwitchCase {
-.  .  .  .  .  .  .  Roles: Switch,Case
+.  .  .  .  .  .  .  Roles: Case,Switch
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  .  .  Line: 2
@@ -82,7 +82,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BooleanLiteral {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Boolean,Case,Condition
+.  .  .  .  .  .  .  .  .  Roles: Boolean,Case,Condition,Expression,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 20
@@ -115,7 +115,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: AssignmentExpression {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Assignment,Operator,Binary
+.  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 28
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -128,11 +128,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  .  .  .  .  operator: =
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Assignment,Binary,Left
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "="
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Identifier {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 28
@@ -148,8 +154,8 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: NumericLiteral {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Assignment,Binary,Right
+.  .  .  .  .  .  .  .  .  .  .  .  2: NumericLiteral {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Literal,Number,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 32
@@ -170,7 +176,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: BreakStatement {
-.  .  .  .  .  .  .  .  .  Roles: Statement,Break
+.  .  .  .  .  .  .  .  .  Roles: Break,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 37
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -188,7 +194,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: SwitchCase {
-.  .  .  .  .  .  .  Roles: Switch,Case
+.  .  .  .  .  .  .  Roles: Case,Switch
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 44
 .  .  .  .  .  .  .  .  Line: 5
@@ -204,7 +210,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BooleanLiteral {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Boolean,Case,Condition
+.  .  .  .  .  .  .  .  .  Roles: Boolean,Case,Condition,Expression,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "false"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 49
@@ -237,7 +243,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: AssignmentExpression {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Assignment,Operator,Binary
+.  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 58
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 6
@@ -250,11 +256,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  .  .  .  .  operator: =
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Assignment,Binary,Left
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "="
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Identifier {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 58
@@ -270,8 +282,8 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: NumericLiteral {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Assignment,Binary,Right
+.  .  .  .  .  .  .  .  .  .  .  .  2: NumericLiteral {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Literal,Number,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 62
@@ -294,7 +306,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: SwitchCase {
-.  .  .  .  .  .  .  Roles: Switch,Case
+.  .  .  .  .  .  .  Roles: Case,Switch
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 65
 .  .  .  .  .  .  .  .  Line: 7
@@ -326,7 +338,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: AssignmentExpression {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Assignment,Operator,Binary
+.  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 76
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
@@ -339,11 +351,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  .  .  .  .  operator: =
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Assignment,Binary,Left
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Operator {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Operator
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "="
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: operator
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Identifier {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 76
@@ -359,8 +377,8 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: NumericLiteral {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Assignment,Binary,Right
+.  .  .  .  .  .  .  .  .  .  .  .  2: NumericLiteral {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Literal,Number,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 80
@@ -381,7 +399,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: BreakStatement {
-.  .  .  .  .  .  .  .  .  Roles: Statement,Break
+.  .  .  .  .  .  .  .  .  Roles: Break,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 85
 .  .  .  .  .  .  .  .  .  .  Line: 9

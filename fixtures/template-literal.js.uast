@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: TemplateLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Incomplete,Literal
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -65,7 +65,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: TemplateElement {
-.  .  .  .  .  .  .  .  .  Roles: Literal,String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Incomplete,Literal,String
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 1
 .  .  .  .  .  .  .  .  .  .  Line: 1
