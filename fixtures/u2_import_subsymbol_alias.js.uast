@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ImportDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Import
+.  .  .  .  .  Roles: Declaration,Import,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -102,7 +102,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: StringLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 31
@@ -121,7 +121,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: ImportDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Import
+.  .  .  .  .  Roles: Declaration,Import,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 39
 .  .  .  .  .  .  Line: 2
@@ -242,7 +242,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: StringLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 88

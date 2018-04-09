@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: VariableDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Variable
+.  .  .  .  .  Roles: Declaration,Statement,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -83,7 +83,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: MemberExpression {
-.  .  .  .  .  .  .  .  .  Roles: Initialization,Qualified,Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Initialization,Qualified
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -140,7 +140,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: VariableDeclaration {
-.  .  .  .  .  Roles: Statement,Declaration,Variable
+.  .  .  .  .  Roles: Declaration,Statement,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  Line: 2
@@ -190,7 +190,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: MemberExpression {
-.  .  .  .  .  .  .  .  .  Roles: Initialization,Qualified,Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Initialization,Qualified
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  .  .  .  .  Line: 2

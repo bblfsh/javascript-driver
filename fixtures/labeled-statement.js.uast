@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: LabeledStatement {
-.  .  .  .  .  Roles: Statement,Incomplete
+.  .  .  .  .  Roles: Incomplete,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -82,7 +82,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BooleanLiteral {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Boolean,While,Condition
+.  .  .  .  .  .  .  .  .  Roles: Boolean,Condition,Expression,Literal,While
 .  .  .  .  .  .  .  .  .  TOKEN "true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 14
@@ -99,7 +99,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope,While,Body
+.  .  .  .  .  .  .  .  .  Roles: Block,Body,Scope,Statement,While
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  .  .  .  .  Line: 2
@@ -115,7 +115,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: BreakStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Break
+.  .  .  .  .  .  .  .  .  .  .  Roles: Break,Statement
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 22
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 2

@@ -50,6 +50,7 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: RegExpLiteral {
 .  .  .  .  .  .  .  Roles: Expression,Literal,Regexp
+.  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -63,7 +64,6 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  flags: 
 .  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  pattern: a
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

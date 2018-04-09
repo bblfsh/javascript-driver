@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: ArrowFunctionExpression {
-.  .  .  .  .  .  .  Roles: Declaration,Function,Expression
+.  .  .  .  .  .  .  Roles: Declaration,Expression,Function
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -67,7 +67,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: AwaitExpression {
-.  .  .  .  .  .  .  .  .  Roles: Function,Body,Expression,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Body,Expression,Function,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  .  .  .  .  Line: 1

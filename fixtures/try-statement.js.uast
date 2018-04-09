@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BlockStatement {
-.  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  Roles: Block,Scope,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 4
 .  .  .  .  .  .  .  .  Line: 1
@@ -65,7 +65,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: CatchClause {
-.  .  .  .  .  .  .  Roles: Try,Catch
+.  .  .  .  .  .  .  Roles: Catch,Try
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  .  .  Line: 1
@@ -98,7 +98,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  Roles: Block,Scope,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -134,7 +134,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BlockStatement {
-.  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  Roles: Block,Scope,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  .  .  Line: 2
@@ -150,7 +150,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  Roles: Statement,Block,Scope,Try,Finally
+.  .  .  .  .  .  .  Roles: Block,Finally,Scope,Statement,Try
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  .  .  Line: 2
@@ -184,7 +184,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BlockStatement {
-.  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  Roles: Block,Scope,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  .  .  Line: 3
@@ -200,7 +200,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: CatchClause {
-.  .  .  .  .  .  .  Roles: Try,Catch
+.  .  .  .  .  .  .  Roles: Catch,Try
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 45
 .  .  .  .  .  .  .  .  Line: 3
@@ -233,7 +233,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Scope
+.  .  .  .  .  .  .  .  .  Roles: Block,Scope,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 54
 .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -251,7 +251,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: BlockStatement {
-.  .  .  .  .  .  .  Roles: Statement,Block,Scope,Try,Finally
+.  .  .  .  .  .  .  Roles: Block,Finally,Scope,Statement,Try
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 65
 .  .  .  .  .  .  .  .  Line: 3

@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: DebuggerStatement {
-.  .  .  .  .  Roles: Statement,Incomplete
+.  .  .  .  .  Roles: Incomplete,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1

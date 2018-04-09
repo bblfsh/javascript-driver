@@ -67,7 +67,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: CommentBlock {
-.  .  .  .  .  Roles: Comment,Block
+.  .  .  .  .  Roles: Block,Comment
 .  .  .  .  .  TOKEN " Another comment "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 18
@@ -84,7 +84,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: CommentBlock {
-.  .  .  .  .  Roles: Comment,Block
+.  .  .  .  .  Roles: Block,Comment
 .  .  .  .  .  TOKEN "* Yet another comment "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 40
@@ -103,7 +103,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: CommentBlock {
-.  .  .  Roles: Comment,Block
+.  .  .  Roles: Block,Comment
 .  .  .  TOKEN " Another comment "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 18
@@ -120,7 +120,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: CommentBlock {
-.  .  .  Roles: Comment,Block
+.  .  .  Roles: Block,Comment
 .  .  .  TOKEN "* Yet another comment "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 40

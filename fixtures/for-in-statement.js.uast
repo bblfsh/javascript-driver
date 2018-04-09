@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ForInStatement {
-.  .  .  .  .  Roles: Statement,For,Iterator
+.  .  .  .  .  Roles: For,Iterator,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  Line: 1
@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: VariableDeclaration {
-.  .  .  .  .  .  .  Roles: For,Iterator,Statement,Declaration,Variable
+.  .  .  .  .  .  .  Roles: Declaration,For,Iterator,Statement,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 5
 .  .  .  .  .  .  .  .  Line: 1
@@ -103,7 +103,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,For
+.  .  .  .  .  .  .  Roles: Expression,For,Identifier
 .  .  .  .  .  .  .  TOKEN "o"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 16
@@ -120,7 +120,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: BlockStatement {
-.  .  .  .  .  .  .  Roles: Statement,Block,Scope,For,Body
+.  .  .  .  .  .  .  Roles: Block,Body,For,Scope,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 19
 .  .  .  .  .  .  .  .  Line: 1

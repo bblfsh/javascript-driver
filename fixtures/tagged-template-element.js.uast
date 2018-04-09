@@ -49,7 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: TaggedTemplateExpression {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Incomplete,Literal
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
 .  .  .  .  .  .  .  .  Line: 1
@@ -82,7 +82,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: TemplateLiteral {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete,Literal
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 3
 .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -98,7 +98,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: TemplateElement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Literal,String,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Literal,String
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 4
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -132,7 +132,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  2: TemplateElement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Literal,String,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Literal,String
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 10
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
@@ -166,7 +166,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  4: TemplateElement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Literal,String,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Literal,String
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 19
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
