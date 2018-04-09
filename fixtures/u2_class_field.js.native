@@ -124,13 +124,13 @@
                                         "column": 37,
                                         "line": 1
                                     },
-                                    "identifierName": "testcls2",
+                                    "identifierName": "testcls1",
                                     "start": {
                                         "column": 29,
                                         "line": 1
                                     }
                                 },
-                                "name": "testcls2",
+                                "name": "testcls1",
                                 "start": 29,
                                 "type": "Identifier"
                             },
