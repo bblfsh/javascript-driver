@@ -173,7 +173,7 @@ var Annotations = []Mapping{
 	}, role.Comment, role.Block),
 
 	// Identifiers
-	AnnotateTypeFields("Identifier",
+	AnnotateType("Identifier",
 		FieldRoles{
 			"name": {Rename: uast.KeyToken},
 		},
@@ -182,7 +182,7 @@ var Annotations = []Mapping{
 	AnnotateType("PrivateName", nil, role.Expression, role.Identifier, role.Qualified, role.Visibility, role.Instance),
 
 	// Literals
-	AnnotateTypeFields("RegExpLiteral",
+	AnnotateType("RegExpLiteral",
 		FieldRoles{
 			"pattern": {Rename: uast.KeyToken},
 		},
@@ -315,7 +315,7 @@ var Annotations = []Mapping{
 	// Misc
 	AnnotateType("Decorator", nil, role.Incomplete),
 	AnnotateType("Directive", nil, role.Incomplete),
-	AnnotateTypeFields("DirectiveLiteral",
+	AnnotateType("DirectiveLiteral",
 		FieldRoles{
 			"value": {Rename: uast.KeyToken},
 		},
@@ -388,14 +388,14 @@ var Annotations = []Mapping{
 		{Name: "operator", Op: Operator("op", unaryRoles, role.Unary)},
 	}, LookupArrOpVar("op", unaryRoles), role.Expression, role.Unary, role.Operator),
 
-	AnnotateTypeFields("UnaryExpression",
+	AnnotateType("UnaryExpression",
 		FieldRoles{
 			"prefix": {Op: Bool(false)},
 		},
 		role.Postfix,
 	),
 
-	AnnotateTypeFields("UpdateExpression",
+	AnnotateType("UpdateExpression",
 		FieldRoles{
 			"prefix": {Op: Bool(false)},
 		},
@@ -436,7 +436,7 @@ var Annotations = []Mapping{
 	// Template literals
 	AnnotateType("TemplateLiteral", nil, role.Expression, role.Literal, role.Incomplete),
 	AnnotateType("TaggedTemplateExpression", nil, role.Expression, role.Literal, role.Incomplete),
-	AnnotateTypeFields("TemplateElement",
+	AnnotateType("TemplateElement",
 		FieldRoles{
 			"value": {Skip: true}, // drop value field
 		},
@@ -506,7 +506,7 @@ var Annotations = []Mapping{
 	AnnotateType("MetaProperty", nil, role.Expression, role.Incomplete),
 
 	// Modules
-	AnnotateTypeFields("ImportDeclaration",
+	AnnotateType("ImportDeclaration",
 		FieldRoles{
 			"specifiers": {Arr: true, Roles: role.Roles{role.Import}},
 			"source":     {Roles: role.Roles{role.Import, role.Pathname}},
@@ -539,7 +539,7 @@ var Annotations = []Mapping{
 	AnnotateType("ExportNamedDeclaration", nil, role.Statement, role.Declaration, role.Visibility, role.Module, role.Incomplete),
 	AnnotateType("ExportDefaultDeclaration", nil, role.Statement, role.Declaration, role.Visibility, role.Module, role.Incomplete),
 	AnnotateType("ExportAllDeclaration", nil, role.Statement, role.Declaration, role.Visibility, role.Module, role.Incomplete),
-	AnnotateTypeFields("ExportNamedDeclaration",
+	AnnotateType("ExportNamedDeclaration",
 		FieldRoles{
 			"declaration": {Roles: role.Roles{role.Incomplete}},
 			"specifiers":  {Arr: true, Roles: role.Roles{role.Incomplete}},
