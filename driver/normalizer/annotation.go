@@ -11,24 +11,6 @@ import (
 // To learn more about the Transformers and the available ones take a look to:
 // https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast/transformer
 var Native = Transformers([][]Transformer{
-	{
-		// ResponseMetadata is a transform that trims response metadata from AST.
-		//
-		// https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast#ResponseMetadata
-		ResponseMetadata{
-			TopLevelIsRootNode: true,
-		},
-		Mappings(
-			ASTMap("remove loc",
-				Part("_", Obj{"loc": AnyNode(Obj{})}),
-				Part("_", Obj{}),
-			),
-			ASTMap("remove extra",
-				Part("_", Obj{"extra": AnyNode(Obj{})}),
-				Part("_", Obj{}),
-			),
-		),
-	},
 	// The main block of transformation rules.
 	{Mappings(Annotations...)},
 	{
@@ -146,16 +128,6 @@ func function(typ string) Mapping {
 
 // Annotations is a list of individual transformations to annotate a native AST with roles.
 var Annotations = []Mapping{
-	// ObjectToNode defines how to normalize common fields of native AST
-	// (like node type, token, positional information).
-	//
-	// https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast#ObjectToNode
-	ObjectToNode{
-		InternalTypeKey: "type",
-		OffsetKey:       "start",
-		EndOffsetKey:    "end",
-	}.Mapping(),
-
 	AnnotateType("File", nil, role.File),
 	AnnotateType("Program", nil, role.Module),
 

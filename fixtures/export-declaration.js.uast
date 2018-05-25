@@ -1,305 +1,281 @@
-Status:  ok
-Language:  javascript
-Errors: 
-UAST: 
-File {
-.  Roles: File
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 1
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 82
-.  .  Line: 6
-.  .  Col: 1
-.  }
-.  Children: {
-.  .  0: Program {
-.  .  .  Roles: Module
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 1
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 82
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: program
-.  .  .  .  sourceType: module
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ExportNamedDeclaration {
-.  .  .  .  .  Roles: Declaration,Incomplete,Module,Statement,Visibility
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 23
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  exportKind: value
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: FunctionDeclaration {
-.  .  .  .  .  .  .  Roles: Declaration,Function,Incomplete,Statement
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 23
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  internalRole: declaration
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
-.  .  .  .  .  .  .  .  .  TOKEN "f"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 23
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: ExportDefaultDeclaration {
-.  .  .  .  .  Roles: Declaration,Incomplete,Module,Statement,Visibility
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 18
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: NumericLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
-.  .  .  .  .  .  .  TOKEN "1"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 16
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 39
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: declaration
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: ExportAllDeclaration {
-.  .  .  .  .  Roles: Declaration,Incomplete,Module,Statement,Visibility
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  exportKind: value
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: StringLiteral {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  TOKEN "mod"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 55
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 60
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: source
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: ExportNamedDeclaration {
-.  .  .  .  .  Roles: Declaration,Incomplete,Module,Statement,Visibility
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 62
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 80
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  exportKind: value
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: ExportSpecifier {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 73
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: specifiers
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
-.  .  .  .  .  .  .  .  .  TOKEN "foo"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 73
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: exported
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
-.  .  .  .  .  .  .  .  .  TOKEN "foo"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 73
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: local
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: ExportSpecifier {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 75
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: specifiers
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
-.  .  .  .  .  .  .  .  .  TOKEN "bar"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 75
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: exported
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
-.  .  .  .  .  .  .  .  .  TOKEN "bar"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 75
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: local
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "File",
+   '@role': [File],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 0,
+         line: 1,
+         col: 1,
+      },
+      end: { '@type': "uast:Position",
+         offset: 82,
+         line: 6,
+         col: 1,
+      },
+   },
+   comments: [],
+   program: { '@type': "Program",
+      '@role': [Module],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 0,
+            line: 1,
+            col: 1,
+         },
+         end: { '@type': "uast:Position",
+            offset: 82,
+            line: 6,
+            col: 1,
+         },
+      },
+      body: [
+         { '@type': "ExportNamedDeclaration",
+            '@role': [Declaration, Incomplete, Module, Statement, Visibility],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 0,
+                  line: 1,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 22,
+                  line: 1,
+                  col: 23,
+               },
+            },
+            declaration: { '@type': "FunctionDeclaration",
+               '@role': [Declaration, Function, Incomplete, Statement],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 7,
+                     line: 1,
+                     col: 8,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 22,
+                     line: 1,
+                     col: 23,
+                  },
+               },
+               async: false,
+               body: { '@type': "BlockStatement",
+                  '@role': [Block, Body, Function, Scope, Statement],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 20,
+                        line: 1,
+                        col: 21,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 22,
+                        line: 1,
+                        col: 23,
+                     },
+                  },
+                  body: [],
+                  directives: [],
+               },
+               generator: false,
+               id: { '@type': "Identifier",
+                  '@token': "f",
+                  '@role': [Expression, Function, Identifier, Name],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 16,
+                        line: 1,
+                        col: 17,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 17,
+                        line: 1,
+                        col: 18,
+                     },
+                  },
+               },
+               params: [],
+            },
+            exportKind: "value",
+            source: ~,
+            specifiers: [],
+         },
+         { '@type': "ExportDefaultDeclaration",
+            '@role': [Declaration, Incomplete, Module, Statement, Visibility],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 23,
+                  line: 2,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 40,
+                  line: 2,
+                  col: 18,
+               },
+            },
+            declaration: { '@type': "NumericLiteral",
+               '@token': 1,
+               '@role': [Expression, Literal, Number],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 38,
+                     line: 2,
+                     col: 16,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 39,
+                     line: 2,
+                     col: 17,
+                  },
+               },
+            },
+         },
+         { '@type': "ExportAllDeclaration",
+            '@role': [Declaration, Incomplete, Module, Statement, Visibility],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 41,
+                  line: 3,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 61,
+                  line: 3,
+                  col: 21,
+               },
+            },
+            exportKind: "value",
+            source: { '@type': "StringLiteral",
+               '@token': "mod",
+               '@role': [Expression, Literal, String],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 55,
+                     line: 3,
+                     col: 15,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 60,
+                     line: 3,
+                     col: 20,
+                  },
+               },
+            },
+         },
+         { '@type': "ExportNamedDeclaration",
+            '@role': [Declaration, Incomplete, Module, Statement, Visibility],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 62,
+                  line: 4,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 80,
+                  line: 4,
+                  col: 19,
+               },
+            },
+            declaration: ~,
+            exportKind: "value",
+            source: ~,
+            specifiers: [
+               { '@type': "ExportSpecifier",
+                  '@role': [Incomplete],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 70,
+                        line: 4,
+                        col: 9,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 73,
+                        line: 4,
+                        col: 12,
+                     },
+                  },
+                  exported: { '@type': "Identifier",
+                     '@token': "foo",
+                     '@role': [Expression, Identifier, Incomplete],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 70,
+                           line: 4,
+                           col: 9,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 73,
+                           line: 4,
+                           col: 12,
+                        },
+                     },
+                  },
+                  local: { '@type': "Identifier",
+                     '@token': "foo",
+                     '@role': [Expression, Identifier, Incomplete],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 70,
+                           line: 4,
+                           col: 9,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 73,
+                           line: 4,
+                           col: 12,
+                        },
+                     },
+                  },
+               },
+               { '@type': "ExportSpecifier",
+                  '@role': [Incomplete],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 75,
+                        line: 4,
+                        col: 14,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 78,
+                        line: 4,
+                        col: 17,
+                     },
+                  },
+                  exported: { '@type': "Identifier",
+                     '@token': "bar",
+                     '@role': [Expression, Identifier, Incomplete],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 75,
+                           line: 4,
+                           col: 14,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 78,
+                           line: 4,
+                           col: 17,
+                        },
+                     },
+                  },
+                  local: { '@type': "Identifier",
+                     '@token': "bar",
+                     '@role': [Expression, Identifier, Incomplete],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 75,
+                           line: 4,
+                           col: 14,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 78,
+                           line: 4,
+                           col: 17,
+                        },
+                     },
+                  },
+               },
+            ],
+         },
+      ],
+      directives: [],
+      sourceType: "module",
+   },
 }
-

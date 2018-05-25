@@ -19,10 +19,22 @@ var Suite = &fixtures.Suite{
 		return driver.NewExecDriverAt(filepath.Join(projectRoot, "build/bin/native"))
 	},
 	Transforms: driver.Transforms{
-		Native: normalizer.Native,
-		Code:   normalizer.Code,
+		Preprocess: normalizer.Preprocess,
+		Normalize:  normalizer.Normalize,
+		Native:     normalizer.Native,
+		Code:       normalizer.Code,
 	},
 	BenchName: "u2_class_method", // TODO: specify a largest file
+	Semantic: fixtures.SemanticConfig{
+		BlacklistTypes: []string{
+			"Identifier",
+			"StringLiteral",
+			"CommentLine",
+			"CommentBlock",
+			"BlockStatement",
+			"FunctionDeclaration",
+		},
+	},
 }
 
 func TestJavascriptDriver(t *testing.T) {
