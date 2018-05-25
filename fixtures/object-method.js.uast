@@ -1,204 +1,188 @@
-Status:  ok
-Language:  javascript
-Errors: 
-UAST: 
-File {
-.  Roles: File
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 1
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 30
-.  .  Line: 2
-.  .  Col: 1
-.  }
-.  Children: {
-.  .  0: Program {
-.  .  .  Roles: Module
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 1
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 30
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: program
-.  .  .  .  sourceType: module
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: VariableDeclaration {
-.  .  .  .  .  Roles: Declaration,Statement,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 30
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  kind: const
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: VariableDeclarator {
-.  .  .  .  .  .  .  Roles: Declaration,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 30
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: declarations
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: ObjectExpression {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Initialization,Literal,Map
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 30
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: init
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: ObjectMethod {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Map
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 11
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 28
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 29
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  .  .  .  .  computed: false
-.  .  .  .  .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: properties
-.  .  .  .  .  .  .  .  .  .  .  .  kind: method
-.  .  .  .  .  .  .  .  .  .  .  .  method: true
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Key,Map,Name
-.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "f"
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Map,Scope,Statement,Value
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 16
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 28
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 29
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ReturnStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Return,Statement
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 26
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: NumericLiteral {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "3"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 25
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 25
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: argument
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "File",
+   '@role': [File],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 0,
+         line: 1,
+         col: 1,
+      },
+      end: { '@type': "uast:Position",
+         offset: 30,
+         line: 2,
+         col: 1,
+      },
+   },
+   comments: [],
+   program: { '@type': "Program",
+      '@role': [Module],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 0,
+            line: 1,
+            col: 1,
+         },
+         end: { '@type': "uast:Position",
+            offset: 30,
+            line: 2,
+            col: 1,
+         },
+      },
+      body: [
+         { '@type': "VariableDeclaration",
+            '@role': [Declaration, Statement, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 0,
+                  line: 1,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 29,
+                  line: 1,
+                  col: 30,
+               },
+            },
+            declarations: [
+               { '@type': "VariableDeclarator",
+                  '@role': [Declaration, Variable],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 6,
+                        line: 1,
+                        col: 7,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 29,
+                        line: 1,
+                        col: 30,
+                     },
+                  },
+                  id: { '@type': "Identifier",
+                     '@token': "a",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 6,
+                           line: 1,
+                           col: 7,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 7,
+                           line: 1,
+                           col: 8,
+                        },
+                     },
+                  },
+                  init: { '@type': "ObjectExpression",
+                     '@role': [Expression, Initialization, Literal, Map],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 10,
+                           line: 1,
+                           col: 11,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 29,
+                           line: 1,
+                           col: 30,
+                        },
+                     },
+                     properties: [
+                        { '@type': "ObjectMethod",
+                           '@role': [Declaration, Function, Map],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 11,
+                                 line: 1,
+                                 col: 12,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 28,
+                                 line: 1,
+                                 col: 29,
+                              },
+                           },
+                           async: false,
+                           body: { '@type': "BlockStatement",
+                              '@role': [Block, Body, Function, Map, Scope, Statement, Value],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 15,
+                                    line: 1,
+                                    col: 16,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 28,
+                                    line: 1,
+                                    col: 29,
+                                 },
+                              },
+                              body: [
+                                 { '@type': "ReturnStatement",
+                                    '@role': [Return, Statement],
+                                    '@pos': { '@type': "uast:Positions",
+                                       start: { '@type': "uast:Position",
+                                          offset: 17,
+                                          line: 1,
+                                          col: 18,
+                                       },
+                                       end: { '@type': "uast:Position",
+                                          offset: 26,
+                                          line: 1,
+                                          col: 27,
+                                       },
+                                    },
+                                    argument: { '@type': "NumericLiteral",
+                                       '@token': 3,
+                                       '@role': [Expression, Literal, Number],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 24,
+                                             line: 1,
+                                             col: 25,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 25,
+                                             line: 1,
+                                             col: 26,
+                                          },
+                                       },
+                                    },
+                                 },
+                              ],
+                              directives: [],
+                           },
+                           computed: false,
+                           generator: false,
+                           id: ~,
+                           key: { '@type': "Identifier",
+                              '@token': "f",
+                              '@role': [Expression, Function, Identifier, Key, Map, Name],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 11,
+                                    line: 1,
+                                    col: 12,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 12,
+                                    line: 1,
+                                    col: 13,
+                                 },
+                              },
+                           },
+                           kind: "method",
+                           method: true,
+                           params: [],
+                        },
+                     ],
+                  },
+               },
+            ],
+            kind: "const",
+         },
+      ],
+      directives: [],
+      sourceType: "module",
+   },
 }
-

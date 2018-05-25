@@ -1,283 +1,239 @@
-Status:  ok
-Language:  javascript
-Errors: 
-UAST: 
-File {
-.  Roles: File
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 1
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 20
-.  .  Line: 5
-.  .  Col: 1
-.  }
-.  Children: {
-.  .  0: Program {
-.  .  .  Roles: Module
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 1
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 20
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: program
-.  .  .  .  sourceType: module
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ExpressionStatement {
-.  .  .  .  .  Roles: Statement
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 4
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: UpdateExpression {
-.  .  .  .  .  .  .  Roles: Arithmetic,Expression,Increment,Operator,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  prefix: true
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Expression,Increment,Operator,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "++"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: operator
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 2
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: argument
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: ExpressionStatement {
-.  .  .  .  .  Roles: Statement
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 5
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 9
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: UpdateExpression {
-.  .  .  .  .  .  .  Roles: Arithmetic,Expression,Increment,Operator,Postfix,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 5
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 8
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  prefix: false
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Expression,Increment,Operator,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "++"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: operator
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 5
-.  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: argument
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: ExpressionStatement {
-.  .  .  .  .  Roles: Statement
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 14
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: UpdateExpression {
-.  .  .  .  .  .  .  Roles: Arithmetic,Decrement,Expression,Operator,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 13
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  prefix: true
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Decrement,Expression,Operator,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "--"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: operator
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 13
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: argument
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: ExpressionStatement {
-.  .  .  .  .  Roles: Statement
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 19
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: UpdateExpression {
-.  .  .  .  .  .  .  Roles: Arithmetic,Decrement,Expression,Operator,Postfix,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 18
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: expression
-.  .  .  .  .  .  .  .  prefix: false
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Decrement,Expression,Operator,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "--"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: operator
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: argument
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "File",
+   '@role': [File],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 0,
+         line: 1,
+         col: 1,
+      },
+      end: { '@type': "uast:Position",
+         offset: 20,
+         line: 5,
+         col: 1,
+      },
+   },
+   comments: [],
+   program: { '@type': "Program",
+      '@role': [Module],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 0,
+            line: 1,
+            col: 1,
+         },
+         end: { '@type': "uast:Position",
+            offset: 20,
+            line: 5,
+            col: 1,
+         },
+      },
+      body: [
+         { '@type': "ExpressionStatement",
+            '@role': [Statement],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 0,
+                  line: 1,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 4,
+                  line: 1,
+                  col: 5,
+               },
+            },
+            expression: { '@type': "UpdateExpression",
+               '@role': [Arithmetic, Expression, Increment, Operator, Unary],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 0,
+                     line: 1,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 3,
+                     line: 1,
+                     col: 4,
+                  },
+               },
+               argument: { '@type': "Identifier",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 2,
+                        line: 1,
+                        col: 3,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 3,
+                        line: 1,
+                        col: 4,
+                     },
+                  },
+               },
+               operator: { '@type': "uast:Operator",
+                  '@token': "++",
+                  '@role': [Arithmetic, Expression, Increment, Operator, Unary],
+               },
+               prefix: true,
+            },
+         },
+         { '@type': "ExpressionStatement",
+            '@role': [Statement],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 5,
+                  line: 2,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 9,
+                  line: 2,
+                  col: 5,
+               },
+            },
+            expression: { '@type': "UpdateExpression",
+               '@role': [Arithmetic, Expression, Increment, Operator, Postfix, Unary],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 5,
+                     line: 2,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 8,
+                     line: 2,
+                     col: 4,
+                  },
+               },
+               argument: { '@type': "Identifier",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 5,
+                        line: 2,
+                        col: 1,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 6,
+                        line: 2,
+                        col: 2,
+                     },
+                  },
+               },
+               operator: { '@type': "uast:Operator",
+                  '@token': "++",
+                  '@role': [Arithmetic, Expression, Increment, Operator, Unary],
+               },
+               prefix: false,
+            },
+         },
+         { '@type': "ExpressionStatement",
+            '@role': [Statement],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 10,
+                  line: 3,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 14,
+                  line: 3,
+                  col: 5,
+               },
+            },
+            expression: { '@type': "UpdateExpression",
+               '@role': [Arithmetic, Decrement, Expression, Operator, Unary],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 10,
+                     line: 3,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 13,
+                     line: 3,
+                     col: 4,
+                  },
+               },
+               argument: { '@type': "Identifier",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 12,
+                        line: 3,
+                        col: 3,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 13,
+                        line: 3,
+                        col: 4,
+                     },
+                  },
+               },
+               operator: { '@type': "uast:Operator",
+                  '@token': "--",
+                  '@role': [Arithmetic, Decrement, Expression, Operator, Unary],
+               },
+               prefix: true,
+            },
+         },
+         { '@type': "ExpressionStatement",
+            '@role': [Statement],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 15,
+                  line: 4,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 19,
+                  line: 4,
+                  col: 5,
+               },
+            },
+            expression: { '@type': "UpdateExpression",
+               '@role': [Arithmetic, Decrement, Expression, Operator, Postfix, Unary],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 15,
+                     line: 4,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 18,
+                     line: 4,
+                     col: 4,
+                  },
+               },
+               argument: { '@type': "Identifier",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 15,
+                        line: 4,
+                        col: 1,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 16,
+                        line: 4,
+                        col: 2,
+                     },
+                  },
+               },
+               operator: { '@type': "uast:Operator",
+                  '@token': "--",
+                  '@role': [Arithmetic, Decrement, Expression, Operator, Unary],
+               },
+               prefix: false,
+            },
+         },
+      ],
+      directives: [],
+      sourceType: "module",
+   },
 }
-

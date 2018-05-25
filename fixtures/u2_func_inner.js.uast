@@ -1,310 +1,293 @@
-Status:  ok
-Language:  javascript
-Errors: 
-UAST: 
-File {
-.  Roles: File
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 1
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 140
-.  .  Line: 11
-.  .  Col: 1
-.  }
-.  Children: {
-.  .  0: Program {
-.  .  .  Roles: Module
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 1
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 140
-.  .  .  .  Line: 11
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: program
-.  .  .  .  sourceType: module
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: FunctionDeclaration {
-.  .  .  .  .  Roles: Declaration,Function,Statement
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  async: false
-.  .  .  .  .  .  generator: false
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
-.  .  .  .  .  .  .  TOKEN "testfnc1"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 9
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: FunctionDeclaration {
-.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Statement
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 26
-.  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 48
-.  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "testfnc2"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 25
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 48
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: FunctionDeclaration {
-.  .  .  .  .  Roles: Declaration,Function,Statement
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  async: false
-.  .  .  .  .  .  generator: false
-.  .  .  .  .  .  internalRole: body
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
-.  .  .  .  .  .  .  TOKEN "testfnc3"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 69
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 72
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: FunctionDeclaration {
-.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Statement
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 136
-.  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "testfnc4"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 87
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 95
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 98
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 25
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 136
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: FunctionDeclaration {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Statement
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 108
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 130
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 31
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  async: false
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  generator: false
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Identifier {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Function,Identifier,Name
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "testfnc5"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 125
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: id
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: BlockStatement {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Block,Body,Function,Scope,Statement
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 29
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 130
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 31
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "File",
+   '@role': [File],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 0,
+         line: 1,
+         col: 1,
+      },
+      end: { '@type': "uast:Position",
+         offset: 140,
+         line: 11,
+         col: 1,
+      },
+   },
+   comments: [],
+   program: { '@type': "Program",
+      '@role': [Module],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 0,
+            line: 1,
+            col: 1,
+         },
+         end: { '@type': "uast:Position",
+            offset: 140,
+            line: 11,
+            col: 1,
+         },
+      },
+      body: [
+         { '@type': "FunctionDeclaration",
+            '@role': [Declaration, Function, Statement],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 0,
+                  line: 1,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 50,
+                  line: 3,
+                  col: 2,
+               },
+            },
+            async: false,
+            body: { '@type': "BlockStatement",
+               '@role': [Block, Body, Function, Scope, Statement],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 20,
+                     line: 1,
+                     col: 21,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 50,
+                     line: 3,
+                     col: 2,
+                  },
+               },
+               body: [
+                  { '@type': "FunctionDeclaration",
+                     '@role': [Declaration, Function, Statement],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 26,
+                           line: 2,
+                           col: 5,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 48,
+                           line: 2,
+                           col: 27,
+                        },
+                     },
+                     async: false,
+                     body: { '@type': "BlockStatement",
+                        '@role': [Block, Body, Function, Scope, Statement],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 46,
+                              line: 2,
+                              col: 25,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 48,
+                              line: 2,
+                              col: 27,
+                           },
+                        },
+                        body: [],
+                        directives: [],
+                     },
+                     generator: false,
+                     id: { '@type': "Identifier",
+                        '@token': "testfnc2",
+                        '@role': [Expression, Function, Identifier, Name],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 35,
+                              line: 2,
+                              col: 14,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 43,
+                              line: 2,
+                              col: 22,
+                           },
+                        },
+                     },
+                     params: [],
+                  },
+               ],
+               directives: [],
+            },
+            generator: false,
+            id: { '@type': "Identifier",
+               '@token': "testfnc1",
+               '@role': [Expression, Function, Identifier, Name],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 9,
+                     line: 1,
+                     col: 10,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 17,
+                     line: 1,
+                     col: 18,
+                  },
+               },
+            },
+            params: [],
+         },
+         { '@type': "FunctionDeclaration",
+            '@role': [Declaration, Function, Statement],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 52,
+                  line: 5,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 138,
+                  line: 9,
+                  col: 2,
+               },
+            },
+            async: false,
+            body: { '@type': "BlockStatement",
+               '@role': [Block, Body, Function, Scope, Statement],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 72,
+                     line: 5,
+                     col: 21,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 138,
+                     line: 9,
+                     col: 2,
+                  },
+               },
+               body: [
+                  { '@type': "FunctionDeclaration",
+                     '@role': [Declaration, Function, Statement],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 78,
+                           line: 6,
+                           col: 5,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 136,
+                           line: 8,
+                           col: 6,
+                        },
+                     },
+                     async: false,
+                     body: { '@type': "BlockStatement",
+                        '@role': [Block, Body, Function, Scope, Statement],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 98,
+                              line: 6,
+                              col: 25,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 136,
+                              line: 8,
+                              col: 6,
+                           },
+                        },
+                        body: [
+                           { '@type': "FunctionDeclaration",
+                              '@role': [Declaration, Function, Statement],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 108,
+                                    line: 7,
+                                    col: 9,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 130,
+                                    line: 7,
+                                    col: 31,
+                                 },
+                              },
+                              async: false,
+                              body: { '@type': "BlockStatement",
+                                 '@role': [Block, Body, Function, Scope, Statement],
+                                 '@pos': { '@type': "uast:Positions",
+                                    start: { '@type': "uast:Position",
+                                       offset: 128,
+                                       line: 7,
+                                       col: 29,
+                                    },
+                                    end: { '@type': "uast:Position",
+                                       offset: 130,
+                                       line: 7,
+                                       col: 31,
+                                    },
+                                 },
+                                 body: [],
+                                 directives: [],
+                              },
+                              generator: false,
+                              id: { '@type': "Identifier",
+                                 '@token': "testfnc5",
+                                 '@role': [Expression, Function, Identifier, Name],
+                                 '@pos': { '@type': "uast:Positions",
+                                    start: { '@type': "uast:Position",
+                                       offset: 117,
+                                       line: 7,
+                                       col: 18,
+                                    },
+                                    end: { '@type': "uast:Position",
+                                       offset: 125,
+                                       line: 7,
+                                       col: 26,
+                                    },
+                                 },
+                              },
+                              params: [],
+                           },
+                        ],
+                        directives: [],
+                     },
+                     generator: false,
+                     id: { '@type': "Identifier",
+                        '@token': "testfnc4",
+                        '@role': [Expression, Function, Identifier, Name],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 87,
+                              line: 6,
+                              col: 14,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 95,
+                              line: 6,
+                              col: 22,
+                           },
+                        },
+                     },
+                     params: [],
+                  },
+               ],
+               directives: [],
+            },
+            generator: false,
+            id: { '@type': "Identifier",
+               '@token': "testfnc3",
+               '@role': [Expression, Function, Identifier, Name],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 61,
+                     line: 5,
+                     col: 10,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 69,
+                     line: 5,
+                     col: 18,
+                  },
+               },
+            },
+            params: [],
+         },
+      ],
+      directives: [],
+      sourceType: "module",
+   },
 }
-
