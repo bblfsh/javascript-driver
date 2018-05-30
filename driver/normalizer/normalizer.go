@@ -53,6 +53,18 @@ var Normalizers = []Mapping{
 			"Value": Var("val"),
 		},
 	),
+	MapSemantic("", "CommentLine", uast.Comment{}, nil,
+		Obj{
+			"value": CommentText([2]string{"", ""}, "comm"),
+		},
+		CommentNode(false, "comm", nil),
+	),
+	MapSemantic("", "CommentBlock", uast.Comment{}, nil,
+		Obj{
+			"value": CommentText([2]string{"", ""}, "comm"),
+		},
+		CommentNode(true, "comm", nil),
+	),
 	MapSemantic("", "BlockStatement", uast.Block{}, nil,
 		Obj{
 			"body":       Var("stmts"),
@@ -60,6 +72,80 @@ var Normalizers = []Mapping{
 		},
 		Obj{
 			"Statements": Var("stmts"),
+		},
+	),
+	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+		Obj{
+			"source":     Var("path"),
+			"specifiers": Arr(),
+		},
+		Obj{
+			"Path": Var("path"),
+		},
+	),
+	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+		Obj{
+			"importKind": String("value"),
+			"source":     Var("path"),
+			"specifiers": Arr(Obj{ // FIXME: it may appear anywhere in the slice
+				uast.KeyType: String("ImportNamespaceSpecifier"),
+				uast.KeyPos:  Var("local_pos"),
+				"local":      Var("local"),
+			}),
+		},
+		Obj{
+			"Path": UASTType(uast.Alias{}, Obj{
+				uast.KeyPos: Var("local_pos"),
+				"Name":      Var("local"),
+				"Node":      Var("path"),
+			}),
+			"Names": Arr(),
+			"All":   Bool(true),
+		},
+	),
+	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+		Obj{
+			"importKind": String("value"),
+			"source":     Var("path"),
+			"specifiers": Check(Not(Arr()), Var("names")),
+		},
+		Obj{
+			"Path":  Var("path"),
+			"Names": Var("names"),
+		},
+	),
+	MapSemantic("", "ImportSpecifier", uast.Alias{}, nil,
+		Obj{
+			"importKind": Is(nil),
+			"local":      Var("local"),
+			"imported":   Var("imp"),
+		},
+		Obj{
+			"Name": Var("local"),
+			"Node": Var("imp"),
+		},
+	),
+	MapSemantic("", "ImportDefaultSpecifier", uast.Alias{}, nil,
+		Obj{
+			"local": Var("local"),
+		},
+		Obj{
+			"Name": Var("local"),
+			"Node": UASTType(uast.Identifier{}, Obj{
+				uast.KeyPos: AnyNode(nil),
+				"Name":      String("."), // TODO: scope
+			}),
+		},
+	),
+	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+		Obj{
+			"importKind": String("value"),
+			"source":     Var("path"),
+			"specifiers": Check(Not(Arr()), Var("names")),
+		},
+		Obj{
+			"Path":  Var("path"),
+			"Names": Var("names"),
 		},
 	),
 	MapSemantic("", "FunctionDeclaration", uast.FunctionGroup{}, nil,
