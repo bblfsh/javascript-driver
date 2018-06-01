@@ -25,11 +25,11 @@ var Preprocessors = []Mapping{
 		EndOffsetKey:    "end",
 	}.Mapping(),
 
-	ASTMap("remove loc",
+	Map(
 		Part("_", Obj{"loc": AnyNode(nil)}),
 		Part("_", Obj{}),
 	),
-	ASTMap("remove extra",
+	Map(
 		Part("_", Obj{"extra": AnyNode(nil)}),
 		Part("_", Obj{}),
 	),
@@ -37,35 +37,35 @@ var Preprocessors = []Mapping{
 
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
 var Normalizers = []Mapping{
-	MapSemantic("", "Identifier", uast.Identifier{}, nil,
+	MapSemantic("Identifier", uast.Identifier{}, MapObj(
 		Obj{
 			"name": Var("name"),
 		},
 		Obj{
 			"Name": Var("name"),
 		},
-	),
-	MapSemantic("", "StringLiteral", uast.String{}, nil,
+	)),
+	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Obj{
 			"value": Var("val"),
 		},
 		Obj{
 			"Value": Var("val"),
 		},
-	),
-	MapSemantic("", "CommentLine", uast.Comment{}, nil,
+	)),
+	MapSemantic("CommentLine", uast.Comment{}, MapObj(
 		Obj{
 			"value": CommentText([2]string{"", ""}, "comm"),
 		},
 		CommentNode(false, "comm", nil),
-	),
-	MapSemantic("", "CommentBlock", uast.Comment{}, nil,
+	)),
+	MapSemantic("CommentBlock", uast.Comment{}, MapObj(
 		Obj{
 			"value": CommentText([2]string{"", ""}, "comm"),
 		},
 		CommentNode(true, "comm", nil),
-	),
-	MapSemantic("", "BlockStatement", uast.Block{}, nil,
+	)),
+	MapSemantic("BlockStatement", uast.Block{}, MapObj(
 		Obj{
 			"body":       Var("stmts"),
 			"directives": Arr(), // TODO: find an example
@@ -73,8 +73,8 @@ var Normalizers = []Mapping{
 		Obj{
 			"Statements": Var("stmts"),
 		},
-	),
-	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+	)),
+	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
 		Obj{
 			"source":     Var("path"),
 			"specifiers": Arr(),
@@ -82,8 +82,8 @@ var Normalizers = []Mapping{
 		Obj{
 			"Path": Var("path"),
 		},
-	),
-	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+	)),
+	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
 		Obj{
 			"importKind": String("value"),
 			"source":     Var("path"),
@@ -102,8 +102,8 @@ var Normalizers = []Mapping{
 			"Names": Arr(),
 			"All":   Bool(true),
 		},
-	),
-	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+	)),
+	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
 		Obj{
 			"importKind": String("value"),
 			"source":     Var("path"),
@@ -113,8 +113,8 @@ var Normalizers = []Mapping{
 			"Path":  Var("path"),
 			"Names": Var("names"),
 		},
-	),
-	MapSemantic("", "ImportSpecifier", uast.Alias{}, nil,
+	)),
+	MapSemantic("ImportSpecifier", uast.Alias{}, MapObj(
 		Obj{
 			"importKind": Is(nil),
 			"local":      Var("local"),
@@ -124,8 +124,8 @@ var Normalizers = []Mapping{
 			"Name": Var("local"),
 			"Node": Var("imp"),
 		},
-	),
-	MapSemantic("", "ImportDefaultSpecifier", uast.Alias{}, nil,
+	)),
+	MapSemantic("ImportDefaultSpecifier", uast.Alias{}, MapObj(
 		Obj{
 			"local": Var("local"),
 		},
@@ -136,8 +136,8 @@ var Normalizers = []Mapping{
 				"Name":      String("."), // TODO: scope
 			}),
 		},
-	),
-	MapSemantic("", "ImportDeclaration", uast.Import{}, nil,
+	)),
+	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
 		Obj{
 			"importKind": String("value"),
 			"source":     Var("path"),
@@ -147,8 +147,8 @@ var Normalizers = []Mapping{
 			"Path":  Var("path"),
 			"Names": Var("names"),
 		},
-	),
-	MapSemantic("", "FunctionDeclaration", uast.FunctionGroup{}, nil,
+	)),
+	MapSemantic("FunctionDeclaration", uast.FunctionGroup{}, MapObj(
 		Obj{
 			"id":        Var("name"),
 			"generator": Var("gen"),   // FIXME: define channels in SDK? or return a function?
@@ -180,5 +180,5 @@ var Normalizers = []Mapping{
 				}),
 			),
 		},
-	),
+	)),
 }
