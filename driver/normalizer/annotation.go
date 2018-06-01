@@ -29,18 +29,6 @@ var Code = []CodeTransformer{
 	positioner.NewFillLineColFromOffset(),
 }
 
-// mapAST is a helper for describing a single AST transformation for a given node type.
-func mapAST(typ string, ast, norm ObjectOp, roles ...role.Role) Mapping {
-	return mapASTCustom(typ, ast, norm, nil, roles...)
-}
-
-func mapASTCustom(typ string, ast, norm ObjectOp, rop ArrayOp, roles ...role.Role) Mapping {
-	return ASTMap(typ,
-		ASTObjectLeft(typ, ast),
-		ASTObjectRight(typ, norm, rop, roles...),
-	)
-}
-
 var (
 	unaryRoles = StringToRolesMap(map[string][]role.Role{
 		// Unary operators
@@ -103,15 +91,15 @@ var (
 )
 
 func literal(typ string, roles ...role.Role) Mapping {
-	return mapAST(typ, Obj{
+	return AnnotateType(typ, MapObj(Obj{
 		"value": Var("val"),
 	}, Obj{
 		uast.KeyToken: Var("val"),
-	}, roles...)
+	}), roles...)
 }
 
 func function(typ string) Mapping {
-	return mapAST(typ, Obj{
+	return AnnotateType(typ, MapObj(Obj{
 		"id":     OptObjectRoles("id"),
 		"body":   ObjectRoles("body"),
 		"params": EachObjectRolesByType("param", nil),
@@ -123,7 +111,7 @@ func function(typ string) Mapping {
 			"RestElement": {role.ArgsList},
 			"":            {},
 		}, role.Function, role.Argument),
-	}, role.Declaration, role.Function)
+	}), role.Declaration, role.Function)
 }
 
 // Annotations is a list of individual transformations to annotate a native AST with roles.
@@ -132,17 +120,17 @@ var Annotations = []Mapping{
 	AnnotateType("Program", nil, role.Module),
 
 	// Comments
-	mapAST("CommentLine", Obj{
+	AnnotateType("CommentLine", MapObj(Obj{
 		"value": UncommentCLike("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
-	}, role.Comment),
+	}), role.Comment),
 
-	mapAST("CommentBlock", Obj{
+	AnnotateType("CommentBlock", MapObj(Obj{
 		"value": UncommentCLike("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
-	}, role.Comment, role.Block),
+	}), role.Comment, role.Block),
 
 	// Identifiers
 	AnnotateType("Identifier",
@@ -334,7 +322,7 @@ var Annotations = []Mapping{
 
 	// Function expressions
 	AnnotateType("FunctionExpression", nil, role.Expression),
-	mapAST("CallExpression", Obj{
+	AnnotateType("CallExpression", MapObj(Obj{
 		"callee":    ObjectRoles("callee"),
 		"arguments": EachObjectRolesByType("argument", nil),
 	}, Obj{
@@ -343,22 +331,22 @@ var Annotations = []Mapping{
 			"SpreadElement": {role.ArgsList},
 			"":              {},
 		}, role.Call, role.Argument),
-	}, role.Expression, role.Call),
+	}), role.Expression, role.Call),
 
 	// Unary operations
-	mapASTCustom("UnaryExpression", Obj{
+	AnnotateTypeCustom("UnaryExpression", MapObj(Obj{
 		"operator": Var("op"),
 	}, Fields{ // ->
 		//{Name:"prefix", Op:  String("true")},
 		{Name: "operator", Op: Operator("op", unaryRoles, role.Unary)},
-	}, LookupArrOpVar("op", unaryRoles), role.Expression, role.Unary, role.Operator),
+	}), LookupArrOpVar("op", unaryRoles), role.Expression, role.Unary, role.Operator),
 
-	mapASTCustom("UpdateExpression", Obj{
+	AnnotateTypeCustom("UpdateExpression", MapObj(Obj{
 		"operator": Var("op"),
 	}, Fields{ // ->
 		//{Name:"prefix", Op:  String("true")},
 		{Name: "operator", Op: Operator("op", unaryRoles, role.Unary)},
-	}, LookupArrOpVar("op", unaryRoles), role.Expression, role.Unary, role.Operator),
+	}), LookupArrOpVar("op", unaryRoles), role.Expression, role.Unary, role.Operator),
 
 	AnnotateType("UnaryExpression",
 		FieldRoles{
@@ -375,7 +363,7 @@ var Annotations = []Mapping{
 	),
 
 	// Binary operations
-	mapASTCustom("BinaryExpression", Obj{
+	AnnotateTypeCustom("BinaryExpression", MapObj(Obj{
 		"operator": Var("op"),
 		"left":     ObjectRoles("left"),
 		"right":    ObjectRoles("right"),
@@ -383,9 +371,9 @@ var Annotations = []Mapping{
 		{Name: "operator", Op: Operator("op", binaryRoles, role.Binary)},
 		{Name: "left", Op: ObjectRoles("left", role.Binary, role.Left)},
 		{Name: "right", Op: ObjectRoles("right", role.Binary, role.Right)},
-	}, LookupArrOpVar("op", binaryRoles), role.Expression, role.Operator, role.Binary),
+	}), LookupArrOpVar("op", binaryRoles), role.Expression, role.Operator, role.Binary),
 
-	mapASTCustom("AssignmentExpression", Obj{
+	AnnotateTypeCustom("AssignmentExpression", MapObj(Obj{
 		"operator": Var("op"),
 		"left":     ObjectRoles("left"),
 		"right":    ObjectRoles("right"),
@@ -393,9 +381,9 @@ var Annotations = []Mapping{
 		{Name: "operator", Op: Operator("op", assignRoles, role.Assignment, role.Binary)},
 		{Name: "left", Op: ObjectRoles("left", role.Assignment, role.Binary, role.Left)},
 		{Name: "right", Op: ObjectRoles("right", role.Assignment, role.Binary, role.Right)},
-	}, LookupArrOpVar("op", assignRoles), role.Expression, role.Assignment, role.Operator, role.Binary),
+	}), LookupArrOpVar("op", assignRoles), role.Expression, role.Assignment, role.Operator, role.Binary),
 
-	mapASTCustom("LogicalExpression", Obj{
+	AnnotateTypeCustom("LogicalExpression", MapObj(Obj{
 		"operator": Var("op"),
 		"left":     ObjectRoles("left"),
 		"right":    ObjectRoles("right"),
@@ -403,7 +391,7 @@ var Annotations = []Mapping{
 		{Name: "operator", Op: Operator("op", logicalRoles, role.Boolean, role.Binary)},
 		{Name: "left", Op: ObjectRoles("left", role.Boolean, role.Binary, role.Left)},
 		{Name: "right", Op: ObjectRoles("right", role.Boolean, role.Binary, role.Right)},
-	}, LookupArrOpVar("op", logicalRoles), role.Boolean, role.Expression, role.Operator, role.Binary),
+	}), LookupArrOpVar("op", logicalRoles), role.Boolean, role.Expression, role.Operator, role.Binary),
 
 	// Template literals
 	AnnotateType("TemplateLiteral", nil, role.Expression, role.Literal, role.Incomplete),
