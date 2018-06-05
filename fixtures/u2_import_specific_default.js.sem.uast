@@ -41,6 +41,7 @@
                   col: 24,
                },
             },
+            All: false,
             Names: [
                { '@type': "uast:Alias",
                   '@pos': { '@type': "uast:Positions",
@@ -89,8 +90,10 @@
                      col: 23,
                   },
                },
+               Format: "",
                Value: "file",
             },
+            Target: ~,
          },
       ],
       directives: [],

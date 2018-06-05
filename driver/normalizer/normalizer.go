@@ -84,35 +84,47 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
-		Obj{
-			"importKind": String("value"),
-			"source":     Var("path"),
-			"specifiers": Arr(Obj{ // FIXME: it may appear anywhere in the slice
-				uast.KeyType: String("ImportNamespaceSpecifier"),
-				uast.KeyPos:  Var("local_pos"),
-				"local":      Var("local"),
-			}),
-		},
-		Obj{
-			"Path": UASTType(uast.Alias{}, Obj{
-				uast.KeyPos: Var("local_pos"),
-				"Name":      Var("local"),
-				"Node":      Var("path"),
-			}),
-			"Names": Arr(),
-			"All":   Bool(true),
-		},
-	)),
-	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
-		Obj{
-			"importKind": String("value"),
-			"source":     Var("path"),
-			"specifiers": Check(Not(Arr()), Var("names")),
-		},
-		Obj{
-			"Path":  Var("path"),
-			"Names": Var("names"),
-		},
+		CasesObj("case",
+			// common
+			Obj{
+				"importKind": String("value"),
+				"source":     Var("path"),
+			},
+			Objs{
+				// namespace
+				{
+					"specifiers": ArrWith(Var("names"), Obj{
+						uast.KeyType: String("ImportNamespaceSpecifier"),
+						uast.KeyPos:  Var("local_pos"),
+						"local":      Var("local"),
+					}),
+				},
+				// normal import
+				{
+					"specifiers": Check(Not(Arr()), Var("names")),
+				},
+			},
+		),
+		CasesObj("case", nil,
+			Objs{
+				// namespace
+				{
+					"Path": UASTType(uast.Alias{}, Obj{
+						uast.KeyPos: Var("local_pos"),
+						"Name":      Var("local"),
+						"Node":      Var("path"),
+					}),
+					"Names": Var("names"),
+					"All":   Bool(true),
+				},
+				// normal import
+				{
+					"Path":  Var("path"),
+					"Names": Var("names"),
+					"All":   Bool(false),
+				},
+			},
+		),
 	)),
 	MapSemantic("ImportSpecifier", uast.Alias{}, MapObj(
 		Obj{
@@ -137,24 +149,32 @@ var Normalizers = []Mapping{
 			}),
 		},
 	)),
-	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
-		Obj{
-			"importKind": String("value"),
-			"source":     Var("path"),
-			"specifiers": Check(Not(Arr()), Var("names")),
-		},
-		Obj{
-			"Path":  Var("path"),
-			"Names": Var("names"),
-		},
-	)),
 	MapSemantic("FunctionDeclaration", uast.FunctionGroup{}, MapObj(
 		Obj{
 			"id":        Var("name"),
 			"generator": Var("gen"),   // FIXME: define channels in SDK? or return a function?
 			"async":     Var("async"), // TODO: async
 			"body":      Var("body"),
-			"params":    Var("params"), // FIXME: Ident | AssignmentPattern
+			"params": Each("params", Cases("param_case",
+				// Identifier
+				Check(
+					HasType(uast.Identifier{}),
+					Var("arg_name"),
+				),
+				// AssignmentPattern
+				Obj{
+					uast.KeyType: String("AssignmentPattern"),
+					uast.KeyPos:  Var("arg_pos"),
+					"left":       Var("arg_name"),
+					"right":      Var("arg_init"),
+				},
+				// RestElement
+				Obj{
+					uast.KeyType: String("RestElement"),
+					uast.KeyPos:  Var("arg_pos"),
+					"argument":   Var("arg_name"),
+				},
+			)),
 		},
 		Obj{
 			"Nodes": Arr(
@@ -166,7 +186,24 @@ var Normalizers = []Mapping{
 					"Name": Var("name"),
 					"Node": UASTType(uast.Function{}, Obj{
 						"Type": UASTType(uast.FunctionType{}, Obj{
-							"Arguments": Var("params"),
+							"Arguments": Each("params", Cases("param_case",
+								// Identifier
+								UASTType(uast.Argument{}, Obj{
+									"Name": Var("arg_name"),
+								}),
+								// AssignmentPattern
+								UASTType(uast.Argument{}, Obj{
+									uast.KeyPos: Var("arg_pos"),
+									"Name":      Var("arg_name"),
+									"Init":      Var("arg_init"),
+								}),
+								// RestElement
+								UASTType(uast.Argument{}, Obj{
+									uast.KeyPos: Var("arg_pos"),
+									"Name":      Var("arg_name"),
+									"Variadic":  Bool(true),
+								}),
+							)),
 							"Returns": Arr(
 								UASTType(uast.Argument{}, Obj{
 									"Init": Is(uast.Identifier{
