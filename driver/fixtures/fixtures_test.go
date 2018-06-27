@@ -34,6 +34,9 @@ var Suite = &fixtures.Suite{
 			"FunctionDeclaration",
 		},
 	},
+	Docker: fixtures.DockerConfig{
+		Image: "node:8",
+	},
 }
 
 func TestJavascriptDriver(t *testing.T) {
