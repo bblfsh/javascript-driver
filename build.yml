@@ -1,0 +1,19 @@
+sdk: '2'
+go-runtime:
+  version: '1.10-alpine'
+native:
+  image: 'node:8-alpine'
+  static:
+    - path: 'native.sh'
+      dest: 'native'
+  build:
+    run:
+      - 'yarn && yarn build'
+    artifacts:
+      - path: '/native/lib/index.js'
+        dest: 'index.js'
+      - path: '/native/node_modules'
+        dest: 'node_modules'
+  test:
+    run:
+      - 'yarn test'
