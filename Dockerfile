@@ -35,23 +35,22 @@ ADD driver $DRIVER_REPO_PATH/driver
 
 WORKDIR $DRIVER_REPO_PATH/
 
-# build tests
-RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 # build server binary
 RUN go build -o /tmp/driver ./driver/main.go
+# build tests
+RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 
 #=======================
 # Stage 3: Driver Build
 #=======================
 FROM node:8-alpine
 
+
+
 LABEL maintainer="source{d}" \
       bblfsh.language="javascript"
 
 WORKDIR /opt/driver
-
-# copy driver manifest and static files
-ADD .manifest.release.toml ./etc/manifest.toml
 
 # copy static files from driver source directory
 ADD ./native/native.sh ./bin/native
@@ -62,13 +61,16 @@ COPY --from=native /native/lib/index.js ./bin/index.js
 COPY --from=native /native/node_modules ./bin/node_modules
 
 
+# copy driver server binary
+COPY --from=driver /tmp/driver ./bin/
+
 # copy tests binary
 COPY --from=driver /tmp/fixtures.test ./bin/
 # move stuff to make tests work
 RUN ln -s /opt/driver ../build
 VOLUME /opt/fixtures
 
-# copy driver server binary
-COPY --from=driver /tmp/driver ./bin/
+# copy driver manifest and static files
+ADD .manifest.release.toml ./etc/manifest.toml
 
 ENTRYPOINT ["/opt/driver/bin/driver"]

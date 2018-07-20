@@ -285,7 +285,7 @@
     "uast/transformer/positioner",
     "uast/yaml"
   ]
-  revision = "6c6325881c9c7ed052e8616ee9faf98df404ce5e"
+  revision = "a4e5194367fffe36b80e233dbcfd9dfb809da048"
 
 [[projects]]
   name = "gopkg.in/src-d/go-errors.v1"
