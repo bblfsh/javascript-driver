@@ -526,4 +526,18 @@ var Annotations = []Mapping{
 		},
 		role.Statement, role.Incomplete,
 	),
+
+	// flow type annotations
+	AnnotateType("TypeAnnotation", nil, role.Declaration, role.Type),
+	AnnotateType("GenericTypeAnnotation", nil, role.Declaration, role.Type),
+	AnnotateType("MixedTypeAnnotation", nil, role.Declaration, role.Type),
+	AnnotateType("NumberTypeAnnotation", nil, role.Declaration, role.Type, role.Number),
+	AnnotateType("BooleanTypeAnnotation", nil, role.Declaration, role.Type, role.Boolean),
+	AnnotateType("StringTypeAnnotation", nil, role.Declaration, role.Type, role.String),
+	AnnotateType("StringLiteralTypeAnnotation", nil, role.Declaration, role.Type, role.String, role.Literal),
+	AnnotateType("NullLiteralTypeAnnotation", nil, role.Declaration, role.Type, role.Null),
+	AnnotateType("UnionTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("VoidTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("AnyTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("NullableTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
 }

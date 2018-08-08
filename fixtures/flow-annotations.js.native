@@ -1,0 +1,1139 @@
+{
+   comments: [
+      {
+         end: 8,
+         loc: {
+            end: {
+               column: 8,
+               line: 1,
+            },
+            start: {
+               column: 0,
+               line: 1,
+            },
+         },
+         start: 0,
+         type: "CommentLine",
+         value: " @flow",
+      },
+   ],
+   end: 277,
+   loc: {
+      end: {
+         column: 0,
+         line: 12,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            declaration: {
+               body: {
+                  body: [
+                     {
+                        async: false,
+                        body: {
+                           body: [],
+                           directives: [],
+                           end: 113,
+                           loc: {
+                              end: {
+                                 column: 69,
+                                 line: 4,
+                              },
+                              start: {
+                                 column: 67,
+                                 line: 4,
+                              },
+                           },
+                           start: 111,
+                           type: "BlockStatement",
+                        },
+                        computed: false,
+                        end: 113,
+                        generator: false,
+                        id: ~,
+                        key: {
+                           end: 56,
+                           loc: {
+                              end: {
+                                 column: 12,
+                                 line: 4,
+                              },
+                              identifierName: "testfnc1",
+                              start: {
+                                 column: 4,
+                                 line: 4,
+                              },
+                           },
+                           name: "testfnc1",
+                           start: 48,
+                           type: "Identifier",
+                        },
+                        kind: "method",
+                        loc: {
+                           end: {
+                              column: 69,
+                              line: 4,
+                           },
+                           start: {
+                              column: 4,
+                              line: 4,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 66,
+                              loc: {
+                                 end: {
+                                    column: 22,
+                                    line: 4,
+                                 },
+                                 identifierName: "a",
+                                 start: {
+                                    column: 13,
+                                    line: 4,
+                                 },
+                              },
+                              name: "a",
+                              start: 57,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 66,
+                                 loc: {
+                                    end: {
+                                       column: 22,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 14,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 58,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 66,
+                                    loc: {
+                                       end: {
+                                          column: 22,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 16,
+                                          line: 4,
+                                       },
+                                    },
+                                    start: 60,
+                                    type: "StringTypeAnnotation",
+                                 },
+                              },
+                           },
+                           {
+                              end: 78,
+                              loc: {
+                                 end: {
+                                    column: 34,
+                                    line: 4,
+                                 },
+                                 identifierName: "b",
+                                 start: {
+                                    column: 24,
+                                    line: 4,
+                                 },
+                              },
+                              name: "b",
+                              start: 68,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 78,
+                                 loc: {
+                                    end: {
+                                       column: 34,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 25,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 69,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 78,
+                                    loc: {
+                                       end: {
+                                          column: 34,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 27,
+                                          line: 4,
+                                       },
+                                    },
+                                    start: 71,
+                                    type: "NullableTypeAnnotation",
+                                    typeAnnotation: {
+                                       end: 78,
+                                       loc: {
+                                          end: {
+                                             column: 34,
+                                             line: 4,
+                                          },
+                                          start: {
+                                             column: 28,
+                                             line: 4,
+                                          },
+                                       },
+                                       start: 72,
+                                       type: "StringTypeAnnotation",
+                                    },
+                                 },
+                              },
+                           },
+                           {
+                              end: 89,
+                              loc: {
+                                 end: {
+                                    column: 45,
+                                    line: 4,
+                                 },
+                                 identifierName: "c",
+                                 start: {
+                                    column: 36,
+                                    line: 4,
+                                 },
+                              },
+                              name: "c",
+                              start: 80,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 89,
+                                 loc: {
+                                    end: {
+                                       column: 45,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 37,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 81,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 89,
+                                    loc: {
+                                       end: {
+                                          column: 45,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 39,
+                                          line: 4,
+                                       },
+                                    },
+                                    start: 83,
+                                    type: "NumberTypeAnnotation",
+                                 },
+                              },
+                           },
+                           {
+                              end: 99,
+                              loc: {
+                                 end: {
+                                    column: 55,
+                                    line: 4,
+                                 },
+                                 identifierName: "d",
+                                 start: {
+                                    column: 47,
+                                    line: 4,
+                                 },
+                              },
+                              name: "d",
+                              start: 91,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 99,
+                                 loc: {
+                                    end: {
+                                       column: 55,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 48,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 92,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 99,
+                                    loc: {
+                                       end: {
+                                          column: 55,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 50,
+                                          line: 4,
+                                       },
+                                    },
+                                    start: 94,
+                                    type: "MixedTypeAnnotation",
+                                 },
+                              },
+                           },
+                           {
+                              end: 110,
+                              loc: {
+                                 end: {
+                                    column: 66,
+                                    line: 4,
+                                 },
+                                 identifierName: "e",
+                                 start: {
+                                    column: 57,
+                                    line: 4,
+                                 },
+                              },
+                              name: "e",
+                              start: 101,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 110,
+                                 loc: {
+                                    end: {
+                                       column: 66,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 58,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 102,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 110,
+                                    id: {
+                                       end: 110,
+                                       loc: {
+                                          end: {
+                                             column: 66,
+                                             line: 4,
+                                          },
+                                          identifierName: "Object",
+                                          start: {
+                                             column: 60,
+                                             line: 4,
+                                          },
+                                       },
+                                       name: "Object",
+                                       start: 104,
+                                       type: "Identifier",
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 66,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 60,
+                                          line: 4,
+                                       },
+                                    },
+                                    start: 104,
+                                    type: "GenericTypeAnnotation",
+                                    typeParameters: ~,
+                                 },
+                              },
+                           },
+                        ],
+                        start: 48,
+                        static: false,
+                        type: "ClassMethod",
+                     },
+                     {
+                        async: false,
+                        body: {
+                           body: [],
+                           directives: [],
+                           end: 179,
+                           loc: {
+                              end: {
+                                 column: 65,
+                                 line: 5,
+                              },
+                              start: {
+                                 column: 63,
+                                 line: 5,
+                              },
+                           },
+                           start: 177,
+                           type: "BlockStatement",
+                        },
+                        computed: false,
+                        end: 179,
+                        generator: false,
+                        id: ~,
+                        key: {
+                           end: 126,
+                           loc: {
+                              end: {
+                                 column: 12,
+                                 line: 5,
+                              },
+                              identifierName: "testfnc2",
+                              start: {
+                                 column: 4,
+                                 line: 5,
+                              },
+                           },
+                           name: "testfnc2",
+                           start: 118,
+                           type: "Identifier",
+                        },
+                        kind: "method",
+                        loc: {
+                           end: {
+                              column: 65,
+                              line: 5,
+                           },
+                           start: {
+                              column: 4,
+                              line: 5,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 146,
+                              loc: {
+                                 end: {
+                                    column: 32,
+                                    line: 5,
+                                 },
+                                 identifierName: "f",
+                                 start: {
+                                    column: 13,
+                                    line: 5,
+                                 },
+                              },
+                              name: "f",
+                              start: 127,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 146,
+                                 loc: {
+                                    end: {
+                                       column: 32,
+                                       line: 5,
+                                    },
+                                    start: {
+                                       column: 14,
+                                       line: 5,
+                                    },
+                                 },
+                                 start: 128,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 146,
+                                    loc: {
+                                       end: {
+                                          column: 32,
+                                          line: 5,
+                                       },
+                                       start: {
+                                          column: 16,
+                                          line: 5,
+                                       },
+                                    },
+                                    start: 130,
+                                    type: "UnionTypeAnnotation",
+                                    types: [
+                                       {
+                                          end: 136,
+                                          loc: {
+                                             end: {
+                                                column: 22,
+                                                line: 5,
+                                             },
+                                             start: {
+                                                column: 16,
+                                                line: 5,
+                                             },
+                                          },
+                                          start: 130,
+                                          type: "StringTypeAnnotation",
+                                       },
+                                       {
+                                          end: 146,
+                                          loc: {
+                                             end: {
+                                                column: 32,
+                                                line: 5,
+                                             },
+                                             start: {
+                                                column: 25,
+                                                line: 5,
+                                             },
+                                          },
+                                          start: 139,
+                                          type: "BooleanTypeAnnotation",
+                                       },
+                                    ],
+                                 },
+                              },
+                           },
+                           {
+                              end: 158,
+                              loc: {
+                                 end: {
+                                    column: 44,
+                                    line: 5,
+                                 },
+                                 identifierName: "g",
+                                 start: {
+                                    column: 34,
+                                    line: 5,
+                                 },
+                              },
+                              name: "g",
+                              start: 148,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 158,
+                                 loc: {
+                                    end: {
+                                       column: 44,
+                                       line: 5,
+                                    },
+                                    start: {
+                                       column: 35,
+                                       line: 5,
+                                    },
+                                 },
+                                 start: 149,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 158,
+                                    loc: {
+                                       end: {
+                                          column: 44,
+                                          line: 5,
+                                       },
+                                       start: {
+                                          column: 37,
+                                          line: 5,
+                                       },
+                                    },
+                                    start: 151,
+                                    type: "BooleanTypeAnnotation",
+                                 },
+                              },
+                           },
+                           {
+                              end: 167,
+                              loc: {
+                                 end: {
+                                    column: 53,
+                                    line: 5,
+                                 },
+                                 identifierName: "h",
+                                 start: {
+                                    column: 46,
+                                    line: 5,
+                                 },
+                              },
+                              name: "h",
+                              start: 160,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 167,
+                                 loc: {
+                                    end: {
+                                       column: 53,
+                                       line: 5,
+                                    },
+                                    start: {
+                                       column: 47,
+                                       line: 5,
+                                    },
+                                 },
+                                 start: 161,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 167,
+                                    loc: {
+                                       end: {
+                                          column: 53,
+                                          line: 5,
+                                       },
+                                       start: {
+                                          column: 49,
+                                          line: 5,
+                                       },
+                                    },
+                                    start: 163,
+                                    type: "NullLiteralTypeAnnotation",
+                                 },
+                              },
+                           },
+                           {
+                              end: 176,
+                              loc: {
+                                 end: {
+                                    column: 62,
+                                    line: 5,
+                                 },
+                                 identifierName: "i",
+                                 start: {
+                                    column: 55,
+                                    line: 5,
+                                 },
+                              },
+                              name: "i",
+                              start: 169,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 176,
+                                 loc: {
+                                    end: {
+                                       column: 62,
+                                       line: 5,
+                                    },
+                                    start: {
+                                       column: 56,
+                                       line: 5,
+                                    },
+                                 },
+                                 start: 170,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 176,
+                                    loc: {
+                                       end: {
+                                          column: 62,
+                                          line: 5,
+                                       },
+                                       start: {
+                                          column: 58,
+                                          line: 5,
+                                       },
+                                    },
+                                    start: 172,
+                                    type: "VoidTypeAnnotation",
+                                 },
+                              },
+                           },
+                        ],
+                        start: 118,
+                        static: false,
+                        type: "ClassMethod",
+                     },
+                     {
+                        async: false,
+                        body: {
+                           body: [],
+                           directives: [],
+                           end: 214,
+                           loc: {
+                              end: {
+                                 column: 34,
+                                 line: 6,
+                              },
+                              start: {
+                                 column: 32,
+                                 line: 6,
+                              },
+                           },
+                           start: 212,
+                           type: "BlockStatement",
+                        },
+                        computed: false,
+                        end: 214,
+                        generator: false,
+                        id: ~,
+                        key: {
+                           end: 192,
+                           loc: {
+                              end: {
+                                 column: 12,
+                                 line: 6,
+                              },
+                              identifierName: "testfncd",
+                              start: {
+                                 column: 4,
+                                 line: 6,
+                              },
+                           },
+                           name: "testfncd",
+                           start: 184,
+                           type: "Identifier",
+                        },
+                        kind: "method",
+                        loc: {
+                           end: {
+                              column: 34,
+                              line: 6,
+                           },
+                           start: {
+                              column: 4,
+                              line: 6,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 211,
+                              loc: {
+                                 end: {
+                                    column: 31,
+                                    line: 6,
+                                 },
+                                 identifierName: "j",
+                                 start: {
+                                    column: 13,
+                                    line: 6,
+                                 },
+                              },
+                              name: "j",
+                              start: 193,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 211,
+                                 loc: {
+                                    end: {
+                                       column: 31,
+                                       line: 6,
+                                    },
+                                    start: {
+                                       column: 14,
+                                       line: 6,
+                                    },
+                                 },
+                                 start: 194,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 211,
+                                    loc: {
+                                       end: {
+                                          column: 31,
+                                          line: 6,
+                                       },
+                                       start: {
+                                          column: 16,
+                                          line: 6,
+                                       },
+                                    },
+                                    start: 196,
+                                    type: "UnionTypeAnnotation",
+                                    types: [
+                                       {
+                                          end: 201,
+                                          extra: {
+                                             raw: "\"one\"",
+                                             rawValue: "one",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 21,
+                                                line: 6,
+                                             },
+                                             start: {
+                                                column: 16,
+                                                line: 6,
+                                             },
+                                          },
+                                          start: 196,
+                                          type: "StringLiteralTypeAnnotation",
+                                          value: "one",
+                                       },
+                                       {
+                                          end: 211,
+                                          extra: {
+                                             raw: "\"other\"",
+                                             rawValue: "other",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 31,
+                                                line: 6,
+                                             },
+                                             start: {
+                                                column: 24,
+                                                line: 6,
+                                             },
+                                          },
+                                          start: 204,
+                                          type: "StringLiteralTypeAnnotation",
+                                          value: "other",
+                                       },
+                                    ],
+                                 },
+                              },
+                           },
+                        ],
+                        start: 184,
+                        static: false,
+                        type: "ClassMethod",
+                     },
+                     {
+                        computed: false,
+                        end: 236,
+                        key: {
+                           end: 223,
+                           loc: {
+                              end: {
+                                 column: 7,
+                                 line: 8,
+                              },
+                              identifierName: "num",
+                              start: {
+                                 column: 4,
+                                 line: 8,
+                              },
+                           },
+                           name: "num",
+                           start: 220,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 20,
+                              line: 8,
+                           },
+                           start: {
+                              column: 4,
+                              line: 8,
+                           },
+                        },
+                        start: 220,
+                        static: false,
+                        type: "ClassProperty",
+                        typeAnnotation: {
+                           end: 231,
+                           loc: {
+                              end: {
+                                 column: 15,
+                                 line: 8,
+                              },
+                              start: {
+                                 column: 7,
+                                 line: 8,
+                              },
+                           },
+                           start: 223,
+                           type: "TypeAnnotation",
+                           typeAnnotation: {
+                              end: 231,
+                              loc: {
+                                 end: {
+                                    column: 15,
+                                    line: 8,
+                                 },
+                                 start: {
+                                    column: 9,
+                                    line: 8,
+                                 },
+                              },
+                              start: 225,
+                              type: "NumberTypeAnnotation",
+                           },
+                        },
+                        value: {
+                           end: 235,
+                           extra: {
+                              raw: "1",
+                              rawValue: 1,
+                           },
+                           loc: {
+                              end: {
+                                 column: 19,
+                                 line: 8,
+                              },
+                              start: {
+                                 column: 18,
+                                 line: 8,
+                              },
+                           },
+                           start: 234,
+                           type: "NumericLiteral",
+                           value: 1,
+                        },
+                        variance: ~,
+                     },
+                     {
+                        computed: false,
+                        end: 259,
+                        key: {
+                           end: 242,
+                           loc: {
+                              end: {
+                                 column: 5,
+                                 line: 9,
+                              },
+                              identifierName: "s",
+                              start: {
+                                 column: 4,
+                                 line: 9,
+                              },
+                           },
+                           name: "s",
+                           start: 241,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 22,
+                              line: 9,
+                           },
+                           start: {
+                              column: 4,
+                              line: 9,
+                           },
+                        },
+                        start: 241,
+                        static: false,
+                        type: "ClassProperty",
+                        typeAnnotation: {
+                           end: 250,
+                           loc: {
+                              end: {
+                                 column: 13,
+                                 line: 9,
+                              },
+                              start: {
+                                 column: 5,
+                                 line: 9,
+                              },
+                           },
+                           start: 242,
+                           type: "TypeAnnotation",
+                           typeAnnotation: {
+                              end: 250,
+                              loc: {
+                                 end: {
+                                    column: 13,
+                                    line: 9,
+                                 },
+                                 start: {
+                                    column: 7,
+                                    line: 9,
+                                 },
+                              },
+                              start: 244,
+                              type: "StringTypeAnnotation",
+                           },
+                        },
+                        value: {
+                           end: 258,
+                           extra: {
+                              raw: "\"foo\"",
+                              rawValue: "foo",
+                           },
+                           loc: {
+                              end: {
+                                 column: 21,
+                                 line: 9,
+                              },
+                              start: {
+                                 column: 16,
+                                 line: 9,
+                              },
+                           },
+                           start: 253,
+                           type: "StringLiteral",
+                           value: "foo",
+                        },
+                        variance: ~,
+                     },
+                     {
+                        computed: false,
+                        end: 274,
+                        key: {
+                           end: 267,
+                           loc: {
+                              end: {
+                                 column: 7,
+                                 line: 10,
+                              },
+                              identifierName: "pok",
+                              start: {
+                                 column: 4,
+                                 line: 10,
+                              },
+                           },
+                           name: "pok",
+                           start: 264,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 14,
+                              line: 10,
+                           },
+                           start: {
+                              column: 4,
+                              line: 10,
+                           },
+                        },
+                        start: 264,
+                        static: false,
+                        type: "ClassProperty",
+                        typeAnnotation: {
+                           end: 273,
+                           loc: {
+                              end: {
+                                 column: 13,
+                                 line: 10,
+                              },
+                              start: {
+                                 column: 7,
+                                 line: 10,
+                              },
+                           },
+                           start: 267,
+                           type: "TypeAnnotation",
+                           typeAnnotation: {
+                              end: 273,
+                              id: {
+                                 end: 273,
+                                 loc: {
+                                    end: {
+                                       column: 13,
+                                       line: 10,
+                                    },
+                                    identifierName: "File",
+                                    start: {
+                                       column: 9,
+                                       line: 10,
+                                    },
+                                 },
+                                 name: "File",
+                                 start: 269,
+                                 type: "Identifier",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 13,
+                                    line: 10,
+                                 },
+                                 start: {
+                                    column: 9,
+                                    line: 10,
+                                 },
+                              },
+                              start: 269,
+                              type: "GenericTypeAnnotation",
+                              typeParameters: ~,
+                           },
+                        },
+                        value: ~,
+                        variance: ~,
+                     },
+                  ],
+                  end: 276,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 11,
+                     },
+                     start: {
+                        column: 32,
+                        line: 3,
+                     },
+                  },
+                  start: 42,
+                  type: "ClassBody",
+               },
+               end: 276,
+               id: {
+                  end: 41,
+                  leadingComments: ~,
+                  loc: {
+                     end: {
+                        column: 31,
+                        line: 3,
+                     },
+                     identifierName: "PluginPass",
+                     start: {
+                        column: 21,
+                        line: 3,
+                     },
+                  },
+                  name: "PluginPass",
+                  start: 31,
+                  type: "Identifier",
+               },
+               leadingComments: ~,
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 11,
+                  },
+                  start: {
+                     column: 15,
+                     line: 3,
+                  },
+               },
+               start: 25,
+               superClass: ~,
+               type: "ClassDeclaration",
+            },
+            end: 276,
+            leadingComments: [
+               {
+                  end: 8,
+                  loc: {
+                     end: {
+                        column: 8,
+                        line: 1,
+                     },
+                     start: {
+                        column: 0,
+                        line: 1,
+                     },
+                  },
+                  start: 0,
+                  type: "CommentLine",
+                  value: " @flow",
+               },
+            ],
+            loc: {
+               end: {
+                  column: 1,
+                  line: 11,
+               },
+               start: {
+                  column: 0,
+                  line: 3,
+               },
+            },
+            start: 10,
+            type: "ExportDefaultDeclaration",
+         },
+      ],
+      directives: [],
+      end: 277,
+      loc: {
+         end: {
+            column: 0,
+            line: 12,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}
