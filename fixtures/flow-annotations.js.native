@@ -17,11 +17,11 @@
          value: " @flow",
       },
    ],
-   end: 472,
+   end: 516,
    loc: {
       end: {
          column: 0,
-         line: 18,
+         line: 19,
       },
       start: {
          column: 0,
@@ -1335,70 +1335,208 @@
                         type: "ClassMethod",
                      },
                      {
+                        async: false,
+                        body: {
+                           body: [],
+                           directives: [],
+                           end: 411,
+                           loc: {
+                              end: {
+                                 column: 43,
+                                 line: 11,
+                              },
+                              start: {
+                                 column: 41,
+                                 line: 11,
+                              },
+                           },
+                           start: 409,
+                           type: "BlockStatement",
+                        },
                         computed: false,
-                        end: 389,
+                        end: 411,
+                        generator: false,
+                        id: ~,
                         key: {
-                           end: 376,
+                           end: 386,
+                           loc: {
+                              end: {
+                                 column: 18,
+                                 line: 11,
+                              },
+                              identifierName: "testfnc_typeof",
+                              start: {
+                                 column: 4,
+                                 line: 11,
+                              },
+                           },
+                           name: "testfnc_typeof",
+                           start: 372,
+                           type: "Identifier",
+                        },
+                        kind: "method",
+                        loc: {
+                           end: {
+                              column: 43,
+                              line: 11,
+                           },
+                           start: {
+                              column: 4,
+                              line: 11,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 407,
+                              loc: {
+                                 end: {
+                                    column: 39,
+                                    line: 11,
+                                 },
+                                 identifierName: "Error",
+                                 start: {
+                                    column: 19,
+                                    line: 11,
+                                 },
+                              },
+                              name: "Error",
+                              optional: true,
+                              start: 387,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 407,
+                                 loc: {
+                                    end: {
+                                       column: 39,
+                                       line: 11,
+                                    },
+                                    start: {
+                                       column: 25,
+                                       line: 11,
+                                    },
+                                 },
+                                 start: 393,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    argument: {
+                                       end: 407,
+                                       id: {
+                                          end: 407,
+                                          loc: {
+                                             end: {
+                                                column: 39,
+                                                line: 11,
+                                             },
+                                             identifierName: "Error",
+                                             start: {
+                                                column: 34,
+                                                line: 11,
+                                             },
+                                          },
+                                          name: "Error",
+                                          start: 402,
+                                          type: "Identifier",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 39,
+                                             line: 11,
+                                          },
+                                          start: {
+                                             column: 34,
+                                             line: 11,
+                                          },
+                                       },
+                                       start: 402,
+                                       type: "GenericTypeAnnotation",
+                                       typeParameters: ~,
+                                    },
+                                    end: 407,
+                                    loc: {
+                                       end: {
+                                          column: 39,
+                                          line: 11,
+                                       },
+                                       start: {
+                                          column: 27,
+                                          line: 11,
+                                       },
+                                    },
+                                    start: 395,
+                                    type: "TypeofTypeAnnotation",
+                                 },
+                              },
+                           },
+                        ],
+                        start: 372,
+                        static: false,
+                        type: "ClassMethod",
+                     },
+                     {
+                        computed: false,
+                        end: 433,
+                        key: {
+                           end: 420,
                            loc: {
                               end: {
                                  column: 7,
-                                 line: 12,
+                                 line: 13,
                               },
                               identifierName: "num",
                               start: {
                                  column: 4,
-                                 line: 12,
+                                 line: 13,
                               },
                            },
                            name: "num",
-                           start: 373,
+                           start: 417,
                            type: "Identifier",
                         },
                         loc: {
                            end: {
                               column: 20,
-                              line: 12,
+                              line: 13,
                            },
                            start: {
                               column: 4,
-                              line: 12,
+                              line: 13,
                            },
                         },
-                        start: 373,
+                        start: 417,
                         static: false,
                         type: "ClassProperty",
                         typeAnnotation: {
-                           end: 384,
+                           end: 428,
                            loc: {
                               end: {
                                  column: 15,
-                                 line: 12,
+                                 line: 13,
                               },
                               start: {
                                  column: 7,
-                                 line: 12,
+                                 line: 13,
                               },
                            },
-                           start: 376,
+                           start: 420,
                            type: "TypeAnnotation",
                            typeAnnotation: {
-                              end: 384,
+                              end: 428,
                               loc: {
                                  end: {
                                     column: 15,
-                                    line: 12,
+                                    line: 13,
                                  },
                                  start: {
                                     column: 9,
-                                    line: 12,
+                                    line: 13,
                                  },
                               },
-                              start: 378,
+                              start: 422,
                               type: "NumberTypeAnnotation",
                            },
                         },
                         value: {
-                           end: 388,
+                           end: 432,
                            extra: {
                               raw: "1",
                               rawValue: 1,
@@ -1406,14 +1544,14 @@
                            loc: {
                               end: {
                                  column: 19,
-                                 line: 12,
+                                 line: 13,
                               },
                               start: {
                                  column: 18,
-                                 line: 12,
+                                 line: 13,
                               },
                            },
-                           start: 387,
+                           start: 431,
                            type: "NumericLiteral",
                            value: 1,
                         },
@@ -1421,69 +1559,69 @@
                      },
                      {
                         computed: false,
-                        end: 412,
+                        end: 456,
                         key: {
-                           end: 395,
+                           end: 439,
                            loc: {
                               end: {
                                  column: 5,
-                                 line: 13,
+                                 line: 14,
                               },
                               identifierName: "s",
                               start: {
                                  column: 4,
-                                 line: 13,
+                                 line: 14,
                               },
                            },
                            name: "s",
-                           start: 394,
+                           start: 438,
                            type: "Identifier",
                         },
                         loc: {
                            end: {
                               column: 22,
-                              line: 13,
+                              line: 14,
                            },
                            start: {
                               column: 4,
-                              line: 13,
+                              line: 14,
                            },
                         },
-                        start: 394,
+                        start: 438,
                         static: false,
                         type: "ClassProperty",
                         typeAnnotation: {
-                           end: 403,
+                           end: 447,
                            loc: {
                               end: {
                                  column: 13,
-                                 line: 13,
+                                 line: 14,
                               },
                               start: {
                                  column: 5,
-                                 line: 13,
+                                 line: 14,
                               },
                            },
-                           start: 395,
+                           start: 439,
                            type: "TypeAnnotation",
                            typeAnnotation: {
-                              end: 403,
+                              end: 447,
                               loc: {
                                  end: {
                                     column: 13,
-                                    line: 13,
+                                    line: 14,
                                  },
                                  start: {
                                     column: 7,
-                                    line: 13,
+                                    line: 14,
                                  },
                               },
-                              start: 397,
+                              start: 441,
                               type: "StringTypeAnnotation",
                            },
                         },
                         value: {
-                           end: 411,
+                           end: 455,
                            extra: {
                               raw: "\"foo\"",
                               rawValue: "foo",
@@ -1491,14 +1629,14 @@
                            loc: {
                               end: {
                                  column: 21,
-                                 line: 13,
+                                 line: 14,
                               },
                               start: {
                                  column: 16,
-                                 line: 13,
+                                 line: 14,
                               },
                            },
-                           start: 406,
+                           start: 450,
                            type: "StringLiteral",
                            value: "foo",
                         },
@@ -1506,81 +1644,81 @@
                      },
                      {
                         computed: false,
-                        end: 427,
+                        end: 471,
                         key: {
-                           end: 420,
+                           end: 464,
                            loc: {
                               end: {
                                  column: 7,
-                                 line: 14,
+                                 line: 15,
                               },
                               identifierName: "pok",
                               start: {
                                  column: 4,
-                                 line: 14,
+                                 line: 15,
                               },
                            },
                            name: "pok",
-                           start: 417,
+                           start: 461,
                            type: "Identifier",
                         },
                         loc: {
                            end: {
                               column: 14,
-                              line: 14,
+                              line: 15,
                            },
                            start: {
                               column: 4,
-                              line: 14,
+                              line: 15,
                            },
                         },
-                        start: 417,
+                        start: 461,
                         static: false,
                         type: "ClassProperty",
                         typeAnnotation: {
-                           end: 426,
+                           end: 470,
                            loc: {
                               end: {
                                  column: 13,
-                                 line: 14,
+                                 line: 15,
                               },
                               start: {
                                  column: 7,
-                                 line: 14,
+                                 line: 15,
                               },
                            },
-                           start: 420,
+                           start: 464,
                            type: "TypeAnnotation",
                            typeAnnotation: {
-                              end: 426,
+                              end: 470,
                               id: {
-                                 end: 426,
+                                 end: 470,
                                  loc: {
                                     end: {
                                        column: 13,
-                                       line: 14,
+                                       line: 15,
                                     },
                                     identifierName: "File",
                                     start: {
                                        column: 9,
-                                       line: 14,
+                                       line: 15,
                                     },
                                  },
                                  name: "File",
-                                 start: 422,
+                                 start: 466,
                                  type: "Identifier",
                               },
                               loc: {
                                  end: {
                                     column: 13,
-                                    line: 14,
+                                    line: 15,
                                  },
                                  start: {
                                     column: 9,
-                                    line: 14,
+                                    line: 15,
                                  },
                               },
-                              start: 422,
+                              start: 466,
                               type: "GenericTypeAnnotation",
                               typeParameters: ~,
                            },
@@ -1590,127 +1728,127 @@
                      },
                      {
                         computed: false,
-                        end: 464,
+                        end: 508,
                         key: {
-                           end: 436,
+                           end: 480,
                            loc: {
                               end: {
                                  column: 8,
-                                 line: 15,
+                                 line: 16,
                               },
                               identifierName: "_map",
                               start: {
                                  column: 4,
-                                 line: 15,
+                                 line: 16,
                               },
                            },
                            name: "_map",
-                           start: 432,
+                           start: 476,
                            type: "Identifier",
                         },
                         loc: {
                            end: {
                               column: 36,
-                              line: 15,
+                              line: 16,
                            },
                            start: {
                               column: 4,
-                              line: 15,
+                              line: 16,
                            },
                         },
-                        start: 432,
+                        start: 476,
                         static: false,
                         type: "ClassProperty",
                         typeAnnotation: {
-                           end: 455,
+                           end: 499,
                            loc: {
                               end: {
                                  column: 27,
-                                 line: 15,
+                                 line: 16,
                               },
                               start: {
                                  column: 8,
-                                 line: 15,
+                                 line: 16,
                               },
                            },
-                           start: 436,
+                           start: 480,
                            type: "TypeAnnotation",
                            typeAnnotation: {
-                              end: 455,
+                              end: 499,
                               id: {
-                                 end: 441,
+                                 end: 485,
                                  loc: {
                                     end: {
                                        column: 13,
-                                       line: 15,
+                                       line: 16,
                                     },
                                     identifierName: "Map",
                                     start: {
                                        column: 10,
-                                       line: 15,
+                                       line: 16,
                                     },
                                  },
                                  name: "Map",
-                                 start: 438,
+                                 start: 482,
                                  type: "Identifier",
                               },
                               loc: {
                                  end: {
                                     column: 27,
-                                    line: 15,
+                                    line: 16,
                                  },
                                  start: {
                                     column: 10,
-                                    line: 15,
+                                    line: 16,
                                  },
                               },
-                              start: 438,
+                              start: 482,
                               type: "GenericTypeAnnotation",
                               typeParameters: {
-                                 end: 455,
+                                 end: 499,
                                  loc: {
                                     end: {
                                        column: 27,
-                                       line: 15,
+                                       line: 16,
                                     },
                                     start: {
                                        column: 13,
-                                       line: 15,
+                                       line: 16,
                                     },
                                  },
                                  params: [
                                     {
-                                       end: 447,
+                                       end: 491,
                                        loc: {
                                           end: {
                                              column: 19,
-                                             line: 15,
+                                             line: 16,
                                           },
                                           start: {
                                              column: 14,
-                                             line: 15,
+                                             line: 16,
                                           },
                                        },
-                                       start: 442,
+                                       start: 486,
                                        type: "MixedTypeAnnotation",
                                     },
                                     {
-                                       end: 454,
+                                       end: 498,
                                        loc: {
                                           end: {
                                              column: 26,
-                                             line: 15,
+                                             line: 16,
                                           },
                                           start: {
                                              column: 21,
-                                             line: 15,
+                                             line: 16,
                                           },
                                        },
-                                       start: 449,
+                                       start: 493,
                                        type: "MixedTypeAnnotation",
                                     },
                                  ],
-                                 start: 441,
+                                 start: 485,
                                  type: "TypeParameterInstantiation",
                               },
                            },
@@ -1718,44 +1856,44 @@
                         value: {
                            arguments: [],
                            callee: {
-                              end: 461,
+                              end: 505,
                               loc: {
                                  end: {
                                     column: 33,
-                                    line: 15,
+                                    line: 16,
                                  },
                                  identifierName: "Map",
                                  start: {
                                     column: 30,
-                                    line: 15,
+                                    line: 16,
                                  },
                               },
                               name: "Map",
-                              start: 458,
+                              start: 502,
                               type: "Identifier",
                            },
-                           end: 463,
+                           end: 507,
                            loc: {
                               end: {
                                  column: 35,
-                                 line: 15,
+                                 line: 16,
                               },
                               start: {
                                  column: 30,
-                                 line: 15,
+                                 line: 16,
                               },
                            },
-                           start: 458,
+                           start: 502,
                            type: "CallExpression",
                         },
                         variance: ~,
                      },
                   ],
-                  end: 471,
+                  end: 515,
                   loc: {
                      end: {
                         column: 1,
-                        line: 17,
+                        line: 18,
                      },
                      start: {
                         column: 32,
@@ -1765,7 +1903,7 @@
                   start: 42,
                   type: "ClassBody",
                },
-               end: 471,
+               end: 515,
                id: {
                   end: 41,
                   leadingComments: ~,
@@ -1788,7 +1926,7 @@
                loc: {
                   end: {
                      column: 1,
-                     line: 17,
+                     line: 18,
                   },
                   start: {
                      column: 15,
@@ -1799,7 +1937,7 @@
                superClass: ~,
                type: "ClassDeclaration",
             },
-            end: 471,
+            end: 515,
             leadingComments: [
                {
                   end: 8,
@@ -1821,7 +1959,7 @@
             loc: {
                end: {
                   column: 1,
-                  line: 17,
+                  line: 18,
                },
                start: {
                   column: 0,
@@ -1833,11 +1971,11 @@
          },
       ],
       directives: [],
-      end: 472,
+      end: 516,
       loc: {
          end: {
             column: 0,
-            line: 18,
+            line: 19,
          },
          start: {
             column: 0,
