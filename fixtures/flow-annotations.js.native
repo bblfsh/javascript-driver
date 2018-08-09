@@ -17,11 +17,11 @@
          value: " @flow",
       },
    ],
-   end: 516,
+   end: 552,
    loc: {
       end: {
          column: 0,
-         line: 19,
+         line: 22,
       },
       start: {
          column: 0,
@@ -1889,11 +1889,11 @@
                         variance: ~,
                      },
                   ],
-                  end: 515,
+                  end: 516,
                   loc: {
                      end: {
                         column: 1,
-                        line: 18,
+                        line: 19,
                      },
                      start: {
                         column: 32,
@@ -1903,7 +1903,7 @@
                   start: 42,
                   type: "ClassBody",
                },
-               end: 515,
+               end: 516,
                id: {
                   end: 41,
                   leadingComments: ~,
@@ -1926,7 +1926,7 @@
                loc: {
                   end: {
                      column: 1,
-                     line: 18,
+                     line: 19,
                   },
                   start: {
                      column: 15,
@@ -1937,7 +1937,7 @@
                superClass: ~,
                type: "ClassDeclaration",
             },
-            end: 515,
+            end: 516,
             leadingComments: [
                {
                   end: 8,
@@ -1959,7 +1959,7 @@
             loc: {
                end: {
                   column: 1,
-                  line: 18,
+                  line: 19,
                },
                start: {
                   column: 0,
@@ -1969,13 +1969,183 @@
             start: 10,
             type: "ExportDefaultDeclaration",
          },
+         {
+            body: {
+               callProperties: [],
+               end: 551,
+               exact: false,
+               indexers: [],
+               loc: {
+                  end: {
+                     column: 33,
+                     line: 21,
+                  },
+                  start: {
+                     column: 31,
+                     line: 21,
+                  },
+               },
+               properties: [],
+               start: 549,
+               type: "ObjectTypeAnnotation",
+            },
+            end: 551,
+            extends: [],
+            id: {
+               end: 533,
+               loc: {
+                  end: {
+                     column: 15,
+                     line: 21,
+                  },
+                  identifierName: "A",
+                  start: {
+                     column: 14,
+                     line: 21,
+                  },
+               },
+               name: "A",
+               start: 532,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 33,
+                  line: 21,
+               },
+               start: {
+                  column: 0,
+                  line: 21,
+               },
+            },
+            mixins: [
+               {
+                  end: 545,
+                  id: {
+                     end: 542,
+                     loc: {
+                        end: {
+                           column: 24,
+                           line: 21,
+                        },
+                        identifierName: "B",
+                        start: {
+                           column: 23,
+                           line: 21,
+                        },
+                     },
+                     name: "B",
+                     start: 541,
+                     type: "Identifier",
+                  },
+                  loc: {
+                     end: {
+                        column: 27,
+                        line: 21,
+                     },
+                     start: {
+                        column: 23,
+                        line: 21,
+                     },
+                  },
+                  start: 541,
+                  type: "InterfaceExtends",
+                  typeParameters: {
+                     end: 545,
+                     loc: {
+                        end: {
+                           column: 27,
+                           line: 21,
+                        },
+                        start: {
+                           column: 24,
+                           line: 21,
+                        },
+                     },
+                     params: [
+                        {
+                           end: 544,
+                           id: {
+                              end: 544,
+                              loc: {
+                                 end: {
+                                    column: 26,
+                                    line: 21,
+                                 },
+                                 identifierName: "T",
+                                 start: {
+                                    column: 25,
+                                    line: 21,
+                                 },
+                              },
+                              name: "T",
+                              start: 543,
+                              type: "Identifier",
+                           },
+                           loc: {
+                              end: {
+                                 column: 26,
+                                 line: 21,
+                              },
+                              start: {
+                                 column: 25,
+                                 line: 21,
+                              },
+                           },
+                           start: 543,
+                           type: "GenericTypeAnnotation",
+                           typeParameters: ~,
+                        },
+                     ],
+                     start: 542,
+                     type: "TypeParameterInstantiation",
+                  },
+               },
+               {
+                  end: 548,
+                  id: {
+                     end: 548,
+                     loc: {
+                        end: {
+                           column: 30,
+                           line: 21,
+                        },
+                        identifierName: "C",
+                        start: {
+                           column: 29,
+                           line: 21,
+                        },
+                     },
+                     name: "C",
+                     start: 547,
+                     type: "Identifier",
+                  },
+                  loc: {
+                     end: {
+                        column: 30,
+                        line: 21,
+                     },
+                     start: {
+                        column: 29,
+                        line: 21,
+                     },
+                  },
+                  start: 547,
+                  type: "InterfaceExtends",
+                  typeParameters: ~,
+               },
+            ],
+            start: 518,
+            type: "DeclareClass",
+            typeParameters: ~,
+         },
       ],
       directives: [],
-      end: 516,
+      end: 552,
       loc: {
          end: {
             column: 0,
-            line: 19,
+            line: 22,
          },
          start: {
             column: 0,

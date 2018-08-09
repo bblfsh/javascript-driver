@@ -14,5 +14,8 @@ export default class PluginPass {
     s: string = "foo";
     pok: File;
     _map: Map<mixed, mixed> = Map();
+
     
 }
+
+declare class A mixins B<T>, C {}
