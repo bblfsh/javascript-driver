@@ -545,4 +545,8 @@ var Annotations = []Mapping{
 	AnnotateType("ObjectTypeProperty", nil, role.Declaration, role.Type, role.Incomplete),
 	AnnotateType("TypeofTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
 	AnnotateType("FunctionTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+
+	// Flow Declare-Classes
+	AnnotateType("DeclareClass", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("InterfaceExtends", nil, role.Declaration, role.Type, role.Subtype, role.Incomplete),
 }
