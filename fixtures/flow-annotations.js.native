@@ -17,11 +17,11 @@
          value: " @flow",
       },
    ],
-   end: 277,
+   end: 472,
    loc: {
       end: {
          column: 0,
-         line: 12,
+         line: 18,
       },
       start: {
          column: 0,
@@ -666,13 +666,13 @@
                                  column: 12,
                                  line: 6,
                               },
-                              identifierName: "testfncd",
+                              identifierName: "testfnc3",
                               start: {
                                  column: 4,
                                  line: 6,
                               },
                            },
-                           name: "testfncd",
+                           name: "testfnc3",
                            start: 184,
                            type: "Identifier",
                         },
@@ -783,70 +783,622 @@
                         type: "ClassMethod",
                      },
                      {
+                        async: false,
+                        body: {
+                           body: [],
+                           directives: [],
+                           end: 367,
+                           loc: {
+                              end: {
+                                 column: 9,
+                                 line: 10,
+                              },
+                              start: {
+                                 column: 7,
+                                 line: 10,
+                              },
+                           },
+                           start: 365,
+                           type: "BlockStatement",
+                        },
                         computed: false,
-                        end: 236,
+                        end: 367,
+                        generator: false,
+                        id: ~,
                         key: {
-                           end: 223,
+                           end: 233,
+                           loc: {
+                              end: {
+                                 column: 18,
+                                 line: 7,
+                              },
+                              identifierName: "testfnc_object",
+                              start: {
+                                 column: 4,
+                                 line: 7,
+                              },
+                           },
+                           name: "testfnc_object",
+                           start: 219,
+                           type: "Identifier",
+                        },
+                        kind: "method",
+                        loc: {
+                           end: {
+                              column: 9,
+                              line: 10,
+                           },
+                           start: {
+                              column: 4,
+                              line: 7,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 363,
+                              loc: {
+                                 end: {
+                                    column: 5,
+                                    line: 10,
+                                 },
+                                 identifierName: "node",
+                                 start: {
+                                    column: 19,
+                                    line: 7,
+                                 },
+                              },
+                              name: "node",
+                              start: 234,
+                              type: "Identifier",
+                              typeAnnotation: {
+                                 end: 363,
+                                 loc: {
+                                    end: {
+                                       column: 5,
+                                       line: 10,
+                                    },
+                                    start: {
+                                       column: 23,
+                                       line: 7,
+                                    },
+                                 },
+                                 start: 238,
+                                 type: "TypeAnnotation",
+                                 typeAnnotation: {
+                                    end: 363,
+                                    loc: {
+                                       end: {
+                                          column: 5,
+                                          line: 10,
+                                       },
+                                       start: {
+                                          column: 25,
+                                          line: 7,
+                                       },
+                                    },
+                                    start: 240,
+                                    type: "NullableTypeAnnotation",
+                                    typeAnnotation: {
+                                       callProperties: [],
+                                       end: 363,
+                                       exact: false,
+                                       indexers: [],
+                                       loc: {
+                                          end: {
+                                             column: 5,
+                                             line: 10,
+                                          },
+                                          start: {
+                                             column: 26,
+                                             line: 7,
+                                          },
+                                       },
+                                       properties: [
+                                          {
+                                             end: 298,
+                                             key: {
+                                                end: 252,
+                                                loc: {
+                                                   end: {
+                                                      column: 9,
+                                                      line: 8,
+                                                   },
+                                                   identifierName: "loc",
+                                                   start: {
+                                                      column: 6,
+                                                      line: 8,
+                                                   },
+                                                },
+                                                name: "loc",
+                                                start: 249,
+                                                type: "Identifier",
+                                             },
+                                             kind: "init",
+                                             loc: {
+                                                end: {
+                                                   column: 55,
+                                                   line: 8,
+                                                },
+                                                start: {
+                                                   column: 6,
+                                                   line: 8,
+                                                },
+                                             },
+                                             optional: true,
+                                             start: 249,
+                                             static: false,
+                                             type: "ObjectTypeProperty",
+                                             value: {
+                                                callProperties: [],
+                                                end: 298,
+                                                exact: false,
+                                                indexers: [],
+                                                loc: {
+                                                   end: {
+                                                      column: 55,
+                                                      line: 8,
+                                                   },
+                                                   start: {
+                                                      column: 12,
+                                                      line: 8,
+                                                   },
+                                                },
+                                                properties: [
+                                                   {
+                                                      end: 296,
+                                                      key: {
+                                                         end: 262,
+                                                         loc: {
+                                                            end: {
+                                                               column: 19,
+                                                               line: 8,
+                                                            },
+                                                            identifierName: "start",
+                                                            start: {
+                                                               column: 14,
+                                                               line: 8,
+                                                            },
+                                                         },
+                                                         name: "start",
+                                                         start: 257,
+                                                         type: "Identifier",
+                                                      },
+                                                      kind: "init",
+                                                      loc: {
+                                                         end: {
+                                                            column: 53,
+                                                            line: 8,
+                                                         },
+                                                         start: {
+                                                            column: 14,
+                                                            line: 8,
+                                                         },
+                                                      },
+                                                      optional: false,
+                                                      start: 257,
+                                                      static: false,
+                                                      type: "ObjectTypeProperty",
+                                                      value: {
+                                                         callProperties: [],
+                                                         end: 296,
+                                                         exact: false,
+                                                         indexers: [],
+                                                         loc: {
+                                                            end: {
+                                                               column: 53,
+                                                               line: 8,
+                                                            },
+                                                            start: {
+                                                               column: 21,
+                                                               line: 8,
+                                                            },
+                                                         },
+                                                         properties: [
+                                                            {
+                                                               end: 278,
+                                                               key: {
+                                                                  end: 270,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 27,
+                                                                        line: 8,
+                                                                     },
+                                                                     identifierName: "line",
+                                                                     start: {
+                                                                        column: 23,
+                                                                        line: 8,
+                                                                     },
+                                                                  },
+                                                                  name: "line",
+                                                                  start: 266,
+                                                                  type: "Identifier",
+                                                               },
+                                                               kind: "init",
+                                                               loc: {
+                                                                  end: {
+                                                                     column: 35,
+                                                                     line: 8,
+                                                                  },
+                                                                  start: {
+                                                                     column: 23,
+                                                                     line: 8,
+                                                                  },
+                                                               },
+                                                               optional: false,
+                                                               start: 266,
+                                                               static: false,
+                                                               type: "ObjectTypeProperty",
+                                                               value: {
+                                                                  end: 278,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 35,
+                                                                        line: 8,
+                                                                     },
+                                                                     start: {
+                                                                        column: 29,
+                                                                        line: 8,
+                                                                     },
+                                                                  },
+                                                                  start: 272,
+                                                                  type: "NumberTypeAnnotation",
+                                                               },
+                                                               variance: ~,
+                                                            },
+                                                            {
+                                                               end: 294,
+                                                               key: {
+                                                                  end: 286,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 43,
+                                                                        line: 8,
+                                                                     },
+                                                                     identifierName: "column",
+                                                                     start: {
+                                                                        column: 37,
+                                                                        line: 8,
+                                                                     },
+                                                                  },
+                                                                  name: "column",
+                                                                  start: 280,
+                                                                  type: "Identifier",
+                                                               },
+                                                               kind: "init",
+                                                               loc: {
+                                                                  end: {
+                                                                     column: 51,
+                                                                     line: 8,
+                                                                  },
+                                                                  start: {
+                                                                     column: 37,
+                                                                     line: 8,
+                                                                  },
+                                                               },
+                                                               optional: false,
+                                                               start: 280,
+                                                               static: false,
+                                                               type: "ObjectTypeProperty",
+                                                               value: {
+                                                                  end: 294,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 51,
+                                                                        line: 8,
+                                                                     },
+                                                                     start: {
+                                                                        column: 45,
+                                                                        line: 8,
+                                                                     },
+                                                                  },
+                                                                  start: 288,
+                                                                  type: "NumberTypeAnnotation",
+                                                               },
+                                                               variance: ~,
+                                                            },
+                                                         ],
+                                                         start: 264,
+                                                         type: "ObjectTypeAnnotation",
+                                                      },
+                                                      variance: ~,
+                                                   },
+                                                ],
+                                                start: 255,
+                                                type: "ObjectTypeAnnotation",
+                                             },
+                                             variance: ~,
+                                          },
+                                          {
+                                             end: 356,
+                                             key: {
+                                                end: 310,
+                                                loc: {
+                                                   end: {
+                                                      column: 10,
+                                                      line: 9,
+                                                   },
+                                                   identifierName: "_loc",
+                                                   start: {
+                                                      column: 6,
+                                                      line: 9,
+                                                   },
+                                                },
+                                                name: "_loc",
+                                                start: 306,
+                                                type: "Identifier",
+                                             },
+                                             kind: "init",
+                                             loc: {
+                                                end: {
+                                                   column: 56,
+                                                   line: 9,
+                                                },
+                                                start: {
+                                                   column: 6,
+                                                   line: 9,
+                                                },
+                                             },
+                                             optional: true,
+                                             start: 306,
+                                             static: false,
+                                             type: "ObjectTypeProperty",
+                                             value: {
+                                                callProperties: [],
+                                                end: 356,
+                                                exact: false,
+                                                indexers: [],
+                                                loc: {
+                                                   end: {
+                                                      column: 56,
+                                                      line: 9,
+                                                   },
+                                                   start: {
+                                                      column: 13,
+                                                      line: 9,
+                                                   },
+                                                },
+                                                properties: [
+                                                   {
+                                                      end: 354,
+                                                      key: {
+                                                         end: 320,
+                                                         loc: {
+                                                            end: {
+                                                               column: 20,
+                                                               line: 9,
+                                                            },
+                                                            identifierName: "start",
+                                                            start: {
+                                                               column: 15,
+                                                               line: 9,
+                                                            },
+                                                         },
+                                                         name: "start",
+                                                         start: 315,
+                                                         type: "Identifier",
+                                                      },
+                                                      kind: "init",
+                                                      loc: {
+                                                         end: {
+                                                            column: 54,
+                                                            line: 9,
+                                                         },
+                                                         start: {
+                                                            column: 15,
+                                                            line: 9,
+                                                         },
+                                                      },
+                                                      optional: false,
+                                                      start: 315,
+                                                      static: false,
+                                                      type: "ObjectTypeProperty",
+                                                      value: {
+                                                         callProperties: [],
+                                                         end: 354,
+                                                         exact: false,
+                                                         indexers: [],
+                                                         loc: {
+                                                            end: {
+                                                               column: 54,
+                                                               line: 9,
+                                                            },
+                                                            start: {
+                                                               column: 22,
+                                                               line: 9,
+                                                            },
+                                                         },
+                                                         properties: [
+                                                            {
+                                                               end: 336,
+                                                               key: {
+                                                                  end: 328,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 28,
+                                                                        line: 9,
+                                                                     },
+                                                                     identifierName: "line",
+                                                                     start: {
+                                                                        column: 24,
+                                                                        line: 9,
+                                                                     },
+                                                                  },
+                                                                  name: "line",
+                                                                  start: 324,
+                                                                  type: "Identifier",
+                                                               },
+                                                               kind: "init",
+                                                               loc: {
+                                                                  end: {
+                                                                     column: 36,
+                                                                     line: 9,
+                                                                  },
+                                                                  start: {
+                                                                     column: 24,
+                                                                     line: 9,
+                                                                  },
+                                                               },
+                                                               optional: false,
+                                                               start: 324,
+                                                               static: false,
+                                                               type: "ObjectTypeProperty",
+                                                               value: {
+                                                                  end: 336,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 36,
+                                                                        line: 9,
+                                                                     },
+                                                                     start: {
+                                                                        column: 30,
+                                                                        line: 9,
+                                                                     },
+                                                                  },
+                                                                  start: 330,
+                                                                  type: "NumberTypeAnnotation",
+                                                               },
+                                                               variance: ~,
+                                                            },
+                                                            {
+                                                               end: 352,
+                                                               key: {
+                                                                  end: 344,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 44,
+                                                                        line: 9,
+                                                                     },
+                                                                     identifierName: "column",
+                                                                     start: {
+                                                                        column: 38,
+                                                                        line: 9,
+                                                                     },
+                                                                  },
+                                                                  name: "column",
+                                                                  start: 338,
+                                                                  type: "Identifier",
+                                                               },
+                                                               kind: "init",
+                                                               loc: {
+                                                                  end: {
+                                                                     column: 52,
+                                                                     line: 9,
+                                                                  },
+                                                                  start: {
+                                                                     column: 38,
+                                                                     line: 9,
+                                                                  },
+                                                               },
+                                                               optional: false,
+                                                               start: 338,
+                                                               static: false,
+                                                               type: "ObjectTypeProperty",
+                                                               value: {
+                                                                  end: 352,
+                                                                  loc: {
+                                                                     end: {
+                                                                        column: 52,
+                                                                        line: 9,
+                                                                     },
+                                                                     start: {
+                                                                        column: 46,
+                                                                        line: 9,
+                                                                     },
+                                                                  },
+                                                                  start: 346,
+                                                                  type: "NumberTypeAnnotation",
+                                                               },
+                                                               variance: ~,
+                                                            },
+                                                         ],
+                                                         start: 322,
+                                                         type: "ObjectTypeAnnotation",
+                                                      },
+                                                      variance: ~,
+                                                   },
+                                                ],
+                                                start: 313,
+                                                type: "ObjectTypeAnnotation",
+                                             },
+                                             variance: ~,
+                                          },
+                                       ],
+                                       start: 241,
+                                       type: "ObjectTypeAnnotation",
+                                    },
+                                 },
+                              },
+                           },
+                        ],
+                        start: 219,
+                        static: false,
+                        type: "ClassMethod",
+                     },
+                     {
+                        computed: false,
+                        end: 389,
+                        key: {
+                           end: 376,
                            loc: {
                               end: {
                                  column: 7,
-                                 line: 8,
+                                 line: 12,
                               },
                               identifierName: "num",
                               start: {
                                  column: 4,
-                                 line: 8,
+                                 line: 12,
                               },
                            },
                            name: "num",
-                           start: 220,
+                           start: 373,
                            type: "Identifier",
                         },
                         loc: {
                            end: {
                               column: 20,
-                              line: 8,
+                              line: 12,
                            },
                            start: {
                               column: 4,
-                              line: 8,
+                              line: 12,
                            },
                         },
-                        start: 220,
+                        start: 373,
                         static: false,
                         type: "ClassProperty",
                         typeAnnotation: {
-                           end: 231,
+                           end: 384,
                            loc: {
                               end: {
                                  column: 15,
-                                 line: 8,
+                                 line: 12,
                               },
                               start: {
                                  column: 7,
-                                 line: 8,
+                                 line: 12,
                               },
                            },
-                           start: 223,
+                           start: 376,
                            type: "TypeAnnotation",
                            typeAnnotation: {
-                              end: 231,
+                              end: 384,
                               loc: {
                                  end: {
                                     column: 15,
-                                    line: 8,
+                                    line: 12,
                                  },
                                  start: {
                                     column: 9,
-                                    line: 8,
+                                    line: 12,
                                  },
                               },
-                              start: 225,
+                              start: 378,
                               type: "NumberTypeAnnotation",
                            },
                         },
                         value: {
-                           end: 235,
+                           end: 388,
                            extra: {
                               raw: "1",
                               rawValue: 1,
@@ -854,14 +1406,14 @@
                            loc: {
                               end: {
                                  column: 19,
-                                 line: 8,
+                                 line: 12,
                               },
                               start: {
                                  column: 18,
-                                 line: 8,
+                                 line: 12,
                               },
                            },
-                           start: 234,
+                           start: 387,
                            type: "NumericLiteral",
                            value: 1,
                         },
@@ -869,69 +1421,69 @@
                      },
                      {
                         computed: false,
-                        end: 259,
+                        end: 412,
                         key: {
-                           end: 242,
+                           end: 395,
                            loc: {
                               end: {
                                  column: 5,
-                                 line: 9,
+                                 line: 13,
                               },
                               identifierName: "s",
                               start: {
                                  column: 4,
-                                 line: 9,
+                                 line: 13,
                               },
                            },
                            name: "s",
-                           start: 241,
+                           start: 394,
                            type: "Identifier",
                         },
                         loc: {
                            end: {
                               column: 22,
-                              line: 9,
+                              line: 13,
                            },
                            start: {
                               column: 4,
-                              line: 9,
+                              line: 13,
                            },
                         },
-                        start: 241,
+                        start: 394,
                         static: false,
                         type: "ClassProperty",
                         typeAnnotation: {
-                           end: 250,
+                           end: 403,
                            loc: {
                               end: {
                                  column: 13,
-                                 line: 9,
+                                 line: 13,
                               },
                               start: {
                                  column: 5,
-                                 line: 9,
+                                 line: 13,
                               },
                            },
-                           start: 242,
+                           start: 395,
                            type: "TypeAnnotation",
                            typeAnnotation: {
-                              end: 250,
+                              end: 403,
                               loc: {
                                  end: {
                                     column: 13,
-                                    line: 9,
+                                    line: 13,
                                  },
                                  start: {
                                     column: 7,
-                                    line: 9,
+                                    line: 13,
                                  },
                               },
-                              start: 244,
+                              start: 397,
                               type: "StringTypeAnnotation",
                            },
                         },
                         value: {
-                           end: 258,
+                           end: 411,
                            extra: {
                               raw: "\"foo\"",
                               rawValue: "foo",
@@ -939,14 +1491,14 @@
                            loc: {
                               end: {
                                  column: 21,
-                                 line: 9,
+                                 line: 13,
                               },
                               start: {
                                  column: 16,
-                                 line: 9,
+                                 line: 13,
                               },
                            },
-                           start: 253,
+                           start: 406,
                            type: "StringLiteral",
                            value: "foo",
                         },
@@ -954,81 +1506,81 @@
                      },
                      {
                         computed: false,
-                        end: 274,
+                        end: 427,
                         key: {
-                           end: 267,
+                           end: 420,
                            loc: {
                               end: {
                                  column: 7,
-                                 line: 10,
+                                 line: 14,
                               },
                               identifierName: "pok",
                               start: {
                                  column: 4,
-                                 line: 10,
+                                 line: 14,
                               },
                            },
                            name: "pok",
-                           start: 264,
+                           start: 417,
                            type: "Identifier",
                         },
                         loc: {
                            end: {
                               column: 14,
-                              line: 10,
+                              line: 14,
                            },
                            start: {
                               column: 4,
-                              line: 10,
+                              line: 14,
                            },
                         },
-                        start: 264,
+                        start: 417,
                         static: false,
                         type: "ClassProperty",
                         typeAnnotation: {
-                           end: 273,
+                           end: 426,
                            loc: {
                               end: {
                                  column: 13,
-                                 line: 10,
+                                 line: 14,
                               },
                               start: {
                                  column: 7,
-                                 line: 10,
+                                 line: 14,
                               },
                            },
-                           start: 267,
+                           start: 420,
                            type: "TypeAnnotation",
                            typeAnnotation: {
-                              end: 273,
+                              end: 426,
                               id: {
-                                 end: 273,
+                                 end: 426,
                                  loc: {
                                     end: {
                                        column: 13,
-                                       line: 10,
+                                       line: 14,
                                     },
                                     identifierName: "File",
                                     start: {
                                        column: 9,
-                                       line: 10,
+                                       line: 14,
                                     },
                                  },
                                  name: "File",
-                                 start: 269,
+                                 start: 422,
                                  type: "Identifier",
                               },
                               loc: {
                                  end: {
                                     column: 13,
-                                    line: 10,
+                                    line: 14,
                                  },
                                  start: {
                                     column: 9,
-                                    line: 10,
+                                    line: 14,
                                  },
                               },
-                              start: 269,
+                              start: 422,
                               type: "GenericTypeAnnotation",
                               typeParameters: ~,
                            },
@@ -1036,12 +1588,174 @@
                         value: ~,
                         variance: ~,
                      },
+                     {
+                        computed: false,
+                        end: 464,
+                        key: {
+                           end: 436,
+                           loc: {
+                              end: {
+                                 column: 8,
+                                 line: 15,
+                              },
+                              identifierName: "_map",
+                              start: {
+                                 column: 4,
+                                 line: 15,
+                              },
+                           },
+                           name: "_map",
+                           start: 432,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 36,
+                              line: 15,
+                           },
+                           start: {
+                              column: 4,
+                              line: 15,
+                           },
+                        },
+                        start: 432,
+                        static: false,
+                        type: "ClassProperty",
+                        typeAnnotation: {
+                           end: 455,
+                           loc: {
+                              end: {
+                                 column: 27,
+                                 line: 15,
+                              },
+                              start: {
+                                 column: 8,
+                                 line: 15,
+                              },
+                           },
+                           start: 436,
+                           type: "TypeAnnotation",
+                           typeAnnotation: {
+                              end: 455,
+                              id: {
+                                 end: 441,
+                                 loc: {
+                                    end: {
+                                       column: 13,
+                                       line: 15,
+                                    },
+                                    identifierName: "Map",
+                                    start: {
+                                       column: 10,
+                                       line: 15,
+                                    },
+                                 },
+                                 name: "Map",
+                                 start: 438,
+                                 type: "Identifier",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 27,
+                                    line: 15,
+                                 },
+                                 start: {
+                                    column: 10,
+                                    line: 15,
+                                 },
+                              },
+                              start: 438,
+                              type: "GenericTypeAnnotation",
+                              typeParameters: {
+                                 end: 455,
+                                 loc: {
+                                    end: {
+                                       column: 27,
+                                       line: 15,
+                                    },
+                                    start: {
+                                       column: 13,
+                                       line: 15,
+                                    },
+                                 },
+                                 params: [
+                                    {
+                                       end: 447,
+                                       loc: {
+                                          end: {
+                                             column: 19,
+                                             line: 15,
+                                          },
+                                          start: {
+                                             column: 14,
+                                             line: 15,
+                                          },
+                                       },
+                                       start: 442,
+                                       type: "MixedTypeAnnotation",
+                                    },
+                                    {
+                                       end: 454,
+                                       loc: {
+                                          end: {
+                                             column: 26,
+                                             line: 15,
+                                          },
+                                          start: {
+                                             column: 21,
+                                             line: 15,
+                                          },
+                                       },
+                                       start: 449,
+                                       type: "MixedTypeAnnotation",
+                                    },
+                                 ],
+                                 start: 441,
+                                 type: "TypeParameterInstantiation",
+                              },
+                           },
+                        },
+                        value: {
+                           arguments: [],
+                           callee: {
+                              end: 461,
+                              loc: {
+                                 end: {
+                                    column: 33,
+                                    line: 15,
+                                 },
+                                 identifierName: "Map",
+                                 start: {
+                                    column: 30,
+                                    line: 15,
+                                 },
+                              },
+                              name: "Map",
+                              start: 458,
+                              type: "Identifier",
+                           },
+                           end: 463,
+                           loc: {
+                              end: {
+                                 column: 35,
+                                 line: 15,
+                              },
+                              start: {
+                                 column: 30,
+                                 line: 15,
+                              },
+                           },
+                           start: 458,
+                           type: "CallExpression",
+                        },
+                        variance: ~,
+                     },
                   ],
-                  end: 276,
+                  end: 471,
                   loc: {
                      end: {
                         column: 1,
-                        line: 11,
+                        line: 17,
                      },
                      start: {
                         column: 32,
@@ -1051,7 +1765,7 @@
                   start: 42,
                   type: "ClassBody",
                },
-               end: 276,
+               end: 471,
                id: {
                   end: 41,
                   leadingComments: ~,
@@ -1074,7 +1788,7 @@
                loc: {
                   end: {
                      column: 1,
-                     line: 11,
+                     line: 17,
                   },
                   start: {
                      column: 15,
@@ -1085,7 +1799,7 @@
                superClass: ~,
                type: "ClassDeclaration",
             },
-            end: 276,
+            end: 471,
             leadingComments: [
                {
                   end: 8,
@@ -1107,7 +1821,7 @@
             loc: {
                end: {
                   column: 1,
-                  line: 11,
+                  line: 17,
                },
                start: {
                   column: 0,
@@ -1119,11 +1833,11 @@
          },
       ],
       directives: [],
-      end: 277,
+      end: 472,
       loc: {
          end: {
             column: 0,
-            line: 12,
+            line: 18,
          },
          start: {
             column: 0,
