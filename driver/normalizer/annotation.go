@@ -543,4 +543,6 @@ var Annotations = []Mapping{
 	AnnotateType("TypeParameterInstantiation", nil, role.Declaration, role.Type, role.Incomplete),
 	AnnotateType("ObjectTypeAnnotation", nil, role.Declaration, role.Type, role.Literal, role.Incomplete),
 	AnnotateType("ObjectTypeProperty", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("TypeofTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("FunctionTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
 }

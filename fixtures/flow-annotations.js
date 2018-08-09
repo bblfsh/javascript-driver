@@ -8,6 +8,7 @@ export default class PluginPass {
       loc?: { start: { line: number, column: number } },
       _loc?: { start: { line: number, column: number } },
     }) {}
+    testfnc_typeof(Error?: typeof Error) {}
 
     num: number = 1;
     s: string = "foo";
