@@ -87,14 +87,14 @@ var Normalizers = []Mapping{
 		CasesObj("case",
 			// common
 			Obj{
-				"importKind": String("value"),
+				"importKind": Var("kind"),
 				"source":     Var("path"),
 			},
 			Objs{
 				// namespace
 				{
 					"specifiers": ArrWith(Var("names"), Obj{
-						uast.KeyType: String("ImportNamespaceSpecifier"),
+						uast.KeyType: Var("spec_type"),
 						uast.KeyPos:  Var("local_pos"),
 						"local":      Var("local"),
 					}),
