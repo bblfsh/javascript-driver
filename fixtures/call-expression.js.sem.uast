@@ -169,7 +169,7 @@
                },
                arguments: [
                   { '@type': "SpreadElement",
-                     '@role': [ArgsList, Argument, Call, Incomplete],
+                     '@role': [ArgsList, Argument, Call, Incomplete, List, Value],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 13,

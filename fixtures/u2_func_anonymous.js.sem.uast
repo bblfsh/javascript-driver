@@ -43,7 +43,7 @@
                },
             },
             expression: { '@type': "ArrowFunctionExpression",
-               '@role': [Declaration, Expression, Function],
+               '@role': [Anonymous, Declaration, Expression, Function],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 0,

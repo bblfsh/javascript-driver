@@ -43,7 +43,7 @@
                },
             },
             expression: { '@type': "TemplateLiteral",
-               '@role': [Expression, Incomplete, Literal],
+               '@role': [Expression, Incomplete, Literal, String],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 0,
@@ -59,7 +59,7 @@
                expressions: [],
                quasis: [
                   { '@type': "TemplateElement",
-                     '@role': [Incomplete, Literal, String],
+                     '@role': [Expression, Incomplete, String, Value],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 1,

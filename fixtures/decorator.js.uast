@@ -60,7 +60,7 @@
             },
             decorators: [
                { '@type': "Decorator",
-                  '@role': [Incomplete],
+                  '@role': [Annotation, Incomplete],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 0,

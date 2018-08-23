@@ -597,7 +597,7 @@
                      },
                      arguments: [
                         { '@type': "ArrowFunctionExpression",
-                           '@role': [Argument, Call, Declaration, Expression, Function],
+                           '@role': [Anonymous, Argument, Call, Declaration, Expression, Function],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
                                  offset: 159,
@@ -959,7 +959,7 @@
                                                 },
                                              },
                                              argument: { '@type': "NewExpression",
-                                                '@role': [Expression, Incomplete],
+                                                '@role': [Call, Expression, Instance],
                                                 '@pos': { '@type': "uast:Positions",
                                                    start: { '@type': "uast:Position",
                                                       offset: 397,
@@ -974,7 +974,7 @@
                                                 },
                                                 arguments: [
                                                    { '@type': "TemplateLiteral",
-                                                      '@role': [Expression, Incomplete, Literal],
+                                                      '@role': [Expression, Incomplete, Literal, String],
                                                       '@pos': { '@type': "uast:Positions",
                                                          start: { '@type': "uast:Position",
                                                             offset: 407,
@@ -1037,7 +1037,7 @@
                                                       ],
                                                       quasis: [
                                                          { '@type': "TemplateElement",
-                                                            '@role': [Incomplete, Literal, String],
+                                                            '@role': [Expression, Incomplete, String, Value],
                                                             '@pos': { '@type': "uast:Positions",
                                                                start: { '@type': "uast:Position",
                                                                   offset: 408,
@@ -1053,7 +1053,7 @@
                                                             tail: false,
                                                          },
                                                          { '@type': "TemplateElement",
-                                                            '@role': [Incomplete, Literal, String],
+                                                            '@role': [Expression, Incomplete, String, Value],
                                                             '@pos': { '@type': "uast:Positions",
                                                                start: { '@type': "uast:Position",
                                                                   offset: 424,
@@ -2279,7 +2279,7 @@
                                     },
                                     arguments: [
                                        { '@type': "NewExpression",
-                                          '@role': [Argument, Call, Expression, Incomplete],
+                                          '@role': [Argument, Call, Expression, Instance],
                                           '@pos': { '@type': "uast:Positions",
                                              start: { '@type': "uast:Position",
                                                 offset: 1038,
@@ -2424,7 +2424,7 @@
                },
                body: [
                   { '@type': "ClassProperty",
-                     '@role': [Variable],
+                     '@role': [Type, Variable],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 1114,

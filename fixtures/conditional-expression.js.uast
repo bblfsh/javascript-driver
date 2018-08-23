@@ -43,7 +43,7 @@
                },
             },
             expression: { '@type': "ConditionalExpression",
-               '@role': [Expression, If],
+               '@role': [Condition, Expression, If],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 0,

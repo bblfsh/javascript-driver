@@ -122,7 +122,7 @@
                                        Name: "x",
                                     },
                                     init: { '@type': "uast:Identifier",
-                                       '@role': [Initialization],
+                                       '@role': [Expression, Initialization],
                                        '@pos': { '@type': "uast:Positions",
                                           start: { '@type': "uast:Position",
                                              offset: 40,

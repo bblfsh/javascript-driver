@@ -74,7 +74,7 @@
                      },
                   },
                   init: { '@type': "BindExpression",
-                     '@role': [Expression, Incomplete, Initialization],
+                     '@role': [Call, Expression, Incomplete, Initialization],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 8,

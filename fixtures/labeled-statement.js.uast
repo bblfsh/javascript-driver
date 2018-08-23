@@ -29,7 +29,7 @@
       },
       body: [
          { '@type': "LabeledStatement",
-            '@role': [Incomplete, Statement],
+            '@role': [Annotation, Incomplete, Statement],
             '@pos': { '@type': "uast:Positions",
                start: { '@type': "uast:Position",
                   offset: 0,
