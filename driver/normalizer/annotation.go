@@ -297,6 +297,7 @@ var Annotations = []Mapping{
 	AnnotateType("ConditionalExpression", nil, role.Expression),
 	AnnotateType("NewExpression", nil, role.Expression, role.Incomplete),
 	AnnotateType("SequenceExpression", nil, role.Expression, role.List),
+	AnnotateType("TypeAlias", nil, role.Type, role.Alias),
 	AnnotateType("DoExpression",
 		ObjRoles{
 			"body": {role.Body},
@@ -425,7 +426,7 @@ var Annotations = []Mapping{
 		},
 		role.Declaration, role.Type,
 	),
-	AnnotateType("OptClasDeclaration",
+	AnnotateType("OptClassDeclaration",
 		ObjRoles{
 			"id":         {role.Type, role.Name},
 			"superClass": {role.Type, role.Base},
@@ -532,7 +533,9 @@ var Annotations = []Mapping{
 	AnnotateType("GenericTypeAnnotation", nil, role.Declaration, role.Type),
 	AnnotateType("MixedTypeAnnotation", nil, role.Declaration, role.Type),
 	AnnotateType("NumberTypeAnnotation", nil, role.Declaration, role.Type, role.Number),
+	AnnotateType("NumberLiteralTypeAnnotation", nil, role.Declaration, role.Type, role.Number, role.Literal),
 	AnnotateType("BooleanTypeAnnotation", nil, role.Declaration, role.Type, role.Boolean),
+	AnnotateType("BooleanLiteralTypeAnnotation", nil, role.Declaration, role.Type, role.Boolean, role.Literal),
 	AnnotateType("StringTypeAnnotation", nil, role.Declaration, role.Type, role.String),
 	AnnotateType("StringLiteralTypeAnnotation", nil, role.Declaration, role.Type, role.String, role.Literal),
 	AnnotateType("NullLiteralTypeAnnotation", nil, role.Declaration, role.Type, role.Null),
@@ -545,8 +548,23 @@ var Annotations = []Mapping{
 	AnnotateType("ObjectTypeProperty", nil, role.Declaration, role.Type, role.Incomplete),
 	AnnotateType("TypeofTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
 	AnnotateType("FunctionTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("ObjectTypeCallProperty", nil, role.Declaration, role.Type, role.Function, role.Incomplete),
+	AnnotateType("FunctionTypeParam", nil, role.Declaration, role.Type, role.Function, role.Argument, role.Incomplete),
+	AnnotateType("TypeParameterDeclaration", nil, role.Declaration, role.Type, role.Argument),
+	AnnotateType("TypeParameter", nil, role.Declaration, role.Type, role.Argument),
+	AnnotateType("TypeCastExpression", nil, role.Declaration, role.Function, role.Argument, role.Alias, role.Incomplete),
+	AnnotateType("ObjectTypeIndexer", nil, role.Declaration, role.Incomplete),
+	AnnotateType("IntersectionTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("ExistsTypeAnnotation", nil, role.Declaration, role.Type, role.Incomplete),
+	AnnotateType("TupleTypeAnnotation", nil, role.Declaration, role.Type, role.Tuple, role.Incomplete),
 
 	// Flow Declare-Classes
 	AnnotateType("DeclareClass", nil, role.Declaration, role.Type, role.Incomplete),
 	AnnotateType("InterfaceExtends", nil, role.Declaration, role.Type, role.Subtype, role.Incomplete),
+
+	// JSX
+	AnnotateType("JSXElement", nil, role.Incomplete),
+	AnnotateType("JSXOpeningElement", nil, role.Block, role.Incomplete),
+	AnnotateType("JSXAttribute", nil, role.Incomplete),
+	AnnotateType("JSXIdentifier", nil, role.Identifier, role.Incomplete),
 }

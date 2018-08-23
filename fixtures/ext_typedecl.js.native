@@ -1,0 +1,3468 @@
+{
+   comments: [],
+   end: 1169,
+   loc: {
+      end: {
+         column: 0,
+         line: 47,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            end: 111,
+            id: {
+               end: 16,
+               loc: {
+                  end: {
+                     column: 16,
+                     line: 1,
+                  },
+                  identifierName: "EnvFunction",
+                  start: {
+                     column: 5,
+                     line: 1,
+                  },
+               },
+               name: "EnvFunction",
+               start: 5,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 2,
+                  line: 6,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            right: {
+               callProperties: [
+                  {
+                     end: 33,
+                     loc: {
+                        end: {
+                           column: 12,
+                           line: 2,
+                        },
+                        start: {
+                           column: 2,
+                           line: 2,
+                        },
+                     },
+                     start: 23,
+                     static: false,
+                     type: "ObjectTypeCallProperty",
+                     value: {
+                        end: 33,
+                        loc: {
+                           end: {
+                              column: 12,
+                              line: 2,
+                           },
+                           start: {
+                              column: 2,
+                              line: 2,
+                           },
+                        },
+                        params: [],
+                        rest: ~,
+                        returnType: {
+                           end: 33,
+                           loc: {
+                              end: {
+                                 column: 12,
+                                 line: 2,
+                              },
+                              start: {
+                                 column: 6,
+                                 line: 2,
+                              },
+                           },
+                           start: 27,
+                           type: "StringTypeAnnotation",
+                        },
+                        start: 23,
+                        type: "FunctionTypeAnnotation",
+                        typeParameters: ~,
+                     },
+                  },
+                  {
+                     end: 58,
+                     loc: {
+                        end: {
+                           column: 23,
+                           line: 3,
+                        },
+                        start: {
+                           column: 2,
+                           line: 3,
+                        },
+                     },
+                     start: 37,
+                     static: false,
+                     type: "ObjectTypeCallProperty",
+                     value: {
+                        end: 58,
+                        loc: {
+                           end: {
+                              column: 23,
+                              line: 3,
+                           },
+                           start: {
+                              column: 2,
+                              line: 3,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 54,
+                              loc: {
+                                 end: {
+                                    column: 19,
+                                    line: 3,
+                                 },
+                                 start: {
+                                    column: 6,
+                                    line: 3,
+                                 },
+                              },
+                              name: ~,
+                              optional: false,
+                              start: 41,
+                              type: "FunctionTypeParam",
+                              typeAnnotation: {
+                                 end: 54,
+                                 loc: {
+                                    end: {
+                                       column: 19,
+                                       line: 3,
+                                    },
+                                    start: {
+                                       column: 6,
+                                       line: 3,
+                                    },
+                                 },
+                                 params: [
+                                    {
+                                       end: 48,
+                                       loc: {
+                                          end: {
+                                             column: 13,
+                                             line: 3,
+                                          },
+                                          start: {
+                                             column: 7,
+                                             line: 3,
+                                          },
+                                       },
+                                       name: ~,
+                                       optional: false,
+                                       start: 42,
+                                       type: "FunctionTypeParam",
+                                       typeAnnotation: {
+                                          end: 48,
+                                          loc: {
+                                             end: {
+                                                column: 13,
+                                                line: 3,
+                                             },
+                                             start: {
+                                                column: 7,
+                                                line: 3,
+                                             },
+                                          },
+                                          start: 42,
+                                          type: "StringTypeAnnotation",
+                                       },
+                                    },
+                                 ],
+                                 rest: ~,
+                                 returnType: {
+                                    end: 54,
+                                    id: {
+                                       end: 54,
+                                       loc: {
+                                          end: {
+                                             column: 19,
+                                             line: 3,
+                                          },
+                                          identifierName: "T",
+                                          start: {
+                                             column: 18,
+                                             line: 3,
+                                          },
+                                       },
+                                       name: "T",
+                                       start: 53,
+                                       type: "Identifier",
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 19,
+                                          line: 3,
+                                       },
+                                       start: {
+                                          column: 18,
+                                          line: 3,
+                                       },
+                                    },
+                                    start: 53,
+                                    type: "GenericTypeAnnotation",
+                                    typeParameters: ~,
+                                 },
+                                 start: 41,
+                                 type: "FunctionTypeAnnotation",
+                                 typeParameters: ~,
+                              },
+                           },
+                        ],
+                        rest: ~,
+                        returnType: {
+                           end: 58,
+                           id: {
+                              end: 58,
+                              loc: {
+                                 end: {
+                                    column: 23,
+                                    line: 3,
+                                 },
+                                 identifierName: "T",
+                                 start: {
+                                    column: 22,
+                                    line: 3,
+                                 },
+                              },
+                              name: "T",
+                              start: 57,
+                              type: "Identifier",
+                           },
+                           loc: {
+                              end: {
+                                 column: 23,
+                                 line: 3,
+                              },
+                              start: {
+                                 column: 22,
+                                 line: 3,
+                              },
+                           },
+                           start: 57,
+                           type: "GenericTypeAnnotation",
+                           typeParameters: ~,
+                        },
+                        start: 37,
+                        type: "FunctionTypeAnnotation",
+                        typeParameters: {
+                           end: 40,
+                           loc: {
+                              end: {
+                                 column: 5,
+                                 line: 3,
+                              },
+                              start: {
+                                 column: 2,
+                                 line: 3,
+                              },
+                           },
+                           params: [
+                              {
+                                 end: 39,
+                                 loc: {
+                                    end: {
+                                       column: 4,
+                                       line: 3,
+                                    },
+                                    start: {
+                                       column: 3,
+                                       line: 3,
+                                    },
+                                 },
+                                 name: "T",
+                                 start: 38,
+                                 type: "TypeParameter",
+                                 variance: ~,
+                              },
+                           ],
+                           start: 37,
+                           type: "TypeParameterDeclaration",
+                        },
+                     },
+                  },
+                  {
+                     end: 79,
+                     loc: {
+                        end: {
+                           column: 19,
+                           line: 4,
+                        },
+                        start: {
+                           column: 2,
+                           line: 4,
+                        },
+                     },
+                     start: 62,
+                     static: false,
+                     type: "ObjectTypeCallProperty",
+                     value: {
+                        end: 79,
+                        loc: {
+                           end: {
+                              column: 19,
+                              line: 4,
+                           },
+                           start: {
+                              column: 2,
+                              line: 4,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 69,
+                              loc: {
+                                 end: {
+                                    column: 9,
+                                    line: 4,
+                                 },
+                                 start: {
+                                    column: 3,
+                                    line: 4,
+                                 },
+                              },
+                              name: ~,
+                              optional: false,
+                              start: 63,
+                              type: "FunctionTypeParam",
+                              typeAnnotation: {
+                                 end: 69,
+                                 loc: {
+                                    end: {
+                                       column: 9,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 3,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 63,
+                                 type: "StringTypeAnnotation",
+                              },
+                           },
+                        ],
+                        rest: ~,
+                        returnType: {
+                           end: 79,
+                           loc: {
+                              end: {
+                                 column: 19,
+                                 line: 4,
+                              },
+                              start: {
+                                 column: 12,
+                                 line: 4,
+                              },
+                           },
+                           start: 72,
+                           type: "BooleanTypeAnnotation",
+                        },
+                        start: 62,
+                        type: "FunctionTypeAnnotation",
+                        typeParameters: ~,
+                     },
+                  },
+                  {
+                     end: 107,
+                     loc: {
+                        end: {
+                           column: 26,
+                           line: 5,
+                        },
+                        start: {
+                           column: 2,
+                           line: 5,
+                        },
+                     },
+                     start: 83,
+                     static: false,
+                     type: "ObjectTypeCallProperty",
+                     value: {
+                        end: 107,
+                        loc: {
+                           end: {
+                              column: 26,
+                              line: 5,
+                           },
+                           start: {
+                              column: 2,
+                              line: 5,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 97,
+                              loc: {
+                                 end: {
+                                    column: 16,
+                                    line: 5,
+                                 },
+                                 start: {
+                                    column: 3,
+                                    line: 5,
+                                 },
+                              },
+                              name: ~,
+                              optional: false,
+                              start: 84,
+                              type: "FunctionTypeParam",
+                              typeAnnotation: {
+                                 end: 97,
+                                 id: {
+                                    end: 89,
+                                    loc: {
+                                       end: {
+                                          column: 8,
+                                          line: 5,
+                                       },
+                                       identifierName: "Array",
+                                       start: {
+                                          column: 3,
+                                          line: 5,
+                                       },
+                                    },
+                                    name: "Array",
+                                    start: 84,
+                                    type: "Identifier",
+                                 },
+                                 loc: {
+                                    end: {
+                                       column: 16,
+                                       line: 5,
+                                    },
+                                    start: {
+                                       column: 3,
+                                       line: 5,
+                                    },
+                                 },
+                                 start: 84,
+                                 type: "GenericTypeAnnotation",
+                                 typeParameters: {
+                                    end: 97,
+                                    loc: {
+                                       end: {
+                                          column: 16,
+                                          line: 5,
+                                       },
+                                       start: {
+                                          column: 8,
+                                          line: 5,
+                                       },
+                                    },
+                                    params: [
+                                       {
+                                          end: 96,
+                                          loc: {
+                                             end: {
+                                                column: 15,
+                                                line: 5,
+                                             },
+                                             start: {
+                                                column: 9,
+                                                line: 5,
+                                             },
+                                          },
+                                          start: 90,
+                                          type: "StringTypeAnnotation",
+                                       },
+                                    ],
+                                    start: 89,
+                                    type: "TypeParameterInstantiation",
+                                 },
+                              },
+                           },
+                        ],
+                        rest: ~,
+                        returnType: {
+                           end: 107,
+                           loc: {
+                              end: {
+                                 column: 26,
+                                 line: 5,
+                              },
+                              start: {
+                                 column: 19,
+                                 line: 5,
+                              },
+                           },
+                           start: 100,
+                           type: "BooleanTypeAnnotation",
+                        },
+                        start: 83,
+                        type: "FunctionTypeAnnotation",
+                        typeParameters: ~,
+                     },
+                  },
+               ],
+               end: 110,
+               exact: false,
+               indexers: [],
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 6,
+                  },
+                  start: {
+                     column: 19,
+                     line: 1,
+                  },
+               },
+               properties: [],
+               start: 19,
+               type: "ObjectTypeAnnotation",
+            },
+            start: 0,
+            type: "TypeAlias",
+            typeParameters: ~,
+         },
+         {
+            declarations: [
+               {
+                  end: 578,
+                  id: {
+                     end: 139,
+                     loc: {
+                        end: {
+                           column: 26,
+                           line: 8,
+                        },
+                        identifierName: "packageToBabelConfig",
+                        start: {
+                           column: 6,
+                           line: 8,
+                        },
+                     },
+                     name: "packageToBabelConfig",
+                     start: 119,
+                     type: "Identifier",
+                  },
+                  init: {
+                     arguments: [
+                        {
+                           async: false,
+                           body: {
+                              body: [
+                                 {
+                                    declarations: [
+                                       {
+                                          end: 251,
+                                          id: {
+                                             end: 217,
+                                             loc: {
+                                                end: {
+                                                   column: 15,
+                                                   line: 10,
+                                                },
+                                                identifierName: "babel",
+                                                start: {
+                                                   column: 10,
+                                                   line: 10,
+                                                },
+                                             },
+                                             name: "babel",
+                                             start: 212,
+                                             type: "Identifier",
+                                          },
+                                          init: {
+                                             computed: true,
+                                             end: 251,
+                                             loc: {
+                                                end: {
+                                                   column: 49,
+                                                   line: 10,
+                                                },
+                                                start: {
+                                                   column: 18,
+                                                   line: 10,
+                                                },
+                                             },
+                                             object: {
+                                                computed: false,
+                                                end: 232,
+                                                loc: {
+                                                   end: {
+                                                      column: 30,
+                                                      line: 10,
+                                                   },
+                                                   start: {
+                                                      column: 18,
+                                                      line: 10,
+                                                   },
+                                                },
+                                                object: {
+                                                   end: 224,
+                                                   loc: {
+                                                      end: {
+                                                         column: 22,
+                                                         line: 10,
+                                                      },
+                                                      identifierName: "file",
+                                                      start: {
+                                                         column: 18,
+                                                         line: 10,
+                                                      },
+                                                   },
+                                                   name: "file",
+                                                   start: 220,
+                                                   type: "Identifier",
+                                                },
+                                                property: {
+                                                   end: 232,
+                                                   loc: {
+                                                      end: {
+                                                         column: 30,
+                                                         line: 10,
+                                                      },
+                                                      identifierName: "options",
+                                                      start: {
+                                                         column: 23,
+                                                         line: 10,
+                                                      },
+                                                   },
+                                                   name: "options",
+                                                   start: 225,
+                                                   type: "Identifier",
+                                                },
+                                                start: 220,
+                                                type: "MemberExpression",
+                                             },
+                                             property: {
+                                                end: 249,
+                                                expression: {
+                                                   end: 241,
+                                                   extra: {
+                                                      raw: "\"babel\"",
+                                                      rawValue: "babel",
+                                                   },
+                                                   loc: {
+                                                      end: {
+                                                         column: 39,
+                                                         line: 10,
+                                                      },
+                                                      start: {
+                                                         column: 32,
+                                                         line: 10,
+                                                      },
+                                                   },
+                                                   start: 234,
+                                                   type: "StringLiteral",
+                                                   value: "babel",
+                                                },
+                                                extra: {
+                                                   parenStart: 233,
+                                                   parenthesized: true,
+                                                },
+                                                loc: {
+                                                   end: {
+                                                      column: 47,
+                                                      line: 10,
+                                                   },
+                                                   start: {
+                                                      column: 32,
+                                                      line: 10,
+                                                   },
+                                                },
+                                                start: 234,
+                                                type: "TypeCastExpression",
+                                                typeAnnotation: {
+                                                   end: 249,
+                                                   loc: {
+                                                      end: {
+                                                         column: 47,
+                                                         line: 10,
+                                                      },
+                                                      start: {
+                                                         column: 39,
+                                                         line: 10,
+                                                      },
+                                                   },
+                                                   start: 241,
+                                                   type: "TypeAnnotation",
+                                                   typeAnnotation: {
+                                                      end: 249,
+                                                      loc: {
+                                                         end: {
+                                                            column: 47,
+                                                            line: 10,
+                                                         },
+                                                         start: {
+                                                            column: 41,
+                                                            line: 10,
+                                                         },
+                                                      },
+                                                      start: 243,
+                                                      type: "StringTypeAnnotation",
+                                                   },
+                                                },
+                                             },
+                                             start: 220,
+                                             type: "MemberExpression",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 49,
+                                                line: 10,
+                                             },
+                                             start: {
+                                                column: 10,
+                                                line: 10,
+                                             },
+                                          },
+                                          start: 212,
+                                          type: "VariableDeclarator",
+                                       },
+                                    ],
+                                    end: 252,
+                                    kind: "const",
+                                    loc: {
+                                       end: {
+                                          column: 50,
+                                          line: 10,
+                                       },
+                                       start: {
+                                          column: 4,
+                                          line: 10,
+                                       },
+                                    },
+                                    start: 206,
+                                    type: "VariableDeclaration",
+                                 },
+                                 {
+                                    alternate: ~,
+                                    consequent: {
+                                       argument: {
+                                          end: 303,
+                                          loc: {
+                                             end: {
+                                                column: 49,
+                                                line: 12,
+                                             },
+                                             start: {
+                                                column: 45,
+                                                line: 12,
+                                             },
+                                          },
+                                          start: 299,
+                                          type: "NullLiteral",
+                                       },
+                                       end: 304,
+                                       loc: {
+                                          end: {
+                                             column: 50,
+                                             line: 12,
+                                          },
+                                          start: {
+                                             column: 38,
+                                             line: 12,
+                                          },
+                                       },
+                                       start: 292,
+                                       type: "ReturnStatement",
+                                    },
+                                    end: 304,
+                                    loc: {
+                                       end: {
+                                          column: 50,
+                                          line: 12,
+                                       },
+                                       start: {
+                                          column: 4,
+                                          line: 12,
+                                       },
+                                    },
+                                    start: 258,
+                                    test: {
+                                       end: 290,
+                                       left: {
+                                          argument: {
+                                             end: 274,
+                                             loc: {
+                                                end: {
+                                                   column: 20,
+                                                   line: 12,
+                                                },
+                                                identifierName: "babel",
+                                                start: {
+                                                   column: 15,
+                                                   line: 12,
+                                                },
+                                             },
+                                             name: "babel",
+                                             start: 269,
+                                             type: "Identifier",
+                                          },
+                                          end: 274,
+                                          extra: {
+                                             parenthesizedArgument: false,
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 20,
+                                                line: 12,
+                                             },
+                                             start: {
+                                                column: 8,
+                                                line: 12,
+                                             },
+                                          },
+                                          operator: "typeof",
+                                          prefix: true,
+                                          start: 262,
+                                          type: "UnaryExpression",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 36,
+                                             line: 12,
+                                          },
+                                          start: {
+                                             column: 8,
+                                             line: 12,
+                                          },
+                                       },
+                                       operator: "===",
+                                       right: {
+                                          end: 290,
+                                          extra: {
+                                             raw: "\"undefined\"",
+                                             rawValue: "undefined",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 36,
+                                                line: 12,
+                                             },
+                                             start: {
+                                                column: 25,
+                                                line: 12,
+                                             },
+                                          },
+                                          start: 279,
+                                          type: "StringLiteral",
+                                          value: "undefined",
+                                       },
+                                       start: 262,
+                                       type: "BinaryExpression",
+                                    },
+                                    type: "IfStatement",
+                                 },
+                                 {
+                                    alternate: ~,
+                                    consequent: {
+                                       body: [
+                                          {
+                                             argument: {
+                                                arguments: [
+                                                   {
+                                                      end: 460,
+                                                      expressions: [
+                                                         {
+                                                            computed: false,
+                                                            end: 423,
+                                                            loc: {
+                                                               end: {
+                                                                  column: 38,
+                                                                  line: 15,
+                                                               },
+                                                               start: {
+                                                                  column: 25,
+                                                                  line: 15,
+                                                               },
+                                                            },
+                                                            object: {
+                                                               end: 414,
+                                                               loc: {
+                                                                  end: {
+                                                                     column: 29,
+                                                                     line: 15,
+                                                                  },
+                                                                  identifierName: "file",
+                                                                  start: {
+                                                                     column: 25,
+                                                                     line: 15,
+                                                                  },
+                                                               },
+                                                               name: "file",
+                                                               start: 410,
+                                                               type: "Identifier",
+                                                            },
+                                                            property: {
+                                                               end: 423,
+                                                               loc: {
+                                                                  end: {
+                                                                     column: 38,
+                                                                     line: 15,
+                                                                  },
+                                                                  identifierName: "filepath",
+                                                                  start: {
+                                                                     column: 30,
+                                                                     line: 15,
+                                                                  },
+                                                               },
+                                                               name: "filepath",
+                                                               start: 415,
+                                                               type: "Identifier",
+                                                            },
+                                                            start: 410,
+                                                            type: "MemberExpression",
+                                                         },
+                                                      ],
+                                                      loc: {
+                                                         end: {
+                                                            column: 75,
+                                                            line: 15,
+                                                         },
+                                                         start: {
+                                                            column: 22,
+                                                            line: 15,
+                                                         },
+                                                      },
+                                                      quasis: [
+                                                         {
+                                                            end: 408,
+                                                            loc: {
+                                                               end: {
+                                                                  column: 23,
+                                                                  line: 15,
+                                                               },
+                                                               start: {
+                                                                  column: 23,
+                                                                  line: 15,
+                                                               },
+                                                            },
+                                                            start: 408,
+                                                            tail: false,
+                                                            type: "TemplateElement",
+                                                            value: {
+                                                               cooked: "",
+                                                               raw: "",
+                                                            },
+                                                         },
+                                                         {
+                                                            end: 459,
+                                                            loc: {
+                                                               end: {
+                                                                  column: 74,
+                                                                  line: 15,
+                                                               },
+                                                               start: {
+                                                                  column: 39,
+                                                                  line: 15,
+                                                               },
+                                                            },
+                                                            start: 424,
+                                                            tail: true,
+                                                            type: "TemplateElement",
+                                                            value: {
+                                                               cooked: ": .babel property must be an object",
+                                                               raw: ": .babel property must be an object",
+                                                            },
+                                                         },
+                                                      ],
+                                                      start: 407,
+                                                      type: "TemplateLiteral",
+                                                   },
+                                                ],
+                                                callee: {
+                                                   end: 406,
+                                                   loc: {
+                                                      end: {
+                                                         column: 21,
+                                                         line: 15,
+                                                      },
+                                                      identifierName: "Error",
+                                                      start: {
+                                                         column: 16,
+                                                         line: 15,
+                                                      },
+                                                   },
+                                                   name: "Error",
+                                                   start: 401,
+                                                   type: "Identifier",
+                                                },
+                                                end: 461,
+                                                loc: {
+                                                   end: {
+                                                      column: 76,
+                                                      line: 15,
+                                                   },
+                                                   start: {
+                                                      column: 12,
+                                                      line: 15,
+                                                   },
+                                                },
+                                                start: 397,
+                                                type: "NewExpression",
+                                             },
+                                             end: 462,
+                                             loc: {
+                                                end: {
+                                                   column: 77,
+                                                   line: 15,
+                                                },
+                                                start: {
+                                                   column: 6,
+                                                   line: 15,
+                                                },
+                                             },
+                                             start: 391,
+                                             type: "ThrowStatement",
+                                          },
+                                       ],
+                                       directives: [],
+                                       end: 468,
+                                       loc: {
+                                          end: {
+                                             column: 5,
+                                             line: 16,
+                                          },
+                                          start: {
+                                             column: 77,
+                                             line: 14,
+                                          },
+                                       },
+                                       start: 383,
+                                       type: "BlockStatement",
+                                    },
+                                    end: 468,
+                                    loc: {
+                                       end: {
+                                          column: 5,
+                                          line: 16,
+                                       },
+                                       start: {
+                                          column: 4,
+                                          line: 14,
+                                       },
+                                    },
+                                    start: 310,
+                                    test: {
+                                       end: 381,
+                                       left: {
+                                          end: 363,
+                                          left: {
+                                             end: 339,
+                                             left: {
+                                                argument: {
+                                                   end: 326,
+                                                   loc: {
+                                                      end: {
+                                                         column: 20,
+                                                         line: 14,
+                                                      },
+                                                      identifierName: "babel",
+                                                      start: {
+                                                         column: 15,
+                                                         line: 14,
+                                                      },
+                                                   },
+                                                   name: "babel",
+                                                   start: 321,
+                                                   type: "Identifier",
+                                                },
+                                                end: 326,
+                                                extra: {
+                                                   parenthesizedArgument: false,
+                                                },
+                                                loc: {
+                                                   end: {
+                                                      column: 20,
+                                                      line: 14,
+                                                   },
+                                                   start: {
+                                                      column: 8,
+                                                      line: 14,
+                                                   },
+                                                },
+                                                operator: "typeof",
+                                                prefix: true,
+                                                start: 314,
+                                                type: "UnaryExpression",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 33,
+                                                   line: 14,
+                                                },
+                                                start: {
+                                                   column: 8,
+                                                   line: 14,
+                                                },
+                                             },
+                                             operator: "!==",
+                                             right: {
+                                                end: 339,
+                                                extra: {
+                                                   raw: "\"object\"",
+                                                   rawValue: "object",
+                                                },
+                                                loc: {
+                                                   end: {
+                                                      column: 33,
+                                                      line: 14,
+                                                   },
+                                                   start: {
+                                                      column: 25,
+                                                      line: 14,
+                                                   },
+                                                },
+                                                start: 331,
+                                                type: "StringLiteral",
+                                                value: "object",
+                                             },
+                                             start: 314,
+                                             type: "BinaryExpression",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 57,
+                                                line: 14,
+                                             },
+                                             start: {
+                                                column: 8,
+                                                line: 14,
+                                             },
+                                          },
+                                          operator: "||",
+                                          right: {
+                                             arguments: [
+                                                {
+                                                   end: 362,
+                                                   loc: {
+                                                      end: {
+                                                         column: 56,
+                                                         line: 14,
+                                                      },
+                                                      identifierName: "babel",
+                                                      start: {
+                                                         column: 51,
+                                                         line: 14,
+                                                      },
+                                                   },
+                                                   name: "babel",
+                                                   start: 357,
+                                                   type: "Identifier",
+                                                },
+                                             ],
+                                             callee: {
+                                                computed: false,
+                                                end: 356,
+                                                loc: {
+                                                   end: {
+                                                      column: 50,
+                                                      line: 14,
+                                                   },
+                                                   start: {
+                                                      column: 37,
+                                                      line: 14,
+                                                   },
+                                                },
+                                                object: {
+                                                   end: 348,
+                                                   loc: {
+                                                      end: {
+                                                         column: 42,
+                                                         line: 14,
+                                                      },
+                                                      identifierName: "Array",
+                                                      start: {
+                                                         column: 37,
+                                                         line: 14,
+                                                      },
+                                                   },
+                                                   name: "Array",
+                                                   start: 343,
+                                                   type: "Identifier",
+                                                },
+                                                property: {
+                                                   end: 356,
+                                                   loc: {
+                                                      end: {
+                                                         column: 50,
+                                                         line: 14,
+                                                      },
+                                                      identifierName: "isArray",
+                                                      start: {
+                                                         column: 43,
+                                                         line: 14,
+                                                      },
+                                                   },
+                                                   name: "isArray",
+                                                   start: 349,
+                                                   type: "Identifier",
+                                                },
+                                                start: 343,
+                                                type: "MemberExpression",
+                                             },
+                                             end: 363,
+                                             loc: {
+                                                end: {
+                                                   column: 57,
+                                                   line: 14,
+                                                },
+                                                start: {
+                                                   column: 37,
+                                                   line: 14,
+                                                },
+                                             },
+                                             start: 343,
+                                             type: "CallExpression",
+                                          },
+                                          start: 314,
+                                          type: "LogicalExpression",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 75,
+                                             line: 14,
+                                          },
+                                          start: {
+                                             column: 8,
+                                             line: 14,
+                                          },
+                                       },
+                                       operator: "||",
+                                       right: {
+                                          end: 381,
+                                          left: {
+                                             end: 372,
+                                             loc: {
+                                                end: {
+                                                   column: 66,
+                                                   line: 14,
+                                                },
+                                                identifierName: "babel",
+                                                start: {
+                                                   column: 61,
+                                                   line: 14,
+                                                },
+                                             },
+                                             name: "babel",
+                                             start: 367,
+                                             type: "Identifier",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 75,
+                                                line: 14,
+                                             },
+                                             start: {
+                                                column: 61,
+                                                line: 14,
+                                             },
+                                          },
+                                          operator: "===",
+                                          right: {
+                                             end: 381,
+                                             loc: {
+                                                end: {
+                                                   column: 75,
+                                                   line: 14,
+                                                },
+                                                start: {
+                                                   column: 71,
+                                                   line: 14,
+                                                },
+                                             },
+                                             start: 377,
+                                             type: "NullLiteral",
+                                          },
+                                          start: 367,
+                                          type: "BinaryExpression",
+                                       },
+                                       start: 314,
+                                       type: "LogicalExpression",
+                                    },
+                                    type: "IfStatement",
+                                 },
+                                 {
+                                    argument: {
+                                       end: 570,
+                                       loc: {
+                                          end: {
+                                             column: 5,
+                                             line: 22,
+                                          },
+                                          start: {
+                                             column: 11,
+                                             line: 18,
+                                          },
+                                       },
+                                       properties: [
+                                          {
+                                             computed: false,
+                                             end: 512,
+                                             key: {
+                                                end: 497,
+                                                loc: {
+                                                   end: {
+                                                      column: 14,
+                                                      line: 19,
+                                                   },
+                                                   identifierName: "filepath",
+                                                   start: {
+                                                      column: 6,
+                                                      line: 19,
+                                                   },
+                                                },
+                                                name: "filepath",
+                                                start: 489,
+                                                type: "Identifier",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 29,
+                                                   line: 19,
+                                                },
+                                                start: {
+                                                   column: 6,
+                                                   line: 19,
+                                                },
+                                             },
+                                             method: false,
+                                             shorthand: false,
+                                             start: 489,
+                                             type: "ObjectProperty",
+                                             value: {
+                                                computed: false,
+                                                end: 512,
+                                                loc: {
+                                                   end: {
+                                                      column: 29,
+                                                      line: 19,
+                                                   },
+                                                   start: {
+                                                      column: 16,
+                                                      line: 19,
+                                                   },
+                                                },
+                                                object: {
+                                                   end: 503,
+                                                   loc: {
+                                                      end: {
+                                                         column: 20,
+                                                         line: 19,
+                                                      },
+                                                      identifierName: "file",
+                                                      start: {
+                                                         column: 16,
+                                                         line: 19,
+                                                      },
+                                                   },
+                                                   name: "file",
+                                                   start: 499,
+                                                   type: "Identifier",
+                                                },
+                                                property: {
+                                                   end: 512,
+                                                   loc: {
+                                                      end: {
+                                                         column: 29,
+                                                         line: 19,
+                                                      },
+                                                      identifierName: "filepath",
+                                                      start: {
+                                                         column: 21,
+                                                         line: 19,
+                                                      },
+                                                   },
+                                                   name: "filepath",
+                                                   start: 504,
+                                                   type: "Identifier",
+                                                },
+                                                start: 499,
+                                                type: "MemberExpression",
+                                             },
+                                          },
+                                          {
+                                             computed: false,
+                                             end: 541,
+                                             key: {
+                                                end: 527,
+                                                loc: {
+                                                   end: {
+                                                      column: 13,
+                                                      line: 20,
+                                                   },
+                                                   identifierName: "dirname",
+                                                   start: {
+                                                      column: 6,
+                                                      line: 20,
+                                                   },
+                                                },
+                                                name: "dirname",
+                                                start: 520,
+                                                type: "Identifier",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 27,
+                                                   line: 20,
+                                                },
+                                                start: {
+                                                   column: 6,
+                                                   line: 20,
+                                                },
+                                             },
+                                             method: false,
+                                             shorthand: false,
+                                             start: 520,
+                                             type: "ObjectProperty",
+                                             value: {
+                                                computed: false,
+                                                end: 541,
+                                                loc: {
+                                                   end: {
+                                                      column: 27,
+                                                      line: 20,
+                                                   },
+                                                   start: {
+                                                      column: 15,
+                                                      line: 20,
+                                                   },
+                                                },
+                                                object: {
+                                                   end: 533,
+                                                   loc: {
+                                                      end: {
+                                                         column: 19,
+                                                         line: 20,
+                                                      },
+                                                      identifierName: "file",
+                                                      start: {
+                                                         column: 15,
+                                                         line: 20,
+                                                      },
+                                                   },
+                                                   name: "file",
+                                                   start: 529,
+                                                   type: "Identifier",
+                                                },
+                                                property: {
+                                                   end: 541,
+                                                   loc: {
+                                                      end: {
+                                                         column: 27,
+                                                         line: 20,
+                                                      },
+                                                      identifierName: "dirname",
+                                                      start: {
+                                                         column: 20,
+                                                         line: 20,
+                                                      },
+                                                   },
+                                                   name: "dirname",
+                                                   start: 534,
+                                                   type: "Identifier",
+                                                },
+                                                start: 529,
+                                                type: "MemberExpression",
+                                             },
+                                          },
+                                          {
+                                             computed: false,
+                                             end: 563,
+                                             key: {
+                                                end: 556,
+                                                loc: {
+                                                   end: {
+                                                      column: 13,
+                                                      line: 21,
+                                                   },
+                                                   identifierName: "options",
+                                                   start: {
+                                                      column: 6,
+                                                      line: 21,
+                                                   },
+                                                },
+                                                name: "options",
+                                                start: 549,
+                                                type: "Identifier",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 20,
+                                                   line: 21,
+                                                },
+                                                start: {
+                                                   column: 6,
+                                                   line: 21,
+                                                },
+                                             },
+                                             method: false,
+                                             shorthand: false,
+                                             start: 549,
+                                             type: "ObjectProperty",
+                                             value: {
+                                                end: 563,
+                                                loc: {
+                                                   end: {
+                                                      column: 20,
+                                                      line: 21,
+                                                   },
+                                                   identifierName: "babel",
+                                                   start: {
+                                                      column: 15,
+                                                      line: 21,
+                                                   },
+                                                },
+                                                name: "babel",
+                                                start: 558,
+                                                type: "Identifier",
+                                             },
+                                          },
+                                       ],
+                                       start: 481,
+                                       type: "ObjectExpression",
+                                    },
+                                    end: 571,
+                                    loc: {
+                                       end: {
+                                          column: 6,
+                                          line: 22,
+                                       },
+                                       start: {
+                                          column: 4,
+                                          line: 18,
+                                       },
+                                    },
+                                    start: 474,
+                                    type: "ReturnStatement",
+                                 },
+                              ],
+                              directives: [],
+                              end: 575,
+                              loc: {
+                                 end: {
+                                    column: 3,
+                                    line: 23,
+                                 },
+                                 start: {
+                                    column: 43,
+                                    line: 9,
+                                 },
+                              },
+                              start: 200,
+                              type: "BlockStatement",
+                           },
+                           end: 575,
+                           generator: false,
+                           id: ~,
+                           loc: {
+                              end: {
+                                 column: 3,
+                                 line: 23,
+                              },
+                              start: {
+                                 column: 2,
+                                 line: 9,
+                              },
+                           },
+                           params: [
+                              {
+                                 end: 176,
+                                 loc: {
+                                    end: {
+                                       column: 19,
+                                       line: 9,
+                                    },
+                                    identifierName: "file",
+                                    start: {
+                                       column: 3,
+                                       line: 9,
+                                    },
+                                 },
+                                 name: "file",
+                                 start: 160,
+                                 type: "Identifier",
+                                 typeAnnotation: {
+                                    end: 176,
+                                    loc: {
+                                       end: {
+                                          column: 19,
+                                          line: 9,
+                                       },
+                                       start: {
+                                          column: 7,
+                                          line: 9,
+                                       },
+                                    },
+                                    start: 164,
+                                    type: "TypeAnnotation",
+                                    typeAnnotation: {
+                                       end: 176,
+                                       id: {
+                                          end: 176,
+                                          loc: {
+                                             end: {
+                                                column: 19,
+                                                line: 9,
+                                             },
+                                             identifierName: "ConfigFile",
+                                             start: {
+                                                column: 9,
+                                                line: 9,
+                                             },
+                                          },
+                                          name: "ConfigFile",
+                                          start: 166,
+                                          type: "Identifier",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 19,
+                                             line: 9,
+                                          },
+                                          start: {
+                                             column: 9,
+                                             line: 9,
+                                          },
+                                       },
+                                       start: 166,
+                                       type: "GenericTypeAnnotation",
+                                       typeParameters: ~,
+                                    },
+                                 },
+                              },
+                           ],
+                           predicate: ~,
+                           returnType: {
+                              end: 196,
+                              loc: {
+                                 end: {
+                                    column: 39,
+                                    line: 9,
+                                 },
+                                 start: {
+                                    column: 20,
+                                    line: 9,
+                                 },
+                              },
+                              start: 177,
+                              type: "TypeAnnotation",
+                              typeAnnotation: {
+                                 end: 196,
+                                 loc: {
+                                    end: {
+                                       column: 39,
+                                       line: 9,
+                                    },
+                                    start: {
+                                       column: 22,
+                                       line: 9,
+                                    },
+                                 },
+                                 start: 179,
+                                 type: "UnionTypeAnnotation",
+                                 types: [
+                                    {
+                                       end: 189,
+                                       id: {
+                                          end: 189,
+                                          loc: {
+                                             end: {
+                                                column: 32,
+                                                line: 9,
+                                             },
+                                             identifierName: "ConfigFile",
+                                             start: {
+                                                column: 22,
+                                                line: 9,
+                                             },
+                                          },
+                                          name: "ConfigFile",
+                                          start: 179,
+                                          type: "Identifier",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 32,
+                                             line: 9,
+                                          },
+                                          start: {
+                                             column: 22,
+                                             line: 9,
+                                          },
+                                       },
+                                       start: 179,
+                                       type: "GenericTypeAnnotation",
+                                       typeParameters: ~,
+                                    },
+                                    {
+                                       end: 196,
+                                       loc: {
+                                          end: {
+                                             column: 39,
+                                             line: 9,
+                                          },
+                                          start: {
+                                             column: 35,
+                                             line: 9,
+                                          },
+                                       },
+                                       start: 192,
+                                       type: "NullLiteralTypeAnnotation",
+                                    },
+                                 ],
+                              },
+                           },
+                           start: 159,
+                           type: "ArrowFunctionExpression",
+                        },
+                     ],
+                     callee: {
+                        end: 155,
+                        loc: {
+                           end: {
+                              column: 42,
+                              line: 8,
+                           },
+                           identifierName: "makeWeakCache",
+                           start: {
+                              column: 29,
+                              line: 8,
+                           },
+                        },
+                        name: "makeWeakCache",
+                        start: 142,
+                        type: "Identifier",
+                     },
+                     end: 578,
+                     loc: {
+                        end: {
+                           column: 1,
+                           line: 24,
+                        },
+                        start: {
+                           column: 29,
+                           line: 8,
+                        },
+                     },
+                     start: 142,
+                     type: "CallExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 24,
+                     },
+                     start: {
+                        column: 6,
+                        line: 8,
+                     },
+                  },
+                  start: 119,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 579,
+            kind: "const",
+            loc: {
+               end: {
+                  column: 2,
+                  line: 24,
+               },
+               start: {
+                  column: 0,
+                  line: 8,
+               },
+            },
+            start: 113,
+            type: "VariableDeclaration",
+         },
+         {
+            end: 652,
+            id: {
+               end: 600,
+               loc: {
+                  end: {
+                     column: 19,
+                     line: 26,
+                  },
+                  identifierName: "VisitorHandler",
+                  start: {
+                     column: 5,
+                     line: 26,
+                  },
+               },
+               name: "VisitorHandler",
+               start: 586,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 71,
+                  line: 26,
+               },
+               start: {
+                  column: 0,
+                  line: 26,
+               },
+            },
+            right: {
+               end: 651,
+               loc: {
+                  end: {
+                     column: 70,
+                     line: 26,
+                  },
+                  start: {
+                     column: 22,
+                     line: 26,
+                  },
+               },
+               start: 603,
+               type: "UnionTypeAnnotation",
+               types: [
+                  {
+                     end: 611,
+                     id: {
+                        end: 611,
+                        loc: {
+                           end: {
+                              column: 30,
+                              line: 26,
+                           },
+                           identifierName: "Function",
+                           start: {
+                              column: 22,
+                              line: 26,
+                           },
+                        },
+                        name: "Function",
+                        start: 603,
+                        type: "Identifier",
+                     },
+                     loc: {
+                        end: {
+                           column: 30,
+                           line: 26,
+                        },
+                        start: {
+                           column: 22,
+                           line: 26,
+                        },
+                     },
+                     start: 603,
+                     type: "GenericTypeAnnotation",
+                     typeParameters: ~,
+                  },
+                  {
+                     callProperties: [],
+                     end: 651,
+                     exact: false,
+                     indexers: [],
+                     loc: {
+                        end: {
+                           column: 70,
+                           line: 26,
+                        },
+                        start: {
+                           column: 33,
+                           line: 26,
+                        },
+                     },
+                     properties: [
+                        {
+                           end: 632,
+                           key: {
+                              end: 621,
+                              loc: {
+                                 end: {
+                                    column: 40,
+                                    line: 26,
+                                 },
+                                 identifierName: "enter",
+                                 start: {
+                                    column: 35,
+                                    line: 26,
+                                 },
+                              },
+                              name: "enter",
+                              start: 616,
+                              type: "Identifier",
+                           },
+                           kind: "init",
+                           loc: {
+                              end: {
+                                 column: 51,
+                                 line: 26,
+                              },
+                              start: {
+                                 column: 35,
+                                 line: 26,
+                              },
+                           },
+                           optional: true,
+                           start: 616,
+                           static: false,
+                           type: "ObjectTypeProperty",
+                           value: {
+                              end: 632,
+                              id: {
+                                 end: 632,
+                                 loc: {
+                                    end: {
+                                       column: 51,
+                                       line: 26,
+                                    },
+                                    identifierName: "Function",
+                                    start: {
+                                       column: 43,
+                                       line: 26,
+                                    },
+                                 },
+                                 name: "Function",
+                                 start: 624,
+                                 type: "Identifier",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 51,
+                                    line: 26,
+                                 },
+                                 start: {
+                                    column: 43,
+                                    line: 26,
+                                 },
+                              },
+                              start: 624,
+                              type: "GenericTypeAnnotation",
+                              typeParameters: ~,
+                           },
+                           variance: ~,
+                        },
+                        {
+                           end: 649,
+                           key: {
+                              end: 638,
+                              loc: {
+                                 end: {
+                                    column: 57,
+                                    line: 26,
+                                 },
+                                 identifierName: "exit",
+                                 start: {
+                                    column: 53,
+                                    line: 26,
+                                 },
+                              },
+                              name: "exit",
+                              start: 634,
+                              type: "Identifier",
+                           },
+                           kind: "init",
+                           loc: {
+                              end: {
+                                 column: 68,
+                                 line: 26,
+                              },
+                              start: {
+                                 column: 53,
+                                 line: 26,
+                              },
+                           },
+                           optional: true,
+                           start: 634,
+                           static: false,
+                           type: "ObjectTypeProperty",
+                           value: {
+                              end: 649,
+                              id: {
+                                 end: 649,
+                                 loc: {
+                                    end: {
+                                       column: 68,
+                                       line: 26,
+                                    },
+                                    identifierName: "Function",
+                                    start: {
+                                       column: 60,
+                                       line: 26,
+                                    },
+                                 },
+                                 name: "Function",
+                                 start: 641,
+                                 type: "Identifier",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 68,
+                                    line: 26,
+                                 },
+                                 start: {
+                                    column: 60,
+                                    line: 26,
+                                 },
+                              },
+                              start: 641,
+                              type: "GenericTypeAnnotation",
+                              typeParameters: ~,
+                           },
+                           variance: ~,
+                        },
+                     ],
+                     start: 614,
+                     type: "ObjectTypeAnnotation",
+                  },
+               ],
+            },
+            start: 581,
+            type: "TypeAlias",
+            typeParameters: ~,
+         },
+         {
+            declaration: {
+               end: 710,
+               id: {
+                  end: 675,
+                  loc: {
+                     end: {
+                        column: 22,
+                        line: 27,
+                     },
+                     identifierName: "VisitorMap",
+                     start: {
+                        column: 12,
+                        line: 27,
+                     },
+                  },
+                  name: "VisitorMap",
+                  start: 665,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 2,
+                     line: 29,
+                  },
+                  start: {
+                     column: 7,
+                     line: 27,
+                  },
+               },
+               right: {
+                  callProperties: [],
+                  end: 709,
+                  exact: false,
+                  indexers: [
+                     {
+                        end: 706,
+                        id: ~,
+                        key: {
+                           end: 689,
+                           loc: {
+                              end: {
+                                 column: 9,
+                                 line: 28,
+                              },
+                              start: {
+                                 column: 3,
+                                 line: 28,
+                              },
+                           },
+                           start: 683,
+                           type: "StringTypeAnnotation",
+                        },
+                        loc: {
+                           end: {
+                              column: 26,
+                              line: 28,
+                           },
+                           start: {
+                              column: 2,
+                              line: 28,
+                           },
+                        },
+                        start: 682,
+                        static: false,
+                        type: "ObjectTypeIndexer",
+                        value: {
+                           end: 706,
+                           id: {
+                              end: 706,
+                              loc: {
+                                 end: {
+                                    column: 26,
+                                    line: 28,
+                                 },
+                                 identifierName: "VisitorHandler",
+                                 start: {
+                                    column: 12,
+                                    line: 28,
+                                 },
+                              },
+                              name: "VisitorHandler",
+                              start: 692,
+                              type: "Identifier",
+                           },
+                           loc: {
+                              end: {
+                                 column: 26,
+                                 line: 28,
+                              },
+                              start: {
+                                 column: 12,
+                                 line: 28,
+                              },
+                           },
+                           start: 692,
+                           type: "GenericTypeAnnotation",
+                           typeParameters: ~,
+                        },
+                        variance: ~,
+                     },
+                  ],
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 29,
+                     },
+                     start: {
+                        column: 25,
+                        line: 27,
+                     },
+                  },
+                  properties: [],
+                  start: 678,
+                  type: "ObjectTypeAnnotation",
+               },
+               start: 660,
+               type: "TypeAlias",
+               typeParameters: ~,
+            },
+            end: 710,
+            exportKind: "type",
+            loc: {
+               end: {
+                  column: 2,
+                  line: 29,
+               },
+               start: {
+                  column: 0,
+                  line: 27,
+               },
+            },
+            source: ~,
+            specifiers: [],
+            start: 653,
+            type: "ExportNamedDeclaration",
+         },
+         {
+            declaration: {
+               end: 807,
+               id: {
+                  end: 747,
+                  loc: {
+                     end: {
+                        column: 35,
+                        line: 31,
+                     },
+                     identifierName: "SimpleCacheConfigurator",
+                     start: {
+                        column: 12,
+                        line: 31,
+                     },
+                  },
+                  name: "SimpleCacheConfigurator",
+                  start: 724,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 29,
+                     line: 32,
+                  },
+                  start: {
+                     column: 7,
+                     line: 31,
+                  },
+               },
+               right: {
+                  end: 806,
+                  loc: {
+                     end: {
+                        column: 28,
+                        line: 32,
+                     },
+                     start: {
+                        column: 38,
+                        line: 31,
+                     },
+                  },
+                  start: 750,
+                  type: "IntersectionTypeAnnotation",
+                  types: [
+                     {
+                        end: 775,
+                        id: {
+                           end: 775,
+                           loc: {
+                              end: {
+                                 column: 63,
+                                 line: 31,
+                              },
+                              identifierName: "SimpleCacheConfiguratorFn",
+                              start: {
+                                 column: 38,
+                                 line: 31,
+                              },
+                           },
+                           name: "SimpleCacheConfiguratorFn",
+                           start: 750,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 63,
+                              line: 31,
+                           },
+                           start: {
+                              column: 38,
+                              line: 31,
+                           },
+                        },
+                        start: 750,
+                        type: "GenericTypeAnnotation",
+                        typeParameters: ~,
+                     },
+                     {
+                        end: 806,
+                        id: {
+                           end: 806,
+                           loc: {
+                              end: {
+                                 column: 28,
+                                 line: 32,
+                              },
+                              identifierName: "SimpleCacheConfiguratorObj",
+                              start: {
+                                 column: 2,
+                                 line: 32,
+                              },
+                           },
+                           name: "SimpleCacheConfiguratorObj",
+                           start: 780,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 28,
+                              line: 32,
+                           },
+                           start: {
+                              column: 2,
+                              line: 32,
+                           },
+                        },
+                        start: 780,
+                        type: "GenericTypeAnnotation",
+                        typeParameters: ~,
+                     },
+                  ],
+               },
+               start: 719,
+               type: "TypeAlias",
+               typeParameters: ~,
+            },
+            end: 807,
+            exportKind: "type",
+            loc: {
+               end: {
+                  column: 29,
+                  line: 32,
+               },
+               start: {
+                  column: 0,
+                  line: 31,
+               },
+            },
+            source: ~,
+            specifiers: [],
+            start: 712,
+            type: "ExportNamedDeclaration",
+         },
+         {
+            declaration: {
+               async: false,
+               body: {
+                  body: [
+                     {
+                        argument: {
+                           arguments: [
+                              {
+                                 arguments: [],
+                                 callee: {
+                                    end: 1049,
+                                    loc: {
+                                       end: {
+                                          column: 39,
+                                          line: 41,
+                                       },
+                                       identifierName: "WeakMap",
+                                       start: {
+                                          column: 32,
+                                          line: 41,
+                                       },
+                                    },
+                                    name: "WeakMap",
+                                    start: 1042,
+                                    type: "Identifier",
+                                 },
+                                 end: 1051,
+                                 loc: {
+                                    end: {
+                                       column: 41,
+                                       line: 41,
+                                    },
+                                    start: {
+                                       column: 28,
+                                       line: 41,
+                                    },
+                                 },
+                                 start: 1038,
+                                 type: "NewExpression",
+                              },
+                              {
+                                 end: 1060,
+                                 loc: {
+                                    end: {
+                                       column: 50,
+                                       line: 41,
+                                    },
+                                    identifierName: "handler",
+                                    start: {
+                                       column: 43,
+                                       line: 41,
+                                    },
+                                 },
+                                 name: "handler",
+                                 start: 1053,
+                                 type: "Identifier",
+                              },
+                           ],
+                           callee: {
+                              end: 1037,
+                              loc: {
+                                 end: {
+                                    column: 27,
+                                    line: 41,
+                                 },
+                                 identifierName: "makeCachedFunction",
+                                 start: {
+                                    column: 9,
+                                    line: 41,
+                                 },
+                              },
+                              name: "makeCachedFunction",
+                              start: 1019,
+                              type: "Identifier",
+                           },
+                           end: 1061,
+                           loc: {
+                              end: {
+                                 column: 51,
+                                 line: 41,
+                              },
+                              start: {
+                                 column: 9,
+                                 line: 41,
+                              },
+                           },
+                           start: 1019,
+                           type: "CallExpression",
+                        },
+                        end: 1062,
+                        loc: {
+                           end: {
+                              column: 52,
+                              line: 41,
+                           },
+                           start: {
+                              column: 2,
+                              line: 41,
+                           },
+                        },
+                        start: 1012,
+                        type: "ReturnStatement",
+                     },
+                  ],
+                  directives: [],
+                  end: 1064,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 42,
+                     },
+                     start: {
+                        column: 34,
+                        line: 40,
+                     },
+                  },
+                  start: 1008,
+                  type: "BlockStatement",
+               },
+               end: 1064,
+               generator: false,
+               id: {
+                  end: 838,
+                  loc: {
+                     end: {
+                        column: 29,
+                        line: 34,
+                     },
+                     identifierName: "makeWeakCache",
+                     start: {
+                        column: 16,
+                        line: 34,
+                     },
+                  },
+                  name: "makeWeakCache",
+                  start: 825,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 42,
+                  },
+                  start: {
+                     column: 7,
+                     line: 34,
+                  },
+               },
+               params: [
+                  {
+                     end: 972,
+                     loc: {
+                        end: {
+                           column: 60,
+                           line: 39,
+                        },
+                        identifierName: "handler",
+                        start: {
+                           column: 2,
+                           line: 39,
+                        },
+                     },
+                     name: "handler",
+                     start: 914,
+                     type: "Identifier",
+                     typeAnnotation: {
+                        end: 972,
+                        loc: {
+                           end: {
+                              column: 60,
+                              line: 39,
+                           },
+                           start: {
+                              column: 9,
+                              line: 39,
+                           },
+                        },
+                        start: 921,
+                        type: "TypeAnnotation",
+                        typeAnnotation: {
+                           end: 972,
+                           loc: {
+                              end: {
+                                 column: 60,
+                                 line: 39,
+                              },
+                              start: {
+                                 column: 11,
+                                 line: 39,
+                              },
+                           },
+                           params: [
+                              {
+                                 end: 929,
+                                 loc: {
+                                    end: {
+                                       column: 17,
+                                       line: 39,
+                                    },
+                                    start: {
+                                       column: 12,
+                                       line: 39,
+                                    },
+                                 },
+                                 name: ~,
+                                 optional: false,
+                                 start: 924,
+                                 type: "FunctionTypeParam",
+                                 typeAnnotation: {
+                                    end: 928,
+                                    id: {
+                                       end: 928,
+                                       loc: {
+                                          end: {
+                                             column: 16,
+                                             line: 39,
+                                          },
+                                          identifierName: "ArgT",
+                                          start: {
+                                             column: 12,
+                                             line: 39,
+                                          },
+                                       },
+                                       name: "ArgT",
+                                       start: 924,
+                                       type: "Identifier",
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 16,
+                                          line: 39,
+                                       },
+                                       start: {
+                                          column: 12,
+                                          line: 39,
+                                       },
+                                    },
+                                    start: 924,
+                                    type: "GenericTypeAnnotation",
+                                    typeParameters: ~,
+                                 },
+                              },
+                              {
+                                 end: 960,
+                                 loc: {
+                                    end: {
+                                       column: 48,
+                                       line: 39,
+                                    },
+                                    start: {
+                                       column: 18,
+                                       line: 39,
+                                    },
+                                 },
+                                 name: ~,
+                                 optional: false,
+                                 start: 930,
+                                 type: "FunctionTypeParam",
+                                 typeAnnotation: {
+                                    end: 960,
+                                    id: {
+                                       end: 947,
+                                       loc: {
+                                          end: {
+                                             column: 35,
+                                             line: 39,
+                                          },
+                                          identifierName: "CacheConfigurator",
+                                          start: {
+                                             column: 18,
+                                             line: 39,
+                                          },
+                                       },
+                                       name: "CacheConfigurator",
+                                       start: 930,
+                                       type: "Identifier",
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 48,
+                                          line: 39,
+                                       },
+                                       start: {
+                                          column: 18,
+                                          line: 39,
+                                       },
+                                    },
+                                    start: 930,
+                                    type: "GenericTypeAnnotation",
+                                    typeParameters: {
+                                       end: 960,
+                                       loc: {
+                                          end: {
+                                             column: 48,
+                                             line: 39,
+                                          },
+                                          start: {
+                                             column: 35,
+                                             line: 39,
+                                          },
+                                       },
+                                       params: [
+                                          {
+                                             end: 959,
+                                             id: {
+                                                end: 959,
+                                                loc: {
+                                                   end: {
+                                                      column: 47,
+                                                      line: 39,
+                                                   },
+                                                   identifierName: "SideChannel",
+                                                   start: {
+                                                      column: 36,
+                                                      line: 39,
+                                                   },
+                                                },
+                                                name: "SideChannel",
+                                                start: 948,
+                                                type: "Identifier",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 47,
+                                                   line: 39,
+                                                },
+                                                start: {
+                                                   column: 36,
+                                                   line: 39,
+                                                },
+                                             },
+                                             start: 948,
+                                             type: "GenericTypeAnnotation",
+                                             typeParameters: ~,
+                                          },
+                                       ],
+                                       start: 947,
+                                       type: "TypeParameterInstantiation",
+                                    },
+                                 },
+                              },
+                           ],
+                           rest: ~,
+                           returnType: {
+                              end: 972,
+                              id: {
+                                 end: 972,
+                                 loc: {
+                                    end: {
+                                       column: 60,
+                                       line: 39,
+                                    },
+                                    identifierName: "ResultT",
+                                    start: {
+                                       column: 53,
+                                       line: 39,
+                                    },
+                                 },
+                                 name: "ResultT",
+                                 start: 965,
+                                 type: "Identifier",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 60,
+                                    line: 39,
+                                 },
+                                 start: {
+                                    column: 53,
+                                    line: 39,
+                                 },
+                              },
+                              start: 965,
+                              type: "GenericTypeAnnotation",
+                              typeParameters: ~,
+                           },
+                           start: 923,
+                           type: "FunctionTypeAnnotation",
+                           typeParameters: ~,
+                        },
+                     },
+                  },
+               ],
+               predicate: ~,
+               returnType: {
+                  end: 1007,
+                  loc: {
+                     end: {
+                        column: 33,
+                        line: 40,
+                     },
+                     start: {
+                        column: 1,
+                        line: 40,
+                     },
+                  },
+                  start: 975,
+                  type: "TypeAnnotation",
+                  typeAnnotation: {
+                     end: 1007,
+                     loc: {
+                        end: {
+                           column: 33,
+                           line: 40,
+                        },
+                        start: {
+                           column: 3,
+                           line: 40,
+                        },
+                     },
+                     params: [
+                        {
+                           end: 983,
+                           loc: {
+                              end: {
+                                 column: 9,
+                                 line: 40,
+                              },
+                              start: {
+                                 column: 4,
+                                 line: 40,
+                              },
+                           },
+                           name: ~,
+                           optional: false,
+                           start: 978,
+                           type: "FunctionTypeParam",
+                           typeAnnotation: {
+                              end: 982,
+                              id: {
+                                 end: 982,
+                                 loc: {
+                                    end: {
+                                       column: 8,
+                                       line: 40,
+                                    },
+                                    identifierName: "ArgT",
+                                    start: {
+                                       column: 4,
+                                       line: 40,
+                                    },
+                                 },
+                                 name: "ArgT",
+                                 start: 978,
+                                 type: "Identifier",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 8,
+                                    line: 40,
+                                 },
+                                 start: {
+                                    column: 4,
+                                    line: 40,
+                                 },
+                              },
+                              start: 978,
+                              type: "GenericTypeAnnotation",
+                              typeParameters: ~,
+                           },
+                        },
+                        {
+                           end: 995,
+                           loc: {
+                              end: {
+                                 column: 21,
+                                 line: 40,
+                              },
+                              start: {
+                                 column: 10,
+                                 line: 40,
+                              },
+                           },
+                           name: ~,
+                           optional: false,
+                           start: 984,
+                           type: "FunctionTypeParam",
+                           typeAnnotation: {
+                              end: 995,
+                              id: {
+                                 end: 995,
+                                 loc: {
+                                    end: {
+                                       column: 21,
+                                       line: 40,
+                                    },
+                                    identifierName: "SideChannel",
+                                    start: {
+                                       column: 10,
+                                       line: 40,
+                                    },
+                                 },
+                                 name: "SideChannel",
+                                 start: 984,
+                                 type: "Identifier",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 21,
+                                    line: 40,
+                                 },
+                                 start: {
+                                    column: 10,
+                                    line: 40,
+                                 },
+                              },
+                              start: 984,
+                              type: "GenericTypeAnnotation",
+                              typeParameters: ~,
+                           },
+                        },
+                     ],
+                     rest: ~,
+                     returnType: {
+                        end: 1007,
+                        id: {
+                           end: 1007,
+                           loc: {
+                              end: {
+                                 column: 33,
+                                 line: 40,
+                              },
+                              identifierName: "ResultT",
+                              start: {
+                                 column: 26,
+                                 line: 40,
+                              },
+                           },
+                           name: "ResultT",
+                           start: 1000,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 33,
+                              line: 40,
+                           },
+                           start: {
+                              column: 26,
+                              line: 40,
+                           },
+                        },
+                        start: 1000,
+                        type: "GenericTypeAnnotation",
+                        typeParameters: ~,
+                     },
+                     start: 977,
+                     type: "FunctionTypeAnnotation",
+                     typeParameters: ~,
+                  },
+               },
+               start: 816,
+               type: "FunctionDeclaration",
+               typeParameters: {
+                  end: 910,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 38,
+                     },
+                     start: {
+                        column: 29,
+                        line: 34,
+                     },
+                  },
+                  params: [
+                     {
+                        bound: {
+                           end: 881,
+                           loc: {
+                              end: {
+                                 column: 41,
+                                 line: 35,
+                              },
+                              start: {
+                                 column: 6,
+                                 line: 35,
+                              },
+                           },
+                           start: 846,
+                           type: "TypeAnnotation",
+                           typeAnnotation: {
+                              end: 881,
+                              loc: {
+                                 end: {
+                                    column: 41,
+                                    line: 35,
+                                 },
+                                 start: {
+                                    column: 8,
+                                    line: 35,
+                                 },
+                              },
+                              start: 848,
+                              type: "UnionTypeAnnotation",
+                              types: [
+                                 {
+                                    callProperties: [],
+                                    end: 850,
+                                    exact: false,
+                                    indexers: [],
+                                    loc: {
+                                       end: {
+                                          column: 10,
+                                          line: 35,
+                                       },
+                                       start: {
+                                          column: 8,
+                                          line: 35,
+                                       },
+                                    },
+                                    properties: [],
+                                    start: 848,
+                                    type: "ObjectTypeAnnotation",
+                                 },
+                                 {
+                                    end: 861,
+                                    id: {
+                                       end: 858,
+                                       loc: {
+                                          end: {
+                                             column: 18,
+                                             line: 35,
+                                          },
+                                          identifierName: "Array",
+                                          start: {
+                                             column: 13,
+                                             line: 35,
+                                          },
+                                       },
+                                       name: "Array",
+                                       start: 853,
+                                       type: "Identifier",
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 21,
+                                          line: 35,
+                                       },
+                                       start: {
+                                          column: 13,
+                                          line: 35,
+                                       },
+                                    },
+                                    start: 853,
+                                    type: "GenericTypeAnnotation",
+                                    typeParameters: {
+                                       end: 861,
+                                       loc: {
+                                          end: {
+                                             column: 21,
+                                             line: 35,
+                                          },
+                                          start: {
+                                             column: 18,
+                                             line: 35,
+                                          },
+                                       },
+                                       params: [
+                                          {
+                                             end: 860,
+                                             loc: {
+                                                end: {
+                                                   column: 20,
+                                                   line: 35,
+                                                },
+                                                start: {
+                                                   column: 19,
+                                                   line: 35,
+                                                },
+                                             },
+                                             start: 859,
+                                             type: "ExistsTypeAnnotation",
+                                          },
+                                       ],
+                                       start: 858,
+                                       type: "TypeParameterInstantiation",
+                                    },
+                                 },
+                                 {
+                                    end: 881,
+                                    id: {
+                                       end: 878,
+                                       loc: {
+                                          end: {
+                                             column: 38,
+                                             line: 35,
+                                          },
+                                          identifierName: "$ReadOnlyArray",
+                                          start: {
+                                             column: 24,
+                                             line: 35,
+                                          },
+                                       },
+                                       name: "$ReadOnlyArray",
+                                       start: 864,
+                                       type: "Identifier",
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 41,
+                                          line: 35,
+                                       },
+                                       start: {
+                                          column: 24,
+                                          line: 35,
+                                       },
+                                    },
+                                    start: 864,
+                                    type: "GenericTypeAnnotation",
+                                    typeParameters: {
+                                       end: 881,
+                                       loc: {
+                                          end: {
+                                             column: 41,
+                                             line: 35,
+                                          },
+                                          start: {
+                                             column: 38,
+                                             line: 35,
+                                          },
+                                       },
+                                       params: [
+                                          {
+                                             end: 880,
+                                             loc: {
+                                                end: {
+                                                   column: 40,
+                                                   line: 35,
+                                                },
+                                                start: {
+                                                   column: 39,
+                                                   line: 35,
+                                                },
+                                             },
+                                             start: 879,
+                                             type: "ExistsTypeAnnotation",
+                                          },
+                                       ],
+                                       start: 878,
+                                       type: "TypeParameterInstantiation",
+                                    },
+                                 },
+                              ],
+                           },
+                        },
+                        end: 881,
+                        loc: {
+                           end: {
+                              column: 41,
+                              line: 35,
+                           },
+                           start: {
+                              column: 2,
+                              line: 35,
+                           },
+                        },
+                        name: "ArgT",
+                        start: 842,
+                        type: "TypeParameter",
+                        variance: ~,
+                     },
+                     {
+                        end: 892,
+                        loc: {
+                           end: {
+                              column: 9,
+                              line: 36,
+                           },
+                           start: {
+                              column: 2,
+                              line: 36,
+                           },
+                        },
+                        name: "ResultT",
+                        start: 885,
+                        type: "TypeParameter",
+                        variance: ~,
+                     },
+                     {
+                        end: 907,
+                        loc: {
+                           end: {
+                              column: 13,
+                              line: 37,
+                           },
+                           start: {
+                              column: 2,
+                              line: 37,
+                           },
+                        },
+                        name: "SideChannel",
+                        start: 896,
+                        type: "TypeParameter",
+                        variance: ~,
+                     },
+                  ],
+                  start: 838,
+                  type: "TypeParameterDeclaration",
+               },
+            },
+            end: 1064,
+            exportKind: "value",
+            loc: {
+               end: {
+                  column: 1,
+                  line: 42,
+               },
+               start: {
+                  column: 0,
+                  line: 34,
+               },
+            },
+            source: ~,
+            specifiers: [],
+            start: 809,
+            type: "ExportNamedDeclaration",
+         },
+         {
+            body: {
+               body: [
+                  {
+                     computed: false,
+                     end: 1166,
+                     key: {
+                        end: 1120,
+                        loc: {
+                           end: {
+                              column: 8,
+                              line: 45,
+                           },
+                           identifierName: "_pairs",
+                           start: {
+                              column: 2,
+                              line: 45,
+                           },
+                        },
+                        name: "_pairs",
+                        start: 1114,
+                        type: "Identifier",
+                     },
+                     loc: {
+                        end: {
+                           column: 54,
+                           line: 45,
+                        },
+                        start: {
+                           column: 2,
+                           line: 45,
+                        },
+                     },
+                     start: 1114,
+                     static: false,
+                     type: "ClassProperty",
+                     typeAnnotation: {
+                        end: 1160,
+                        loc: {
+                           end: {
+                              column: 48,
+                              line: 45,
+                           },
+                           start: {
+                              column: 8,
+                              line: 45,
+                           },
+                        },
+                        start: 1120,
+                        type: "TypeAnnotation",
+                        typeAnnotation: {
+                           end: 1160,
+                           id: {
+                              end: 1127,
+                              loc: {
+                                 end: {
+                                    column: 15,
+                                    line: 45,
+                                 },
+                                 identifierName: "Array",
+                                 start: {
+                                    column: 10,
+                                    line: 45,
+                                 },
+                              },
+                              name: "Array",
+                              start: 1122,
+                              type: "Identifier",
+                           },
+                           loc: {
+                              end: {
+                                 column: 48,
+                                 line: 45,
+                              },
+                              start: {
+                                 column: 10,
+                                 line: 45,
+                              },
+                           },
+                           start: 1122,
+                           type: "GenericTypeAnnotation",
+                           typeParameters: {
+                              end: 1160,
+                              loc: {
+                                 end: {
+                                    column: 48,
+                                    line: 45,
+                                 },
+                                 start: {
+                                    column: 15,
+                                    line: 45,
+                                 },
+                              },
+                              params: [
+                                 {
+                                    end: 1159,
+                                    loc: {
+                                       end: {
+                                          column: 47,
+                                          line: 45,
+                                       },
+                                       start: {
+                                          column: 16,
+                                          line: 45,
+                                       },
+                                    },
+                                    start: 1128,
+                                    type: "TupleTypeAnnotation",
+                                    types: [
+                                       {
+                                          end: 1134,
+                                          loc: {
+                                             end: {
+                                                column: 22,
+                                                line: 45,
+                                             },
+                                             start: {
+                                                column: 17,
+                                                line: 45,
+                                             },
+                                          },
+                                          start: 1129,
+                                          type: "MixedTypeAnnotation",
+                                       },
+                                       {
+                                          end: 1158,
+                                          loc: {
+                                             end: {
+                                                column: 46,
+                                                line: 45,
+                                             },
+                                             start: {
+                                                column: 24,
+                                                line: 45,
+                                             },
+                                          },
+                                          params: [
+                                             {
+                                                end: 1148,
+                                                loc: {
+                                                   end: {
+                                                      column: 36,
+                                                      line: 45,
+                                                   },
+                                                   start: {
+                                                      column: 25,
+                                                      line: 45,
+                                                   },
+                                                },
+                                                name: ~,
+                                                optional: false,
+                                                start: 1137,
+                                                type: "FunctionTypeParam",
+                                                typeAnnotation: {
+                                                   end: 1148,
+                                                   id: {
+                                                      end: 1148,
+                                                      loc: {
+                                                         end: {
+                                                            column: 36,
+                                                            line: 45,
+                                                         },
+                                                         identifierName: "SideChannel",
+                                                         start: {
+                                                            column: 25,
+                                                            line: 45,
+                                                         },
+                                                      },
+                                                      name: "SideChannel",
+                                                      start: 1137,
+                                                      type: "Identifier",
+                                                   },
+                                                   loc: {
+                                                      end: {
+                                                         column: 36,
+                                                         line: 45,
+                                                      },
+                                                      start: {
+                                                         column: 25,
+                                                         line: 45,
+                                                      },
+                                                   },
+                                                   start: 1137,
+                                                   type: "GenericTypeAnnotation",
+                                                   typeParameters: ~,
+                                                },
+                                             },
+                                          ],
+                                          rest: ~,
+                                          returnType: {
+                                             end: 1158,
+                                             loc: {
+                                                end: {
+                                                   column: 46,
+                                                   line: 45,
+                                                },
+                                                start: {
+                                                   column: 41,
+                                                   line: 45,
+                                                },
+                                             },
+                                             start: 1153,
+                                             type: "MixedTypeAnnotation",
+                                          },
+                                          start: 1136,
+                                          type: "FunctionTypeAnnotation",
+                                          typeParameters: ~,
+                                       },
+                                    ],
+                                 },
+                              ],
+                              start: 1127,
+                              type: "TypeParameterInstantiation",
+                           },
+                        },
+                     },
+                     value: {
+                        elements: [],
+                        end: 1165,
+                        loc: {
+                           end: {
+                              column: 53,
+                              line: 45,
+                           },
+                           start: {
+                              column: 51,
+                              line: 45,
+                           },
+                        },
+                        start: 1163,
+                        type: "ArrayExpression",
+                     },
+                     variance: ~,
+                  },
+               ],
+               end: 1168,
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 46,
+                  },
+                  start: {
+                     column: 44,
+                     line: 44,
+                  },
+               },
+               start: 1110,
+               type: "ClassBody",
+            },
+            end: 1168,
+            id: {
+               end: 1089,
+               loc: {
+                  end: {
+                     column: 23,
+                     line: 44,
+                  },
+                  identifierName: "CacheConfigurator",
+                  start: {
+                     column: 6,
+                     line: 44,
+                  },
+               },
+               name: "CacheConfigurator",
+               start: 1072,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 1,
+                  line: 46,
+               },
+               start: {
+                  column: 0,
+                  line: 44,
+               },
+            },
+            start: 1066,
+            superClass: ~,
+            type: "ClassDeclaration",
+            typeParameters: {
+               end: 1109,
+               loc: {
+                  end: {
+                     column: 43,
+                     line: 44,
+                  },
+                  start: {
+                     column: 23,
+                     line: 44,
+                  },
+               },
+               params: [
+                  {
+                     default: {
+                        end: 1108,
+                        loc: {
+                           end: {
+                              column: 42,
+                              line: 44,
+                           },
+                           start: {
+                              column: 38,
+                              line: 44,
+                           },
+                        },
+                        start: 1104,
+                        type: "VoidTypeAnnotation",
+                     },
+                     end: 1108,
+                     loc: {
+                        end: {
+                           column: 42,
+                           line: 44,
+                        },
+                        start: {
+                           column: 24,
+                           line: 44,
+                        },
+                     },
+                     name: "SideChannel",
+                     start: 1090,
+                     type: "TypeParameter",
+                     variance: ~,
+                  },
+               ],
+               start: 1089,
+               type: "TypeParameterDeclaration",
+            },
+         },
+      ],
+      directives: [],
+      end: 1169,
+      loc: {
+         end: {
+            column: 0,
+            line: 47,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}
