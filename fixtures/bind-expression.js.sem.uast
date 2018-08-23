@@ -73,7 +73,7 @@
                      Name: "x",
                   },
                   init: { '@type': "BindExpression",
-                     '@role': [Call, Expression, Incomplete, Initialization],
+                     '@role': [Expression, Incomplete, Initialization],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 8,
