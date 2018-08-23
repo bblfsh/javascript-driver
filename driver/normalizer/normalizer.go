@@ -87,20 +87,32 @@ var Normalizers = []Mapping{
 		CasesObj("case",
 			// common
 			Obj{
-				"importKind": Var("kind"),
 				"source":     Var("path"),
 			},
 			Objs{
 				// namespace
 				{
+					"importKind": String("value"),
 					"specifiers": ArrWith(Var("names"), Obj{
-						uast.KeyType: Var("spec_type"),
+						//uast.KeyType: Var("spec_type"),
+						uast.KeyType: String("ImportNamespaceSpecifier"),
 						uast.KeyPos:  Var("local_pos"),
 						"local":      Var("local"),
 					}),
 				},
+				// specific type
+				{
+					"importKind": String("type"),
+					"specifiers": ArrWith(Var("names"), Obj{
+						uast.KeyType: String("uast:Alias"),
+						uast.KeyPos: Var("local_pos"),
+						"Name": Var("local"),
+						"Node": AnyNode(nil), // Hardcoded node "." on the elevated uast:Alias
+					}),
+				},
 				// normal import
 				{
+					"importKind": String("value"),
 					"specifiers": Check(Not(Arr()), Var("names")),
 				},
 			},
@@ -108,6 +120,16 @@ var Normalizers = []Mapping{
 		CasesObj("case", nil,
 			Objs{
 				// namespace
+				{
+					"Path": UASTType(uast.Alias{}, Obj{
+						uast.KeyPos: Var("local_pos"),
+						"Name":      Var("local"),
+						"Node":      Var("path"),
+					}),
+					"Names": Var("names"),
+					"All":   Bool(true),
+				},
+				// specific type
 				{
 					"Path": UASTType(uast.Alias{}, Obj{
 						uast.KeyPos: Var("local_pos"),
