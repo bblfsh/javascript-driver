@@ -1,0 +1,498 @@
+{
+   comments: [],
+   end: 139,
+   loc: {
+      end: {
+         column: 0,
+         line: 8,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            end: 138,
+            id: {
+               end: 29,
+               loc: {
+                  end: {
+                     column: 29,
+                     line: 1,
+                  },
+                  identifierName: "BabelFileModulesMetadata",
+                  start: {
+                     column: 5,
+                     line: 1,
+                  },
+               },
+               name: "BabelFileModulesMetadata",
+               start: 5,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 2,
+                  line: 7,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            right: {
+               callProperties: [],
+               end: 137,
+               exact: false,
+               indexers: [],
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 7,
+                  },
+                  start: {
+                     column: 32,
+                     line: 1,
+                  },
+               },
+               properties: [
+                  {
+                     end: 58,
+                     key: {
+                        end: 43,
+                        loc: {
+                           end: {
+                              column: 9,
+                              line: 2,
+                           },
+                           identifierName: "imports",
+                           start: {
+                              column: 2,
+                              line: 2,
+                           },
+                        },
+                        name: "imports",
+                        start: 36,
+                        type: "Identifier",
+                     },
+                     kind: "init",
+                     loc: {
+                        end: {
+                           column: 24,
+                           line: 2,
+                        },
+                        start: {
+                           column: 2,
+                           line: 2,
+                        },
+                     },
+                     optional: false,
+                     start: 36,
+                     static: false,
+                     type: "ObjectTypeProperty",
+                     value: {
+                        end: 58,
+                        id: {
+                           end: 50,
+                           loc: {
+                              end: {
+                                 column: 16,
+                                 line: 2,
+                              },
+                              identifierName: "Array",
+                              start: {
+                                 column: 11,
+                                 line: 2,
+                              },
+                           },
+                           name: "Array",
+                           start: 45,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 24,
+                              line: 2,
+                           },
+                           start: {
+                              column: 11,
+                              line: 2,
+                           },
+                        },
+                        start: 45,
+                        type: "GenericTypeAnnotation",
+                        typeParameters: {
+                           end: 58,
+                           loc: {
+                              end: {
+                                 column: 24,
+                                 line: 2,
+                              },
+                              start: {
+                                 column: 16,
+                                 line: 2,
+                              },
+                           },
+                           params: [
+                              {
+                                 end: 57,
+                                 id: {
+                                    end: 57,
+                                    loc: {
+                                       end: {
+                                          column: 23,
+                                          line: 2,
+                                       },
+                                       identifierName: "Object",
+                                       start: {
+                                          column: 17,
+                                          line: 2,
+                                       },
+                                    },
+                                    name: "Object",
+                                    start: 51,
+                                    type: "Identifier",
+                                 },
+                                 loc: {
+                                    end: {
+                                       column: 23,
+                                       line: 2,
+                                    },
+                                    start: {
+                                       column: 17,
+                                       line: 2,
+                                    },
+                                 },
+                                 start: 51,
+                                 type: "GenericTypeAnnotation",
+                                 typeParameters: ~,
+                              },
+                           ],
+                           start: 50,
+                           type: "TypeParameterInstantiation",
+                        },
+                     },
+                     variance: ~,
+                  },
+                  {
+                     end: 135,
+                     key: {
+                        end: 69,
+                        loc: {
+                           end: {
+                              column: 9,
+                              line: 3,
+                           },
+                           identifierName: "exports",
+                           start: {
+                              column: 2,
+                              line: 3,
+                           },
+                        },
+                        name: "exports",
+                        start: 62,
+                        type: "Identifier",
+                     },
+                     kind: "init",
+                     loc: {
+                        end: {
+                           column: 3,
+                           line: 6,
+                        },
+                        start: {
+                           column: 2,
+                           line: 3,
+                        },
+                     },
+                     optional: false,
+                     start: 62,
+                     static: false,
+                     type: "ObjectTypeProperty",
+                     value: {
+                        callProperties: [],
+                        end: 135,
+                        exact: false,
+                        indexers: [],
+                        loc: {
+                           end: {
+                              column: 3,
+                              line: 6,
+                           },
+                           start: {
+                              column: 11,
+                              line: 3,
+                           },
+                        },
+                        properties: [
+                           {
+                              end: 100,
+                              key: {
+                                 end: 85,
+                                 loc: {
+                                    end: {
+                                       column: 12,
+                                       line: 4,
+                                    },
+                                    identifierName: "exported",
+                                    start: {
+                                       column: 4,
+                                       line: 4,
+                                    },
+                                 },
+                                 name: "exported",
+                                 start: 77,
+                                 type: "Identifier",
+                              },
+                              kind: "init",
+                              loc: {
+                                 end: {
+                                    column: 27,
+                                    line: 4,
+                                 },
+                                 start: {
+                                    column: 4,
+                                    line: 4,
+                                 },
+                              },
+                              optional: false,
+                              start: 77,
+                              static: false,
+                              type: "ObjectTypeProperty",
+                              value: {
+                                 end: 100,
+                                 id: {
+                                    end: 92,
+                                    loc: {
+                                       end: {
+                                          column: 19,
+                                          line: 4,
+                                       },
+                                       identifierName: "Array",
+                                       start: {
+                                          column: 14,
+                                          line: 4,
+                                       },
+                                    },
+                                    name: "Array",
+                                    start: 87,
+                                    type: "Identifier",
+                                 },
+                                 loc: {
+                                    end: {
+                                       column: 27,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 14,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 87,
+                                 type: "GenericTypeAnnotation",
+                                 typeParameters: {
+                                    end: 100,
+                                    loc: {
+                                       end: {
+                                          column: 27,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 19,
+                                          line: 4,
+                                       },
+                                    },
+                                    params: [
+                                       {
+                                          end: 99,
+                                          id: {
+                                             end: 99,
+                                             loc: {
+                                                end: {
+                                                   column: 26,
+                                                   line: 4,
+                                                },
+                                                identifierName: "Object",
+                                                start: {
+                                                   column: 20,
+                                                   line: 4,
+                                                },
+                                             },
+                                             name: "Object",
+                                             start: 93,
+                                             type: "Identifier",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 26,
+                                                line: 4,
+                                             },
+                                             start: {
+                                                column: 20,
+                                                line: 4,
+                                             },
+                                          },
+                                          start: 93,
+                                          type: "GenericTypeAnnotation",
+                                          typeParameters: ~,
+                                       },
+                                    ],
+                                    start: 92,
+                                    type: "TypeParameterInstantiation",
+                                 },
+                              },
+                              variance: ~,
+                           },
+                           {
+                              end: 131,
+                              key: {
+                                 end: 116,
+                                 loc: {
+                                    end: {
+                                       column: 14,
+                                       line: 5,
+                                    },
+                                    identifierName: "specifiers",
+                                    start: {
+                                       column: 4,
+                                       line: 5,
+                                    },
+                                 },
+                                 name: "specifiers",
+                                 start: 106,
+                                 type: "Identifier",
+                              },
+                              kind: "init",
+                              loc: {
+                                 end: {
+                                    column: 29,
+                                    line: 5,
+                                 },
+                                 start: {
+                                    column: 4,
+                                    line: 5,
+                                 },
+                              },
+                              optional: false,
+                              start: 106,
+                              static: false,
+                              type: "ObjectTypeProperty",
+                              value: {
+                                 end: 131,
+                                 id: {
+                                    end: 123,
+                                    loc: {
+                                       end: {
+                                          column: 21,
+                                          line: 5,
+                                       },
+                                       identifierName: "Array",
+                                       start: {
+                                          column: 16,
+                                          line: 5,
+                                       },
+                                    },
+                                    name: "Array",
+                                    start: 118,
+                                    type: "Identifier",
+                                 },
+                                 loc: {
+                                    end: {
+                                       column: 29,
+                                       line: 5,
+                                    },
+                                    start: {
+                                       column: 16,
+                                       line: 5,
+                                    },
+                                 },
+                                 start: 118,
+                                 type: "GenericTypeAnnotation",
+                                 typeParameters: {
+                                    end: 131,
+                                    loc: {
+                                       end: {
+                                          column: 29,
+                                          line: 5,
+                                       },
+                                       start: {
+                                          column: 21,
+                                          line: 5,
+                                       },
+                                    },
+                                    params: [
+                                       {
+                                          end: 130,
+                                          id: {
+                                             end: 130,
+                                             loc: {
+                                                end: {
+                                                   column: 28,
+                                                   line: 5,
+                                                },
+                                                identifierName: "Object",
+                                                start: {
+                                                   column: 22,
+                                                   line: 5,
+                                                },
+                                             },
+                                             name: "Object",
+                                             start: 124,
+                                             type: "Identifier",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 28,
+                                                line: 5,
+                                             },
+                                             start: {
+                                                column: 22,
+                                                line: 5,
+                                             },
+                                          },
+                                          start: 124,
+                                          type: "GenericTypeAnnotation",
+                                          typeParameters: ~,
+                                       },
+                                    ],
+                                    start: 123,
+                                    type: "TypeParameterInstantiation",
+                                 },
+                              },
+                              variance: ~,
+                           },
+                        ],
+                        start: 71,
+                        type: "ObjectTypeAnnotation",
+                     },
+                     variance: ~,
+                  },
+               ],
+               start: 32,
+               type: "ObjectTypeAnnotation",
+            },
+            start: 0,
+            type: "TypeAlias",
+            typeParameters: ~,
+         },
+      ],
+      directives: [],
+      end: 139,
+      loc: {
+         end: {
+            column: 0,
+            line: 8,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}

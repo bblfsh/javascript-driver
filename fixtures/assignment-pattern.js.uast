@@ -58,7 +58,7 @@
                      },
                   },
                   id: { '@type': "ObjectPattern",
-                     '@role': [Incomplete],
+                     '@role': [Incomplete, Map],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 4,

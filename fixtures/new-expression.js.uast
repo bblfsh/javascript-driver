@@ -43,7 +43,7 @@
                },
             },
             expression: { '@type': "NewExpression",
-               '@role': [Expression, Incomplete],
+               '@role': [Call, Expression, Instance],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 0,

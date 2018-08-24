@@ -1,0 +1,569 @@
+{
+   comments: [],
+   end: 219,
+   loc: {
+      end: {
+         column: 0,
+         line: 10,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            declarations: [
+               {
+                  end: 21,
+                  id: {
+                     end: 10,
+                     loc: {
+                        end: {
+                           column: 10,
+                           line: 1,
+                        },
+                        identifierName: "single",
+                        start: {
+                           column: 4,
+                           line: 1,
+                        },
+                     },
+                     name: "single",
+                     start: 4,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 21,
+                     extra: {
+                        raw: "'quotes'",
+                        rawValue: "quotes",
+                     },
+                     loc: {
+                        end: {
+                           column: 21,
+                           line: 1,
+                        },
+                        start: {
+                           column: 13,
+                           line: 1,
+                        },
+                     },
+                     start: 13,
+                     type: "StringLiteral",
+                     value: "quotes",
+                  },
+                  loc: {
+                     end: {
+                        column: 21,
+                        line: 1,
+                     },
+                     start: {
+                        column: 4,
+                        line: 1,
+                     },
+                  },
+                  start: 4,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 22,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 22,
+                  line: 1,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            start: 0,
+            type: "VariableDeclaration",
+         },
+         {
+            declarations: [
+               {
+                  end: 47,
+                  id: {
+                     end: 36,
+                     loc: {
+                        end: {
+                           column: 13,
+                           line: 2,
+                        },
+                        identifierName: "outnumber",
+                        start: {
+                           column: 4,
+                           line: 2,
+                        },
+                     },
+                     name: "outnumber",
+                     start: 27,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 47,
+                     extra: {
+                        raw: "'double'",
+                        rawValue: "double",
+                     },
+                     loc: {
+                        end: {
+                           column: 24,
+                           line: 2,
+                        },
+                        start: {
+                           column: 16,
+                           line: 2,
+                        },
+                     },
+                     start: 39,
+                     type: "StringLiteral",
+                     value: "double",
+                  },
+                  loc: {
+                     end: {
+                        column: 24,
+                        line: 2,
+                     },
+                     start: {
+                        column: 4,
+                        line: 2,
+                     },
+                  },
+                  start: 27,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 48,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 25,
+                  line: 2,
+               },
+               start: {
+                  column: 0,
+                  line: 2,
+               },
+            },
+            start: 23,
+            type: "VariableDeclaration",
+         },
+         {
+            declarations: [
+               {
+                  end: 85,
+                  id: {
+                     end: 79,
+                     loc: {
+                        end: {
+                           column: 30,
+                           line: 3,
+                        },
+                        identifierName: "moreSingleQuotesThanDouble",
+                        start: {
+                           column: 4,
+                           line: 3,
+                        },
+                     },
+                     name: "moreSingleQuotesThanDouble",
+                     start: 53,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 85,
+                     extra: {
+                        raw: "'!'",
+                        rawValue: "!",
+                     },
+                     loc: {
+                        end: {
+                           column: 36,
+                           line: 3,
+                        },
+                        start: {
+                           column: 33,
+                           line: 3,
+                        },
+                     },
+                     start: 82,
+                     type: "StringLiteral",
+                     value: "!",
+                  },
+                  loc: {
+                     end: {
+                        column: 36,
+                        line: 3,
+                     },
+                     start: {
+                        column: 4,
+                        line: 3,
+                     },
+                  },
+                  start: 53,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 86,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 37,
+                  line: 3,
+               },
+               start: {
+                  column: 0,
+                  line: 3,
+               },
+            },
+            start: 49,
+            type: "VariableDeclaration",
+         },
+         {
+            end: 218,
+            expression: {
+               arguments: [
+                  {
+                     end: 216,
+                     loc: {
+                        end: {
+                           column: 1,
+                           line: 9,
+                        },
+                        start: {
+                           column: 18,
+                           line: 4,
+                        },
+                     },
+                     properties: [
+                        {
+                           async: false,
+                           body: {
+                              body: [
+                                 {
+                                    argument: {
+                                       children: [],
+                                       closingElement: ~,
+                                       end: 208,
+                                       loc: {
+                                          end: {
+                                             column: 88,
+                                             line: 6,
+                                          },
+                                          start: {
+                                             column: 11,
+                                             line: 6,
+                                          },
+                                       },
+                                       openingElement: {
+                                          attributes: [
+                                             {
+                                                end: 158,
+                                                loc: {
+                                                   end: {
+                                                      column: 38,
+                                                      line: 6,
+                                                   },
+                                                   start: {
+                                                      column: 17,
+                                                      line: 6,
+                                                   },
+                                                },
+                                                name: {
+                                                   end: 145,
+                                                   loc: {
+                                                      end: {
+                                                         column: 25,
+                                                         line: 6,
+                                                      },
+                                                      start: {
+                                                         column: 17,
+                                                         line: 6,
+                                                      },
+                                                   },
+                                                   name: "multiple",
+                                                   start: 137,
+                                                   type: "JSXIdentifier",
+                                                },
+                                                start: 137,
+                                                type: "JSXAttribute",
+                                                value: {
+                                                   end: 158,
+                                                   extra: {
+                                                      raw: "\"attributes\"",
+                                                      rawValue: "attributes",
+                                                   },
+                                                   loc: {
+                                                      end: {
+                                                         column: 38,
+                                                         line: 6,
+                                                      },
+                                                      start: {
+                                                         column: 26,
+                                                         line: 6,
+                                                      },
+                                                   },
+                                                   start: 146,
+                                                   type: "StringLiteral",
+                                                   value: "attributes",
+                                                },
+                                             },
+                                             {
+                                                end: 205,
+                                                loc: {
+                                                   end: {
+                                                      column: 85,
+                                                      line: 6,
+                                                   },
+                                                   start: {
+                                                      column: 39,
+                                                      line: 6,
+                                                   },
+                                                },
+                                                name: {
+                                                   end: 168,
+                                                   loc: {
+                                                      end: {
+                                                         column: 48,
+                                                         line: 6,
+                                                      },
+                                                      start: {
+                                                         column: 39,
+                                                         line: 6,
+                                                      },
+                                                   },
+                                                   name: "attribute",
+                                                   start: 159,
+                                                   type: "JSXIdentifier",
+                                                },
+                                                start: 159,
+                                                type: "JSXAttribute",
+                                                value: {
+                                                   end: 205,
+                                                   extra: {
+                                                      raw: "\"If parent is JSX keep double quote\"",
+                                                      rawValue: "If parent is JSX keep double quote",
+                                                   },
+                                                   loc: {
+                                                      end: {
+                                                         column: 85,
+                                                         line: 6,
+                                                      },
+                                                      start: {
+                                                         column: 49,
+                                                         line: 6,
+                                                      },
+                                                   },
+                                                   start: 169,
+                                                   type: "StringLiteral",
+                                                   value: "If parent is JSX keep double quote",
+                                                },
+                                             },
+                                          ],
+                                          end: 208,
+                                          loc: {
+                                             end: {
+                                                column: 88,
+                                                line: 6,
+                                             },
+                                             start: {
+                                                column: 11,
+                                                line: 6,
+                                             },
+                                          },
+                                          name: {
+                                             end: 136,
+                                             loc: {
+                                                end: {
+                                                   column: 16,
+                                                   line: 6,
+                                                },
+                                                start: {
+                                                   column: 12,
+                                                   line: 6,
+                                                },
+                                             },
+                                             name: "View",
+                                             start: 132,
+                                             type: "JSXIdentifier",
+                                          },
+                                          selfClosing: true,
+                                          start: 131,
+                                          type: "JSXOpeningElement",
+                                       },
+                                       start: 131,
+                                       type: "JSXElement",
+                                    },
+                                    end: 209,
+                                    loc: {
+                                       end: {
+                                          column: 89,
+                                          line: 6,
+                                       },
+                                       start: {
+                                          column: 4,
+                                          line: 6,
+                                       },
+                                    },
+                                    start: 124,
+                                    type: "ReturnStatement",
+                                 },
+                              ],
+                              directives: [],
+                              end: 213,
+                              loc: {
+                                 end: {
+                                    column: 3,
+                                    line: 7,
+                                 },
+                                 start: {
+                                    column: 11,
+                                    line: 5,
+                                 },
+                              },
+                              start: 118,
+                              type: "BlockStatement",
+                           },
+                           computed: false,
+                           end: 213,
+                           generator: false,
+                           id: ~,
+                           key: {
+                              end: 115,
+                              loc: {
+                                 end: {
+                                    column: 8,
+                                    line: 5,
+                                 },
+                                 identifierName: "render",
+                                 start: {
+                                    column: 2,
+                                    line: 5,
+                                 },
+                              },
+                              name: "render",
+                              start: 109,
+                              type: "Identifier",
+                           },
+                           kind: "method",
+                           loc: {
+                              end: {
+                                 column: 3,
+                                 line: 7,
+                              },
+                              start: {
+                                 column: 2,
+                                 line: 5,
+                              },
+                           },
+                           method: true,
+                           params: [],
+                           start: 109,
+                           type: "ObjectMethod",
+                        },
+                     ],
+                     start: 105,
+                     type: "ObjectExpression",
+                  },
+               ],
+               callee: {
+                  computed: false,
+                  end: 104,
+                  loc: {
+                     end: {
+                        column: 17,
+                        line: 4,
+                     },
+                     start: {
+                        column: 0,
+                        line: 4,
+                     },
+                  },
+                  object: {
+                     end: 92,
+                     loc: {
+                        end: {
+                           column: 5,
+                           line: 4,
+                        },
+                        identifierName: "React",
+                        start: {
+                           column: 0,
+                           line: 4,
+                        },
+                     },
+                     name: "React",
+                     start: 87,
+                     type: "Identifier",
+                  },
+                  property: {
+                     end: 104,
+                     loc: {
+                        end: {
+                           column: 17,
+                           line: 4,
+                        },
+                        identifierName: "createClass",
+                        start: {
+                           column: 6,
+                           line: 4,
+                        },
+                     },
+                     name: "createClass",
+                     start: 93,
+                     type: "Identifier",
+                  },
+                  start: 87,
+                  type: "MemberExpression",
+               },
+               end: 217,
+               loc: {
+                  end: {
+                     column: 2,
+                     line: 9,
+                  },
+                  start: {
+                     column: 0,
+                     line: 4,
+                  },
+               },
+               start: 87,
+               type: "CallExpression",
+            },
+            loc: {
+               end: {
+                  column: 3,
+                  line: 9,
+               },
+               start: {
+                  column: 0,
+                  line: 4,
+               },
+            },
+            start: 87,
+            type: "ExpressionStatement",
+         },
+      ],
+      directives: [],
+      end: 219,
+      loc: {
+         end: {
+            column: 0,
+            line: 10,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}

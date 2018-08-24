@@ -73,7 +73,7 @@
                      Name: "x",
                   },
                   init: { '@type': "ClassExpression",
-                     '@role': [Declaration, Expression, Initialization, Type],
+                     '@role': [Declaration, Expression, Initialization, Literal, Type],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 8,

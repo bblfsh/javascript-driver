@@ -57,7 +57,7 @@
                   },
                },
                left: { '@type': "ArrayPattern",
-                  '@role': [Assignment, Binary, Incomplete, Left],
+                  '@role': [Assignment, Binary, Incomplete, Left, List],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 0,

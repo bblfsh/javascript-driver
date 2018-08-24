@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 35,
+   end: 65,
    loc: {
       end: {
          column: 0,
-         line: 2,
+         line: 3,
       },
       start: {
          column: 0,
@@ -83,13 +83,83 @@
             start: 0,
             type: "ImportDeclaration",
          },
+         {
+            end: 64,
+            importKind: "type",
+            loc: {
+               end: {
+                  column: 29,
+                  line: 2,
+               },
+               start: {
+                  column: 0,
+                  line: 2,
+               },
+            },
+            source: {
+               end: 63,
+               extra: {
+                  raw: "\"file\"",
+                  rawValue: "file",
+               },
+               loc: {
+                  end: {
+                     column: 28,
+                     line: 2,
+                  },
+                  start: {
+                     column: 22,
+                     line: 2,
+                  },
+               },
+               start: 57,
+               type: "StringLiteral",
+               value: "file",
+            },
+            specifiers: [
+               {
+                  end: 51,
+                  loc: {
+                     end: {
+                        column: 16,
+                        line: 2,
+                     },
+                     start: {
+                        column: 12,
+                        line: 2,
+                     },
+                  },
+                  local: {
+                     end: 51,
+                     loc: {
+                        end: {
+                           column: 16,
+                           line: 2,
+                        },
+                        identifierName: "File",
+                        start: {
+                           column: 12,
+                           line: 2,
+                        },
+                     },
+                     name: "File",
+                     start: 47,
+                     type: "Identifier",
+                  },
+                  start: 47,
+                  type: "ImportDefaultSpecifier",
+               },
+            ],
+            start: 35,
+            type: "ImportDeclaration",
+         },
       ],
       directives: [],
-      end: 35,
+      end: 65,
       loc: {
          end: {
             column: 0,
-            line: 2,
+            line: 3,
          },
          start: {
             column: 0,

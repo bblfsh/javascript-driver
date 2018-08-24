@@ -61,7 +61,7 @@
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
-                  '@role': [Import],
+                  '@role': [Default, Import],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 7,

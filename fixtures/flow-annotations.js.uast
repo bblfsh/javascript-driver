@@ -15,7 +15,7 @@
    comments: [
       { '@type': "CommentLine",
          '@token': " @flow",
-         '@role': [Comment],
+         '@role': [Comment, Noop],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
                offset: 0,
@@ -1917,7 +1917,7 @@
             leadingComments: [
                { '@type': "CommentLine",
                   '@token': " @flow",
-                  '@role': [Comment],
+                  '@role': [Comment, Noop],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 0,

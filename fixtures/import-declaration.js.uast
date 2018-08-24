@@ -61,7 +61,7 @@
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
-                  '@role': [Import],
+                  '@role': [Default, Import],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 7,
@@ -126,7 +126,7 @@
             },
             specifiers: [
                { '@type': "ImportNamespaceSpecifier",
-                  '@role': [Import],
+                  '@role': [Import, Name],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 48,
@@ -615,7 +615,7 @@
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
-                  '@role': [Import],
+                  '@role': [Default, Import],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 240,
@@ -728,7 +728,7 @@
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
-                  '@role': [Import],
+                  '@role': [Default, Import],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 288,
@@ -759,7 +759,7 @@
                   },
                },
                { '@type': "ImportNamespaceSpecifier",
-                  '@role': [Import],
+                  '@role': [Import, Name],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 303,
