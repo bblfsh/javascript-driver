@@ -87,7 +87,7 @@ var Normalizers = []Mapping{
 		CasesObj("case",
 			// common
 			Obj{
-				"source":     Var("path"),
+				"source": Var("path"),
 			},
 			Objs{
 				// namespace
@@ -103,12 +103,14 @@ var Normalizers = []Mapping{
 				// specific type
 				{
 					"importKind": String("type"),
-					"specifiers": ArrWith(Var("names"), Obj{
-						uast.KeyType: String("uast:Alias"),
-						uast.KeyPos: Var("local_pos"),
-						"Name": Var("local"),
-						"Node": AnyNode(nil), // Hardcoded node "." on the elevated uast:Alias
-					}),
+					"specifiers": ArrWith(Var("names"),
+						UASTType(uast.Alias{}, Obj{
+							uast.KeyPos: Var("local_pos"),
+							"Name":      Var("local"),
+							"Node": UASTType(uast.Identifier{}, Obj{
+								"Name": String("."),
+							}),
+						})),
 				},
 				// normal import
 				{
