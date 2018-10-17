@@ -1,9 +1,9 @@
 {
    comments: [],
-   end: 4,
+   end: 26,
    loc: {
       end: {
-         column: 0,
+         column: 22,
          line: 2,
       },
       start: {
@@ -48,12 +48,134 @@
             start: 0,
             type: "ExpressionStatement",
          },
+         {
+            end: 26,
+            expression: {
+               arguments: [
+                  {
+                     end: 20,
+                     extra: {
+                        raw: "/a/g",
+                     },
+                     flags: "g",
+                     loc: {
+                        end: {
+                           column: 16,
+                           line: 2,
+                        },
+                        start: {
+                           column: 12,
+                           line: 2,
+                        },
+                     },
+                     pattern: "a",
+                     start: 16,
+                     type: "RegExpLiteral",
+                  },
+                  {
+                     end: 25,
+                     extra: {
+                        raw: "'x'",
+                        rawValue: "x",
+                     },
+                     loc: {
+                        end: {
+                           column: 21,
+                           line: 2,
+                        },
+                        start: {
+                           column: 18,
+                           line: 2,
+                        },
+                     },
+                     start: 22,
+                     type: "StringLiteral",
+                     value: "x",
+                  },
+               ],
+               callee: {
+                  computed: false,
+                  end: 15,
+                  loc: {
+                     end: {
+                        column: 11,
+                        line: 2,
+                     },
+                     start: {
+                        column: 0,
+                        line: 2,
+                     },
+                  },
+                  object: {
+                     end: 7,
+                     loc: {
+                        end: {
+                           column: 3,
+                           line: 2,
+                        },
+                        identifierName: "str",
+                        start: {
+                           column: 0,
+                           line: 2,
+                        },
+                     },
+                     name: "str",
+                     start: 4,
+                     type: "Identifier",
+                  },
+                  property: {
+                     end: 15,
+                     loc: {
+                        end: {
+                           column: 11,
+                           line: 2,
+                        },
+                        identifierName: "replace",
+                        start: {
+                           column: 4,
+                           line: 2,
+                        },
+                     },
+                     name: "replace",
+                     start: 8,
+                     type: "Identifier",
+                  },
+                  start: 4,
+                  type: "MemberExpression",
+               },
+               end: 26,
+               loc: {
+                  end: {
+                     column: 22,
+                     line: 2,
+                  },
+                  start: {
+                     column: 0,
+                     line: 2,
+                  },
+               },
+               start: 4,
+               type: "CallExpression",
+            },
+            loc: {
+               end: {
+                  column: 22,
+                  line: 2,
+               },
+               start: {
+                  column: 0,
+                  line: 2,
+               },
+            },
+            start: 4,
+            type: "ExpressionStatement",
+         },
       ],
       directives: [],
-      end: 4,
+      end: 26,
       loc: {
          end: {
-            column: 0,
+            column: 22,
             line: 2,
          },
          start: {
