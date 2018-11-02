@@ -1,4 +1,4 @@
-{ '@type': "File",
+{ '@type': "javascript:File",
    '@role': [File],
    '@pos': { '@type': "uast:Positions",
       start: { '@type': "uast:Position",
@@ -13,7 +13,7 @@
       },
    },
    comments: [],
-   program: { '@type': "Program",
+   program: { '@type': "javascript:Program",
       '@role': [Module],
       '@pos': { '@type': "uast:Positions",
          start: { '@type': "uast:Position",
@@ -28,7 +28,7 @@
          },
       },
       body: [
-         { '@type': "ThrowStatement",
+         { '@type': "javascript:ThrowStatement",
             '@role': [Statement, Throw],
             '@pos': { '@type': "uast:Positions",
                start: { '@type': "uast:Position",
