@@ -41,7 +41,7 @@ export class GuessParsingError extends Error {
   constructor(...messages) {
     super(messages.join(', '));
 
-    this.allMessages = message;
+    this.allMessages = messages;
   }
 }
 

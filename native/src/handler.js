@@ -8,7 +8,7 @@ function parse(data) {
     return ok(ast);
   } catch (ex) {
     if (ex instanceof GuessParsingError) {
-      return error(ex.allMessages);
+      return error(...ex.allMessages);
     }
     return error([ex.message]);
   }
