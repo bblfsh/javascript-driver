@@ -1,0 +1,658 @@
+{
+   comments: [],
+   end: 122,
+   loc: {
+      end: {
+         column: 0,
+         line: 6,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            declarations: [
+               {
+                  end: 40,
+                  id: {
+                     end: 15,
+                     loc: {
+                        end: {
+                           column: 15,
+                           line: 1,
+                        },
+                        identifierName: "accumulator",
+                        start: {
+                           column: 4,
+                           line: 1,
+                        },
+                     },
+                     name: "accumulator",
+                     start: 4,
+                     type: "Identifier",
+                  },
+                  init: {
+                     async: false,
+                     body: {
+                        async: false,
+                        body: {
+                           end: 39,
+                           left: {
+                              end: 34,
+                              loc: {
+                                 end: {
+                                    column: 34,
+                                    line: 1,
+                                 },
+                                 identifierName: "sum",
+                                 start: {
+                                    column: 31,
+                                    line: 1,
+                                 },
+                              },
+                              name: "sum",
+                              start: 31,
+                              type: "Identifier",
+                           },
+                           loc: {
+                              end: {
+                                 column: 39,
+                                 line: 1,
+                              },
+                              start: {
+                                 column: 31,
+                                 line: 1,
+                              },
+                           },
+                           operator: "+=",
+                           right: {
+                              end: 39,
+                              loc: {
+                                 end: {
+                                    column: 39,
+                                    line: 1,
+                                 },
+                                 identifierName: "n",
+                                 start: {
+                                    column: 38,
+                                    line: 1,
+                                 },
+                              },
+                              name: "n",
+                              start: 38,
+                              type: "Identifier",
+                           },
+                           start: 31,
+                           type: "AssignmentExpression",
+                        },
+                        end: 39,
+                        extra: {
+                           parenStart: 25,
+                           parenthesized: true,
+                        },
+                        generator: false,
+                        id: ~,
+                        loc: {
+                           end: {
+                              column: 39,
+                              line: 1,
+                           },
+                           start: {
+                              column: 26,
+                              line: 1,
+                           },
+                        },
+                        params: [
+                           {
+                              end: 27,
+                              loc: {
+                                 end: {
+                                    column: 27,
+                                    line: 1,
+                                 },
+                                 identifierName: "n",
+                                 start: {
+                                    column: 26,
+                                    line: 1,
+                                 },
+                              },
+                              name: "n",
+                              start: 26,
+                              type: "Identifier",
+                           },
+                        ],
+                        start: 26,
+                        type: "ArrowFunctionExpression",
+                     },
+                     end: 40,
+                     generator: false,
+                     id: ~,
+                     loc: {
+                        end: {
+                           column: 40,
+                           line: 1,
+                        },
+                        start: {
+                           column: 18,
+                           line: 1,
+                        },
+                     },
+                     params: [
+                        {
+                           end: 21,
+                           loc: {
+                              end: {
+                                 column: 21,
+                                 line: 1,
+                              },
+                              identifierName: "sum",
+                              start: {
+                                 column: 18,
+                                 line: 1,
+                              },
+                           },
+                           name: "sum",
+                           start: 18,
+                           type: "Identifier",
+                        },
+                     ],
+                     start: 18,
+                     type: "ArrowFunctionExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 40,
+                        line: 1,
+                     },
+                     start: {
+                        column: 4,
+                        line: 1,
+                     },
+                  },
+                  start: 4,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 41,
+            kind: "let",
+            loc: {
+               end: {
+                  column: 41,
+                  line: 1,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            start: 0,
+            type: "VariableDeclaration",
+         },
+         {
+            declarations: [
+               {
+                  end: 64,
+                  id: {
+                     end: 47,
+                     loc: {
+                        end: {
+                           column: 5,
+                           line: 2,
+                        },
+                        identifierName: "x",
+                        start: {
+                           column: 4,
+                           line: 2,
+                        },
+                     },
+                     name: "x",
+                     start: 46,
+                     type: "Identifier",
+                  },
+                  init: {
+                     arguments: [
+                        {
+                           end: 63,
+                           extra: {
+                              raw: "1",
+                              rawValue: 1,
+                           },
+                           loc: {
+                              end: {
+                                 column: 21,
+                                 line: 2,
+                              },
+                              start: {
+                                 column: 20,
+                                 line: 2,
+                              },
+                           },
+                           start: 62,
+                           type: "NumericLiteral",
+                           value: 1,
+                        },
+                     ],
+                     callee: {
+                        end: 61,
+                        loc: {
+                           end: {
+                              column: 19,
+                              line: 2,
+                           },
+                           identifierName: "accumulator",
+                           start: {
+                              column: 8,
+                              line: 2,
+                           },
+                        },
+                        name: "accumulator",
+                        start: 50,
+                        type: "Identifier",
+                     },
+                     end: 64,
+                     loc: {
+                        end: {
+                           column: 22,
+                           line: 2,
+                        },
+                        start: {
+                           column: 8,
+                           line: 2,
+                        },
+                     },
+                     start: 50,
+                     type: "CallExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 22,
+                        line: 2,
+                     },
+                     start: {
+                        column: 4,
+                        line: 2,
+                     },
+                  },
+                  start: 46,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 65,
+            kind: "let",
+            loc: {
+               end: {
+                  column: 23,
+                  line: 2,
+               },
+               start: {
+                  column: 0,
+                  line: 2,
+               },
+            },
+            start: 42,
+            type: "VariableDeclaration",
+         },
+         {
+            end: 84,
+            expression: {
+               arguments: [
+                  {
+                     arguments: [
+                        {
+                           end: 81,
+                           extra: {
+                              raw: "5",
+                              rawValue: 5,
+                           },
+                           loc: {
+                              end: {
+                                 column: 15,
+                                 line: 3,
+                              },
+                              start: {
+                                 column: 14,
+                                 line: 3,
+                              },
+                           },
+                           start: 80,
+                           type: "NumericLiteral",
+                           value: 5,
+                        },
+                     ],
+                     callee: {
+                        end: 79,
+                        loc: {
+                           end: {
+                              column: 13,
+                              line: 3,
+                           },
+                           identifierName: "x",
+                           start: {
+                              column: 12,
+                              line: 3,
+                           },
+                        },
+                        name: "x",
+                        start: 78,
+                        type: "Identifier",
+                     },
+                     end: 82,
+                     loc: {
+                        end: {
+                           column: 16,
+                           line: 3,
+                        },
+                        start: {
+                           column: 12,
+                           line: 3,
+                        },
+                     },
+                     start: 78,
+                     type: "CallExpression",
+                  },
+               ],
+               callee: {
+                  computed: false,
+                  end: 77,
+                  loc: {
+                     end: {
+                        column: 11,
+                        line: 3,
+                     },
+                     start: {
+                        column: 0,
+                        line: 3,
+                     },
+                  },
+                  object: {
+                     end: 73,
+                     loc: {
+                        end: {
+                           column: 7,
+                           line: 3,
+                        },
+                        identifierName: "console",
+                        start: {
+                           column: 0,
+                           line: 3,
+                        },
+                     },
+                     name: "console",
+                     start: 66,
+                     type: "Identifier",
+                  },
+                  property: {
+                     end: 77,
+                     loc: {
+                        end: {
+                           column: 11,
+                           line: 3,
+                        },
+                        identifierName: "log",
+                        start: {
+                           column: 8,
+                           line: 3,
+                        },
+                     },
+                     name: "log",
+                     start: 74,
+                     type: "Identifier",
+                  },
+                  start: 66,
+                  type: "MemberExpression",
+               },
+               end: 83,
+               loc: {
+                  end: {
+                     column: 17,
+                     line: 3,
+                  },
+                  start: {
+                     column: 0,
+                     line: 3,
+                  },
+               },
+               start: 66,
+               type: "CallExpression",
+            },
+            loc: {
+               end: {
+                  column: 18,
+                  line: 3,
+               },
+               start: {
+                  column: 0,
+                  line: 3,
+               },
+            },
+            start: 66,
+            type: "ExpressionStatement",
+         },
+         {
+            end: 100,
+            expression: {
+               arguments: [
+                  {
+                     end: 98,
+                     extra: {
+                        raw: "3",
+                        rawValue: 3,
+                     },
+                     loc: {
+                        end: {
+                           column: 13,
+                           line: 4,
+                        },
+                        start: {
+                           column: 12,
+                           line: 4,
+                        },
+                     },
+                     start: 97,
+                     type: "NumericLiteral",
+                     value: 3,
+                  },
+               ],
+               callee: {
+                  end: 96,
+                  loc: {
+                     end: {
+                        column: 11,
+                        line: 4,
+                     },
+                     identifierName: "accumulator",
+                     start: {
+                        column: 0,
+                        line: 4,
+                     },
+                  },
+                  name: "accumulator",
+                  start: 85,
+                  type: "Identifier",
+               },
+               end: 99,
+               loc: {
+                  end: {
+                     column: 14,
+                     line: 4,
+                  },
+                  start: {
+                     column: 0,
+                     line: 4,
+                  },
+               },
+               start: 85,
+               type: "CallExpression",
+            },
+            loc: {
+               end: {
+                  column: 15,
+                  line: 4,
+               },
+               start: {
+                  column: 0,
+                  line: 4,
+               },
+            },
+            start: 85,
+            type: "ExpressionStatement",
+         },
+         {
+            end: 121,
+            expression: {
+               arguments: [
+                  {
+                     arguments: [
+                        {
+                           end: 118,
+                           extra: {
+                              raw: "2.3",
+                              rawValue: 2.3,
+                           },
+                           loc: {
+                              end: {
+                                 column: 17,
+                                 line: 5,
+                              },
+                              start: {
+                                 column: 14,
+                                 line: 5,
+                              },
+                           },
+                           start: 115,
+                           type: "NumericLiteral",
+                           value: 2.3,
+                        },
+                     ],
+                     callee: {
+                        end: 114,
+                        loc: {
+                           end: {
+                              column: 13,
+                              line: 5,
+                           },
+                           identifierName: "x",
+                           start: {
+                              column: 12,
+                              line: 5,
+                           },
+                        },
+                        name: "x",
+                        start: 113,
+                        type: "Identifier",
+                     },
+                     end: 119,
+                     loc: {
+                        end: {
+                           column: 18,
+                           line: 5,
+                        },
+                        start: {
+                           column: 12,
+                           line: 5,
+                        },
+                     },
+                     start: 113,
+                     type: "CallExpression",
+                  },
+               ],
+               callee: {
+                  computed: false,
+                  end: 112,
+                  loc: {
+                     end: {
+                        column: 11,
+                        line: 5,
+                     },
+                     start: {
+                        column: 0,
+                        line: 5,
+                     },
+                  },
+                  object: {
+                     end: 108,
+                     loc: {
+                        end: {
+                           column: 7,
+                           line: 5,
+                        },
+                        identifierName: "console",
+                        start: {
+                           column: 0,
+                           line: 5,
+                        },
+                     },
+                     name: "console",
+                     start: 101,
+                     type: "Identifier",
+                  },
+                  property: {
+                     end: 112,
+                     loc: {
+                        end: {
+                           column: 11,
+                           line: 5,
+                        },
+                        identifierName: "log",
+                        start: {
+                           column: 8,
+                           line: 5,
+                        },
+                     },
+                     name: "log",
+                     start: 109,
+                     type: "Identifier",
+                  },
+                  start: 101,
+                  type: "MemberExpression",
+               },
+               end: 120,
+               loc: {
+                  end: {
+                     column: 19,
+                     line: 5,
+                  },
+                  start: {
+                     column: 0,
+                     line: 5,
+                  },
+               },
+               start: 101,
+               type: "CallExpression",
+            },
+            loc: {
+               end: {
+                  column: 20,
+                  line: 5,
+               },
+               start: {
+                  column: 0,
+                  line: 5,
+               },
+            },
+            start: 101,
+            type: "ExpressionStatement",
+         },
+      ],
+      directives: [],
+      end: 122,
+      loc: {
+         end: {
+            column: 0,
+            line: 6,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}

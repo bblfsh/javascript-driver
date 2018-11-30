@@ -1,0 +1,447 @@
+{
+   comments: [],
+   end: 79,
+   loc: {
+      end: {
+         column: 0,
+         line: 4,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            async: false,
+            body: {
+               body: [
+                  {
+                     alternate: {
+                        body: [
+                           {
+                              argument: {
+                                 end: 73,
+                                 left: {
+                                    arguments: [
+                                       {
+                                          end: 63,
+                                          left: {
+                                             end: 61,
+                                             loc: {
+                                                end: {
+                                                   column: 43,
+                                                   line: 2,
+                                                },
+                                                identifierName: "n",
+                                                start: {
+                                                   column: 42,
+                                                   line: 2,
+                                                },
+                                             },
+                                             name: "n",
+                                             start: 60,
+                                             type: "Identifier",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 45,
+                                                line: 2,
+                                             },
+                                             start: {
+                                                column: 42,
+                                                line: 2,
+                                             },
+                                          },
+                                          operator: "-",
+                                          right: {
+                                             end: 63,
+                                             extra: {
+                                                raw: "1",
+                                                rawValue: 1,
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 45,
+                                                   line: 2,
+                                                },
+                                                start: {
+                                                   column: 44,
+                                                   line: 2,
+                                                },
+                                             },
+                                             start: 62,
+                                             type: "NumericLiteral",
+                                             value: 1,
+                                          },
+                                          start: 60,
+                                          type: "BinaryExpression",
+                                       },
+                                    ],
+                                    callee: {
+                                       end: 59,
+                                       loc: {
+                                          end: {
+                                             column: 41,
+                                             line: 2,
+                                          },
+                                          identifierName: "fib",
+                                          start: {
+                                             column: 38,
+                                             line: 2,
+                                          },
+                                       },
+                                       name: "fib",
+                                       start: 56,
+                                       type: "Identifier",
+                                    },
+                                    end: 64,
+                                    loc: {
+                                       end: {
+                                          column: 46,
+                                          line: 2,
+                                       },
+                                       start: {
+                                          column: 38,
+                                          line: 2,
+                                       },
+                                    },
+                                    start: 56,
+                                    type: "CallExpression",
+                                 },
+                                 loc: {
+                                    end: {
+                                       column: 55,
+                                       line: 2,
+                                    },
+                                    start: {
+                                       column: 38,
+                                       line: 2,
+                                    },
+                                 },
+                                 operator: "+",
+                                 right: {
+                                    arguments: [
+                                       {
+                                          end: 72,
+                                          left: {
+                                             end: 70,
+                                             loc: {
+                                                end: {
+                                                   column: 52,
+                                                   line: 2,
+                                                },
+                                                identifierName: "n",
+                                                start: {
+                                                   column: 51,
+                                                   line: 2,
+                                                },
+                                             },
+                                             name: "n",
+                                             start: 69,
+                                             type: "Identifier",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 54,
+                                                line: 2,
+                                             },
+                                             start: {
+                                                column: 51,
+                                                line: 2,
+                                             },
+                                          },
+                                          operator: "-",
+                                          right: {
+                                             end: 72,
+                                             extra: {
+                                                raw: "2",
+                                                rawValue: 2,
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 54,
+                                                   line: 2,
+                                                },
+                                                start: {
+                                                   column: 53,
+                                                   line: 2,
+                                                },
+                                             },
+                                             start: 71,
+                                             type: "NumericLiteral",
+                                             value: 2,
+                                          },
+                                          start: 69,
+                                          type: "BinaryExpression",
+                                       },
+                                    ],
+                                    callee: {
+                                       end: 68,
+                                       loc: {
+                                          end: {
+                                             column: 50,
+                                             line: 2,
+                                          },
+                                          identifierName: "fib",
+                                          start: {
+                                             column: 47,
+                                             line: 2,
+                                          },
+                                       },
+                                       name: "fib",
+                                       start: 65,
+                                       type: "Identifier",
+                                    },
+                                    end: 73,
+                                    loc: {
+                                       end: {
+                                          column: 55,
+                                          line: 2,
+                                       },
+                                       start: {
+                                          column: 47,
+                                          line: 2,
+                                       },
+                                    },
+                                    start: 65,
+                                    type: "CallExpression",
+                                 },
+                                 start: 56,
+                                 type: "BinaryExpression",
+                              },
+                              end: 74,
+                              loc: {
+                                 end: {
+                                    column: 56,
+                                    line: 2,
+                                 },
+                                 start: {
+                                    column: 31,
+                                    line: 2,
+                                 },
+                              },
+                              start: 49,
+                              type: "ReturnStatement",
+                           },
+                        ],
+                        directives: [],
+                        end: 76,
+                        loc: {
+                           end: {
+                              column: 58,
+                              line: 2,
+                           },
+                           start: {
+                              column: 29,
+                              line: 2,
+                           },
+                        },
+                        start: 47,
+                        type: "BlockStatement",
+                     },
+                     consequent: {
+                        body: [
+                           {
+                              argument: {
+                                 end: 38,
+                                 loc: {
+                                    end: {
+                                       column: 20,
+                                       line: 2,
+                                    },
+                                    identifierName: "n",
+                                    start: {
+                                       column: 19,
+                                       line: 2,
+                                    },
+                                 },
+                                 name: "n",
+                                 start: 37,
+                                 type: "Identifier",
+                              },
+                              end: 39,
+                              loc: {
+                                 end: {
+                                    column: 21,
+                                    line: 2,
+                                 },
+                                 start: {
+                                    column: 12,
+                                    line: 2,
+                                 },
+                              },
+                              start: 30,
+                              type: "ReturnStatement",
+                           },
+                        ],
+                        directives: [],
+                        end: 41,
+                        loc: {
+                           end: {
+                              column: 23,
+                              line: 2,
+                           },
+                           start: {
+                              column: 10,
+                              line: 2,
+                           },
+                        },
+                        start: 28,
+                        type: "BlockStatement",
+                     },
+                     end: 76,
+                     loc: {
+                        end: {
+                           column: 58,
+                           line: 2,
+                        },
+                        start: {
+                           column: 1,
+                           line: 2,
+                        },
+                     },
+                     start: 19,
+                     test: {
+                        end: 26,
+                        left: {
+                           end: 24,
+                           loc: {
+                              end: {
+                                 column: 6,
+                                 line: 2,
+                              },
+                              identifierName: "n",
+                              start: {
+                                 column: 5,
+                                 line: 2,
+                              },
+                           },
+                           name: "n",
+                           start: 23,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 8,
+                              line: 2,
+                           },
+                           start: {
+                              column: 5,
+                              line: 2,
+                           },
+                        },
+                        operator: "<",
+                        right: {
+                           end: 26,
+                           extra: {
+                              raw: "2",
+                              rawValue: 2,
+                           },
+                           loc: {
+                              end: {
+                                 column: 8,
+                                 line: 2,
+                              },
+                              start: {
+                                 column: 7,
+                                 line: 2,
+                              },
+                           },
+                           start: 25,
+                           type: "NumericLiteral",
+                           value: 2,
+                        },
+                        start: 23,
+                        type: "BinaryExpression",
+                     },
+                     type: "IfStatement",
+                  },
+               ],
+               directives: [],
+               end: 78,
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 3,
+                  },
+                  start: {
+                     column: 16,
+                     line: 1,
+                  },
+               },
+               start: 16,
+               type: "BlockStatement",
+            },
+            end: 78,
+            generator: false,
+            id: {
+               end: 12,
+               loc: {
+                  end: {
+                     column: 12,
+                     line: 1,
+                  },
+                  identifierName: "fib",
+                  start: {
+                     column: 9,
+                     line: 1,
+                  },
+               },
+               name: "fib",
+               start: 9,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 1,
+                  line: 3,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            params: [
+               {
+                  end: 14,
+                  loc: {
+                     end: {
+                        column: 14,
+                        line: 1,
+                     },
+                     identifierName: "n",
+                     start: {
+                        column: 13,
+                        line: 1,
+                     },
+                  },
+                  name: "n",
+                  start: 13,
+                  type: "Identifier",
+               },
+            ],
+            start: 0,
+            type: "FunctionDeclaration",
+         },
+      ],
+      directives: [],
+      end: 79,
+      loc: {
+         end: {
+            column: 0,
+            line: 4,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}

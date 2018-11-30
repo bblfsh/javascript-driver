@@ -1,0 +1,883 @@
+{
+   comments: [],
+   end: 174,
+   loc: {
+      end: {
+         column: 0,
+         line: 9,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            async: false,
+            body: {
+               body: [
+                  {
+                     alternate: ~,
+                     consequent: {
+                        body: [
+                           {
+                              end: 66,
+                              expression: {
+                                 arguments: [
+                                    {
+                                       end: 55,
+                                       left: {
+                                          end: 53,
+                                          loc: {
+                                             end: {
+                                                column: 10,
+                                                line: 3,
+                                             },
+                                             identifierName: "n",
+                                             start: {
+                                                column: 9,
+                                                line: 3,
+                                             },
+                                          },
+                                          name: "n",
+                                          start: 52,
+                                          type: "Identifier",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 12,
+                                             line: 3,
+                                          },
+                                          start: {
+                                             column: 9,
+                                             line: 3,
+                                          },
+                                       },
+                                       operator: "-",
+                                       right: {
+                                          end: 55,
+                                          extra: {
+                                             raw: "1",
+                                             rawValue: 1,
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 12,
+                                                line: 3,
+                                             },
+                                             start: {
+                                                column: 11,
+                                                line: 3,
+                                             },
+                                          },
+                                          start: 54,
+                                          type: "NumericLiteral",
+                                          value: 1,
+                                       },
+                                       start: 52,
+                                       type: "BinaryExpression",
+                                    },
+                                    {
+                                       end: 58,
+                                       loc: {
+                                          end: {
+                                             column: 15,
+                                             line: 3,
+                                          },
+                                          identifierName: "a",
+                                          start: {
+                                             column: 14,
+                                             line: 3,
+                                          },
+                                       },
+                                       name: "a",
+                                       start: 57,
+                                       type: "Identifier",
+                                    },
+                                    {
+                                       end: 61,
+                                       loc: {
+                                          end: {
+                                             column: 18,
+                                             line: 3,
+                                          },
+                                          identifierName: "c",
+                                          start: {
+                                             column: 17,
+                                             line: 3,
+                                          },
+                                       },
+                                       name: "c",
+                                       start: 60,
+                                       type: "Identifier",
+                                    },
+                                    {
+                                       end: 64,
+                                       loc: {
+                                          end: {
+                                             column: 21,
+                                             line: 3,
+                                          },
+                                          identifierName: "b",
+                                          start: {
+                                             column: 20,
+                                             line: 3,
+                                          },
+                                       },
+                                       name: "b",
+                                       start: 63,
+                                       type: "Identifier",
+                                    },
+                                 ],
+                                 callee: {
+                                    end: 51,
+                                    loc: {
+                                       end: {
+                                          column: 8,
+                                          line: 3,
+                                       },
+                                       identifierName: "move",
+                                       start: {
+                                          column: 4,
+                                          line: 3,
+                                       },
+                                    },
+                                    name: "move",
+                                    start: 47,
+                                    type: "Identifier",
+                                 },
+                                 end: 65,
+                                 loc: {
+                                    end: {
+                                       column: 22,
+                                       line: 3,
+                                    },
+                                    start: {
+                                       column: 4,
+                                       line: 3,
+                                    },
+                                 },
+                                 start: 47,
+                                 type: "CallExpression",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 23,
+                                    line: 3,
+                                 },
+                                 start: {
+                                    column: 4,
+                                    line: 3,
+                                 },
+                              },
+                              start: 47,
+                              type: "ExpressionStatement",
+                           },
+                           {
+                              end: 119,
+                              expression: {
+                                 arguments: [
+                                    {
+                                       end: 117,
+                                       left: {
+                                          end: 113,
+                                          left: {
+                                             end: 104,
+                                             left: {
+                                                end: 100,
+                                                extra: {
+                                                   raw: "\"Move disk from \"",
+                                                   rawValue: "Move disk from ",
+                                                },
+                                                loc: {
+                                                   end: {
+                                                      column: 33,
+                                                      line: 4,
+                                                   },
+                                                   start: {
+                                                      column: 16,
+                                                      line: 4,
+                                                   },
+                                                },
+                                                start: 83,
+                                                type: "StringLiteral",
+                                                value: "Move disk from ",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 37,
+                                                   line: 4,
+                                                },
+                                                start: {
+                                                   column: 16,
+                                                   line: 4,
+                                                },
+                                             },
+                                             operator: "+",
+                                             right: {
+                                                end: 104,
+                                                loc: {
+                                                   end: {
+                                                      column: 37,
+                                                      line: 4,
+                                                   },
+                                                   identifierName: "a",
+                                                   start: {
+                                                      column: 36,
+                                                      line: 4,
+                                                   },
+                                                },
+                                                name: "a",
+                                                start: 103,
+                                                type: "Identifier",
+                                             },
+                                             start: 83,
+                                             type: "BinaryExpression",
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 46,
+                                                line: 4,
+                                             },
+                                             start: {
+                                                column: 16,
+                                                line: 4,
+                                             },
+                                          },
+                                          operator: "+",
+                                          right: {
+                                             end: 113,
+                                             extra: {
+                                                raw: "\" to \"",
+                                                rawValue: " to ",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 46,
+                                                   line: 4,
+                                                },
+                                                start: {
+                                                   column: 40,
+                                                   line: 4,
+                                                },
+                                             },
+                                             start: 107,
+                                             type: "StringLiteral",
+                                             value: " to ",
+                                          },
+                                          start: 83,
+                                          type: "BinaryExpression",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 50,
+                                             line: 4,
+                                          },
+                                          start: {
+                                             column: 16,
+                                             line: 4,
+                                          },
+                                       },
+                                       operator: "+",
+                                       right: {
+                                          end: 117,
+                                          loc: {
+                                             end: {
+                                                column: 50,
+                                                line: 4,
+                                             },
+                                             identifierName: "c",
+                                             start: {
+                                                column: 49,
+                                                line: 4,
+                                             },
+                                          },
+                                          name: "c",
+                                          start: 116,
+                                          type: "Identifier",
+                                       },
+                                       start: 83,
+                                       type: "BinaryExpression",
+                                    },
+                                 ],
+                                 callee: {
+                                    computed: false,
+                                    end: 82,
+                                    loc: {
+                                       end: {
+                                          column: 15,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 4,
+                                          line: 4,
+                                       },
+                                    },
+                                    object: {
+                                       end: 78,
+                                       loc: {
+                                          end: {
+                                             column: 11,
+                                             line: 4,
+                                          },
+                                          identifierName: "console",
+                                          start: {
+                                             column: 4,
+                                             line: 4,
+                                          },
+                                       },
+                                       name: "console",
+                                       start: 71,
+                                       type: "Identifier",
+                                    },
+                                    property: {
+                                       end: 82,
+                                       loc: {
+                                          end: {
+                                             column: 15,
+                                             line: 4,
+                                          },
+                                          identifierName: "log",
+                                          start: {
+                                             column: 12,
+                                             line: 4,
+                                          },
+                                       },
+                                       name: "log",
+                                       start: 79,
+                                       type: "Identifier",
+                                    },
+                                    start: 71,
+                                    type: "MemberExpression",
+                                 },
+                                 end: 118,
+                                 loc: {
+                                    end: {
+                                       column: 51,
+                                       line: 4,
+                                    },
+                                    start: {
+                                       column: 4,
+                                       line: 4,
+                                    },
+                                 },
+                                 start: 71,
+                                 type: "CallExpression",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 52,
+                                    line: 4,
+                                 },
+                                 start: {
+                                    column: 4,
+                                    line: 4,
+                                 },
+                              },
+                              start: 71,
+                              type: "ExpressionStatement",
+                           },
+                           {
+                              end: 143,
+                              expression: {
+                                 arguments: [
+                                    {
+                                       end: 132,
+                                       left: {
+                                          end: 130,
+                                          loc: {
+                                             end: {
+                                                column: 10,
+                                                line: 5,
+                                             },
+                                             identifierName: "n",
+                                             start: {
+                                                column: 9,
+                                                line: 5,
+                                             },
+                                          },
+                                          name: "n",
+                                          start: 129,
+                                          type: "Identifier",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 12,
+                                             line: 5,
+                                          },
+                                          start: {
+                                             column: 9,
+                                             line: 5,
+                                          },
+                                       },
+                                       operator: "-",
+                                       right: {
+                                          end: 132,
+                                          extra: {
+                                             raw: "1",
+                                             rawValue: 1,
+                                          },
+                                          loc: {
+                                             end: {
+                                                column: 12,
+                                                line: 5,
+                                             },
+                                             start: {
+                                                column: 11,
+                                                line: 5,
+                                             },
+                                          },
+                                          start: 131,
+                                          type: "NumericLiteral",
+                                          value: 1,
+                                       },
+                                       start: 129,
+                                       type: "BinaryExpression",
+                                    },
+                                    {
+                                       end: 135,
+                                       loc: {
+                                          end: {
+                                             column: 15,
+                                             line: 5,
+                                          },
+                                          identifierName: "b",
+                                          start: {
+                                             column: 14,
+                                             line: 5,
+                                          },
+                                       },
+                                       name: "b",
+                                       start: 134,
+                                       type: "Identifier",
+                                    },
+                                    {
+                                       end: 138,
+                                       loc: {
+                                          end: {
+                                             column: 18,
+                                             line: 5,
+                                          },
+                                          identifierName: "a",
+                                          start: {
+                                             column: 17,
+                                             line: 5,
+                                          },
+                                       },
+                                       name: "a",
+                                       start: 137,
+                                       type: "Identifier",
+                                    },
+                                    {
+                                       end: 141,
+                                       loc: {
+                                          end: {
+                                             column: 21,
+                                             line: 5,
+                                          },
+                                          identifierName: "c",
+                                          start: {
+                                             column: 20,
+                                             line: 5,
+                                          },
+                                       },
+                                       name: "c",
+                                       start: 140,
+                                       type: "Identifier",
+                                    },
+                                 ],
+                                 callee: {
+                                    end: 128,
+                                    loc: {
+                                       end: {
+                                          column: 8,
+                                          line: 5,
+                                       },
+                                       identifierName: "move",
+                                       start: {
+                                          column: 4,
+                                          line: 5,
+                                       },
+                                    },
+                                    name: "move",
+                                    start: 124,
+                                    type: "Identifier",
+                                 },
+                                 end: 142,
+                                 loc: {
+                                    end: {
+                                       column: 22,
+                                       line: 5,
+                                    },
+                                    start: {
+                                       column: 4,
+                                       line: 5,
+                                    },
+                                 },
+                                 start: 124,
+                                 type: "CallExpression",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 23,
+                                    line: 5,
+                                 },
+                                 start: {
+                                    column: 4,
+                                    line: 5,
+                                 },
+                              },
+                              start: 124,
+                              type: "ExpressionStatement",
+                           },
+                        ],
+                        directives: [],
+                        end: 147,
+                        loc: {
+                           end: {
+                              column: 3,
+                              line: 6,
+                           },
+                           start: {
+                              column: 13,
+                              line: 2,
+                           },
+                        },
+                        start: 41,
+                        type: "BlockStatement",
+                     },
+                     end: 147,
+                     loc: {
+                        end: {
+                           column: 3,
+                           line: 6,
+                        },
+                        start: {
+                           column: 2,
+                           line: 2,
+                        },
+                     },
+                     start: 30,
+                     test: {
+                        end: 39,
+                        left: {
+                           end: 35,
+                           loc: {
+                              end: {
+                                 column: 7,
+                                 line: 2,
+                              },
+                              identifierName: "n",
+                              start: {
+                                 column: 6,
+                                 line: 2,
+                              },
+                           },
+                           name: "n",
+                           start: 34,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 11,
+                              line: 2,
+                           },
+                           start: {
+                              column: 6,
+                              line: 2,
+                           },
+                        },
+                        operator: ">",
+                        right: {
+                           end: 39,
+                           extra: {
+                              raw: "0",
+                              rawValue: 0,
+                           },
+                           loc: {
+                              end: {
+                                 column: 11,
+                                 line: 2,
+                              },
+                              start: {
+                                 column: 10,
+                                 line: 2,
+                              },
+                           },
+                           start: 38,
+                           type: "NumericLiteral",
+                           value: 0,
+                        },
+                        start: 34,
+                        type: "BinaryExpression",
+                     },
+                     type: "IfStatement",
+                  },
+               ],
+               directives: [],
+               end: 149,
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 7,
+                  },
+                  start: {
+                     column: 26,
+                     line: 1,
+                  },
+               },
+               start: 26,
+               type: "BlockStatement",
+            },
+            end: 149,
+            generator: false,
+            id: {
+               end: 13,
+               loc: {
+                  end: {
+                     column: 13,
+                     line: 1,
+                  },
+                  identifierName: "move",
+                  start: {
+                     column: 9,
+                     line: 1,
+                  },
+               },
+               name: "move",
+               start: 9,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 1,
+                  line: 7,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            params: [
+               {
+                  end: 15,
+                  loc: {
+                     end: {
+                        column: 15,
+                        line: 1,
+                     },
+                     identifierName: "n",
+                     start: {
+                        column: 14,
+                        line: 1,
+                     },
+                  },
+                  name: "n",
+                  start: 14,
+                  type: "Identifier",
+               },
+               {
+                  end: 18,
+                  loc: {
+                     end: {
+                        column: 18,
+                        line: 1,
+                     },
+                     identifierName: "a",
+                     start: {
+                        column: 17,
+                        line: 1,
+                     },
+                  },
+                  name: "a",
+                  start: 17,
+                  type: "Identifier",
+               },
+               {
+                  end: 21,
+                  loc: {
+                     end: {
+                        column: 21,
+                        line: 1,
+                     },
+                     identifierName: "b",
+                     start: {
+                        column: 20,
+                        line: 1,
+                     },
+                  },
+                  name: "b",
+                  start: 20,
+                  type: "Identifier",
+               },
+               {
+                  end: 24,
+                  loc: {
+                     end: {
+                        column: 24,
+                        line: 1,
+                     },
+                     identifierName: "c",
+                     start: {
+                        column: 23,
+                        line: 1,
+                     },
+                  },
+                  name: "c",
+                  start: 23,
+                  type: "Identifier",
+               },
+            ],
+            start: 0,
+            type: "FunctionDeclaration",
+         },
+         {
+            end: 173,
+            expression: {
+               arguments: [
+                  {
+                     end: 156,
+                     extra: {
+                        raw: "4",
+                        rawValue: 4,
+                     },
+                     loc: {
+                        end: {
+                           column: 6,
+                           line: 8,
+                        },
+                        start: {
+                           column: 5,
+                           line: 8,
+                        },
+                     },
+                     start: 155,
+                     type: "NumericLiteral",
+                     value: 4,
+                  },
+                  {
+                     end: 161,
+                     extra: {
+                        raw: "\"A\"",
+                        rawValue: "A",
+                     },
+                     loc: {
+                        end: {
+                           column: 11,
+                           line: 8,
+                        },
+                        start: {
+                           column: 8,
+                           line: 8,
+                        },
+                     },
+                     start: 158,
+                     type: "StringLiteral",
+                     value: "A",
+                  },
+                  {
+                     end: 166,
+                     extra: {
+                        raw: "\"B\"",
+                        rawValue: "B",
+                     },
+                     loc: {
+                        end: {
+                           column: 16,
+                           line: 8,
+                        },
+                        start: {
+                           column: 13,
+                           line: 8,
+                        },
+                     },
+                     start: 163,
+                     type: "StringLiteral",
+                     value: "B",
+                  },
+                  {
+                     end: 171,
+                     extra: {
+                        raw: "\"C\"",
+                        rawValue: "C",
+                     },
+                     loc: {
+                        end: {
+                           column: 21,
+                           line: 8,
+                        },
+                        start: {
+                           column: 18,
+                           line: 8,
+                        },
+                     },
+                     start: 168,
+                     type: "StringLiteral",
+                     value: "C",
+                  },
+               ],
+               callee: {
+                  end: 154,
+                  loc: {
+                     end: {
+                        column: 4,
+                        line: 8,
+                     },
+                     identifierName: "move",
+                     start: {
+                        column: 0,
+                        line: 8,
+                     },
+                  },
+                  name: "move",
+                  start: 150,
+                  type: "Identifier",
+               },
+               end: 172,
+               loc: {
+                  end: {
+                     column: 22,
+                     line: 8,
+                  },
+                  start: {
+                     column: 0,
+                     line: 8,
+                  },
+               },
+               start: 150,
+               type: "CallExpression",
+            },
+            loc: {
+               end: {
+                  column: 23,
+                  line: 8,
+               },
+               start: {
+                  column: 0,
+                  line: 8,
+               },
+            },
+            start: 150,
+            type: "ExpressionStatement",
+         },
+      ],
+      directives: [],
+      end: 174,
+      loc: {
+         end: {
+            column: 0,
+            line: 9,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}

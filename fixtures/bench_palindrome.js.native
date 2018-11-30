@@ -1,0 +1,496 @@
+{
+   comments: [],
+   end: 147,
+   loc: {
+      end: {
+         column: 0,
+         line: 6,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            async: false,
+            body: {
+               body: [
+                  {
+                     argument: {
+                        end: 78,
+                        left: {
+                           end: 41,
+                           loc: {
+                              end: {
+                                 column: 12,
+                                 line: 2,
+                              },
+                              identifierName: "str",
+                              start: {
+                                 column: 9,
+                                 line: 2,
+                              },
+                           },
+                           name: "str",
+                           start: 38,
+                           type: "Identifier",
+                        },
+                        loc: {
+                           end: {
+                              column: 49,
+                              line: 2,
+                           },
+                           start: {
+                              column: 9,
+                              line: 2,
+                           },
+                        },
+                        operator: "===",
+                        right: {
+                           arguments: [
+                              {
+                                 end: 77,
+                                 extra: {
+                                    raw: "\"\"",
+                                    rawValue: "",
+                                 },
+                                 loc: {
+                                    end: {
+                                       column: 48,
+                                       line: 2,
+                                    },
+                                    start: {
+                                       column: 46,
+                                       line: 2,
+                                    },
+                                 },
+                                 start: 75,
+                                 type: "StringLiteral",
+                                 value: "",
+                              },
+                           ],
+                           callee: {
+                              computed: false,
+                              end: 74,
+                              loc: {
+                                 end: {
+                                    column: 45,
+                                    line: 2,
+                                 },
+                                 start: {
+                                    column: 17,
+                                    line: 2,
+                                 },
+                              },
+                              object: {
+                                 arguments: [],
+                                 callee: {
+                                    computed: false,
+                                    end: 67,
+                                    loc: {
+                                       end: {
+                                          column: 38,
+                                          line: 2,
+                                       },
+                                       start: {
+                                          column: 17,
+                                          line: 2,
+                                       },
+                                    },
+                                    object: {
+                                       arguments: [
+                                          {
+                                             end: 58,
+                                             extra: {
+                                                raw: "\"\"",
+                                                rawValue: "",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 29,
+                                                   line: 2,
+                                                },
+                                                start: {
+                                                   column: 27,
+                                                   line: 2,
+                                                },
+                                             },
+                                             start: 56,
+                                             type: "StringLiteral",
+                                             value: "",
+                                          },
+                                       ],
+                                       callee: {
+                                          computed: false,
+                                          end: 55,
+                                          loc: {
+                                             end: {
+                                                column: 26,
+                                                line: 2,
+                                             },
+                                             start: {
+                                                column: 17,
+                                                line: 2,
+                                             },
+                                          },
+                                          object: {
+                                             end: 49,
+                                             loc: {
+                                                end: {
+                                                   column: 20,
+                                                   line: 2,
+                                                },
+                                                identifierName: "str",
+                                                start: {
+                                                   column: 17,
+                                                   line: 2,
+                                                },
+                                             },
+                                             name: "str",
+                                             start: 46,
+                                             type: "Identifier",
+                                          },
+                                          property: {
+                                             end: 55,
+                                             loc: {
+                                                end: {
+                                                   column: 26,
+                                                   line: 2,
+                                                },
+                                                identifierName: "split",
+                                                start: {
+                                                   column: 21,
+                                                   line: 2,
+                                                },
+                                             },
+                                             name: "split",
+                                             start: 50,
+                                             type: "Identifier",
+                                          },
+                                          start: 46,
+                                          type: "MemberExpression",
+                                       },
+                                       end: 59,
+                                       loc: {
+                                          end: {
+                                             column: 30,
+                                             line: 2,
+                                          },
+                                          start: {
+                                             column: 17,
+                                             line: 2,
+                                          },
+                                       },
+                                       start: 46,
+                                       type: "CallExpression",
+                                    },
+                                    property: {
+                                       end: 67,
+                                       loc: {
+                                          end: {
+                                             column: 38,
+                                             line: 2,
+                                          },
+                                          identifierName: "reverse",
+                                          start: {
+                                             column: 31,
+                                             line: 2,
+                                          },
+                                       },
+                                       name: "reverse",
+                                       start: 60,
+                                       type: "Identifier",
+                                    },
+                                    start: 46,
+                                    type: "MemberExpression",
+                                 },
+                                 end: 69,
+                                 loc: {
+                                    end: {
+                                       column: 40,
+                                       line: 2,
+                                    },
+                                    start: {
+                                       column: 17,
+                                       line: 2,
+                                    },
+                                 },
+                                 start: 46,
+                                 type: "CallExpression",
+                              },
+                              property: {
+                                 end: 74,
+                                 loc: {
+                                    end: {
+                                       column: 45,
+                                       line: 2,
+                                    },
+                                    identifierName: "join",
+                                    start: {
+                                       column: 41,
+                                       line: 2,
+                                    },
+                                 },
+                                 name: "join",
+                                 start: 70,
+                                 type: "Identifier",
+                              },
+                              start: 46,
+                              type: "MemberExpression",
+                           },
+                           end: 78,
+                           loc: {
+                              end: {
+                                 column: 49,
+                                 line: 2,
+                              },
+                              start: {
+                                 column: 17,
+                                 line: 2,
+                              },
+                           },
+                           start: 46,
+                           type: "CallExpression",
+                        },
+                        start: 38,
+                        type: "BinaryExpression",
+                     },
+                     end: 79,
+                     loc: {
+                        end: {
+                           column: 50,
+                           line: 2,
+                        },
+                        start: {
+                           column: 2,
+                           line: 2,
+                        },
+                     },
+                     start: 31,
+                     type: "ReturnStatement",
+                  },
+               ],
+               directives: [],
+               end: 81,
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 3,
+                  },
+                  start: {
+                     column: 27,
+                     line: 1,
+                  },
+               },
+               start: 27,
+               type: "BlockStatement",
+            },
+            end: 81,
+            generator: false,
+            id: {
+               end: 21,
+               loc: {
+                  end: {
+                     column: 21,
+                     line: 1,
+                  },
+                  identifierName: "isPalindrome",
+                  start: {
+                     column: 9,
+                     line: 1,
+                  },
+               },
+               name: "isPalindrome",
+               start: 9,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 1,
+                  line: 3,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            params: [
+               {
+                  end: 25,
+                  loc: {
+                     end: {
+                        column: 25,
+                        line: 1,
+                     },
+                     identifierName: "str",
+                     start: {
+                        column: 22,
+                        line: 1,
+                     },
+                  },
+                  name: "str",
+                  start: 22,
+                  type: "Identifier",
+               },
+            ],
+            start: 0,
+            type: "FunctionDeclaration",
+         },
+         {
+            end: 146,
+            expression: {
+               arguments: [
+                  {
+                     arguments: [
+                        {
+                           end: 143,
+                           extra: {
+                              raw: "\"ingirumimusnocteetconsumimurigni\"",
+                              rawValue: "ingirumimusnocteetconsumimurigni",
+                           },
+                           loc: {
+                              end: {
+                                 column: 59,
+                                 line: 5,
+                              },
+                              start: {
+                                 column: 25,
+                                 line: 5,
+                              },
+                           },
+                           start: 109,
+                           type: "StringLiteral",
+                           value: "ingirumimusnocteetconsumimurigni",
+                        },
+                     ],
+                     callee: {
+                        end: 108,
+                        loc: {
+                           end: {
+                              column: 24,
+                              line: 5,
+                           },
+                           identifierName: "isPalindrome",
+                           start: {
+                              column: 12,
+                              line: 5,
+                           },
+                        },
+                        name: "isPalindrome",
+                        start: 96,
+                        type: "Identifier",
+                     },
+                     end: 144,
+                     loc: {
+                        end: {
+                           column: 60,
+                           line: 5,
+                        },
+                        start: {
+                           column: 12,
+                           line: 5,
+                        },
+                     },
+                     start: 96,
+                     type: "CallExpression",
+                  },
+               ],
+               callee: {
+                  computed: false,
+                  end: 95,
+                  loc: {
+                     end: {
+                        column: 11,
+                        line: 5,
+                     },
+                     start: {
+                        column: 0,
+                        line: 5,
+                     },
+                  },
+                  object: {
+                     end: 91,
+                     loc: {
+                        end: {
+                           column: 7,
+                           line: 5,
+                        },
+                        identifierName: "console",
+                        start: {
+                           column: 0,
+                           line: 5,
+                        },
+                     },
+                     name: "console",
+                     start: 84,
+                     type: "Identifier",
+                  },
+                  property: {
+                     end: 95,
+                     loc: {
+                        end: {
+                           column: 11,
+                           line: 5,
+                        },
+                        identifierName: "log",
+                        start: {
+                           column: 8,
+                           line: 5,
+                        },
+                     },
+                     name: "log",
+                     start: 92,
+                     type: "Identifier",
+                  },
+                  start: 84,
+                  type: "MemberExpression",
+               },
+               end: 145,
+               loc: {
+                  end: {
+                     column: 61,
+                     line: 5,
+                  },
+                  start: {
+                     column: 0,
+                     line: 5,
+                  },
+               },
+               start: 84,
+               type: "CallExpression",
+            },
+            loc: {
+               end: {
+                  column: 62,
+                  line: 5,
+               },
+               start: {
+                  column: 0,
+                  line: 5,
+               },
+            },
+            start: 84,
+            type: "ExpressionStatement",
+         },
+      ],
+      directives: [],
+      end: 147,
+      loc: {
+         end: {
+            column: 0,
+            line: 6,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}
