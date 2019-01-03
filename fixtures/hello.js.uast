@@ -58,7 +58,7 @@
                },
                arguments: [
                   { '@type': "StringLiteral",
-                     '@token': "Hello World",
+                     '@token': "'Hello World'",
                      '@role': [Argument, Call, Expression, Literal, String],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",

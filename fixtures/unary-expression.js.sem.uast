@@ -486,7 +486,7 @@
                            col: 13,
                         },
                      },
-                     Format: "",
+                     Format: "single",
                      Value: "x",
                   },
                },

@@ -120,7 +120,7 @@
                            col: 22,
                         },
                      },
-                     Format: "",
+                     Format: "single",
                      Value: "x",
                   },
                ],

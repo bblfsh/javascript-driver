@@ -43,7 +43,7 @@
                },
             },
             argument: { '@type': "StringLiteral",
-               '@token': "exception",
+               '@token': "'exception'",
                '@role': [Expression, Literal, String],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",

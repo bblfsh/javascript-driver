@@ -414,7 +414,7 @@
                },
                arguments: [
                   { '@type': "StringLiteral",
-                     '@token': "",
+                     '@token': "''",
                      '@role': [Argument, Call, Expression, Literal, String],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",

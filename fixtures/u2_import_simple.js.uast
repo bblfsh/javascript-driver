@@ -43,7 +43,7 @@
                },
             },
             source: { '@type': "StringLiteral",
-               '@token': "file1",
+               '@token': "'file1'",
                '@role': [Expression, Import, Literal, Pathname, String],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",

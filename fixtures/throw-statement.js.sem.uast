@@ -55,7 +55,7 @@
                      col: 18,
                   },
                },
-               Format: "",
+               Format: "single",
                Value: "exception",
             },
          },
