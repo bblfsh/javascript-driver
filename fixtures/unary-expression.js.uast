@@ -477,7 +477,7 @@
                      },
                   },
                   property: { '@type': "StringLiteral",
-                     '@token': "x",
+                     '@token': "'x'",
                      '@role': [Expression, Literal, String],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",

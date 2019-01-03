@@ -107,7 +107,7 @@
                      flags: "g",
                   },
                   { '@type': "StringLiteral",
-                     '@token': "x",
+                     '@token': "'x'",
                      '@role': [Argument, Call, Expression, Literal, String],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",

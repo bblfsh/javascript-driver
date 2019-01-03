@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 8,
+   end: 20,
    loc: {
       end: {
          column: 0,
-         line: 2,
+         line: 3,
       },
       start: {
          column: 0,
@@ -81,13 +81,81 @@
             start: 0,
             type: "ExpressionStatement",
          },
+         {
+            end: 19,
+            expression: {
+               end: 19,
+               left: {
+                  end: 10,
+                  loc: {
+                     end: {
+                        column: 2,
+                        line: 2,
+                     },
+                     identifierName: "bc",
+                     start: {
+                        column: 0,
+                        line: 2,
+                     },
+                  },
+                  name: "bc",
+                  start: 8,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 11,
+                     line: 2,
+                  },
+                  start: {
+                     column: 0,
+                     line: 2,
+                  },
+               },
+               operator: "=",
+               right: {
+                  end: 19,
+                  extra: {
+                     raw: "\"b\\nc\"",
+                     rawValue: "b\nc",
+                  },
+                  loc: {
+                     end: {
+                        column: 11,
+                        line: 2,
+                     },
+                     start: {
+                        column: 5,
+                        line: 2,
+                     },
+                  },
+                  start: 13,
+                  type: "StringLiteral",
+                  value: "b\nc",
+               },
+               start: 8,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 11,
+                  line: 2,
+               },
+               start: {
+                  column: 0,
+                  line: 2,
+               },
+            },
+            start: 8,
+            type: "ExpressionStatement",
+         },
       ],
       directives: [],
-      end: 8,
+      end: 20,
       loc: {
          end: {
             column: 0,
-            line: 2,
+            line: 3,
          },
          start: {
             column: 0,

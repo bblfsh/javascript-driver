@@ -1634,7 +1634,7 @@
                            },
                         },
                         value: { '@type': "StringLiteral",
-                           '@token': "foo",
+                           '@token': "\"foo\"",
                            '@role': [Expression, Initialization, Literal, String, Value],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",

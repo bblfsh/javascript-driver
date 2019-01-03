@@ -1,7 +1,10 @@
 package normalizer
 
 import (
+	"strings"
+
 	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 )
 
@@ -29,6 +32,22 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{"loc": AnyNode(nil)}),
 		Part("_", Obj{}),
 	),
+	// preserve raw string literal
+	Map(
+		Part("_", Obj{
+			uast.KeyType: String("StringLiteral"),
+			"value":      AnyNode(nil),
+			"extra": Obj{
+				"raw":      Var("raw"),
+				"rawValue": AnyNode(nil),
+			},
+		}),
+		Part("_", Obj{
+			uast.KeyType: String("StringLiteral"),
+			"value":      Var("raw"),
+		}),
+	),
+	// drop extra info for other nodes (it duplicates other node fields)
 	Map(
 		Part("_", Obj{"extra": AnyNode(nil)}),
 		Part("_", Obj{}),
@@ -47,7 +66,16 @@ var Normalizers = []Mapping{
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Obj{
-			"value": Var("val"),
+			"value": singleQuote{Var("val")},
+		},
+		Obj{
+			"Value":  Var("val"),
+			"Format": String("single"),
+		},
+	)),
+	MapSemantic("StringLiteral", uast.String{}, MapObj(
+		Obj{
+			"value": Quote(Var("val")),
 		},
 		Obj{
 			"Value": Var("val"),
@@ -242,4 +270,43 @@ var Normalizers = []Mapping{
 			),
 		},
 	)),
+}
+
+type singleQuote struct {
+	op Op
+}
+
+func (op singleQuote) Kinds() nodes.Kind {
+	return nodes.KindString
+}
+
+func (op singleQuote) Check(st *State, n nodes.Node) (bool, error) {
+	sn, ok := n.(nodes.String)
+	if !ok {
+		return false, nil
+	}
+	s := string(sn)
+	if !strings.HasPrefix(s, `'`) || !strings.HasSuffix(s, `'`) {
+		return false, nil
+	}
+	s = s[1 : len(s)-1]
+	s, err := unquoteSingle(s)
+	if err != nil {
+		return false, err
+	}
+	return op.op.Check(st, nodes.String(s))
+}
+
+func (op singleQuote) Construct(st *State, n nodes.Node) (nodes.Node, error) {
+	n, err := op.op.Construct(st, n)
+	if err != nil {
+		return nil, err
+	}
+	sn, ok := n.(nodes.String)
+	if !ok {
+		return nil, ErrUnexpectedType.New(nodes.String(""), n)
+	}
+	s := string(sn)
+	s = quoteSingle(s)
+	return nodes.String(s), nil
 }

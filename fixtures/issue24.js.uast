@@ -127,7 +127,7 @@
                },
             ],
             source: { '@type': "StringLiteral",
-               '@token': "./file/file",
+               '@token': "\"./file/file\"",
                '@role': [Expression, Import, Literal, Pathname, String],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",

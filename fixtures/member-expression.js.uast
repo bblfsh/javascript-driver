@@ -202,7 +202,7 @@
                         },
                      },
                      property: { '@type': "StringLiteral",
-                        '@token': "b",
+                        '@token': "'b'",
                         '@role': [Expression, Literal, String],
                         '@pos': { '@type': "uast:Positions",
                            start: { '@type': "uast:Position",
