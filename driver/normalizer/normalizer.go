@@ -32,7 +32,7 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{"loc": AnyNode(nil)}),
 		Part("_", Obj{}),
 	),
-	// preserve raw string literal
+	// preserve raw string and regexp literals
 	Map(
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
@@ -45,6 +45,18 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
 			"value":      Var("raw"),
+		}),
+	),
+	Map(
+		Part("_", Obj{
+			uast.KeyType: String("RegExpLiteral"),
+			"extra": Obj{
+				"raw": Var("raw"),
+			},
+		}),
+		Part("_", Obj{
+			uast.KeyType: String("RegExpLiteral"),
+			"raw":        Var("raw"),
 		}),
 	),
 	// drop extra info for other nodes (it duplicates other node fields)
@@ -306,7 +318,6 @@ func (op singleQuote) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 	if !ok {
 		return nil, ErrUnexpectedType.New(nodes.String(""), n)
 	}
-	s := string(sn)
-	s = quoteSingle(s)
+	s := quoteSingle(string(sn))
 	return nodes.String(s), nil
 }

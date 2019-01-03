@@ -144,7 +144,7 @@ var Annotations = []Mapping{
 	// Literals
 	AnnotateType("RegExpLiteral",
 		FieldRoles{
-			"pattern": {Rename: uast.KeyToken},
+			"raw": {Rename: uast.KeyToken},
 		},
 		role.Expression, role.Literal, role.Regexp,
 	),
