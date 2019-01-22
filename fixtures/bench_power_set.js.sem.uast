@@ -1125,7 +1125,7 @@
                            col: 16,
                         },
                      },
-                     Format: "",
+                     Format: "single",
                      Value: "json2.js",
                   },
                ],

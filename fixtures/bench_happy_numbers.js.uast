@@ -1506,7 +1506,7 @@
                                  '@role': [Add, Arithmetic, Binary, Expression, Operator],
                               },
                               right: { '@type': "StringLiteral",
-                                 '@token': " ",
+                                 '@token': "\" \"",
                                  '@role': [Binary, Expression, Literal, Right, String],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
