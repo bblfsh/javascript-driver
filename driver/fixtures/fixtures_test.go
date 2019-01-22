@@ -8,6 +8,7 @@ import (
 	"gopkg.in/bblfsh/sdk.v2/driver"
 	"gopkg.in/bblfsh/sdk.v2/driver/fixtures"
 	"gopkg.in/bblfsh/sdk.v2/driver/native"
+	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
 )
 
 const projectRoot = "../../"
@@ -35,8 +36,26 @@ var Suite = &fixtures.Suite{
 			"FunctionDeclaration",
 		},
 	},
-	Docker: fixtures.DockerConfig{
-		Image: "node:8",
+	VerifyTokens: []positioner.VerifyToken{
+		{Types: []string{
+			// TODO(dennwc): issues with positions in native AST
+			//               in some cases a positional info of an
+			//               identifier covers the whole parameter
+			//               declaration
+
+			//"Identifier",
+
+			// TODO(dennwc): positions doesn't cover the "//" and "/*" tokens
+
+			// "CommentLine",
+			// "CommentBlock",
+
+			"StringLiteral",
+			"RegExpLiteral",
+			"StringLiteral",
+			"BooleanLiteral",
+			"NumericLiteral",
+		}},
 	},
 }
 

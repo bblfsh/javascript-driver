@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 20,
+   end: 29,
    loc: {
       end: {
          column: 0,
-         line: 3,
+         line: 4,
       },
       start: {
          column: 0,
@@ -82,9 +82,9 @@
             type: "ExpressionStatement",
          },
          {
-            end: 19,
+            end: 16,
             expression: {
-               end: 19,
+               end: 16,
                left: {
                   end: 10,
                   loc: {
@@ -92,19 +92,19 @@
                         column: 2,
                         line: 2,
                      },
-                     identifierName: "bc",
+                     identifierName: "u8",
                      start: {
                         column: 0,
                         line: 2,
                      },
                   },
-                  name: "bc",
+                  name: "u8",
                   start: 8,
                   type: "Identifier",
                },
                loc: {
                   end: {
-                     column: 11,
+                     column: 8,
                      line: 2,
                   },
                   start: {
@@ -114,14 +114,14 @@
                },
                operator: "=",
                right: {
-                  end: 19,
+                  end: 16,
                   extra: {
-                     raw: "\"b\\nc\"",
-                     rawValue: "b\nc",
+                     raw: "\"ё\"",
+                     rawValue: "ё",
                   },
                   loc: {
                      end: {
-                        column: 11,
+                        column: 8,
                         line: 2,
                      },
                      start: {
@@ -131,14 +131,14 @@
                   },
                   start: 13,
                   type: "StringLiteral",
-                  value: "b\nc",
+                  value: "ё",
                },
                start: 8,
                type: "AssignmentExpression",
             },
             loc: {
                end: {
-                  column: 11,
+                  column: 8,
                   line: 2,
                },
                start: {
@@ -149,13 +149,81 @@
             start: 8,
             type: "ExpressionStatement",
          },
+         {
+            end: 28,
+            expression: {
+               end: 28,
+               left: {
+                  end: 19,
+                  loc: {
+                     end: {
+                        column: 2,
+                        line: 3,
+                     },
+                     identifierName: "bc",
+                     start: {
+                        column: 0,
+                        line: 3,
+                     },
+                  },
+                  name: "bc",
+                  start: 17,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 11,
+                     line: 3,
+                  },
+                  start: {
+                     column: 0,
+                     line: 3,
+                  },
+               },
+               operator: "=",
+               right: {
+                  end: 28,
+                  extra: {
+                     raw: "\"b\\nc\"",
+                     rawValue: "b\nc",
+                  },
+                  loc: {
+                     end: {
+                        column: 11,
+                        line: 3,
+                     },
+                     start: {
+                        column: 5,
+                        line: 3,
+                     },
+                  },
+                  start: 22,
+                  type: "StringLiteral",
+                  value: "b\nc",
+               },
+               start: 17,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 11,
+                  line: 3,
+               },
+               start: {
+                  column: 0,
+                  line: 3,
+               },
+            },
+            start: 17,
+            type: "ExpressionStatement",
+         },
       ],
       directives: [],
-      end: 20,
+      end: 29,
       loc: {
          end: {
             column: 0,
-            line: 3,
+            line: 4,
          },
          start: {
             column: 0,
