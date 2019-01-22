@@ -20,14 +20,13 @@ var Native = Transformers([][]Transformer{
 	},
 }...)
 
-// Code is a special block of transformations that are applied at the end
-// and can access original source code file. It can be used to improve or
-// fix positional information.
-//
-// https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner
-var Code = []CodeTransformer{
-	positioner.NewFillLineColFromOffset(),
+// PreprocessCode is a preprocessor stage that can use the source code to
+// fix tokens and positional information.
+var PreprocessCode = []CodeTransformer{
+	positioner.FromOffset(),
 }
+
+var Code []CodeTransformer // TODO(dennwc): deprecated
 
 var (
 	unaryRoles = StringToRolesMap(map[string][]role.Role{

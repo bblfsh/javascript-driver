@@ -1109,7 +1109,7 @@
                },
                arguments: [
                   { '@type': "StringLiteral",
-                     '@token': "json2.js",
+                     '@token': "'json2.js'",
                      '@role': [Argument, Call, Expression, Literal, String],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",

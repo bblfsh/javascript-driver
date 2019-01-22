@@ -277,7 +277,7 @@
                                           },
                                           arguments: [
                                              { '@type': "StringLiteral",
-                                                '@token': "Door %d is open",
+                                                '@token': "\"Door %d is open\"",
                                                 '@role': [Argument, Call, Expression, Literal, String],
                                                 '@pos': { '@type': "uast:Positions",
                                                    start: { '@type': "uast:Position",

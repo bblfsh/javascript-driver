@@ -122,7 +122,7 @@
                            },
                            arguments: [
                               { '@type': "StringLiteral",
-                                 '@token': "",
+                                 '@token': "\"\"",
                                  '@role': [Argument, Call, Expression, Literal, String],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -199,7 +199,7 @@
                                        },
                                        arguments: [
                                           { '@type': "StringLiteral",
-                                             '@token': "",
+                                             '@token': "\"\"",
                                              '@role': [Argument, Call, Expression, Literal, String],
                                              '@pos': { '@type': "uast:Positions",
                                                 start: { '@type': "uast:Position",
@@ -386,7 +386,7 @@
                      },
                      arguments: [
                         { '@type': "StringLiteral",
-                           '@token': "ingirumimusnocteetconsumimurigni",
+                           '@token': "\"ingirumimusnocteetconsumimurigni\"",
                            '@role': [Argument, Call, Expression, Literal, String],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
