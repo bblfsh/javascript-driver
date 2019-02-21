@@ -64,6 +64,16 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{"extra": AnyNode(nil)}),
 		Part("_", Obj{}),
 	),
+	// FIXME(bzz): make sure such comments are mapped properly
+	Map(
+		Part("_", Obj{
+			uast.KeyType: String("ImportNamespaceSpecifier"),
+			"leadingComments": Any(),
+		}),
+		Part("_", Obj{
+			uast.KeyType: String("ImportNamespaceSpecifier"),
+		}),
+	),
 }
 
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
