@@ -158,6 +158,7 @@ var Normalizers = []Mapping{
 							uast.KeyPos: Var("local_pos"),
 							"Name":      Var("local"),
 							"Node": UASTType(uast.Identifier{}, Obj{
+								uast.KeyPos: Any(),
 								"Name": String("."),
 							}),
 						})),
@@ -218,7 +219,7 @@ var Normalizers = []Mapping{
 		Obj{
 			"Name": Var("local"),
 			"Node": UASTType(uast.Identifier{}, Obj{
-				uast.KeyPos: AnyNode(nil),
+				uast.KeyPos: Any(),
 				"Name":      String("."), // TODO: scope
 			}),
 		},
