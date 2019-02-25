@@ -87,8 +87,11 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
-		Obj{
-			"value": singleQuote{Var("val")},
+		Fields{
+			{Name: "value", Op: singleQuote{Var("val")}},
+			//FIXME(bzz): save both once we agree how
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Value":  Var("val"),
@@ -96,8 +99,11 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
-		Obj{
-			"value": Quote(Var("val")),
+		Fields{
+			{Name: "value", Op: Quote(Var("val"))},
+			//FIXME(bzz): save both once we agree how
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Value": Var("val"),
