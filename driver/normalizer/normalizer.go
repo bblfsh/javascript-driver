@@ -213,8 +213,10 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("ImportDefaultSpecifier", uast.Alias{}, MapObj(
-		Obj{
-			"local": Var("local"),
+		Fields{
+			{Name: "local", Op: Var("local")},
+			//FIXME(bzz): save this once we agree how
+			{Name: "leadingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Name": Var("local"),
