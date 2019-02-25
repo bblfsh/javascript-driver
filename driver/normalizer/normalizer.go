@@ -116,9 +116,11 @@ var Normalizers = []Mapping{
 		CommentNode(true, "comm", nil),
 	)),
 	MapSemantic("BlockStatement", uast.Block{}, MapObj(
-		Obj{
-			"body":       Var("stmts"),
-			"directives": Arr(), // TODO: find an example
+		Fields{
+			{Name: "body", Op: Var("stmts")},
+			{Name: "directives", Op: Arr()}, // TODO: find an example
+			//FIXME(bzz): save this once we agree how
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Statements": Var("stmts"),
