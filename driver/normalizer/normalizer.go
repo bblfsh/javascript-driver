@@ -137,16 +137,25 @@ var Normalizers = []Mapping{
 			{Name: "source", Op: Var("path")},
 			// empty un-used array
 			{Name: "specifiers", Drop: true, Op: Arr()},
+			// FIXME(bzz): make sure such comments are linked properly
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Path": Var("path"),
 		},
 	)),
+	// importKind switch, set only by flow plugin
+	// https://github.com/babel/babel/blob/master/packages/babel-parser/ast/spec.md#importdeclaration
+	// TODO(bzz): this mapping misses 'typeof' case
 	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
 		CasesObj("case",
 			// common
-			Obj{
-				"source": Var("path"),
+			Fields{
+				{Name: "source", Op: Var("path")},
+				// FIXME(bzz): make sure such comments are linked properly
+				{Name: "leadingComments", Drop: true, Op: Any()},
+				{Name: "trailingComments", Drop: true, Op: Any()},
 			},
 			Objs{
 				// namespace
