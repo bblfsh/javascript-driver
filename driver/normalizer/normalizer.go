@@ -133,9 +133,10 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
-		Obj{
-			"source":     Var("path"),
-			"specifiers": Arr(),
+		Fields{
+			{Name: "source", Op: Var("path")},
+			// empty un-used array
+			{Name: "specifiers", Drop: true, Op: Arr()},
 		},
 		Obj{
 			"Path": Var("path"),
