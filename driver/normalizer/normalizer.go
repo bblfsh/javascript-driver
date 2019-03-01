@@ -83,6 +83,8 @@ var Normalizers = []Mapping{
 			{Name: "name", Op: Var("name")},
 			//FIXME(bzz): map Flow variable types properly
 			{Name: "typeAnnotation", Drop: true, Op: Any()},
+			//FIXME(bzz): map Flow "Optional Prameter" properly
+			{Name: "optional", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Name": Var("name"),
