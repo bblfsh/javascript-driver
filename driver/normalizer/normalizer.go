@@ -79,8 +79,10 @@ var Preprocessors = []Mapping{
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
 var Normalizers = []Mapping{
 	MapSemantic("Identifier", uast.Identifier{}, MapObj(
-		Obj{
-			"name": Var("name"),
+		Fields{
+			{Name: "name", Op: Var("name")},
+			//FIXME(bzz): map Flow variable types properly
+			{Name: "typeAnnotation", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Name": Var("name"),
