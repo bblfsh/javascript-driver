@@ -252,12 +252,18 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("FunctionDeclaration", uast.FunctionGroup{}, MapObj(
-		Obj{
-			"id":        Var("name"),
-			"generator": Var("gen"),   // FIXME: define channels in SDK? or return a function?
-			"async":     Var("async"), // TODO: async
-			"body":      Var("body"),
-			"params": Each("params", Cases("param_case",
+		Fields{
+			{Name: "id", Op: Var("name")},
+			{Name: "generator", Op: Var("gen")}, // FIXME: define channels in SDK? or return a function?
+			{Name: "async", Op: Var("async")},   // TODO: async
+			{Name: "body", Op: Var("body")},
+			//FIXME(bzz): map predicate properly
+			{Name: "predicate", Drop: true, Op: Any()},
+			//FIXME(bzz): map Flow return type annotations
+			{Name: "returnType", Drop: true, Op: Any()},
+			//FIXME(bzz): map Flow argument type annotations
+			{Name: "typeParameters", Drop: true, Op: Any()},
+			{Name: "params", Op: Each("params", Cases("param_case",
 				// Identifier
 				Check(
 					HasType(uast.Identifier{}),
@@ -276,7 +282,7 @@ var Normalizers = []Mapping{
 					uast.KeyPos:  Var("arg_pos"),
 					"argument":   Var("arg_name"),
 				},
-			)),
+			))},
 		},
 		Obj{
 			"Nodes": Arr(
