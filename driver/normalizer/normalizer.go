@@ -37,9 +37,12 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
 			"value":      AnyNode(nil),
-			"extra": Obj{
-				"raw":      Var("raw"),
-				"rawValue": AnyNode(nil),
+			"extra": Fields{
+				{Name: "raw", Op: Var("raw")},
+				{Name: "rawValue", Op: Any()},
+				//FIXME(bzz): map parenthesis
+				{Name: "parenthesized", Drop: true, Op: Any()},
+				{Name: "parenStart", Drop: true, Op: Any()},
 			},
 		}),
 		Part("_", Obj{
@@ -50,8 +53,11 @@ var Preprocessors = []Mapping{
 	Map(
 		Part("_", Obj{
 			uast.KeyType: String("RegExpLiteral"),
-			"extra": Obj{
-				"raw": Var("raw"),
+			"extra": Fields{
+				{Name: "raw", Op: Var("raw")},
+				//FIXME(bzz): map parenthesis
+				{Name: "parenthesized", Drop: true, Op: Any()},
+				{Name: "parenStart", Drop: true, Op: Any()},
 			},
 		}),
 		Part("_", Obj{
@@ -61,7 +67,7 @@ var Preprocessors = []Mapping{
 	),
 	// drop extra info for other nodes (it duplicates other node fields)
 	Map(
-		Part("_", Obj{"extra": AnyNode(nil)}),
+		Part("_", Obj{"extra": Any()}),
 		Part("_", Obj{}),
 	),
 	// FIXME(bzz): make sure such comments are mapped properly
