@@ -70,16 +70,6 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{"extra": Any()}),
 		Part("_", Obj{}),
 	),
-	// FIXME(bzz): make sure such comments are mapped properly
-	Map(
-		Part("_", Obj{
-			uast.KeyType: String("ImportNamespaceSpecifier"),
-			"leadingComments": Any(),
-		}),
-		Part("_", Obj{
-			uast.KeyType: String("ImportNamespaceSpecifier"),
-		}),
-	),
 }
 
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
@@ -174,11 +164,14 @@ var Normalizers = []Mapping{
 				// namespace
 				{
 					"importKind": String("value"),
-					"specifiers": ArrWith(Var("names"), Obj{
+					"specifiers": ArrWith(Var("names"), Fields{
 						//uast.KeyType: Var("spec_type"),
-						uast.KeyType: String("ImportNamespaceSpecifier"),
-						uast.KeyPos:  Var("local_pos"),
-						"local":      Var("local"),
+						{Name: uast.KeyType, Op: String("ImportNamespaceSpecifier")},
+						{Name: uast.KeyPos, Op: Var("local_pos")},
+						{Name: "local", Op: Var("local")},
+						// FIXME(bzz): make sure such comments are linked properly
+						{Name: "leadingComments", Drop: true, Op: Any()},
+						{Name: "trailingComments", Drop: true, Op: Any()},
 					}),
 				},
 				// specific type
