@@ -1,10 +1,43 @@
 {
-   comments: [],
-   end: 45,
+   comments: [
+      {
+         end: 17,
+         loc: {
+            end: {
+               column: 17,
+               line: 1,
+            },
+            start: {
+               column: 0,
+               line: 1,
+            },
+         },
+         start: 0,
+         type: "CommentLine",
+         value: " comment before",
+      },
+      {
+         end: 79,
+         loc: {
+            end: {
+               column: 16,
+               line: 3,
+            },
+            start: {
+               column: 0,
+               line: 3,
+            },
+         },
+         start: 63,
+         type: "CommentLine",
+         value: " comment after",
+      },
+   ],
+   end: 79,
    loc: {
       end: {
-         column: 0,
-         line: 2,
+         column: 16,
+         line: 3,
       },
       start: {
          column: 0,
@@ -20,164 +53,184 @@
                   {
                      declarations: [
                         {
-                           end: 41,
+                           end: 59,
                            id: {
-                              end: 37,
+                              end: 55,
                               loc: {
                                  end: {
                                     column: 37,
-                                    line: 1,
+                                    line: 2,
                                  },
                                  identifierName: "x",
                                  start: {
                                     column: 36,
-                                    line: 1,
+                                    line: 2,
                                  },
                               },
                               name: "x",
-                              start: 36,
+                              start: 54,
                               type: "Identifier",
                            },
                            init: {
-                              end: 41,
+                              end: 59,
                               loc: {
                                  end: {
                                     column: 41,
-                                    line: 1,
+                                    line: 2,
                                  },
                                  identifierName: "a",
                                  start: {
                                     column: 40,
-                                    line: 1,
+                                    line: 2,
                                  },
                               },
                               name: "a",
-                              start: 40,
+                              start: 58,
                               type: "Identifier",
                            },
                            loc: {
                               end: {
                                  column: 41,
-                                 line: 1,
+                                 line: 2,
                               },
                               start: {
                                  column: 36,
-                                 line: 1,
+                                 line: 2,
                               },
                            },
-                           start: 36,
+                           start: 54,
                            type: "VariableDeclarator",
                         },
                      ],
-                     end: 42,
+                     end: 60,
                      kind: "let",
                      loc: {
                         end: {
                            column: 42,
-                           line: 1,
+                           line: 2,
                         },
                         start: {
                            column: 32,
-                           line: 1,
+                           line: 2,
                         },
                      },
-                     start: 32,
+                     start: 50,
                      type: "VariableDeclaration",
                   },
                ],
                directives: [],
-               end: 44,
+               end: 62,
                loc: {
                   end: {
                      column: 44,
-                     line: 1,
+                     line: 2,
                   },
                   start: {
                      column: 30,
-                     line: 1,
+                     line: 2,
                   },
                },
-               start: 30,
+               start: 48,
+               trailingComments: ~,
                type: "BlockStatement",
             },
-            end: 44,
+            end: 62,
             generator: false,
             id: {
-               end: 10,
+               end: 28,
+               leadingComments: ~,
                loc: {
                   end: {
                      column: 10,
-                     line: 1,
+                     line: 2,
                   },
                   identifierName: "f",
                   start: {
                      column: 9,
-                     line: 1,
+                     line: 2,
                   },
                },
                name: "f",
-               start: 9,
+               start: 27,
                type: "Identifier",
             },
+            leadingComments: [
+               {
+                  end: 17,
+                  loc: {
+                     end: {
+                        column: 17,
+                        line: 1,
+                     },
+                     start: {
+                        column: 0,
+                        line: 1,
+                     },
+                  },
+                  start: 0,
+                  type: "CommentLine",
+                  value: " comment before",
+               },
+            ],
             loc: {
                end: {
                   column: 44,
-                  line: 1,
+                  line: 2,
                },
                start: {
                   column: 0,
-                  line: 1,
+                  line: 2,
                },
             },
             params: [
                {
-                  end: 12,
+                  end: 30,
                   loc: {
                      end: {
                         column: 12,
-                        line: 1,
+                        line: 2,
                      },
                      identifierName: "a",
                      start: {
                         column: 11,
-                        line: 1,
+                        line: 2,
                      },
                   },
                   name: "a",
-                  start: 11,
+                  start: 29,
                   type: "Identifier",
                },
                {
-                  end: 19,
+                  end: 37,
                   left: {
-                     end: 15,
+                     end: 33,
                      loc: {
                         end: {
                            column: 15,
-                           line: 1,
+                           line: 2,
                         },
                         identifierName: "b",
                         start: {
                            column: 14,
-                           line: 1,
+                           line: 2,
                         },
                      },
                      name: "b",
-                     start: 14,
+                     start: 32,
                      type: "Identifier",
                   },
                   loc: {
                      end: {
                         column: 19,
-                        line: 1,
+                        line: 2,
                      },
                      start: {
                         column: 14,
-                        line: 1,
+                        line: 2,
                      },
                   },
                   right: {
-                     end: 19,
+                     end: 37,
                      extra: {
                         raw: "0",
                         rawValue: 0,
@@ -185,63 +238,81 @@
                      loc: {
                         end: {
                            column: 19,
-                           line: 1,
+                           line: 2,
                         },
                         start: {
                            column: 18,
-                           line: 1,
+                           line: 2,
                         },
                      },
-                     start: 18,
+                     start: 36,
                      type: "NumericLiteral",
                      value: 0,
                   },
-                  start: 14,
+                  start: 32,
                   type: "AssignmentPattern",
                },
                {
                   argument: {
-                     end: 28,
+                     end: 46,
                      loc: {
                         end: {
                            column: 28,
-                           line: 1,
+                           line: 2,
                         },
                         identifierName: "rest",
                         start: {
                            column: 24,
-                           line: 1,
+                           line: 2,
                         },
                      },
                      name: "rest",
-                     start: 24,
+                     start: 42,
                      type: "Identifier",
                   },
-                  end: 28,
+                  end: 46,
                   loc: {
                      end: {
                         column: 28,
-                        line: 1,
+                        line: 2,
                      },
                      start: {
                         column: 21,
-                        line: 1,
+                        line: 2,
                      },
                   },
-                  start: 21,
+                  start: 39,
                   type: "RestElement",
                },
             ],
-            start: 0,
+            start: 18,
+            trailingComments: [
+               {
+                  end: 79,
+                  loc: {
+                     end: {
+                        column: 16,
+                        line: 3,
+                     },
+                     start: {
+                        column: 0,
+                        line: 3,
+                     },
+                  },
+                  start: 63,
+                  type: "CommentLine",
+                  value: " comment after",
+               },
+            ],
             type: "FunctionDeclaration",
          },
       ],
       directives: [],
-      end: 45,
+      end: 79,
       loc: {
          end: {
-            column: 0,
-            line: 2,
+            column: 16,
+            line: 3,
          },
          start: {
             column: 0,

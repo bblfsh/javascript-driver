@@ -249,6 +249,7 @@ var Normalizers = []Mapping{
 			{Name: "local", Op: Var("local")},
 			//FIXME(bzz): save this once we agree how
 			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Name": Var("local"),
@@ -270,6 +271,9 @@ var Normalizers = []Mapping{
 			{Name: "returnType", Drop: true, Op: Any()},
 			//FIXME(bzz): map Flow argument type annotations
 			{Name: "typeParameters", Drop: true, Op: Any()},
+			// FIXME(bzz): make sure such comments are linked properly
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 			{Name: "params", Op: Each("params", Cases("param_case",
 				// Identifier
 				Check(
