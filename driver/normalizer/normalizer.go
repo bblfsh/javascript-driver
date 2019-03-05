@@ -89,6 +89,14 @@ var Normalizers = []Mapping{
 			"Name": Var("name"),
 		},
 	)),
+	MapSemantic("JSXIdentifier", uast.Identifier{}, MapObj(
+		Obj{
+			"name": Var("name"),
+		},
+		Obj{
+			"Name": Var("name"),
+		},
+	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
 			{Name: "value", Op: singleQuote{Var("val")}},

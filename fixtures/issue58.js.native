@@ -1,0 +1,484 @@
+{
+   comments: [],
+   end: 168,
+   loc: {
+      end: {
+         column: 0,
+         line: 10,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            body: {
+               body: [
+                  {
+                     async: false,
+                     body: {
+                        body: [
+                           {
+                              argument: {
+                                 children: [
+                                    {
+                                       end: 101,
+                                       extra: {
+                                          raw: "\n          ",
+                                          rawValue: "\n          ",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 10,
+                                             line: 5,
+                                          },
+                                          start: {
+                                             column: 14,
+                                             line: 4,
+                                          },
+                                       },
+                                       start: 90,
+                                       type: "JSXText",
+                                       value: "\n          ",
+                                    },
+                                    {
+                                       children: [
+                                          {
+                                             end: 125,
+                                             extra: {
+                                                raw: "text",
+                                                rawValue: "text",
+                                             },
+                                             loc: {
+                                                end: {
+                                                   column: 34,
+                                                   line: 5,
+                                                },
+                                                start: {
+                                                   column: 30,
+                                                   line: 5,
+                                                },
+                                             },
+                                             start: 121,
+                                             type: "JSXText",
+                                             value: "text",
+                                          },
+                                       ],
+                                       closingElement: {
+                                          end: 132,
+                                          loc: {
+                                             end: {
+                                                column: 41,
+                                                line: 5,
+                                             },
+                                             start: {
+                                                column: 34,
+                                                line: 5,
+                                             },
+                                          },
+                                          name: {
+                                             end: 131,
+                                             loc: {
+                                                end: {
+                                                   column: 40,
+                                                   line: 5,
+                                                },
+                                                start: {
+                                                   column: 36,
+                                                   line: 5,
+                                                },
+                                             },
+                                             name: "Text",
+                                             start: 127,
+                                             type: "JSXIdentifier",
+                                          },
+                                          start: 125,
+                                          type: "JSXClosingElement",
+                                       },
+                                       end: 132,
+                                       loc: {
+                                          end: {
+                                             column: 41,
+                                             line: 5,
+                                          },
+                                          start: {
+                                             column: 10,
+                                             line: 5,
+                                          },
+                                       },
+                                       openingElement: {
+                                          attributes: [
+                                             {
+                                                end: 120,
+                                                loc: {
+                                                   end: {
+                                                      column: 29,
+                                                      line: 5,
+                                                   },
+                                                   start: {
+                                                      column: 16,
+                                                      line: 5,
+                                                   },
+                                                },
+                                                name: {
+                                                   end: 113,
+                                                   loc: {
+                                                      end: {
+                                                         column: 22,
+                                                         line: 5,
+                                                      },
+                                                      start: {
+                                                         column: 16,
+                                                         line: 5,
+                                                      },
+                                                   },
+                                                   name: "testID",
+                                                   start: 107,
+                                                   type: "JSXIdentifier",
+                                                },
+                                                start: 107,
+                                                type: "JSXAttribute",
+                                                value: {
+                                                   end: 120,
+                                                   extra: {
+                                                      raw: "\"Text\"",
+                                                      rawValue: "Text",
+                                                   },
+                                                   loc: {
+                                                      end: {
+                                                         column: 29,
+                                                         line: 5,
+                                                      },
+                                                      start: {
+                                                         column: 23,
+                                                         line: 5,
+                                                      },
+                                                   },
+                                                   start: 114,
+                                                   type: "StringLiteral",
+                                                   value: "Text",
+                                                },
+                                             },
+                                          ],
+                                          end: 121,
+                                          loc: {
+                                             end: {
+                                                column: 30,
+                                                line: 5,
+                                             },
+                                             start: {
+                                                column: 10,
+                                                line: 5,
+                                             },
+                                          },
+                                          name: {
+                                             end: 106,
+                                             loc: {
+                                                end: {
+                                                   column: 15,
+                                                   line: 5,
+                                                },
+                                                start: {
+                                                   column: 11,
+                                                   line: 5,
+                                                },
+                                             },
+                                             name: "Text",
+                                             start: 102,
+                                             type: "JSXIdentifier",
+                                          },
+                                          selfClosing: false,
+                                          start: 101,
+                                          type: "JSXOpeningElement",
+                                       },
+                                       start: 101,
+                                       type: "JSXElement",
+                                    },
+                                    {
+                                       end: 141,
+                                       extra: {
+                                          raw: "\n        ",
+                                          rawValue: "\n        ",
+                                       },
+                                       loc: {
+                                          end: {
+                                             column: 8,
+                                             line: 6,
+                                          },
+                                          start: {
+                                             column: 41,
+                                             line: 5,
+                                          },
+                                       },
+                                       start: 132,
+                                       type: "JSXText",
+                                       value: "\n        ",
+                                    },
+                                 ],
+                                 closingElement: {
+                                    end: 148,
+                                    loc: {
+                                       end: {
+                                          column: 15,
+                                          line: 6,
+                                       },
+                                       start: {
+                                          column: 8,
+                                          line: 6,
+                                       },
+                                    },
+                                    name: {
+                                       end: 147,
+                                       loc: {
+                                          end: {
+                                             column: 14,
+                                             line: 6,
+                                          },
+                                          start: {
+                                             column: 10,
+                                             line: 6,
+                                          },
+                                       },
+                                       name: "View",
+                                       start: 143,
+                                       type: "JSXIdentifier",
+                                    },
+                                    start: 141,
+                                    type: "JSXClosingElement",
+                                 },
+                                 end: 148,
+                                 extra: {
+                                    parenStart: 74,
+                                    parenthesized: true,
+                                 },
+                                 loc: {
+                                    end: {
+                                       column: 15,
+                                       line: 6,
+                                    },
+                                    start: {
+                                       column: 8,
+                                       line: 4,
+                                    },
+                                 },
+                                 openingElement: {
+                                    attributes: [],
+                                    end: 90,
+                                    loc: {
+                                       end: {
+                                          column: 14,
+                                          line: 4,
+                                       },
+                                       start: {
+                                          column: 8,
+                                          line: 4,
+                                       },
+                                    },
+                                    name: {
+                                       end: 89,
+                                       loc: {
+                                          end: {
+                                             column: 13,
+                                             line: 4,
+                                          },
+                                          start: {
+                                             column: 9,
+                                             line: 4,
+                                          },
+                                       },
+                                       name: "View",
+                                       start: 85,
+                                       type: "JSXIdentifier",
+                                    },
+                                    selfClosing: false,
+                                    start: 84,
+                                    type: "JSXOpeningElement",
+                                 },
+                                 start: 84,
+                                 type: "JSXElement",
+                              },
+                              end: 157,
+                              loc: {
+                                 end: {
+                                    column: 8,
+                                    line: 7,
+                                 },
+                                 start: {
+                                    column: 6,
+                                    line: 3,
+                                 },
+                              },
+                              start: 67,
+                              type: "ReturnStatement",
+                           },
+                        ],
+                        directives: [],
+                        end: 163,
+                        loc: {
+                           end: {
+                              column: 5,
+                              line: 8,
+                           },
+                           start: {
+                              column: 13,
+                              line: 2,
+                           },
+                        },
+                        start: 59,
+                        type: "BlockStatement",
+                     },
+                     computed: false,
+                     end: 163,
+                     generator: false,
+                     id: ~,
+                     key: {
+                        end: 56,
+                        loc: {
+                           end: {
+                              column: 10,
+                              line: 2,
+                           },
+                           identifierName: "render",
+                           start: {
+                              column: 4,
+                              line: 2,
+                           },
+                        },
+                        name: "render",
+                        start: 50,
+                        type: "Identifier",
+                     },
+                     kind: "method",
+                     loc: {
+                        end: {
+                           column: 5,
+                           line: 8,
+                        },
+                        start: {
+                           column: 4,
+                           line: 2,
+                        },
+                     },
+                     params: [],
+                     start: 50,
+                     static: false,
+                     type: "ClassMethod",
+                  },
+               ],
+               end: 167,
+               loc: {
+                  end: {
+                     column: 3,
+                     line: 9,
+                  },
+                  start: {
+                     column: 44,
+                     line: 1,
+                  },
+               },
+               start: 44,
+               type: "ClassBody",
+            },
+            end: 167,
+            id: {
+               end: 19,
+               loc: {
+                  end: {
+                     column: 19,
+                     line: 1,
+                  },
+                  identifierName: "TestIdTestApp",
+                  start: {
+                     column: 6,
+                     line: 1,
+                  },
+               },
+               name: "TestIdTestApp",
+               start: 6,
+               type: "Identifier",
+            },
+            loc: {
+               end: {
+                  column: 3,
+                  line: 9,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            start: 0,
+            superClass: {
+               computed: false,
+               end: 43,
+               loc: {
+                  end: {
+                     column: 43,
+                     line: 1,
+                  },
+                  start: {
+                     column: 28,
+                     line: 1,
+                  },
+               },
+               object: {
+                  end: 33,
+                  loc: {
+                     end: {
+                        column: 33,
+                        line: 1,
+                     },
+                     identifierName: "React",
+                     start: {
+                        column: 28,
+                        line: 1,
+                     },
+                  },
+                  name: "React",
+                  start: 28,
+                  type: "Identifier",
+               },
+               property: {
+                  end: 43,
+                  loc: {
+                     end: {
+                        column: 43,
+                        line: 1,
+                     },
+                     identifierName: "Component",
+                     start: {
+                        column: 34,
+                        line: 1,
+                     },
+                  },
+                  name: "Component",
+                  start: 34,
+                  type: "Identifier",
+               },
+               start: 28,
+               type: "MemberExpression",
+            },
+            type: "ClassDeclaration",
+         },
+      ],
+      directives: [],
+      end: 168,
+      loc: {
+         end: {
+            column: 0,
+            line: 10,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}
