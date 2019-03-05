@@ -40,7 +40,7 @@ var Preprocessors = []Mapping{
 			"extra": Fields{
 				{Name: "raw", Op: Var("raw")},
 				{Name: "rawValue", Op: Any()},
-				//FIXME(bzz): map parenthesis
+				//TODO(bzz): make sure parenthesis mapping is consistent \w other drivers
 				{Name: "parenthesized", Drop: true, Op: Any()},
 				{Name: "parenStart", Drop: true, Op: Any()},
 			},
@@ -55,7 +55,7 @@ var Preprocessors = []Mapping{
 			uast.KeyType: String("RegExpLiteral"),
 			"extra": Fields{
 				{Name: "raw", Op: Var("raw")},
-				//FIXME(bzz): map parenthesis
+				//TODO(bzz): make sure parenthesis mapping is consistent \w other drivers
 				{Name: "parenthesized", Drop: true, Op: Any()},
 				{Name: "parenStart", Drop: true, Op: Any()},
 			},
@@ -265,11 +265,15 @@ var Normalizers = []Mapping{
 			{Name: "generator", Op: Var("gen")}, // FIXME: define channels in SDK? or return a function?
 			{Name: "async", Op: Var("async")},   // TODO: async
 			{Name: "body", Op: Var("body")},
-			//FIXME(bzz): map predicate properly
+			//FIXME(bzz): map Flow predicate properly
+			// https://flow.org/en/docs/types/functions/#toc-predicate-functions
 			{Name: "predicate", Drop: true, Op: Any()},
 			//FIXME(bzz): map Flow return type annotations
+			// https://flow.org/en/docs/types/functions/#toc-function-returns
 			{Name: "returnType", Drop: true, Op: Any()},
-			//FIXME(bzz): map Flow argument type annotations
+			//FIXME(bzz): map Flow generic types annotations
+			// https://flow.org/en/docs/types/generics/
+			// see fixtures/ext_typedecl.js#34 func makeWeakCache
 			{Name: "typeParameters", Drop: true, Op: Any()},
 			// FIXME(bzz): make sure such comments are linked properly
 			{Name: "leadingComments", Drop: true, Op: Any()},
