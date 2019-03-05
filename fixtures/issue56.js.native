@@ -1,0 +1,437 @@
+{
+   comments: [],
+   end: 158,
+   loc: {
+      end: {
+         column: 0,
+         line: 4,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            end: 157,
+            expression: {
+               end: 156,
+               left: {
+                  computed: false,
+                  end: 35,
+                  loc: {
+                     end: {
+                        column: 35,
+                        line: 1,
+                     },
+                     start: {
+                        column: 0,
+                        line: 1,
+                     },
+                  },
+                  object: {
+                     end: 4,
+                     loc: {
+                        end: {
+                           column: 4,
+                           line: 1,
+                        },
+                        start: {
+                           column: 0,
+                           line: 1,
+                        },
+                     },
+                     start: 0,
+                     type: "ThisExpression",
+                  },
+                  property: {
+                     end: 35,
+                     loc: {
+                        end: {
+                           column: 35,
+                           line: 1,
+                        },
+                        identifierName: "_dayOfMonthOrdinalParseLenient",
+                        start: {
+                           column: 5,
+                           line: 1,
+                        },
+                     },
+                     name: "_dayOfMonthOrdinalParseLenient",
+                     start: 5,
+                     type: "Identifier",
+                  },
+                  start: 0,
+                  type: "MemberExpression",
+               },
+               loc: {
+                  end: {
+                     column: 33,
+                     line: 3,
+                  },
+                  start: {
+                     column: 0,
+                     line: 1,
+                  },
+               },
+               operator: "=",
+               right: {
+                  arguments: [
+                     {
+                        end: 155,
+                        left: {
+                           end: 134,
+                           left: {
+                              end: 119,
+                              extra: {
+                                 parenStart: 54,
+                                 parenthesized: true,
+                              },
+                              left: {
+                                 computed: false,
+                                 end: 90,
+                                 loc: {
+                                    end: {
+                                       column: 40,
+                                       line: 2,
+                                    },
+                                    start: {
+                                       column: 5,
+                                       line: 2,
+                                    },
+                                 },
+                                 object: {
+                                    computed: false,
+                                    end: 83,
+                                    loc: {
+                                       end: {
+                                          column: 33,
+                                          line: 2,
+                                       },
+                                       start: {
+                                          column: 5,
+                                          line: 2,
+                                       },
+                                    },
+                                    object: {
+                                       end: 59,
+                                       loc: {
+                                          end: {
+                                             column: 9,
+                                             line: 2,
+                                          },
+                                          start: {
+                                             column: 5,
+                                             line: 2,
+                                          },
+                                       },
+                                       start: 55,
+                                       type: "ThisExpression",
+                                    },
+                                    property: {
+                                       end: 83,
+                                       loc: {
+                                          end: {
+                                             column: 33,
+                                             line: 2,
+                                          },
+                                          identifierName: "_dayOfMonthOrdinalParse",
+                                          start: {
+                                             column: 10,
+                                             line: 2,
+                                          },
+                                       },
+                                       name: "_dayOfMonthOrdinalParse",
+                                       start: 60,
+                                       type: "Identifier",
+                                    },
+                                    start: 55,
+                                    type: "MemberExpression",
+                                 },
+                                 property: {
+                                    end: 90,
+                                    loc: {
+                                       end: {
+                                          column: 40,
+                                          line: 2,
+                                       },
+                                       identifierName: "source",
+                                       start: {
+                                          column: 34,
+                                          line: 2,
+                                       },
+                                    },
+                                    name: "source",
+                                    start: 84,
+                                    type: "Identifier",
+                                 },
+                                 start: 55,
+                                 type: "MemberExpression",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 69,
+                                    line: 2,
+                                 },
+                                 start: {
+                                    column: 5,
+                                    line: 2,
+                                 },
+                              },
+                              operator: "||",
+                              right: {
+                                 computed: false,
+                                 end: 119,
+                                 loc: {
+                                    end: {
+                                       column: 69,
+                                       line: 2,
+                                    },
+                                    start: {
+                                       column: 44,
+                                       line: 2,
+                                    },
+                                 },
+                                 object: {
+                                    computed: false,
+                                    end: 112,
+                                    loc: {
+                                       end: {
+                                          column: 62,
+                                          line: 2,
+                                       },
+                                       start: {
+                                          column: 44,
+                                          line: 2,
+                                       },
+                                    },
+                                    object: {
+                                       end: 98,
+                                       loc: {
+                                          end: {
+                                             column: 48,
+                                             line: 2,
+                                          },
+                                          start: {
+                                             column: 44,
+                                             line: 2,
+                                          },
+                                       },
+                                       start: 94,
+                                       type: "ThisExpression",
+                                    },
+                                    property: {
+                                       end: 112,
+                                       loc: {
+                                          end: {
+                                             column: 62,
+                                             line: 2,
+                                          },
+                                          identifierName: "_ordinalParse",
+                                          start: {
+                                             column: 49,
+                                             line: 2,
+                                          },
+                                       },
+                                       name: "_ordinalParse",
+                                       start: 99,
+                                       type: "Identifier",
+                                    },
+                                    start: 94,
+                                    type: "MemberExpression",
+                                 },
+                                 property: {
+                                    end: 119,
+                                    loc: {
+                                       end: {
+                                          column: 69,
+                                          line: 2,
+                                       },
+                                       identifierName: "source",
+                                       start: {
+                                          column: 63,
+                                          line: 2,
+                                       },
+                                    },
+                                    name: "source",
+                                    start: 113,
+                                    type: "Identifier",
+                                 },
+                                 start: 94,
+                                 type: "MemberExpression",
+                              },
+                              start: 55,
+                              type: "LogicalExpression",
+                           },
+                           loc: {
+                              end: {
+                                 column: 11,
+                                 line: 3,
+                              },
+                              start: {
+                                 column: 4,
+                                 line: 2,
+                              },
+                           },
+                           operator: "+",
+                           right: {
+                              end: 134,
+                              extra: {
+                                 raw: "'|'",
+                                 rawValue: "|",
+                              },
+                              loc: {
+                                 end: {
+                                    column: 11,
+                                    line: 3,
+                                 },
+                                 start: {
+                                    column: 8,
+                                    line: 3,
+                                 },
+                              },
+                              start: 131,
+                              type: "StringLiteral",
+                              value: "|",
+                           },
+                           start: 54,
+                           type: "BinaryExpression",
+                        },
+                        loc: {
+                           end: {
+                              column: 32,
+                              line: 3,
+                           },
+                           start: {
+                              column: 4,
+                              line: 2,
+                           },
+                        },
+                        operator: "+",
+                        right: {
+                           computed: false,
+                           end: 155,
+                           loc: {
+                              end: {
+                                 column: 32,
+                                 line: 3,
+                              },
+                              start: {
+                                 column: 14,
+                                 line: 3,
+                              },
+                           },
+                           object: {
+                              end: 147,
+                              extra: {
+                                 parenStart: 137,
+                                 parenthesized: true,
+                                 raw: "/\\d{1,2}/",
+                              },
+                              flags: "",
+                              loc: {
+                                 end: {
+                                    column: 24,
+                                    line: 3,
+                                 },
+                                 start: {
+                                    column: 15,
+                                    line: 3,
+                                 },
+                              },
+                              pattern: "\\d{1,2}",
+                              start: 138,
+                              type: "RegExpLiteral",
+                           },
+                           property: {
+                              end: 155,
+                              loc: {
+                                 end: {
+                                    column: 32,
+                                    line: 3,
+                                 },
+                                 identifierName: "source",
+                                 start: {
+                                    column: 26,
+                                    line: 3,
+                                 },
+                              },
+                              name: "source",
+                              start: 149,
+                              type: "Identifier",
+                           },
+                           start: 137,
+                           type: "MemberExpression",
+                        },
+                        start: 54,
+                        type: "BinaryExpression",
+                     },
+                  ],
+                  callee: {
+                     end: 48,
+                     loc: {
+                        end: {
+                           column: 48,
+                           line: 1,
+                        },
+                        identifierName: "RegExp",
+                        start: {
+                           column: 42,
+                           line: 1,
+                        },
+                     },
+                     name: "RegExp",
+                     start: 42,
+                     type: "Identifier",
+                  },
+                  end: 156,
+                  loc: {
+                     end: {
+                        column: 33,
+                        line: 3,
+                     },
+                     start: {
+                        column: 38,
+                        line: 1,
+                     },
+                  },
+                  start: 38,
+                  type: "NewExpression",
+               },
+               start: 0,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 34,
+                  line: 3,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            start: 0,
+            type: "ExpressionStatement",
+         },
+      ],
+      directives: [],
+      end: 158,
+      loc: {
+         end: {
+            column: 0,
+            line: 4,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}

@@ -125,6 +125,7 @@
                         col: 18,
                      },
                   },
+                  leadingComments: ~,
                   local: { '@type': "Identifier",
                      '@token': "React",
                      '@role': [Expression, Identifier, Import],

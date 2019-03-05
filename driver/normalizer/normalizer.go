@@ -37,9 +37,12 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
 			"value":      AnyNode(nil),
-			"extra": Obj{
-				"raw":      Var("raw"),
-				"rawValue": AnyNode(nil),
+			"extra": Fields{
+				{Name: "raw", Op: Var("raw")},
+				{Name: "rawValue", Op: Any()},
+				//TODO(bzz): make sure parenthesis mapping is consistent \w other drivers
+				{Name: "parenthesized", Drop: true, Op: Any()},
+				{Name: "parenStart", Drop: true, Op: Any()},
 			},
 		}),
 		Part("_", Obj{
@@ -50,8 +53,11 @@ var Preprocessors = []Mapping{
 	Map(
 		Part("_", Obj{
 			uast.KeyType: String("RegExpLiteral"),
-			"extra": Obj{
-				"raw": Var("raw"),
+			"extra": Fields{
+				{Name: "raw", Op: Var("raw")},
+				//TODO(bzz): make sure parenthesis mapping is consistent \w other drivers
+				{Name: "parenthesized", Drop: true, Op: Any()},
+				{Name: "parenStart", Drop: true, Op: Any()},
 			},
 		}),
 		Part("_", Obj{
@@ -61,24 +67,29 @@ var Preprocessors = []Mapping{
 	),
 	// drop extra info for other nodes (it duplicates other node fields)
 	Map(
-		Part("_", Obj{"extra": AnyNode(nil)}),
+		Part("_", Obj{"extra": Any()}),
 		Part("_", Obj{}),
-	),
-	// FIXME(bzz): make sure such comments are mapped properly
-	Map(
-		Part("_", Obj{
-			uast.KeyType: String("ImportNamespaceSpecifier"),
-			"leadingComments": Any(),
-		}),
-		Part("_", Obj{
-			uast.KeyType: String("ImportNamespaceSpecifier"),
-		}),
 	),
 }
 
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
 var Normalizers = []Mapping{
 	MapSemantic("Identifier", uast.Identifier{}, MapObj(
+		Fields{
+			{Name: "name", Op: Var("name")},
+			//FIXME(bzz): map Flow variable types properly
+			{Name: "typeAnnotation", Drop: true, Op: Any()},
+			//FIXME(bzz): map Flow "Optional Prameter" properly
+			{Name: "optional", Drop: true, Op: Any()},
+			//FIXME(bzz): map both once we agree how
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
+		},
+		Obj{
+			"Name": Var("name"),
+		},
+	)),
+	MapSemantic("JSXIdentifier", uast.Identifier{}, MapObj(
 		Obj{
 			"name": Var("name"),
 		},
@@ -87,8 +98,11 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
-		Obj{
-			"value": singleQuote{Var("val")},
+		Fields{
+			{Name: "value", Op: singleQuote{Var("val")}},
+			//FIXME(bzz): save both once we agree how
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Value":  Var("val"),
@@ -96,8 +110,11 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
-		Obj{
-			"value": Quote(Var("val")),
+		Fields{
+			{Name: "value", Op: Quote(Var("val"))},
+			//FIXME(bzz): save both once we agree how
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Value": Var("val"),
@@ -116,38 +133,53 @@ var Normalizers = []Mapping{
 		CommentNode(true, "comm", nil),
 	)),
 	MapSemantic("BlockStatement", uast.Block{}, MapObj(
-		Obj{
-			"body":       Var("stmts"),
-			"directives": Arr(), // TODO: find an example
+		Fields{
+			{Name: "body", Op: Var("stmts")},
+			{Name: "directives", Op: Arr()}, // TODO: find an example
+			//FIXME(bzz): save this once we agree how
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Statements": Var("stmts"),
 		},
 	)),
 	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
-		Obj{
-			"source":     Var("path"),
-			"specifiers": Arr(),
+		Fields{
+			{Name: "source", Op: Var("path")},
+			// empty un-used array
+			{Name: "specifiers", Drop: true, Op: Arr()},
+			// FIXME(bzz): make sure such comments are linked properly
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Path": Var("path"),
 		},
 	)),
+	// importKind switch, set only by flow plugin
+	// https://github.com/babel/babel/blob/master/packages/babel-parser/ast/spec.md#importdeclaration
+	// TODO(bzz): this mapping misses 'typeof' case
 	MapSemantic("ImportDeclaration", uast.Import{}, MapObj(
 		CasesObj("case",
 			// common
-			Obj{
-				"source": Var("path"),
+			Fields{
+				{Name: "source", Op: Var("path")},
+				// FIXME(bzz): make sure such comments are linked properly
+				{Name: "leadingComments", Drop: true, Op: Any()},
+				{Name: "trailingComments", Drop: true, Op: Any()},
 			},
 			Objs{
 				// namespace
 				{
 					"importKind": String("value"),
-					"specifiers": ArrWith(Var("names"), Obj{
+					"specifiers": ArrWith(Var("names"), Fields{
 						//uast.KeyType: Var("spec_type"),
-						uast.KeyType: String("ImportNamespaceSpecifier"),
-						uast.KeyPos:  Var("local_pos"),
-						"local":      Var("local"),
+						{Name: uast.KeyType, Op: String("ImportNamespaceSpecifier")},
+						{Name: uast.KeyPos, Op: Var("local_pos")},
+						{Name: "local", Op: Var("local")},
+						// FIXME(bzz): make sure such comments are linked properly
+						{Name: "leadingComments", Drop: true, Op: Any()},
+						{Name: "trailingComments", Drop: true, Op: Any()},
 					}),
 				},
 				// specific type
@@ -158,6 +190,7 @@ var Normalizers = []Mapping{
 							uast.KeyPos: Var("local_pos"),
 							"Name":      Var("local"),
 							"Node": UASTType(uast.Identifier{}, Obj{
+								uast.KeyPos: Any(),
 								"Name": String("."),
 							}),
 						})),
@@ -212,24 +245,40 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("ImportDefaultSpecifier", uast.Alias{}, MapObj(
-		Obj{
-			"local": Var("local"),
+		Fields{
+			{Name: "local", Op: Var("local")},
+			//FIXME(bzz): save this once we agree how
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Name": Var("local"),
 			"Node": UASTType(uast.Identifier{}, Obj{
-				uast.KeyPos: AnyNode(nil),
+				uast.KeyPos: Any(),
 				"Name":      String("."), // TODO: scope
 			}),
 		},
 	)),
 	MapSemantic("FunctionDeclaration", uast.FunctionGroup{}, MapObj(
-		Obj{
-			"id":        Var("name"),
-			"generator": Var("gen"),   // FIXME: define channels in SDK? or return a function?
-			"async":     Var("async"), // TODO: async
-			"body":      Var("body"),
-			"params": Each("params", Cases("param_case",
+		Fields{
+			{Name: "id", Op: Var("name")},
+			{Name: "generator", Op: Var("gen")}, // FIXME: define channels in SDK? or return a function?
+			{Name: "async", Op: Var("async")},   // TODO: async
+			{Name: "body", Op: Var("body")},
+			//FIXME(bzz): map Flow predicate properly
+			// https://flow.org/en/docs/types/functions/#toc-predicate-functions
+			{Name: "predicate", Drop: true, Op: Any()},
+			//FIXME(bzz): map Flow return type annotations
+			// https://flow.org/en/docs/types/functions/#toc-function-returns
+			{Name: "returnType", Drop: true, Op: Any()},
+			//FIXME(bzz): map Flow generic types annotations
+			// https://flow.org/en/docs/types/generics/
+			// see fixtures/ext_typedecl.js#34 func makeWeakCache
+			{Name: "typeParameters", Drop: true, Op: Any()},
+			// FIXME(bzz): make sure such comments are linked properly
+			{Name: "leadingComments", Drop: true, Op: Any()},
+			{Name: "trailingComments", Drop: true, Op: Any()},
+			{Name: "params", Op: Each("params", Cases("param_case",
 				// Identifier
 				Check(
 					HasType(uast.Identifier{}),
@@ -248,7 +297,7 @@ var Normalizers = []Mapping{
 					uast.KeyPos:  Var("arg_pos"),
 					"argument":   Var("arg_name"),
 				},
-			)),
+			))},
 		},
 		Obj{
 			"Nodes": Arr(
