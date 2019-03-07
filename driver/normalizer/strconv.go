@@ -11,6 +11,7 @@ import (
 
 // unquoteSingle is the same as strconv.Unquote, but uses ' as a quote.
 func unquoteSingle(s string) (string, error) {
+	s = s[1 : len(s)-1]
 	var runeTmp [utf8.UTFMax]byte
 	buf := make([]byte, 0, 3*len(s)/2)
 	for len(s) > 0 {

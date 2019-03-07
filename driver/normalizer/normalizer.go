@@ -36,7 +36,7 @@ var Preprocessors = []Mapping{
 	Map(
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
-			"value":      AnyNode(nil),
+			"value": Any(),
 			"extra": Fields{
 				{Name: "raw", Op: Var("raw")},
 				{Name: "rawValue", Op: Any()},
@@ -360,7 +360,6 @@ func (op singleQuote) Check(st *State, n nodes.Node) (bool, error) {
 	if !strings.HasPrefix(s, `'`) || !strings.HasSuffix(s, `'`) {
 		return false, nil
 	}
-	s = s[1 : len(s)-1]
 	s, err := unquoteSingle(s)
 	if err != nil {
 		return false, err
