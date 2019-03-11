@@ -1,6 +1,7 @@
 package normalizer
 
 import (
+	"fmt"
 	"strconv"
 	"unicode/utf8"
 )
@@ -18,7 +19,7 @@ func unquoteSingle(s string) (string, error) {
 	}
 	quote := s[0]
 	if quote != s[n-1] {
-		return "", strconv.ErrSyntax
+		return "", fmt.Errorf("string does not begin and end with a quote")
 	}
 	s = s[1 : len(s)-1]
 
@@ -33,6 +34,7 @@ func unquoteSingle(s string) (string, error) {
 			return s, nil
 		}
 	}
+	s = replaceEscapedMaybe(s, '0', '\x00')
 
 	var runeTmp [utf8.UTFMax]byte
 	buf := make([]byte, 0, 3*len(s)/2) // Try to avoid more allocations.
@@ -60,6 +62,42 @@ func contains(s string, c byte) bool {
 		}
 	}
 	return false
+}
+
+// replaceEscapedMaybe returns a copy of s with "\\old[^0-9]" replaced by new.
+func replaceEscapedMaybe(s string, old, new rune) string {
+	var runeTmp [utf8.UTFMax]byte
+	n := utf8.EncodeRune(runeTmp[:], new)
+
+	lastCp := 0
+	var buf []byte
+	for i, w := 0, 0; i < len(s); i += w {
+		r1, w1 := utf8.DecodeRuneInString(s[i:])
+		w = w1
+		if r1 == '\\' { // find sequence \\old[^0-9]
+			r2, w2 := utf8.DecodeRuneInString(s[i+w1:])
+			if r2 == old {
+				r3, _ := utf8.DecodeRuneInString(s[i+w1+w2:])
+				if 0 > r3 || r3 > 9 { // not a number after "\\old"
+					w += w2
+					if len(buf) == 0 {
+						buf = make([]byte, 0, 3*len(s)/2)
+					}
+					buf = append(buf, []byte(s[lastCp:i])...)
+					buf = append(buf, runeTmp[:n]...)
+					lastCp = i + w
+				}
+			}
+		}
+	}
+	if lastCp == 0 {
+		return s
+	}
+
+	if 0 < lastCp && lastCp < len(s) {
+		return string(append(buf, []byte(s[lastCp:len(s)])...))
+	}
+	return string(buf)
 }
 
 const lowerhex = "0123456789abcdef"

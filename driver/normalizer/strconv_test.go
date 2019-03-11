@@ -1,6 +1,7 @@
 package normalizer
 
 import (
+	"regexp"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -40,12 +41,25 @@ func TestUnquoteSingleAndQuoteBack(t *testing.T) {
 	}
 }
 
-func TestUnquoteSingle_StringAndQuoteBack(t *testing.T) {
-	const o = "'rand'"
+func BenchmarkReplacingNullEscape_Iterative(b *testing.B) {
+	b.ReportAllocs()
+	s := testCasesUnquote[3].in
+	for n := 0; n < b.N; n++ {
+		replaceEscapedMaybe(s, '0', '\x00')
+	}
+}
 
-	s, err := unquoteSingle(o)
-	require.NoError(t, err)
-	q := quoteSingle(s)
+func BenchmarkReplacingNullEscape_Regexp(b *testing.B) {
+	b.ReportAllocs()
+	s := testCasesUnquote[3].in
+	for n := 0; n < b.N; n++ {
+		replaceEscapedMaybeRegexp(s)
+	}
+}
 
-	require.Equal(t, o, q)
+var re = regexp.MustCompile(`\\0([^0-9]|$)`)
+
+// replaceEscapedMaybeRegexp is very simple, but slower alternative to normalizer.replaceEscapedMaybe
+func replaceEscapedMaybeRegexp(s string) string {
+	return re.ReplaceAllString(s, "\x00$1")
 }
