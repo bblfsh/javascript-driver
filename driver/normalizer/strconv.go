@@ -16,16 +16,16 @@ import (
 func unquoteSingle(s string) (string, error) {
 	n := len(s)
 	if n < 2 {
-		return "", strconv.ErrSyntax
+		return "", fmt.Errorf("%+q is not a quoted string", s)
 	}
 	quote := s[0]
 	if quote != s[n-1] {
-		return "", fmt.Errorf("string does not begin and end with a quote")
+		return "", fmt.Errorf("%+q does not begin and end with a quote", s)
 	}
 	s = s[1 : len(s)-1]
 
 	if contains(s, '\n') {
-		return "", strconv.ErrSyntax
+		return "", fmt.Errorf("%+q contains EOL", s)
 	}
 
 	// Is it trivial? Avoid allocation.
