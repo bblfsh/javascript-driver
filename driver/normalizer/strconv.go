@@ -8,12 +8,34 @@ import (
 // Functions below are copied from strconv.Unquote and strconv.Quote.
 // Original functions are unable to escape/unescape values containing
 // multiple characters since in Go single quotes represent a rune literal
+// https://github.com/golang/go/blob/65a54aef5bedbf8035a465d12ad54783fb81e957/src/strconv/quote.go#L360
 
 // unquoteSingle is the same as strconv.Unquote, but uses ' as a quote.
 func unquoteSingle(s string) (string, error) {
+	n := len(s)
+	if n < 2 {
+		return "", strconv.ErrSyntax
+	}
+	quote := s[0]
+	if quote != s[n-1] {
+		return "", strconv.ErrSyntax
+	}
 	s = s[1 : len(s)-1]
+
+	if contains(s, '\n') {
+		return "", strconv.ErrSyntax
+	}
+
+	// Is it trivial? Avoid allocation.
+	if !contains(s, '\\') && !contains(s, quote) {
+		r, size := utf8.DecodeRuneInString(s)
+		if size == len(s) && (r != utf8.RuneError || size != 1) {
+			return s, nil
+		}
+	}
+
 	var runeTmp [utf8.UTFMax]byte
-	buf := make([]byte, 0, 3*len(s)/2)
+	buf := make([]byte, 0, 3*len(s)/2) // Try to avoid more allocations.
 	for len(s) > 0 {
 		c, multibyte, ss, err := strconv.UnquoteChar(s, '\'')
 		if err != nil {
@@ -30,15 +52,23 @@ func unquoteSingle(s string) (string, error) {
 	return string(buf), nil
 }
 
+// contains reports whether the string contains the byte c.
+func contains(s string, c byte) bool {
+	for i := 0; i < len(s); i++ {
+		if s[i] == c {
+			return true
+		}
+	}
+	return false
+}
+
 const lowerhex = "0123456789abcdef"
 
 // quoteSingle is the same as strconv.Quote, but uses ' as a quote.
 func quoteSingle(s string) string {
-	const (
-		quote = '\''
-	)
-
+	const quote = '\''
 	buf := make([]byte, 0, 3*len(s)/2)
+
 	buf = append(buf, quote)
 	for width := 0; len(s) > 0; s = s[width:] {
 		r := rune(s[0])
