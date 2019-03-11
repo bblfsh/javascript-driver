@@ -3,31 +3,41 @@ package normalizer
 import (
 	"testing"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
-func TestUnquoteSingle_NullGo(t *testing.T) {
-	s, err := unquoteSingle("'\x00'")
-	require.NoError(t, err)
+const msg = "test case %d failed"
 
-	require.Equal(t, "\u0000", s)
+var testCasesUnquote = []struct {
+	in  string
+	out string
+}{
+	{"'\x00'", "\u0000"},
+	{`'\0'`, "\u0000"},
+	{`'\0something\0'`, "\u0000something\u0000"},
+	{`'\0something\0somethingElse'`, "\u0000something\u0000somethingElse"},
 }
 
-func TestUnquoteSingle_NullJs(t *testing.T) {
-	s, err := unquoteSingle(`'\0'`)
-	require.NoError(t, err)
+func TestUnquoteSingle(t *testing.T) {
+	for i, test := range testCasesUnquote {
+		s, err := unquoteSingle(test.in)
+		require.NoError(t, err, msg, i)
 
-	require.Equal(t, "\u0000", s)
+		require.Equal(t, test.out, s, msg, i)
+	}
 }
 
-func TestUnquoteSingle_NullAndQuoteBack(t *testing.T) {
-	const o = "'\x00'"
+var testCasesUnquoteAndQuoteBack = []string{"'\x00'", "'rand'"}
 
-	s, err := unquoteSingle(o)
-	require.NoError(t, err)
-	q := quoteSingle(s)
+func TestUnquoteSingleAndQuoteBack(t *testing.T) {
+	for i, test := range testCasesUnquoteAndQuoteBack {
+		s, err := unquoteSingle(test)
+		assert.NoError(t, err, msg, i)
+		q := quoteSingle(s)
 
-	require.Equal(t, o, q)
+		assert.Equal(t, test, q, msg, i)
+	}
 }
 
 func TestUnquoteSingle_StringAndQuoteBack(t *testing.T) {
