@@ -3,6 +3,7 @@ package normalizer
 import (
 	"fmt"
 	"strconv"
+	"strings"
 	"unicode/utf8"
 )
 
@@ -56,12 +57,7 @@ func unquoteSingle(s string) (string, error) {
 
 // contains reports whether the string contains the byte c.
 func contains(s string, c byte) bool {
-	for i := 0; i < len(s); i++ {
-		if s[i] == c {
-			return true
-		}
-	}
-	return false
+	return strings.IndexByte(s, c) >= 0
 }
 
 // replaceEscapedMaybe returns a copy of s with "\\old[^0-9]" replaced by new.
