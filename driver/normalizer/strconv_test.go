@@ -4,7 +4,6 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
@@ -29,15 +28,13 @@ func TestUnquoteSingle(t *testing.T) {
 	}
 }
 
-var testCasesUnquoteAndQuoteBack = []string{"'\x00'", "'rand'"}
-
 func TestUnquoteSingleAndQuoteBack(t *testing.T) {
-	for i, test := range testCasesUnquoteAndQuoteBack {
-		s, err := unquoteSingle(test)
-		assert.NoError(t, err, msg, i)
-		q := quoteSingle(s)
+	for i, test := range testCasesUnquote {
+		s, err := unquoteSingle(test.in)
+		require.NoError(t, err, msg, i)
 
-		assert.Equal(t, test, q, msg, i)
+		q := quoteSingle(s)
+		require.Equal(t, test.in, q, msg, i)
 	}
 }
 
