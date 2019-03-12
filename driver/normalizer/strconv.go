@@ -35,7 +35,7 @@ func unquoteSingle(s string) (string, error) {
 			return s, nil
 		}
 	}
-	s = replaceEscapedMaybe(s, '0', '\x00') // treatment of special JS escape seq
+	s = replaceEscapedMaybe(s, "\\0", "\x00") // treatment of special JS escape seq
 
 	var runeTmp [utf8.UTFMax]byte
 	buf := make([]byte, 0, 3*len(s)/2) // Try to avoid more allocations.
@@ -62,39 +62,28 @@ func contains(s string, c byte) bool {
 
 // replaceEscapedMaybe returns a copy of s with "\\old[^0-9]" replaced by new.
 // Is not part of the stdlib, handles the special case of JS escape sequence.
-func replaceEscapedMaybe(s string, old, new rune) string {
-	var runeTmp [utf8.UTFMax]byte
-	n := utf8.EncodeRune(runeTmp[:], new)
-
-	lastCp := 0
-	var buf []byte
-	for i, w := 0, 0; i < len(s); i += w {
-		r1, w1 := utf8.DecodeRuneInString(s[i:])
-		w = w1
-		if r1 == '\\' { // find sequence \\old[^0-9]
-			r2, w2 := utf8.DecodeRuneInString(s[i+w1:])
-			if r2 == old {
-				r3, _ := utf8.DecodeRuneInString(s[i+w1+w2:])
-				if 0 > r3 || r3 > 9 { // not a number after "\\old"
-					w += w2
-					if len(buf) == 0 {
-						buf = make([]byte, 0, 3*len(s)/2)
-					}
-					buf = append(buf, []byte(s[lastCp:i])...)
-					buf = append(buf, runeTmp[:n]...)
-					lastCp = i + w
-				}
-			}
+func replaceEscapedMaybe(s, old, repl string) string {
+	var out strings.Builder
+	for s != "" {
+		pos := strings.Index(s, old)
+		if pos < 0 {
+			break
+		}
+		out.WriteString(s[:pos])
+		s = s[pos+len(old):]
+		r, n := utf8.DecodeRuneInString(s)
+		s = s[n:]
+		if r >= '0' && r <= '9' {
+			out.WriteString(old)
+		} else {
+			out.WriteString(repl)
+		}
+		if n != 0 {
+			out.WriteRune(r)
 		}
 	}
-	if lastCp == 0 {
-		return s
-	}
-
-	if 0 < lastCp && lastCp < len(s) {
-		return string(append(buf, []byte(s[lastCp:len(s)])...))
-	}
-	return string(buf)
+	out.WriteString(s)
+	return out.String()
 }
 
 const lowerhex = "0123456789abcdef"

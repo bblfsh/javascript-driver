@@ -3,6 +3,7 @@ package normalizer
 import (
 	"regexp"
 	"testing"
+	"unicode/utf8"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -70,17 +71,54 @@ func printDebug(t *testing.T, quoted, actual string) {
 
 func BenchmarkReplacingNullEscape_Iterative(b *testing.B) {
 	b.ReportAllocs()
-	s := testCasesUnquote[3].quoted
 	for n := 0; n < b.N; n++ {
-		replaceEscapedMaybe(s, '0', '\x00')
+		for _, test := range testCasesUnquote {
+			replaceEscapedMaybeIter(test.quoted, '0', '\x00')
+		}
 	}
+}
+
+func replaceEscapedMaybeIter(s string, old, new rune) string {
+	var runeTmp [utf8.UTFMax]byte
+	n := utf8.EncodeRune(runeTmp[:], new)
+
+	lastCp := 0
+	var buf []byte
+	for i, w := 0, 0; i < len(s); i += w {
+		r1, w1 := utf8.DecodeRuneInString(s[i:])
+		w = w1
+		if r1 == '\\' { // find sequence \\old[^0-9]
+			r2, w2 := utf8.DecodeRuneInString(s[i+w1:])
+			if r2 == old {
+				r3, _ := utf8.DecodeRuneInString(s[i+w1+w2:])
+				if 0 > r3 || r3 > 9 { // not a number after "\\old"
+					w += w2
+					if len(buf) == 0 {
+						buf = make([]byte, 0, 3*len(s)/2)
+					}
+					buf = append(buf, []byte(s[lastCp:i])...)
+					buf = append(buf, runeTmp[:n]...)
+					lastCp = i + w
+				}
+			}
+		}
+	}
+	if lastCp == 0 {
+		return s
+	}
+
+	if 0 < lastCp && lastCp < len(s) {
+		return string(append(buf, []byte(s[lastCp:len(s)])...))
+	}
+	return string(buf)
 }
 
 func BenchmarkReplacingNullEscape_Regexp(b *testing.B) {
 	b.ReportAllocs()
-	s := testCasesUnquote[3].quoted
 	for n := 0; n < b.N; n++ {
-		replaceEscapedMaybeRegexp(s)
+		for _, test := range testCasesUnquote {
+			replaceEscapedMaybeRegexp(test.quoted)
+		}
 	}
 }
 
@@ -89,4 +127,13 @@ var re = regexp.MustCompile(`\\0([^0-9]|$)`)
 // replaceEscapedMaybeRegexp is very simple, but slower alternative to normalizer.replaceEscapedMaybe
 func replaceEscapedMaybeRegexp(s string) string {
 	return re.ReplaceAllString(s, "\x00$1")
+}
+
+func BenchmarkReplacingNullEscape_Simple(b *testing.B) {
+	b.ReportAllocs()
+	for n := 0; n < b.N; n++ {
+		for _, test := range testCasesUnquote {
+			replaceEscapedMaybe(test.quoted, "\\0", "\x00")
+		}
+	}
 }
