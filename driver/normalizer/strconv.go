@@ -35,7 +35,7 @@ func unquoteSingle(s string) (string, error) {
 			return s, nil
 		}
 	}
-	s = replaceEscapedMaybe(s, '0', '\x00')
+	s = replaceEscapedMaybe(s, '0', '\x00') // treatment of special JS escape seq
 
 	var runeTmp [utf8.UTFMax]byte
 	buf := make([]byte, 0, 3*len(s)/2) // Try to avoid more allocations.
@@ -61,6 +61,7 @@ func contains(s string, c byte) bool {
 }
 
 // replaceEscapedMaybe returns a copy of s with "\\old[^0-9]" replaced by new.
+// Is not part of the stdlib, handles the special case of JS escape sequence.
 func replaceEscapedMaybe(s string, old, new rune) string {
 	var runeTmp [utf8.UTFMax]byte
 	n := utf8.EncodeRune(runeTmp[:], new)
@@ -99,6 +100,8 @@ func replaceEscapedMaybe(s string, old, new rune) string {
 const lowerhex = "0123456789abcdef"
 
 // quoteSingle is the same as strconv.Quote, but uses ' as a quote.
+// quoteSingle(unquoteSingle(s)) may not result in exact same bytes as s,
+// due to quoteSingle always opting in for hex escape sequnece format.
 func quoteSingle(s string) string {
 	const quote = '\''
 	buf := make([]byte, 0, 3*len(s)/2)
