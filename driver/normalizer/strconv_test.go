@@ -66,10 +66,12 @@ func printDebug(t *testing.T, quoted, actual string) {
 }
 
 func BenchmarkReplacingNullEscape(b *testing.B) {
-	b.ReportAllocs()
 	for _, test := range testCasesUnquote {
-		for n := 0; n < b.N; n++ {
-			replaceEscapedMaybe(test.quoted, "\\0", "\x00")
-		}
+		b.Run("", func(b *testing.B) {
+			b.ReportAllocs()
+			for n := 0; n < b.N; n++ {
+				replaceEscapedMaybe(test.quoted, "\\0", "\x00")
+			}
+		})
 	}
 }
