@@ -9,8 +9,6 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-const msg = "test case %d failed"
-
 var testCasesUnquote = []struct {
 	quoted   string
 	unquoted string
@@ -29,29 +27,33 @@ var testCasesUnquote = []struct {
 }
 
 func TestUnquoteSingle(t *testing.T) {
-	for i, test := range testCasesUnquote {
-		s, err := unquoteSingle(test.quoted)
-		require.NoError(t, err, msg, i)
-		require.Equal(t, test.unquoted, s, msg, i)
+	for _, test := range testCasesUnquote {
+		t.Run("", func(t *testing.T) {
+			s, err := unquoteSingle(test.quoted)
+			require.NoError(t, err)
+			require.Equal(t, test.unquoted, s)
+		})
 	}
 }
 
 func TestUnquoteSingleAndQuoteBack(t *testing.T) {
-	for i, test := range testCasesUnquote {
-		u, err := unquoteSingle(test.quoted)
-		require.NoError(t, err, msg, i)
+	for _, test := range testCasesUnquote {
+		t.Run("", func(t *testing.T) {
+			u, err := unquoteSingle(test.quoted)
+			require.NoError(t, err)
 
-		q := quoteSingle(u)
-		if test.canonicalQuoted != "" {
-			assertEquals(t, test.canonicalQuoted, q, i)
-		} else {
-			assertEquals(t, test.quoted, q, i)
-		}
+			q := quoteSingle(u)
+			if test.canonicalQuoted != "" {
+				assertEquals(t, test.canonicalQuoted, q)
+			} else {
+				assertEquals(t, test.quoted, q)
+			}
+		})
 	}
 }
 
-func assertEquals(t *testing.T, quoted, actual string, i int) {
-	if !assert.Equal(t, quoted, actual, msg, i) {
+func assertEquals(t *testing.T, quoted, actual string) {
+	if !assert.Equal(t, quoted, actual) {
 		printDebug(t, quoted, actual)
 		t.FailNow()
 	}
