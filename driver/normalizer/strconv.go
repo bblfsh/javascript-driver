@@ -1,18 +1,44 @@
 package normalizer
 
 import (
+	"fmt"
 	"strconv"
+	"strings"
 	"unicode/utf8"
 )
 
 // Functions below are copied from strconv.Unquote and strconv.Quote.
 // Original functions are unable to escape/unescape values containing
 // multiple characters since in Go single quotes represent a rune literal
+// https://github.com/golang/go/blob/65a54aef5bedbf8035a465d12ad54783fb81e957/src/strconv/quote.go#L360
 
 // unquoteSingle is the same as strconv.Unquote, but uses ' as a quote.
 func unquoteSingle(s string) (string, error) {
+	n := len(s)
+	if n < 2 {
+		return "", fmt.Errorf("%+q is not a quoted string", s)
+	}
+	quote := s[0]
+	if quote != s[n-1] {
+		return "", fmt.Errorf("%+q does not begin and end with a quote", s)
+	}
+	s = s[1 : len(s)-1]
+
+	if contains(s, '\n') {
+		return "", fmt.Errorf("%+q contains EOL", s)
+	}
+
+	// Is it trivial? Avoid allocation.
+	if !contains(s, '\\') && !contains(s, quote) {
+		r, size := utf8.DecodeRuneInString(s)
+		if size == len(s) && (r != utf8.RuneError || size != 1) {
+			return s, nil
+		}
+	}
+	s = replaceEscapedMaybe(s, "\\0", "\x00") // treatment of special JS escape seq
+
 	var runeTmp [utf8.UTFMax]byte
-	buf := make([]byte, 0, 3*len(s)/2)
+	buf := make([]byte, 0, 3*len(s)/2) // Try to avoid more allocations.
 	for len(s) > 0 {
 		c, multibyte, ss, err := strconv.UnquoteChar(s, '\'')
 		if err != nil {
@@ -29,15 +55,49 @@ func unquoteSingle(s string) (string, error) {
 	return string(buf), nil
 }
 
+// contains reports whether the string contains the byte c.
+func contains(s string, c byte) bool {
+	return strings.IndexByte(s, c) >= 0
+}
+
+// replaceEscapedMaybe returns a copy of s in which occurrences of old followed by a
+// non-digit are replaced by repl.
+// Is not part of the stdlib, handles the special case of JS escape sequence.
+// Regexp replacement and manual expansion performance was tested against the
+// current implementation and found this was fastest.
+func replaceEscapedMaybe(s, old, repl string) string {
+	var out strings.Builder
+	for s != "" {
+		pos := strings.Index(s, old)
+		if pos < 0 {
+			break
+		}
+		out.WriteString(s[:pos])
+		s = s[pos+len(old):]
+		r, n := utf8.DecodeRuneInString(s)
+		s = s[n:]
+		if r >= '0' && r <= '9' {
+			out.WriteString(old)
+		} else {
+			out.WriteString(repl)
+		}
+		if n != 0 {
+			out.WriteRune(r)
+		}
+	}
+	out.WriteString(s)
+	return out.String()
+}
+
 const lowerhex = "0123456789abcdef"
 
 // quoteSingle is the same as strconv.Quote, but uses ' as a quote.
+// quoteSingle(unquoteSingle(s)) may not result in exact same bytes as s,
+// because quoteSingle always uses the hex escape sequence format.
 func quoteSingle(s string) string {
-	const (
-		quote = '\''
-	)
-
+	const quote = '\''
 	buf := make([]byte, 0, 3*len(s)/2)
+
 	buf = append(buf, quote)
 	for width := 0; len(s) > 0; s = s[width:] {
 		r := rune(s[0])

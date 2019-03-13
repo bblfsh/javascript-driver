@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 29,
+   end: 255,
    loc: {
       end: {
          column: 0,
-         line: 4,
+         line: 10,
       },
       start: {
          column: 0,
@@ -217,13 +217,953 @@
             start: 17,
             type: "ExpressionStatement",
          },
+         {
+            declarations: [
+               {
+                  end: 73,
+                  id: {
+                     end: 42,
+                     loc: {
+                        end: {
+                           column: 12,
+                           line: 5,
+                        },
+                        identifierName: "escSlash",
+                        start: {
+                           column: 4,
+                           line: 5,
+                        },
+                     },
+                     name: "escSlash",
+                     start: 34,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 73,
+                     left: {
+                        end: 68,
+                        left: {
+                           end: 54,
+                           extra: {
+                              raw: "'\\0SLASH'",
+                              rawValue: "\x00SLASH",
+                           },
+                           loc: {
+                              end: {
+                                 column: 24,
+                                 line: 5,
+                              },
+                              start: {
+                                 column: 15,
+                                 line: 5,
+                              },
+                           },
+                           start: 45,
+                           type: "StringLiteral",
+                           value: "\x00SLASH",
+                        },
+                        loc: {
+                           end: {
+                              column: 38,
+                              line: 5,
+                           },
+                           start: {
+                              column: 15,
+                              line: 5,
+                           },
+                        },
+                        operator: "+",
+                        right: {
+                           arguments: [],
+                           callee: {
+                              computed: false,
+                              end: 66,
+                              loc: {
+                                 end: {
+                                    column: 36,
+                                    line: 5,
+                                 },
+                                 start: {
+                                    column: 25,
+                                    line: 5,
+                                 },
+                              },
+                              object: {
+                                 end: 59,
+                                 loc: {
+                                    end: {
+                                       column: 29,
+                                       line: 5,
+                                    },
+                                    identifierName: "Math",
+                                    start: {
+                                       column: 25,
+                                       line: 5,
+                                    },
+                                 },
+                                 name: "Math",
+                                 start: 55,
+                                 type: "Identifier",
+                              },
+                              property: {
+                                 end: 66,
+                                 loc: {
+                                    end: {
+                                       column: 36,
+                                       line: 5,
+                                    },
+                                    identifierName: "random",
+                                    start: {
+                                       column: 30,
+                                       line: 5,
+                                    },
+                                 },
+                                 name: "random",
+                                 start: 60,
+                                 type: "Identifier",
+                              },
+                              start: 55,
+                              type: "MemberExpression",
+                           },
+                           end: 68,
+                           loc: {
+                              end: {
+                                 column: 38,
+                                 line: 5,
+                              },
+                              start: {
+                                 column: 25,
+                                 line: 5,
+                              },
+                           },
+                           start: 55,
+                           type: "CallExpression",
+                        },
+                        start: 45,
+                        type: "BinaryExpression",
+                     },
+                     loc: {
+                        end: {
+                           column: 43,
+                           line: 5,
+                        },
+                        start: {
+                           column: 15,
+                           line: 5,
+                        },
+                     },
+                     operator: "+",
+                     right: {
+                        end: 73,
+                        extra: {
+                           raw: "'\\0'",
+                           rawValue: "\x00",
+                        },
+                        loc: {
+                           end: {
+                              column: 43,
+                              line: 5,
+                           },
+                           start: {
+                              column: 39,
+                              line: 5,
+                           },
+                        },
+                        start: 69,
+                        type: "StringLiteral",
+                        value: "\x00",
+                     },
+                     start: 45,
+                     type: "BinaryExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 43,
+                        line: 5,
+                     },
+                     start: {
+                        column: 4,
+                        line: 5,
+                     },
+                  },
+                  start: 34,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 74,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 44,
+                  line: 5,
+               },
+               start: {
+                  column: 0,
+                  line: 5,
+               },
+            },
+            start: 30,
+            type: "VariableDeclaration",
+         },
+         {
+            declarations: [
+               {
+                  end: 116,
+                  id: {
+                     end: 86,
+                     loc: {
+                        end: {
+                           column: 11,
+                           line: 6,
+                        },
+                        identifierName: "escOpen",
+                        start: {
+                           column: 4,
+                           line: 6,
+                        },
+                     },
+                     name: "escOpen",
+                     start: 79,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 116,
+                     left: {
+                        end: 111,
+                        left: {
+                           end: 97,
+                           extra: {
+                              raw: "'\\0OPEN'",
+                              rawValue: "\x00OPEN",
+                           },
+                           loc: {
+                              end: {
+                                 column: 22,
+                                 line: 6,
+                              },
+                              start: {
+                                 column: 14,
+                                 line: 6,
+                              },
+                           },
+                           start: 89,
+                           type: "StringLiteral",
+                           value: "\x00OPEN",
+                        },
+                        loc: {
+                           end: {
+                              column: 36,
+                              line: 6,
+                           },
+                           start: {
+                              column: 14,
+                              line: 6,
+                           },
+                        },
+                        operator: "+",
+                        right: {
+                           arguments: [],
+                           callee: {
+                              computed: false,
+                              end: 109,
+                              loc: {
+                                 end: {
+                                    column: 34,
+                                    line: 6,
+                                 },
+                                 start: {
+                                    column: 23,
+                                    line: 6,
+                                 },
+                              },
+                              object: {
+                                 end: 102,
+                                 loc: {
+                                    end: {
+                                       column: 27,
+                                       line: 6,
+                                    },
+                                    identifierName: "Math",
+                                    start: {
+                                       column: 23,
+                                       line: 6,
+                                    },
+                                 },
+                                 name: "Math",
+                                 start: 98,
+                                 type: "Identifier",
+                              },
+                              property: {
+                                 end: 109,
+                                 loc: {
+                                    end: {
+                                       column: 34,
+                                       line: 6,
+                                    },
+                                    identifierName: "random",
+                                    start: {
+                                       column: 28,
+                                       line: 6,
+                                    },
+                                 },
+                                 name: "random",
+                                 start: 103,
+                                 type: "Identifier",
+                              },
+                              start: 98,
+                              type: "MemberExpression",
+                           },
+                           end: 111,
+                           loc: {
+                              end: {
+                                 column: 36,
+                                 line: 6,
+                              },
+                              start: {
+                                 column: 23,
+                                 line: 6,
+                              },
+                           },
+                           start: 98,
+                           type: "CallExpression",
+                        },
+                        start: 89,
+                        type: "BinaryExpression",
+                     },
+                     loc: {
+                        end: {
+                           column: 41,
+                           line: 6,
+                        },
+                        start: {
+                           column: 14,
+                           line: 6,
+                        },
+                     },
+                     operator: "+",
+                     right: {
+                        end: 116,
+                        extra: {
+                           raw: "'\\0'",
+                           rawValue: "\x00",
+                        },
+                        loc: {
+                           end: {
+                              column: 41,
+                              line: 6,
+                           },
+                           start: {
+                              column: 37,
+                              line: 6,
+                           },
+                        },
+                        start: 112,
+                        type: "StringLiteral",
+                        value: "\x00",
+                     },
+                     start: 89,
+                     type: "BinaryExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 41,
+                        line: 6,
+                     },
+                     start: {
+                        column: 4,
+                        line: 6,
+                     },
+                  },
+                  start: 79,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 117,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 42,
+                  line: 6,
+               },
+               start: {
+                  column: 0,
+                  line: 6,
+               },
+            },
+            start: 75,
+            type: "VariableDeclaration",
+         },
+         {
+            declarations: [
+               {
+                  end: 161,
+                  id: {
+                     end: 130,
+                     loc: {
+                        end: {
+                           column: 12,
+                           line: 7,
+                        },
+                        identifierName: "escClose",
+                        start: {
+                           column: 4,
+                           line: 7,
+                        },
+                     },
+                     name: "escClose",
+                     start: 122,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 161,
+                     left: {
+                        end: 156,
+                        left: {
+                           end: 142,
+                           extra: {
+                              raw: "'\\0CLOSE'",
+                              rawValue: "\x00CLOSE",
+                           },
+                           loc: {
+                              end: {
+                                 column: 24,
+                                 line: 7,
+                              },
+                              start: {
+                                 column: 15,
+                                 line: 7,
+                              },
+                           },
+                           start: 133,
+                           type: "StringLiteral",
+                           value: "\x00CLOSE",
+                        },
+                        loc: {
+                           end: {
+                              column: 38,
+                              line: 7,
+                           },
+                           start: {
+                              column: 15,
+                              line: 7,
+                           },
+                        },
+                        operator: "+",
+                        right: {
+                           arguments: [],
+                           callee: {
+                              computed: false,
+                              end: 154,
+                              loc: {
+                                 end: {
+                                    column: 36,
+                                    line: 7,
+                                 },
+                                 start: {
+                                    column: 25,
+                                    line: 7,
+                                 },
+                              },
+                              object: {
+                                 end: 147,
+                                 loc: {
+                                    end: {
+                                       column: 29,
+                                       line: 7,
+                                    },
+                                    identifierName: "Math",
+                                    start: {
+                                       column: 25,
+                                       line: 7,
+                                    },
+                                 },
+                                 name: "Math",
+                                 start: 143,
+                                 type: "Identifier",
+                              },
+                              property: {
+                                 end: 154,
+                                 loc: {
+                                    end: {
+                                       column: 36,
+                                       line: 7,
+                                    },
+                                    identifierName: "random",
+                                    start: {
+                                       column: 30,
+                                       line: 7,
+                                    },
+                                 },
+                                 name: "random",
+                                 start: 148,
+                                 type: "Identifier",
+                              },
+                              start: 143,
+                              type: "MemberExpression",
+                           },
+                           end: 156,
+                           loc: {
+                              end: {
+                                 column: 38,
+                                 line: 7,
+                              },
+                              start: {
+                                 column: 25,
+                                 line: 7,
+                              },
+                           },
+                           start: 143,
+                           type: "CallExpression",
+                        },
+                        start: 133,
+                        type: "BinaryExpression",
+                     },
+                     loc: {
+                        end: {
+                           column: 43,
+                           line: 7,
+                        },
+                        start: {
+                           column: 15,
+                           line: 7,
+                        },
+                     },
+                     operator: "+",
+                     right: {
+                        end: 161,
+                        extra: {
+                           raw: "'\\0'",
+                           rawValue: "\x00",
+                        },
+                        loc: {
+                           end: {
+                              column: 43,
+                              line: 7,
+                           },
+                           start: {
+                              column: 39,
+                              line: 7,
+                           },
+                        },
+                        start: 157,
+                        type: "StringLiteral",
+                        value: "\x00",
+                     },
+                     start: 133,
+                     type: "BinaryExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 43,
+                        line: 7,
+                     },
+                     start: {
+                        column: 4,
+                        line: 7,
+                     },
+                  },
+                  start: 122,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 162,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 44,
+                  line: 7,
+               },
+               start: {
+                  column: 0,
+                  line: 7,
+               },
+            },
+            start: 118,
+            type: "VariableDeclaration",
+         },
+         {
+            declarations: [
+               {
+                  end: 206,
+                  id: {
+                     end: 175,
+                     loc: {
+                        end: {
+                           column: 12,
+                           line: 8,
+                        },
+                        identifierName: "escComma",
+                        start: {
+                           column: 4,
+                           line: 8,
+                        },
+                     },
+                     name: "escComma",
+                     start: 167,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 206,
+                     left: {
+                        end: 201,
+                        left: {
+                           end: 187,
+                           extra: {
+                              raw: "'\\0COMMA'",
+                              rawValue: "\x00COMMA",
+                           },
+                           loc: {
+                              end: {
+                                 column: 24,
+                                 line: 8,
+                              },
+                              start: {
+                                 column: 15,
+                                 line: 8,
+                              },
+                           },
+                           start: 178,
+                           type: "StringLiteral",
+                           value: "\x00COMMA",
+                        },
+                        loc: {
+                           end: {
+                              column: 38,
+                              line: 8,
+                           },
+                           start: {
+                              column: 15,
+                              line: 8,
+                           },
+                        },
+                        operator: "+",
+                        right: {
+                           arguments: [],
+                           callee: {
+                              computed: false,
+                              end: 199,
+                              loc: {
+                                 end: {
+                                    column: 36,
+                                    line: 8,
+                                 },
+                                 start: {
+                                    column: 25,
+                                    line: 8,
+                                 },
+                              },
+                              object: {
+                                 end: 192,
+                                 loc: {
+                                    end: {
+                                       column: 29,
+                                       line: 8,
+                                    },
+                                    identifierName: "Math",
+                                    start: {
+                                       column: 25,
+                                       line: 8,
+                                    },
+                                 },
+                                 name: "Math",
+                                 start: 188,
+                                 type: "Identifier",
+                              },
+                              property: {
+                                 end: 199,
+                                 loc: {
+                                    end: {
+                                       column: 36,
+                                       line: 8,
+                                    },
+                                    identifierName: "random",
+                                    start: {
+                                       column: 30,
+                                       line: 8,
+                                    },
+                                 },
+                                 name: "random",
+                                 start: 193,
+                                 type: "Identifier",
+                              },
+                              start: 188,
+                              type: "MemberExpression",
+                           },
+                           end: 201,
+                           loc: {
+                              end: {
+                                 column: 38,
+                                 line: 8,
+                              },
+                              start: {
+                                 column: 25,
+                                 line: 8,
+                              },
+                           },
+                           start: 188,
+                           type: "CallExpression",
+                        },
+                        start: 178,
+                        type: "BinaryExpression",
+                     },
+                     loc: {
+                        end: {
+                           column: 43,
+                           line: 8,
+                        },
+                        start: {
+                           column: 15,
+                           line: 8,
+                        },
+                     },
+                     operator: "+",
+                     right: {
+                        end: 206,
+                        extra: {
+                           raw: "'\\0'",
+                           rawValue: "\x00",
+                        },
+                        loc: {
+                           end: {
+                              column: 43,
+                              line: 8,
+                           },
+                           start: {
+                              column: 39,
+                              line: 8,
+                           },
+                        },
+                        start: 202,
+                        type: "StringLiteral",
+                        value: "\x00",
+                     },
+                     start: 178,
+                     type: "BinaryExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 43,
+                        line: 8,
+                     },
+                     start: {
+                        column: 4,
+                        line: 8,
+                     },
+                  },
+                  start: 167,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 207,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 44,
+                  line: 8,
+               },
+               start: {
+                  column: 0,
+                  line: 8,
+               },
+            },
+            start: 163,
+            type: "VariableDeclaration",
+         },
+         {
+            declarations: [
+               {
+                  end: 253,
+                  id: {
+                     end: 221,
+                     loc: {
+                        end: {
+                           column: 13,
+                           line: 9,
+                        },
+                        identifierName: "escPeriod",
+                        start: {
+                           column: 4,
+                           line: 9,
+                        },
+                     },
+                     name: "escPeriod",
+                     start: 212,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 253,
+                     left: {
+                        end: 248,
+                        left: {
+                           end: 234,
+                           extra: {
+                              raw: "'\\0PERIOD'",
+                              rawValue: "\x00PERIOD",
+                           },
+                           loc: {
+                              end: {
+                                 column: 26,
+                                 line: 9,
+                              },
+                              start: {
+                                 column: 16,
+                                 line: 9,
+                              },
+                           },
+                           start: 224,
+                           type: "StringLiteral",
+                           value: "\x00PERIOD",
+                        },
+                        loc: {
+                           end: {
+                              column: 40,
+                              line: 9,
+                           },
+                           start: {
+                              column: 16,
+                              line: 9,
+                           },
+                        },
+                        operator: "+",
+                        right: {
+                           arguments: [],
+                           callee: {
+                              computed: false,
+                              end: 246,
+                              loc: {
+                                 end: {
+                                    column: 38,
+                                    line: 9,
+                                 },
+                                 start: {
+                                    column: 27,
+                                    line: 9,
+                                 },
+                              },
+                              object: {
+                                 end: 239,
+                                 loc: {
+                                    end: {
+                                       column: 31,
+                                       line: 9,
+                                    },
+                                    identifierName: "Math",
+                                    start: {
+                                       column: 27,
+                                       line: 9,
+                                    },
+                                 },
+                                 name: "Math",
+                                 start: 235,
+                                 type: "Identifier",
+                              },
+                              property: {
+                                 end: 246,
+                                 loc: {
+                                    end: {
+                                       column: 38,
+                                       line: 9,
+                                    },
+                                    identifierName: "random",
+                                    start: {
+                                       column: 32,
+                                       line: 9,
+                                    },
+                                 },
+                                 name: "random",
+                                 start: 240,
+                                 type: "Identifier",
+                              },
+                              start: 235,
+                              type: "MemberExpression",
+                           },
+                           end: 248,
+                           loc: {
+                              end: {
+                                 column: 40,
+                                 line: 9,
+                              },
+                              start: {
+                                 column: 27,
+                                 line: 9,
+                              },
+                           },
+                           start: 235,
+                           type: "CallExpression",
+                        },
+                        start: 224,
+                        type: "BinaryExpression",
+                     },
+                     loc: {
+                        end: {
+                           column: 45,
+                           line: 9,
+                        },
+                        start: {
+                           column: 16,
+                           line: 9,
+                        },
+                     },
+                     operator: "+",
+                     right: {
+                        end: 253,
+                        extra: {
+                           raw: "'\\0'",
+                           rawValue: "\x00",
+                        },
+                        loc: {
+                           end: {
+                              column: 45,
+                              line: 9,
+                           },
+                           start: {
+                              column: 41,
+                              line: 9,
+                           },
+                        },
+                        start: 249,
+                        type: "StringLiteral",
+                        value: "\x00",
+                     },
+                     start: 224,
+                     type: "BinaryExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 45,
+                        line: 9,
+                     },
+                     start: {
+                        column: 4,
+                        line: 9,
+                     },
+                  },
+                  start: 212,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 254,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 46,
+                  line: 9,
+               },
+               start: {
+                  column: 0,
+                  line: 9,
+               },
+            },
+            start: 208,
+            type: "VariableDeclaration",
+         },
       ],
       directives: [],
-      end: 29,
+      end: 255,
       loc: {
          end: {
             column: 0,
-            line: 4,
+            line: 10,
          },
          start: {
             column: 0,

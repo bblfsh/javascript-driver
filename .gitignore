@@ -4,3 +4,5 @@
 .sdk
 .config
 build
+node_modules
+.vscode
