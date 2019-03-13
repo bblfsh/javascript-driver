@@ -16,12 +16,12 @@ var testCasesUnquote = []struct {
 	// Golang unquote() defaults to hex format, so it's used as canonical one.
 	canonicalQuoted string
 }{
-	{"'a'", "a", ""},
-	{"'\\x00'", "\u0000", ""},
+	{`'a'`, "a", ""},
+	{`'\x00'`, "\u0000", ""},
 	{`'\0'`, "\u0000", "'\\x00'"},
 	{`'\0something\0'`, "\u0000something\u0000", "'\\x00something\\x00'"},
 	{`'\0something\0else'`, "\u0000something\u0000else", "'\\x00something\\x00else'"},
-	{"'\u0000123\\0s'", "\u0000123\u0000s", "'\\x00123\\x00s'"},
+	{`'\u0000123\0s'`, "\u0000123\u0000s", "'\\x00123\\x00s'"},
 }
 
 func TestUnquoteSingle(t *testing.T) {
@@ -68,7 +68,7 @@ func printDebug(t *testing.T, quoted, actual string) {
 	}
 }
 
-func BenchmarkReplacingNullEscape_Simple(b *testing.B) {
+func BenchmarkReplacingNullEscape(b *testing.B) {
 	b.ReportAllocs()
 	for _, test := range testCasesUnquote {
 		for n := 0; n < b.N; n++ {
