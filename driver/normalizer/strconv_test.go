@@ -10,14 +10,15 @@ import (
 var testCasesUnquote = []struct {
 	quoted   string
 	unquoted string
-	// If this is non-empty it means that quoteing back unqoted string does not
-	// produce same result bit-wise.
-	// This happens when we lose the information about original escape sequence (octal, hex)
-	// Golang unquote() defaults to hex format, so it's used as canonical one.
+	// In some cases unquoting and then re-quoting a quoted string does not produce a
+	// string that is bitwise identical to the original, even though they denote the same bytes.
+	// This can happen, e.g, if we switch between hex and octal encoding of a byte.
+	// Test cases where this happens set canonicalUnquoted to the string that is expected
+	// to be decoded via Go's native rules to the byte sequence we want.
 	canonicalQuoted string
 }{
-	{`'a'`, "a", ""},
-	{`'\x00'`, "\u0000", ""},
+	{`'a'`, "a", `'a'`},
+	{`'\x00'`, "\u0000", `'\x00'`},
 	{`'\0'`, "\u0000", "'\\x00'"},
 	{`'\0something\0'`, "\u0000something\u0000", "'\\x00something\\x00'"},
 	{`'\0something\0else'`, "\u0000something\u0000else", "'\\x00something\\x00else'"},
@@ -41,11 +42,7 @@ func TestUnquoteSingleAndQuoteBack(t *testing.T) {
 			require.NoError(t, err)
 
 			q := quoteSingle(u)
-			if test.canonicalQuoted != "" {
-				assertEquals(t, test.canonicalQuoted, q)
-			} else {
-				assertEquals(t, test.quoted, q)
-			}
+			assertEquals(t, test.canonicalQuoted, q)
 		})
 	}
 }
