@@ -60,9 +60,11 @@ func contains(s string, c byte) bool {
 	return strings.IndexByte(s, c) >= 0
 }
 
-// replaceEscapedMaybe returns a copy of s in which occurrences of old followed by a 
+// replaceEscapedMaybe returns a copy of s in which occurrences of old followed by a
 // non-digit are replaced by repl.
 // Is not part of the stdlib, handles the special case of JS escape sequence.
+// Regexp replacement and manual expansion performance was tested against the
+// current implementation and found this was fastest.
 func replaceEscapedMaybe(s, old, repl string) string {
 	var out strings.Builder
 	for s != "" {
