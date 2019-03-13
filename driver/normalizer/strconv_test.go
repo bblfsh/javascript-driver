@@ -72,8 +72,8 @@ func printDebug(t *testing.T, quoted, actual string) {
 
 func BenchmarkReplacingNullEscape_Iterative(b *testing.B) {
 	b.ReportAllocs()
-	for n := 0; n < b.N; n++ {
-		for _, test := range testCasesUnquote {
+	for _, test := range testCasesUnquote {
+		for n := 0; n < b.N; n++ {
 			replaceEscapedMaybeIter(test.quoted, '0', '\x00')
 		}
 	}
@@ -118,8 +118,8 @@ func replaceEscapedMaybeIter(s string, old, new rune) string {
 
 func BenchmarkReplacingNullEscape_Regexp(b *testing.B) {
 	b.ReportAllocs()
-	for n := 0; n < b.N; n++ {
-		for _, test := range testCasesUnquote {
+	for _, test := range testCasesUnquote {
+		for n := 0; n < b.N; n++ {
 			replaceEscapedMaybeRegexp(test.quoted)
 		}
 	}
@@ -135,8 +135,8 @@ func replaceEscapedMaybeRegexp(s string) string {
 
 func BenchmarkReplacingNullEscape_Simple(b *testing.B) {
 	b.ReportAllocs()
-	for n := 0; n < b.N; n++ {
-		for _, test := range testCasesUnquote {
+	for _, test := range testCasesUnquote {
+		for n := 0; n < b.N; n++ {
 			replaceEscapedMaybe(test.quoted, "\\0", "\x00")
 		}
 	}
