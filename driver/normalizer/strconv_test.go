@@ -14,8 +14,9 @@ const msg = "test case %d failed"
 var testCasesUnquote = []struct {
 	quoted   string
 	unquoted string
-	// isn't empty only for cases where quote(unqote(s)) != s
-	// e.g when we loose the informaiton wich original escape sequence was used
+	// If this is non-empty it means that quoteing back unqoted string does not
+	// produce same result bit-wise.
+	// This happens when we lose the information about original escape sequence (octal, hex)
 	// Golang unquote() defaults to hex format, so it's used as canonical one.
 	canonicalQuoted string
 }{
@@ -31,7 +32,6 @@ func TestUnquoteSingle(t *testing.T) {
 	for i, test := range testCasesUnquote {
 		s, err := unquoteSingle(test.quoted)
 		require.NoError(t, err, msg, i)
-
 		require.Equal(t, test.unquoted, s, msg, i)
 	}
 }
@@ -51,15 +51,14 @@ func TestUnquoteSingleAndQuoteBack(t *testing.T) {
 }
 
 func assertEquals(t *testing.T, quoted, actual string, i int) {
-	success := assert.Equal(t, quoted, actual, msg, i)
-	if !success {
+	if !assert.Equal(t, quoted, actual, msg, i) {
 		printDebug(t, quoted, actual)
 		t.FailNow()
 	}
 }
 
 func printDebug(t *testing.T, quoted, actual string) {
-	t.Logf("\texepcted: len=%d", len(quoted))
+	t.Logf("\texpected: len=%d", len(quoted))
 	for _, c := range quoted {
 		t.Logf("%x - %#U", c, c)
 	}
@@ -78,6 +77,8 @@ func BenchmarkReplacingNullEscape_Iterative(b *testing.B) {
 	}
 }
 
+// replaceEscapedMaybeIter is alternative implementation of replaceEscapedMaybe
+// It is only used in benchmark tests for performance comparison.
 func replaceEscapedMaybeIter(s string, old, new rune) string {
 	var runeTmp [utf8.UTFMax]byte
 	n := utf8.EncodeRune(runeTmp[:], new)
@@ -124,7 +125,8 @@ func BenchmarkReplacingNullEscape_Regexp(b *testing.B) {
 
 var re = regexp.MustCompile(`\\0([^0-9]|$)`)
 
-// replaceEscapedMaybeRegexp is very simple, but slower alternative to normalizer.replaceEscapedMaybe
+// replaceEscapedMaybeRegexp is alternative implementation of replaceEscapedMaybe
+// It is only used in benchmark tests for performance comparison.
 func replaceEscapedMaybeRegexp(s string) string {
 	return re.ReplaceAllString(s, "\x00$1")
 }

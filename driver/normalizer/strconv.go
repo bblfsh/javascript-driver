@@ -91,7 +91,7 @@ const lowerhex = "0123456789abcdef"
 
 // quoteSingle is the same as strconv.Quote, but uses ' as a quote.
 // quoteSingle(unquoteSingle(s)) may not result in exact same bytes as s,
-// due to quoteSingle always opting in for hex escape sequnece format.
+// because quoteSingle always uses the hex escape sequence format.
 func quoteSingle(s string) string {
 	const quote = '\''
 	buf := make([]byte, 0, 3*len(s)/2)
