@@ -136,7 +136,9 @@ var Normalizers = []Mapping{
 		Fields{
 			{Name: "body", Op: Var("stmts")},
 			{Name: "directives", Op: Arr()}, // TODO: find an example
-			//FIXME(bzz): save this once we agree how
+			// FIXME(bzz): make sure such comments are linked properly
+			{Name: "innerComments", Drop: true, Op: Any()},
+			{Name: "leadingComments", Drop: true, Op: Any()},
 			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
