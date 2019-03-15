@@ -48,12 +48,44 @@
          type: "CommentBlock",
          value: "* Yet another comment ",
       },
+      {
+         end: 99,
+         loc: {
+            end: {
+               column: 31,
+               line: 5,
+            },
+            start: {
+               column: 0,
+               line: 5,
+            },
+         },
+         start: 68,
+         type: "CommentLine",
+         value: " Create dest - leadingComment",
+      },
+      {
+         end: 246,
+         loc: {
+            end: {
+               column: 81,
+               line: 9,
+            },
+            start: {
+               column: 4,
+               line: 9,
+            },
+         },
+         start: 169,
+         type: "CommentLine",
+         value: " like Unix's cp, keep going even if we can't create dest dir - innerComment",
+      },
    ],
-   end: 67,
+   end: 249,
    loc: {
       end: {
          column: 0,
-         line: 4,
+         line: 11,
       },
       start: {
          column: 0,
@@ -61,64 +93,361 @@
       },
    },
    program: {
-      body: [],
-      directives: [],
-      end: 67,
-      innerComments: [
+      body: [
          {
-            end: 17,
+            block: {
+               body: [
+                  {
+                     end: 150,
+                     expression: {
+                        arguments: [
+                           {
+                              end: 127,
+                              loc: {
+                                 end: {
+                                    column: 21,
+                                    line: 7,
+                                 },
+                                 identifierName: "dest",
+                                 start: {
+                                    column: 17,
+                                    line: 7,
+                                 },
+                              },
+                              name: "dest",
+                              start: 123,
+                              type: "Identifier",
+                           },
+                           {
+                              arguments: [
+                                 {
+                                    end: 144,
+                                    extra: {
+                                       raw: "'0777'",
+                                       rawValue: "0777",
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 38,
+                                          line: 7,
+                                       },
+                                       start: {
+                                          column: 32,
+                                          line: 7,
+                                       },
+                                    },
+                                    start: 138,
+                                    type: "StringLiteral",
+                                    value: "0777",
+                                 },
+                                 {
+                                    end: 147,
+                                    extra: {
+                                       raw: "8",
+                                       rawValue: 8,
+                                    },
+                                    loc: {
+                                       end: {
+                                          column: 41,
+                                          line: 7,
+                                       },
+                                       start: {
+                                          column: 40,
+                                          line: 7,
+                                       },
+                                    },
+                                    start: 146,
+                                    type: "NumericLiteral",
+                                    value: 8,
+                                 },
+                              ],
+                              callee: {
+                                 end: 137,
+                                 loc: {
+                                    end: {
+                                       column: 31,
+                                       line: 7,
+                                    },
+                                    identifierName: "parseInt",
+                                    start: {
+                                       column: 23,
+                                       line: 7,
+                                    },
+                                 },
+                                 name: "parseInt",
+                                 start: 129,
+                                 type: "Identifier",
+                              },
+                              end: 148,
+                              loc: {
+                                 end: {
+                                    column: 42,
+                                    line: 7,
+                                 },
+                                 start: {
+                                    column: 23,
+                                    line: 7,
+                                 },
+                              },
+                              start: 129,
+                              type: "CallExpression",
+                           },
+                        ],
+                        callee: {
+                           computed: false,
+                           end: 122,
+                           leadingComments: ~,
+                           loc: {
+                              end: {
+                                 column: 16,
+                                 line: 7,
+                              },
+                              start: {
+                                 column: 4,
+                                 line: 7,
+                              },
+                           },
+                           object: {
+                              end: 112,
+                              leadingComments: ~,
+                              loc: {
+                                 end: {
+                                    column: 6,
+                                    line: 7,
+                                 },
+                                 identifierName: "fs",
+                                 start: {
+                                    column: 4,
+                                    line: 7,
+                                 },
+                              },
+                              name: "fs",
+                              start: 110,
+                              type: "Identifier",
+                           },
+                           property: {
+                              end: 122,
+                              loc: {
+                                 end: {
+                                    column: 16,
+                                    line: 7,
+                                 },
+                                 identifierName: "mkdirSync",
+                                 start: {
+                                    column: 7,
+                                    line: 7,
+                                 },
+                              },
+                              name: "mkdirSync",
+                              start: 113,
+                              type: "Identifier",
+                           },
+                           start: 110,
+                           type: "MemberExpression",
+                        },
+                        end: 149,
+                        leadingComments: ~,
+                        loc: {
+                           end: {
+                              column: 43,
+                              line: 7,
+                           },
+                           start: {
+                              column: 4,
+                              line: 7,
+                           },
+                        },
+                        start: 110,
+                        type: "CallExpression",
+                     },
+                     leadingComments: ~,
+                     loc: {
+                        end: {
+                           column: 44,
+                           line: 7,
+                        },
+                        start: {
+                           column: 4,
+                           line: 7,
+                        },
+                     },
+                     start: 110,
+                     type: "ExpressionStatement",
+                  },
+               ],
+               directives: [],
+               end: 152,
+               leadingComments: ~,
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 8,
+                  },
+                  start: {
+                     column: 4,
+                     line: 6,
+                  },
+               },
+               start: 104,
+               type: "BlockStatement",
+            },
+            end: 248,
+            finalizer: ~,
+            guardedHandlers: [],
+            handler: {
+               body: {
+                  body: [],
+                  directives: [],
+                  end: 248,
+                  innerComments: [
+                     {
+                        end: 246,
+                        loc: {
+                           end: {
+                              column: 81,
+                              line: 9,
+                           },
+                           start: {
+                              column: 4,
+                              line: 9,
+                           },
+                        },
+                        start: 169,
+                        type: "CommentLine",
+                        value: " like Unix's cp, keep going even if we can't create dest dir - innerComment",
+                     },
+                  ],
+                  leadingComments: ~,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 10,
+                     },
+                     start: {
+                        column: 12,
+                        line: 8,
+                     },
+                  },
+                  start: 163,
+                  type: "BlockStatement",
+               },
+               end: 248,
+               loc: {
+                  end: {
+                     column: 1,
+                     line: 10,
+                  },
+                  start: {
+                     column: 2,
+                     line: 8,
+                  },
+               },
+               param: {
+                  end: 161,
+                  loc: {
+                     end: {
+                        column: 10,
+                        line: 8,
+                     },
+                     identifierName: "e",
+                     start: {
+                        column: 9,
+                        line: 8,
+                     },
+                  },
+                  name: "e",
+                  start: 160,
+                  type: "Identifier",
+               },
+               start: 153,
+               type: "CatchClause",
+            },
+            leadingComments: [
+               {
+                  end: 17,
+                  loc: {
+                     end: {
+                        column: 17,
+                        line: 1,
+                     },
+                     start: {
+                        column: 0,
+                        line: 1,
+                     },
+                  },
+                  start: 0,
+                  type: "CommentLine",
+                  value: " This a comment",
+               },
+               {
+                  end: 39,
+                  loc: {
+                     end: {
+                        column: 21,
+                        line: 2,
+                     },
+                     start: {
+                        column: 0,
+                        line: 2,
+                     },
+                  },
+                  start: 18,
+                  type: "CommentBlock",
+                  value: " Another comment ",
+               },
+               {
+                  end: 66,
+                  loc: {
+                     end: {
+                        column: 26,
+                        line: 3,
+                     },
+                     start: {
+                        column: 0,
+                        line: 3,
+                     },
+                  },
+                  start: 40,
+                  type: "CommentBlock",
+                  value: "* Yet another comment ",
+               },
+               {
+                  end: 99,
+                  loc: {
+                     end: {
+                        column: 31,
+                        line: 5,
+                     },
+                     start: {
+                        column: 0,
+                        line: 5,
+                     },
+                  },
+                  start: 68,
+                  type: "CommentLine",
+                  value: " Create dest - leadingComment",
+               },
+            ],
             loc: {
                end: {
-                  column: 17,
-                  line: 1,
+                  column: 1,
+                  line: 10,
                },
                start: {
                   column: 0,
-                  line: 1,
+                  line: 6,
                },
             },
-            start: 0,
-            type: "CommentLine",
-            value: " This a comment",
-         },
-         {
-            end: 39,
-            loc: {
-               end: {
-                  column: 21,
-                  line: 2,
-               },
-               start: {
-                  column: 0,
-                  line: 2,
-               },
-            },
-            start: 18,
-            type: "CommentBlock",
-            value: " Another comment ",
-         },
-         {
-            end: 66,
-            loc: {
-               end: {
-                  column: 26,
-                  line: 3,
-               },
-               start: {
-                  column: 0,
-                  line: 3,
-               },
-            },
-            start: 40,
-            type: "CommentBlock",
-            value: "* Yet another comment ",
+            start: 100,
+            type: "TryStatement",
          },
       ],
-      leadingComments: ~,
+      directives: [],
+      end: 249,
       loc: {
          end: {
             column: 0,
-            line: 4,
+            line: 11,
          },
          start: {
             column: 0,
