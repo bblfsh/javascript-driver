@@ -438,8 +438,8 @@
     "uast/yaml",
   ]
   pruneopts = "T"
-  revision = "5a1a268859490ec2772d8106a331be1f7d0d85a3"
-  version = "v2.14.2"
+  revision = "7f43f27c14a259a0a396cc70c911424b8e8b11c1"
+  version = "v2.15.0"
 
 [[projects]]
   digest = "1:48c5414d07b77e35a4c19f35e1c78d6a0cbdba6386005d0f8b7b86862d0ceca3"
