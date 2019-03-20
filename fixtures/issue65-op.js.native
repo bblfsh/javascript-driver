@@ -1,0 +1,141 @@
+{
+   comments: [],
+   end: 15,
+   loc: {
+      end: {
+         column: 0,
+         line: 2,
+      },
+      start: {
+         column: 0,
+         line: 1,
+      },
+   },
+   program: {
+      body: [
+         {
+            declarations: [
+               {
+                  end: 13,
+                  id: {
+                     end: 5,
+                     loc: {
+                        end: {
+                           column: 5,
+                           line: 1,
+                        },
+                        identifierName: "a",
+                        start: {
+                           column: 4,
+                           line: 1,
+                        },
+                     },
+                     name: "a",
+                     start: 4,
+                     type: "Identifier",
+                  },
+                  init: {
+                     end: 13,
+                     left: {
+                        end: 9,
+                        extra: {
+                           raw: "0",
+                           rawValue: 0,
+                        },
+                        loc: {
+                           end: {
+                              column: 9,
+                              line: 1,
+                           },
+                           start: {
+                              column: 8,
+                              line: 1,
+                           },
+                        },
+                        start: 8,
+                        type: "NumericLiteral",
+                        value: 0,
+                     },
+                     loc: {
+                        end: {
+                           column: 13,
+                           line: 1,
+                        },
+                        start: {
+                           column: 8,
+                           line: 1,
+                        },
+                     },
+                     operator: "+",
+                     right: {
+                        end: 13,
+                        extra: {
+                           raw: "1",
+                           rawValue: 1,
+                        },
+                        loc: {
+                           end: {
+                              column: 13,
+                              line: 1,
+                           },
+                           start: {
+                              column: 12,
+                              line: 1,
+                           },
+                        },
+                        start: 12,
+                        type: "NumericLiteral",
+                        value: 1,
+                     },
+                     start: 8,
+                     type: "BinaryExpression",
+                  },
+                  loc: {
+                     end: {
+                        column: 13,
+                        line: 1,
+                     },
+                     start: {
+                        column: 4,
+                        line: 1,
+                     },
+                  },
+                  start: 4,
+                  type: "VariableDeclarator",
+               },
+            ],
+            end: 14,
+            kind: "var",
+            loc: {
+               end: {
+                  column: 14,
+                  line: 1,
+               },
+               start: {
+                  column: 0,
+                  line: 1,
+               },
+            },
+            start: 0,
+            type: "VariableDeclaration",
+         },
+      ],
+      directives: [],
+      end: 15,
+      loc: {
+         end: {
+            column: 0,
+            line: 2,
+         },
+         start: {
+            column: 0,
+            line: 1,
+         },
+      },
+      sourceType: "module",
+      start: 0,
+      type: "Program",
+   },
+   start: 0,
+   type: "File",
+}
