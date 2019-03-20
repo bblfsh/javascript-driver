@@ -29,7 +29,7 @@ var Preprocessors = []Mapping{
 	}.Mapping(),
 
 	Map(
-		Part("_", Obj{"loc": AnyNode(nil)}),
+		Part("_", Obj{"loc": Any()}),
 		Part("_", Obj{}),
 	),
 	// preserve raw string and regexp literals
@@ -72,8 +72,48 @@ var Preprocessors = []Mapping{
 	),
 }
 
+// allNormalizedTypes are all uast.KeyType that are processed by current normalizer
+// where we currently drop the coments node off.
+var allNormalizedTypes = []nodes.Value{
+	nodes.String("Identifier"),
+	nodes.String("JSXIdentifier"),
+	nodes.String("StringLiteral"),
+	nodes.String("StringLiteral"),
+	nodes.String("CommentLine"),
+	nodes.String("CommentBlock"),
+	nodes.String("BlockStatement"),
+	nodes.String("ImportDeclaration"),
+	nodes.String("ImportDeclaration"),
+	nodes.String("ImportSpecifier"),
+	nodes.String("ImportDefaultSpecifier"),
+	nodes.String("ImportNamespaceSpecifier"),
+	nodes.String("FunctionDeclaration"),
+}
+
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
 var Normalizers = []Mapping{
+	//FIXME(bzz): save all 3 *Commnets in a new parent Group node \w order
+	Map( // this is not reversible
+		Part("_", Fields{
+			{Name: uast.KeyType, Op: Check(In(allNormalizedTypes...), Var("t"))},
+			{Name: "leadingComments", Drop: true, Op: Any()},
+		}),
+		Part("_", Obj{uast.KeyType: Var("t")}),
+	),
+	Map( // this is not reversible
+		Part("_", Fields{
+			{Name: uast.KeyType, Op: Check(In(allNormalizedTypes...), Var("t"))},
+			{Name: "innerComments", Drop: true, Op: Any()},
+		}),
+		Part("_", Obj{uast.KeyType: Var("t")}),
+	),
+	Map( // this is not reversible
+		Part("_", Fields{
+			{Name: uast.KeyType, Op: Check(In(allNormalizedTypes...), Var("t"))},
+			{Name: "trailingComments", Drop: true, Op: Any()},
+		}),
+		Part("_", Obj{uast.KeyType: Var("t")}),
+	),
 	MapSemantic("Identifier", uast.Identifier{}, MapObj(
 		Fields{
 			{Name: "name", Op: Var("name")},
@@ -81,9 +121,6 @@ var Normalizers = []Mapping{
 			{Name: "typeAnnotation", Drop: true, Op: Any()},
 			//FIXME(bzz): map Flow "Optional Prameter" properly
 			{Name: "optional", Drop: true, Op: Any()},
-			//FIXME(bzz): map both once we agree how
-			{Name: "leadingComments", Drop: true, Op: Any()},
-			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Name": Var("name"),
@@ -100,9 +137,6 @@ var Normalizers = []Mapping{
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
 			{Name: "value", Op: singleQuote{Var("val")}},
-			//FIXME(bzz): save both once we agree how
-			{Name: "leadingComments", Drop: true, Op: Any()},
-			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Value":  Var("val"),
@@ -112,9 +146,6 @@ var Normalizers = []Mapping{
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
 			{Name: "value", Op: Quote(Var("val"))},
-			//FIXME(bzz): save both once we agree how
-			{Name: "leadingComments", Drop: true, Op: Any()},
-			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Value": Var("val"),
@@ -136,10 +167,6 @@ var Normalizers = []Mapping{
 		Fields{
 			{Name: "body", Op: Var("stmts")},
 			{Name: "directives", Op: Arr()}, // TODO: find an example
-			// FIXME(bzz): make sure such comments are linked properly
-			{Name: "innerComments", Drop: true, Op: Any()},
-			{Name: "leadingComments", Drop: true, Op: Any()},
-			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Statements": Var("stmts"),
@@ -150,9 +177,6 @@ var Normalizers = []Mapping{
 			{Name: "source", Op: Var("path")},
 			// empty un-used array
 			{Name: "specifiers", Drop: true, Op: Arr()},
-			// FIXME(bzz): make sure such comments are linked properly
-			{Name: "leadingComments", Drop: true, Op: Any()},
-			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Path": Var("path"),
@@ -166,9 +190,6 @@ var Normalizers = []Mapping{
 			// common
 			Fields{
 				{Name: "source", Op: Var("path")},
-				// FIXME(bzz): make sure such comments are linked properly
-				{Name: "leadingComments", Drop: true, Op: Any()},
-				{Name: "trailingComments", Drop: true, Op: Any()},
 			},
 			Objs{
 				// namespace
@@ -179,9 +200,6 @@ var Normalizers = []Mapping{
 						{Name: uast.KeyType, Op: String("ImportNamespaceSpecifier")},
 						{Name: uast.KeyPos, Op: Var("local_pos")},
 						{Name: "local", Op: Var("local")},
-						// FIXME(bzz): make sure such comments are linked properly
-						{Name: "leadingComments", Drop: true, Op: Any()},
-						{Name: "trailingComments", Drop: true, Op: Any()},
 					}),
 				},
 				// specific type
@@ -249,9 +267,6 @@ var Normalizers = []Mapping{
 	MapSemantic("ImportDefaultSpecifier", uast.Alias{}, MapObj(
 		Fields{
 			{Name: "local", Op: Var("local")},
-			//FIXME(bzz): save this once we agree how
-			{Name: "leadingComments", Drop: true, Op: Any()},
-			{Name: "trailingComments", Drop: true, Op: Any()},
 		},
 		Obj{
 			"Name": Var("local"),
@@ -277,9 +292,6 @@ var Normalizers = []Mapping{
 			// https://flow.org/en/docs/types/generics/
 			// see fixtures/ext_typedecl.js#34 func makeWeakCache
 			{Name: "typeParameters", Drop: true, Op: Any()},
-			// FIXME(bzz): make sure such comments are linked properly
-			{Name: "leadingComments", Drop: true, Op: Any()},
-			{Name: "trailingComments", Drop: true, Op: Any()},
 			{Name: "params", Op: Each("params", Cases("param_case",
 				// Identifier
 				Check(
