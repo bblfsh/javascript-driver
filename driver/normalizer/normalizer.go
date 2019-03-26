@@ -83,7 +83,6 @@ var allNormalizedTypes = []nodes.Value{
 	nodes.String("CommentBlock"),
 	nodes.String("BlockStatement"),
 	nodes.String("ImportDeclaration"),
-	nodes.String("ImportDeclaration"),
 	nodes.String("ImportSpecifier"),
 	nodes.String("ImportDefaultSpecifier"),
 	nodes.String("ImportNamespaceSpecifier"),
