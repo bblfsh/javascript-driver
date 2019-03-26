@@ -211,7 +211,7 @@ var Normalizers = []Mapping{
 							"Name":      Var("local"),
 							"Node": UASTType(uast.Identifier{}, Obj{
 								uast.KeyPos: Any(),
-								"Name": String("."),
+								"Name": Any(),
 							}),
 						})),
 				},

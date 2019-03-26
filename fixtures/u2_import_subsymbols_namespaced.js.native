@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 65,
+   end: 109,
    loc: {
       end: {
          column: 0,
-         line: 3,
+         line: 4,
       },
       start: {
          column: 0,
@@ -153,13 +153,83 @@
             start: 35,
             type: "ImportDeclaration",
          },
+         {
+            end: 108,
+            importKind: "type",
+            loc: {
+               end: {
+                  column: 43,
+                  line: 3,
+               },
+               start: {
+                  column: 0,
+                  line: 3,
+               },
+            },
+            source: {
+               end: 107,
+               extra: {
+                  raw: "\"react-relay\"",
+                  rawValue: "react-relay",
+               },
+               loc: {
+                  end: {
+                     column: 42,
+                     line: 3,
+                  },
+                  start: {
+                     column: 29,
+                     line: 3,
+                  },
+               },
+               start: 94,
+               type: "StringLiteral",
+               value: "react-relay",
+            },
+            specifiers: [
+               {
+                  end: 88,
+                  loc: {
+                     end: {
+                        column: 23,
+                        line: 3,
+                     },
+                     start: {
+                        column: 12,
+                        line: 3,
+                     },
+                  },
+                  local: {
+                     end: 88,
+                     loc: {
+                        end: {
+                           column: 23,
+                           line: 3,
+                        },
+                        identifierName: "Environment",
+                        start: {
+                           column: 12,
+                           line: 3,
+                        },
+                     },
+                     name: "Environment",
+                     start: 77,
+                     type: "Identifier",
+                  },
+                  start: 77,
+                  type: "ImportDefaultSpecifier",
+               },
+            ],
+            start: 65,
+            type: "ImportDeclaration",
+         },
       ],
       directives: [],
-      end: 65,
+      end: 109,
       loc: {
          end: {
             column: 0,
-            line: 3,
+            line: 4,
          },
          start: {
             column: 0,
