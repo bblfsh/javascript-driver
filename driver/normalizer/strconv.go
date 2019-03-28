@@ -67,6 +67,7 @@ func contains(s string, c byte) bool {
 // current implementation and found this was fastest.
 func replaceEscapedMaybe(s, old, repl string) string {
 	var out strings.Builder
+	oldFirstRune, _ := utf8.DecodeRuneInString(old)
 	for s != "" {
 		pos := strings.Index(s, old)
 		if pos < 0 {
@@ -80,7 +81,7 @@ func replaceEscapedMaybe(s, old, repl string) string {
 		} else {
 			out.WriteString(repl)
 		}
-		if strings.IndexRune(old, r) == 0 { // old startsWith r
+		if oldFirstRune == r {
 			continue
 		}
 		s = s[n:]
@@ -171,10 +172,10 @@ func appendEscapedRune(buf []byte, r rune, quote byte) []byte {
 	return buf
 }
 
-// unquoteDouble is strconv.Unquote + JS-specific escape sequnce handling
+// unquoteDouble is strconv.Unquote + JS-specific escape sequence handling.
 func unquoteDouble(s string) (string, error) {
-	s = replaceEscapedMaybe(s, "\\0", "\x00") // treatment of special JS escape seq
-	ns, err := strconv.Unquote(s)
+	// Handle JS-specific escape sequences before removing quotes.
+	ns, err := strconv.Unquote(replaceEscapedMaybe(s, "\\0", "\x00"))
 	if err != nil {
 		return "", fmt.Errorf("%v (%s)", err, s)
 	}
