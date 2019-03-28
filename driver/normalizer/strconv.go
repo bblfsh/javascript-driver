@@ -75,12 +75,15 @@ func replaceEscapedMaybe(s, old, repl string) string {
 		out.WriteString(s[:pos])
 		s = s[pos+len(old):]
 		r, n := utf8.DecodeRuneInString(s)
-		s = s[n:]
 		if r >= '0' && r <= '9' {
 			out.WriteString(old)
 		} else {
 			out.WriteString(repl)
 		}
+		if strings.IndexRune(old, r) == 0 { // old startsWith r
+			continue
+		}
+		s = s[n:]
 		if n != 0 {
 			out.WriteRune(r)
 		}

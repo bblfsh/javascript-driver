@@ -23,6 +23,7 @@ var testCasesUnquote = []struct {
 	{`'\0something\0'`, "\u0000something\u0000", "'\\x00something\\x00'"},
 	{`'\0something\0else'`, "\u0000something\u0000else", "'\\x00something\\x00else'"},
 	{`'\u0000123\0s'`, "\u0000123\u0000s", "'\\x00123\\x00s'"},
+	{`'\0\0'`, "\u0000\u0000", "'\\x00\\x00'"},
 }
 
 func TestUnquoteSingle(t *testing.T) {
