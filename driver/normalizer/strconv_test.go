@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-var testCasesUnquote = []struct {
+var testCasesUnquoteSingle = []struct {
 	quoted   string
 	unquoted string
 	// In some cases unquoting and then re-quoting a quoted string does not produce a
@@ -17,8 +17,8 @@ var testCasesUnquote = []struct {
 	// to be decoded via Go's native rules to the byte sequence we want.
 	canonicalQuoted string
 }{
-	{`'a'`, "a", `'a'`},
-	{`'\x00'`, "\u0000", `'\x00'`},
+	{`'a'`, "a", "'a'"},
+	{`'\x00'`, "\u0000", "'\\x00'"},
 	{`'\0'`, "\u0000", "'\\x00'"},
 	{`'\0something\0'`, "\u0000something\u0000", "'\\x00something\\x00'"},
 	{`'\0something\0else'`, "\u0000something\u0000else", "'\\x00something\\x00else'"},
@@ -26,8 +26,14 @@ var testCasesUnquote = []struct {
 	{`'\0\0'`, "\u0000\u0000", "'\\x00\\x00'"},
 }
 
+func TestUnquoteDouble(t *testing.T) {
+	s, err := unquoteDouble(`"\0\0\0\0\0\0\0\0"`)
+	require.NoError(t, err)
+	require.Equal(t, "\x00\x00\x00\x00\x00\x00\x00\x00", s)
+}
+
 func TestUnquoteSingle(t *testing.T) {
-	for _, test := range testCasesUnquote {
+	for _, test := range testCasesUnquoteSingle {
 		t.Run("", func(t *testing.T) {
 			s, err := unquoteSingle(test.quoted)
 			require.NoError(t, err)
@@ -37,7 +43,7 @@ func TestUnquoteSingle(t *testing.T) {
 }
 
 func TestUnquoteSingleAndQuoteBack(t *testing.T) {
-	for _, test := range testCasesUnquote {
+	for _, test := range testCasesUnquoteSingle {
 		t.Run("", func(t *testing.T) {
 			u, err := unquoteSingle(test.quoted)
 			require.NoError(t, err)
@@ -67,7 +73,7 @@ func printDebug(t *testing.T, quoted, actual string) {
 }
 
 func BenchmarkReplacingNullEscape(b *testing.B) {
-	for _, test := range testCasesUnquote {
+	for _, test := range testCasesUnquoteSingle {
 		b.Run("", func(b *testing.B) {
 			b.ReportAllocs()
 			for n := 0; n < b.N; n++ {

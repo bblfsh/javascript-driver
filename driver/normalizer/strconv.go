@@ -170,3 +170,13 @@ func appendEscapedRune(buf []byte, r rune, quote byte) []byte {
 	}
 	return buf
 }
+
+// unquoteDouble is strconv.Unquote + JS-specific escape sequnce handling
+func unquoteDouble(s string) (string, error) {
+	s = replaceEscapedMaybe(s, "\\0", "\x00") // treatment of special JS escape seq
+	ns, err := strconv.Unquote(s)
+	if err != nil {
+		return "", fmt.Errorf("%v (%s)", err, s)
+	}
+	return ns, nil
+}
