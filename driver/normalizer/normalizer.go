@@ -210,6 +210,8 @@ var Normalizers = []Mapping{
 							"Name":      Var("local"),
 							"Node": UASTType(uast.Identifier{}, Obj{
 								uast.KeyPos: Any(),
+								//TODO(bzz): save imported Identifer in Nodes
+								// https://github.com/babel/babel/blob/master/packages/babel-parser/ast/spec.md#importspecifier
 								"Name": Any(),
 							}),
 						})),
@@ -241,6 +243,7 @@ var Normalizers = []Mapping{
 						"Node":      Var("path"),
 					}),
 					"Names": Var("names"),
+					//FIXME(bzz): this should be true ONLY for wildcard imports
 					"All":   Bool(true),
 				},
 				// normal import
