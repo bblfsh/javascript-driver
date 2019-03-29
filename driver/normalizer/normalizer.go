@@ -1,6 +1,7 @@
 package normalizer
 
 import (
+	"strconv"
 	"strings"
 
 	"gopkg.in/bblfsh/sdk.v2/uast"
@@ -145,7 +146,7 @@ var Normalizers = []Mapping{
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
-			{Name: "value", Op: Quote(Var("val"))},
+			{Name: "value", Op: doubleQuote(Var("val"))},
 		},
 		Obj{
 			"Value": Var("val"),
@@ -392,4 +393,13 @@ func (op singleQuote) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 	}
 	s := quoteSingle(string(sn))
 	return nodes.String(s), nil
+}
+
+// doubleQuote is a transformer.Quote + JS-specific escape sequence handing
+func doubleQuote(op Op) Op {
+	return StringConv(op, func(s string) (string, error) {
+		return unquoteDouble(s)
+	}, func(s string) (string, error) {
+		return strconv.Quote(s), nil
+	})
 }

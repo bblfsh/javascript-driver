@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 255,
+   end: 279,
    loc: {
       end: {
          column: 0,
-         line: 10,
+         line: 12,
       },
       start: {
          column: 0,
@@ -1157,13 +1157,81 @@
             start: 208,
             type: "VariableDeclaration",
          },
+         {
+            end: 278,
+            expression: {
+               end: 278,
+               left: {
+                  end: 257,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 11,
+                     },
+                     identifierName: "d",
+                     start: {
+                        column: 0,
+                        line: 11,
+                     },
+                  },
+                  name: "d",
+                  start: 256,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 22,
+                     line: 11,
+                  },
+                  start: {
+                     column: 0,
+                     line: 11,
+                  },
+               },
+               operator: "=",
+               right: {
+                  end: 278,
+                  extra: {
+                     raw: "\"\\0\\0\\0\\0\\0\\0\\0\\0\"",
+                     rawValue: "\x00\x00\x00\x00\x00\x00\x00\x00",
+                  },
+                  loc: {
+                     end: {
+                        column: 22,
+                        line: 11,
+                     },
+                     start: {
+                        column: 4,
+                        line: 11,
+                     },
+                  },
+                  start: 260,
+                  type: "StringLiteral",
+                  value: "\x00\x00\x00\x00\x00\x00\x00\x00",
+               },
+               start: 256,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 22,
+                  line: 11,
+               },
+               start: {
+                  column: 0,
+                  line: 11,
+               },
+            },
+            start: 256,
+            type: "ExpressionStatement",
+         },
       ],
       directives: [],
-      end: 255,
+      end: 279,
       loc: {
          end: {
             column: 0,
-            line: 10,
+            line: 12,
          },
          start: {
             column: 0,
