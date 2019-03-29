@@ -9,3 +9,5 @@ var escComma = '\0COMMA'+Math.random()+'\0';
 var escPeriod = '\0PERIOD'+Math.random()+'\0';
 
 d = "\0\0\0\0\0\0\0\0"
+
+c = "\.\1 or really \anything"

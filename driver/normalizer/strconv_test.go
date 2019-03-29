@@ -26,10 +26,22 @@ var testCasesUnquoteSingle = []struct {
 	{`'\0\0'`, "\u0000\u0000", "'\\x00\\x00'"},
 }
 
+var testCasesUnquoteDouble = []struct {
+	quoted   string
+	unquoted string
+}{
+	{`"\0\0\0"`, "\x00\x00\x00"},
+	{`"\.\."`, "\\.\\."},
+}
+
 func TestUnquoteDouble(t *testing.T) {
-	s, err := unquoteDouble(`"\0\0\0\0\0\0\0\0"`)
-	require.NoError(t, err)
-	require.Equal(t, "\x00\x00\x00\x00\x00\x00\x00\x00", s)
+	for _, test := range testCasesUnquoteDouble {
+		t.Run("", func(t *testing.T) {
+			s, err := unquoteDouble(test.quoted)
+			require.NoError(t, err)
+			require.Equal(t, test.unquoted, s)
+		})
+	}
 }
 
 func TestUnquoteSingle(t *testing.T) {
