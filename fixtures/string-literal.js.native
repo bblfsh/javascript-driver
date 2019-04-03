@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 311,
+   end: 328,
    loc: {
       end: {
          column: 0,
-         line: 14,
+         line: 16,
       },
       start: {
          column: 0,
@@ -1293,13 +1293,81 @@
             start: 280,
             type: "ExpressionStatement",
          },
+         {
+            end: 327,
+            expression: {
+               end: 327,
+               left: {
+                  end: 313,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 15,
+                     },
+                     identifierName: "f",
+                     start: {
+                        column: 0,
+                        line: 15,
+                     },
+                  },
+                  name: "f",
+                  start: 312,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 15,
+                     line: 15,
+                  },
+                  start: {
+                     column: 0,
+                     line: 15,
+                  },
+               },
+               operator: "=",
+               right: {
+                  end: 327,
+                  extra: {
+                     raw: "\"\\u{1D306}\"",
+                     rawValue: "𝌆",
+                  },
+                  loc: {
+                     end: {
+                        column: 15,
+                        line: 15,
+                     },
+                     start: {
+                        column: 4,
+                        line: 15,
+                     },
+                  },
+                  start: 316,
+                  type: "StringLiteral",
+                  value: "𝌆",
+               },
+               start: 312,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 15,
+                  line: 15,
+               },
+               start: {
+                  column: 0,
+                  line: 15,
+               },
+            },
+            start: 312,
+            type: "ExpressionStatement",
+         },
       ],
       directives: [],
-      end: 311,
+      end: 328,
       loc: {
          end: {
             column: 0,
-            line: 14,
+            line: 16,
          },
          start: {
             column: 0,

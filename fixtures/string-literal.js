@@ -11,3 +11,5 @@ var escPeriod = '\0PERIOD'+Math.random()+'\0';
 d = "\0\0\0\0\0\0\0\0"
 
 c = "\.\1 or really \anything"
+
+f = "\u{1D306}"

@@ -24,6 +24,7 @@ var testCasesUnquoteSingle = []struct {
 	{`'\0something\0else'`, "\u0000something\u0000else", "'\\x00something\\x00else'"},
 	{`'\u0000123\0s'`, "\u0000123\u0000s", "'\\x00123\\x00s'"},
 	{`'\0\0'`, "\u0000\u0000", "'\\x00\\x00'"},
+	{`'\01'`, "\u0001", "'\\x01'"},
 }
 
 var testCasesUnquoteDouble = []struct {
@@ -31,7 +32,11 @@ var testCasesUnquoteDouble = []struct {
 	unquoted string
 }{
 	{`"\0\0\0"`, "\x00\x00\x00"},
-	{`"\.\."`, "\\.\\."},
+	{`"\a"`, "a"},
+	{`"\.\."`, ".."},
+	{`"\1"`, "1"},
+	{`"\01"`, "1"},
+	{`"\u{1D306}"`, "𝌆"},
 }
 
 func TestUnquoteDouble(t *testing.T) {
@@ -39,7 +44,7 @@ func TestUnquoteDouble(t *testing.T) {
 		t.Run("", func(t *testing.T) {
 			s, err := unquoteDouble(test.quoted)
 			require.NoError(t, err)
-			require.Equal(t, test.unquoted, s)
+			assertEquals(t, test.unquoted, s)
 		})
 	}
 }
@@ -49,7 +54,7 @@ func TestUnquoteSingle(t *testing.T) {
 		t.Run("", func(t *testing.T) {
 			s, err := unquoteSingle(test.quoted)
 			require.NoError(t, err)
-			require.Equal(t, test.unquoted, s)
+			assertEquals(t, test.unquoted, s)
 		})
 	}
 }
