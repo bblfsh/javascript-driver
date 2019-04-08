@@ -23,7 +23,7 @@ var Native = Transformers([][]Transformer{
 // PreprocessCode is a preprocessor stage that can use the source code to
 // fix tokens and positional information.
 var PreprocessCode = []CodeTransformer{
-	positioner.FromUnicodeOffset(),
+	positioner.FromUTF16Offset(),
 }
 
 var Code []CodeTransformer // TODO(dennwc): deprecated
