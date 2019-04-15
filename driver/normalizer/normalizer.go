@@ -1,7 +1,6 @@
 package normalizer
 
 import (
-	"strconv"
 	"strings"
 
 	"gopkg.in/bblfsh/sdk.v2/uast"
@@ -37,10 +36,10 @@ var Preprocessors = []Mapping{
 	Map(
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
-			"value": Any(),
+			"value":      Any(),
 			"extra": Fields{
 				{Name: "raw", Op: Var("raw")},
-				{Name: "rawValue", Op: Any()},
+				{Name: "rawValue", Op: Var("norm")},
 				//TODO(bzz): make sure parenthesis mapping is consistent \w other drivers
 				{Name: "parenthesized", Drop: true, Op: Any()},
 				{Name: "parenStart", Drop: true, Op: Any()},
@@ -49,6 +48,7 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
 			"value":      Var("raw"),
+			"normValue":  Var("norm"),
 		}),
 	),
 	Map(
@@ -78,7 +78,6 @@ var Preprocessors = []Mapping{
 var allNormalizedTypes = []nodes.Value{
 	nodes.String("Identifier"),
 	nodes.String("JSXIdentifier"),
-	nodes.String("StringLiteral"),
 	nodes.String("StringLiteral"),
 	nodes.String("CommentLine"),
 	nodes.String("CommentBlock"),
@@ -136,7 +135,8 @@ var Normalizers = []Mapping{
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
-			{Name: "value", Op: singleQuote{Var("val")}},
+			{Name: "normValue", Op: Var("val")},
+			{Name: "value", Drop: true, Op: singleQuote{Any()}}, // only used in Annotated
 		},
 		Obj{
 			"Value":  Var("val"),
@@ -145,7 +145,8 @@ var Normalizers = []Mapping{
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
-			{Name: "value", Op: doubleQuote(Var("val"))},
+			{Name: "normValue", Op: Var("val")},
+			{Name: "value", Drop: true, Op: Any()}, // only used in Annotated
 		},
 		Obj{
 			"Value": Var("val"),
@@ -245,7 +246,7 @@ var Normalizers = []Mapping{
 					}),
 					"Names": Var("names"),
 					//FIXME(bzz): this should be true ONLY for wildcard imports
-					"All":   Bool(true),
+					"All": Bool(true),
 				},
 				// normal import
 				{
@@ -377,10 +378,6 @@ func (op singleQuote) Check(st *State, n nodes.Node) (bool, error) {
 	if !strings.HasPrefix(s, `'`) || !strings.HasSuffix(s, `'`) {
 		return false, nil
 	}
-	s, err := unquoteSingle(s)
-	if err != nil {
-		return false, err
-	}
 	return op.op.Check(st, nodes.String(s))
 }
 
@@ -393,15 +390,5 @@ func (op singleQuote) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 	if !ok {
 		return nil, ErrUnexpectedType.New(nodes.String(""), n)
 	}
-	s := quoteSingle(string(sn))
-	return nodes.String(s), nil
-}
-
-// doubleQuote is a transformer.Quote + JS-specific escape sequence handing
-func doubleQuote(op Op) Op {
-	return StringConv(op, func(s string) (string, error) {
-		return unquoteDouble(s)
-	}, func(s string) (string, error) {
-		return strconv.Quote(s), nil
-	})
+	return sn, nil
 }
