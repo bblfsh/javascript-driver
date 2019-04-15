@@ -123,6 +123,7 @@
                            col: 22,
                         },
                      },
+                     normValue: "x",
                   },
                ],
                callee: { '@type': "MemberExpression",

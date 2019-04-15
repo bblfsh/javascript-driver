@@ -1648,6 +1648,7 @@
                                  col: 22,
                               },
                            },
+                           normValue: "foo",
                         },
                         variance: ~,
                      },

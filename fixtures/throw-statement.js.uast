@@ -57,6 +57,7 @@
                      col: 18,
                   },
                },
+               normValue: "exception",
             },
          },
       ],
