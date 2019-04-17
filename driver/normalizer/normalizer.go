@@ -136,7 +136,7 @@ var Normalizers = []Mapping{
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
 			{Name: "normValue", Op: Var("val")},
-			{Name: "value", Drop: true, Op: singleQuote{Any()}}, // only used in Annotated
+			{Name: "value", Drop: true, Op: Check(singleQuote{}, Any())}, // only used in Annotated
 		},
 		Obj{
 			"Value":  Var("val"),
@@ -362,7 +362,6 @@ var Normalizers = []Mapping{
 }
 
 type singleQuote struct {
-	op Op
 }
 
 func (op singleQuote) Kinds() nodes.Kind {
@@ -375,20 +374,5 @@ func (op singleQuote) Check(st *State, n nodes.Node) (bool, error) {
 		return false, nil
 	}
 	s := string(sn)
-	if !strings.HasPrefix(s, `'`) || !strings.HasSuffix(s, `'`) {
-		return false, nil
-	}
-	return op.op.Check(st, nodes.String(s))
-}
-
-func (op singleQuote) Construct(st *State, n nodes.Node) (nodes.Node, error) {
-	n, err := op.op.Construct(st, n)
-	if err != nil {
-		return nil, err
-	}
-	sn, ok := n.(nodes.String)
-	if !ok {
-		return nil, ErrUnexpectedType.New(nodes.String(""), n)
-	}
-	return sn, nil
+	return strings.HasPrefix(s, `'`) && strings.HasSuffix(s, `'`), nil
 }
