@@ -1,15 +1,15 @@
 package normalizer
 
 import (
-	"gopkg.in/bblfsh/sdk.v2/uast"
-	"gopkg.in/bblfsh/sdk.v2/uast/role"
-	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
+	"github.com/bblfsh/sdk/v3/uast"
+	"github.com/bblfsh/sdk/v3/uast/role"
+	. "github.com/bblfsh/sdk/v3/uast/transformer"
+	"github.com/bblfsh/sdk/v3/uast/transformer/positioner"
 )
 
 // Native is the of list `transformer.Transformer` to apply to a native AST.
 // To learn more about the Transformers and the available ones take a look to:
-// https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast/transformer
+// https://godoc.org/github.com/bblfsh/sdk/v3/uast/transformer
 var Native = Transformers([][]Transformer{
 	// The main block of transformation rules.
 	{Mappings(Annotations...)},
@@ -25,8 +25,6 @@ var Native = Transformers([][]Transformer{
 var PreprocessCode = []CodeTransformer{
 	positioner.FromUTF16Offset(),
 }
-
-var Code []CodeTransformer // TODO(dennwc): deprecated
 
 var (
 	unaryRoles = StringToRolesMap(map[string][]role.Role{
