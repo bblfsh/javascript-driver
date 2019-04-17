@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"strings"
 
-	"gopkg.in/bblfsh/sdk.v2/uast"
-	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
-	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
+	"github.com/bblfsh/sdk/v3/uast"
+	"github.com/bblfsh/sdk/v3/uast/nodes"
+	. "github.com/bblfsh/sdk/v3/uast/transformer"
 )
 
 var Preprocess = Transformers([][]Transformer{
@@ -22,7 +22,7 @@ var Preprocessors = []Mapping{
 	// ObjectToNode defines how to normalize common fields of native AST
 	// (like node type, token, positional information).
 	//
-	// https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast#ObjectToNode
+	// https://godoc.org/github.com/bblfsh/sdk/v3/uast#ObjectToNode
 	ObjectToNode{
 		InternalTypeKey: "type",
 		OffsetKey:       "start",
@@ -37,7 +37,7 @@ var Preprocessors = []Mapping{
 	Map(
 		Part("_", Obj{
 			uast.KeyType: String("StringLiteral"),
-			"value": Any(),
+			"value":      Any(),
 			"extra": Fields{
 				{Name: "raw", Op: Var("raw")},
 				{Name: "rawValue", Op: Any()},
@@ -245,7 +245,7 @@ var Normalizers = []Mapping{
 					}),
 					"Names": Var("names"),
 					//FIXME(bzz): this should be true ONLY for wildcard imports
-					"All":   Bool(true),
+					"All": Bool(true),
 				},
 				// normal import
 				{
