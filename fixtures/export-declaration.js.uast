@@ -158,6 +158,7 @@
                      col: 20,
                   },
                },
+               normValue: "mod",
             },
          },
          { '@type': "ExportNamedDeclaration",

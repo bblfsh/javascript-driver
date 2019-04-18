@@ -58,6 +58,7 @@
                      col: 38,
                   },
                },
+               normValue: "file",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -140,6 +141,7 @@
                      col: 56,
                   },
                },
+               normValue: "file",
             },
             specifiers: [
                { '@type': "ImportSpecifier",

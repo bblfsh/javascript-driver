@@ -269,6 +269,7 @@
                      col: 31,
                   },
                },
+               normValue: "react",
             },
             specifiers: [
                { '@type': "ImportNamespaceSpecifier",
@@ -336,6 +337,7 @@
                      col: 53,
                   },
                },
+               normValue: "react-relay",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -466,6 +468,7 @@
                      col: 56,
                   },
                },
+               normValue: "@kiwicom/orbit-components/lib/Alert",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -531,6 +534,7 @@
                      col: 66,
                   },
                },
+               normValue: "@kiwicom/orbit-components/lib/InputField",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -596,6 +600,7 @@
                      col: 47,
                   },
                },
+               normValue: "react-relay",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -678,6 +683,7 @@
                      col: 57,
                   },
                },
+               normValue: "../../services/environment",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -743,6 +749,7 @@
                      col: 57,
                   },
                },
+               normValue: "./primitives/PickerDropDown",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -808,6 +815,7 @@
                      col: 45,
                   },
                },
+               normValue: "./primitives/NoResult",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -873,6 +881,7 @@
                      col: 43,
                   },
                },
+               normValue: "../ClickOutside",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -938,6 +947,7 @@
                      col: 27,
                   },
                },
+               normValue: "../Text",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -1003,6 +1013,7 @@
                      col: 77,
                   },
                },
+               normValue: "./components/LocationPickerResultList",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -1068,6 +1079,7 @@
                      col: 52,
                   },
                },
+               normValue: "./services/placeholder",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -1133,6 +1145,7 @@
                      col: 55,
                   },
                },
+               normValue: "../../records/Location",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -2422,6 +2435,7 @@
                                        col: 14,
                                     },
                                  },
+                                 normValue: "",
                               },
                            },
                         ],
@@ -4944,6 +4958,7 @@
                                                                      col: 39,
                                                                   },
                                                                },
+                                                               normValue: "",
                                                             },
                                                             consequent: { '@type': "Identifier",
                                                                '@token': "input",
@@ -5641,6 +5656,7 @@
                                                                                                                col: 49,
                                                                                                             },
                                                                                                          },
+                                                                                                         normValue: "common.api_error",
                                                                                                       },
                                                                                                    },
                                                                                                 ],
@@ -5771,6 +5787,7 @@
                                                                                                          col: 43,
                                                                                                       },
                                                                                                    },
+                                                                                                   normValue: "critical",
                                                                                                 },
                                                                                              },
                                                                                           ],
@@ -6129,6 +6146,7 @@
                                                                                                                col: 56,
                                                                                                             },
                                                                                                          },
+                                                                                                         normValue: "forms.places_no_results",
                                                                                                       },
                                                                                                    },
                                                                                                 ],

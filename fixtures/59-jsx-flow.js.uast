@@ -109,6 +109,7 @@
                      col: 31,
                   },
                },
+               normValue: "react",
             },
             specifiers: [
                { '@type': "ImportNamespaceSpecifier",
@@ -212,6 +213,7 @@
                      col: 22,
                   },
                },
+               normValue: "mod",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",

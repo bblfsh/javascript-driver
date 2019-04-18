@@ -58,6 +58,7 @@
                      col: 34,
                   },
                },
+               normValue: "file",
             },
             specifiers: [
                { '@type': "ImportNamespaceSpecifier",
@@ -123,6 +124,7 @@
                      col: 29,
                   },
                },
+               normValue: "file",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",

@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 279,
+   end: 328,
    loc: {
       end: {
          column: 0,
-         line: 12,
+         line: 16,
       },
       start: {
          column: 0,
@@ -1225,20 +1225,156 @@
             start: 256,
             type: "ExpressionStatement",
          },
+         {
+            end: 310,
+            expression: {
+               end: 310,
+               left: {
+                  end: 281,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 13,
+                     },
+                     identifierName: "c",
+                     start: {
+                        column: 0,
+                        line: 13,
+                     },
+                  },
+                  name: "c",
+                  start: 280,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 30,
+                     line: 13,
+                  },
+                  start: {
+                     column: 0,
+                     line: 13,
+                  },
+               },
+               operator: "=",
+               right: {
+                  end: 310,
+                  extra: {
+                     raw: "\"\\.\\1 or really \\anything\"",
+                     rawValue: ".\x01 or really anything",
+                  },
+                  loc: {
+                     end: {
+                        column: 30,
+                        line: 13,
+                     },
+                     start: {
+                        column: 4,
+                        line: 13,
+                     },
+                  },
+                  start: 284,
+                  type: "StringLiteral",
+                  value: ".\x01 or really anything",
+               },
+               start: 280,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 30,
+                  line: 13,
+               },
+               start: {
+                  column: 0,
+                  line: 13,
+               },
+            },
+            start: 280,
+            type: "ExpressionStatement",
+         },
+         {
+            end: 327,
+            expression: {
+               end: 327,
+               left: {
+                  end: 313,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 15,
+                     },
+                     identifierName: "f",
+                     start: {
+                        column: 0,
+                        line: 15,
+                     },
+                  },
+                  name: "f",
+                  start: 312,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 15,
+                     line: 15,
+                  },
+                  start: {
+                     column: 0,
+                     line: 15,
+                  },
+               },
+               operator: "=",
+               right: {
+                  end: 327,
+                  extra: {
+                     raw: "\"\\u{1D306}\"",
+                     rawValue: "𝌆",
+                  },
+                  loc: {
+                     end: {
+                        column: 15,
+                        line: 15,
+                     },
+                     start: {
+                        column: 4,
+                        line: 15,
+                     },
+                  },
+                  start: 316,
+                  type: "StringLiteral",
+                  value: "𝌆",
+               },
+               start: 312,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 15,
+                  line: 15,
+               },
+               start: {
+                  column: 0,
+                  line: 15,
+               },
+            },
+            start: 312,
+            type: "ExpressionStatement",
+         },
       ],
       directives: [],
-      end: 279,
+      end: 328,
       loc: {
          end: {
             column: 0,
-            line: 12,
+            line: 16,
          },
          start: {
             column: 0,
             line: 1,
          },
       },
-      sourceType: "module",
+      sourceType: "script",
       start: 0,
       type: "Program",
    },

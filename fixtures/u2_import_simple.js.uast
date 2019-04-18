@@ -57,6 +57,7 @@
                      col: 15,
                   },
                },
+               normValue: "file1",
             },
             specifiers: [],
          },
