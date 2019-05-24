@@ -1,4 +1,4 @@
-# JavaScript driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/javascript-driver.svg?branch=master)](https://travis-ci.org/bblfsh/javascript-driver) ![Native Version](https://img.shields.io/badge/javascript%20version-8.9.3--r1-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.12-63afbf.svg)
+# JavaScript driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/javascript-driver.svg?branch=master)](https://travis-ci.org/bblfsh/javascript-driver) ![Native Version](https://img.shields.io/badge/javascript%20version-8-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.12-63afbf.svg)
 
 JavaScript driver for [babelfish](https://github.com/bblfsh/bblfshd).
 
