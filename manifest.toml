@@ -1,5 +1,6 @@
 name = "JavaScript"
 language = "javascript"
+aliases = ["JS","JSX"]
 status = "beta"
 features = ["ast","uast","roles"]
 
@@ -7,8 +8,3 @@ features = ["ast","uast","roles"]
 description  = """
 JavaScript driver for [babelfish](https://github.com/bblfsh/bblfshd).
 """
-
-[runtime]
-os = "alpine"
-go_version = "1.12"
-native_version = ["8.9.3-r1"]

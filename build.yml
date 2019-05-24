@@ -1,6 +1,6 @@
 sdk: '2'
 go-runtime:
-  version: '1.10-alpine'
+  version: '1.12-alpine'
 native:
   image: 'node:8-alpine'
   static:
