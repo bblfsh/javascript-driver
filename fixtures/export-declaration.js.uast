@@ -158,7 +158,7 @@
                      col: 20,
                   },
                },
-               normValue: "mod",
+               value: "mod",
             },
          },
          { '@type': "ExportNamedDeclaration",

@@ -72,7 +72,7 @@
                            col: 26,
                         },
                      },
-                     normValue: "Hello World",
+                     value: "Hello World",
                   },
                ],
                callee: { '@type': "MemberExpression",

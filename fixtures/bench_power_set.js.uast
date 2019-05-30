@@ -1123,7 +1123,7 @@
                            col: 16,
                         },
                      },
-                     normValue: "json2.js",
+                     value: "json2.js",
                   },
                ],
                callee: { '@type': "Identifier",

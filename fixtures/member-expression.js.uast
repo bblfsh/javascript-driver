@@ -216,7 +216,7 @@
                               col: 14,
                            },
                         },
-                        normValue: "b",
+                        value: "b",
                      },
                   },
                },

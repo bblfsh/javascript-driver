@@ -213,7 +213,7 @@
                                           col: 39,
                                        },
                                     },
-                                    normValue: "0777",
+                                    value: "0777",
                                  },
                                  { '@type': "NumericLiteral",
                                     '@token': 8,

@@ -491,7 +491,7 @@
                            col: 13,
                         },
                      },
-                     normValue: "x",
+                     value: "x",
                   },
                },
                operator: { '@type': "uast:Operator",

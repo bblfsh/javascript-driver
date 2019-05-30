@@ -428,7 +428,7 @@
                            col: 10,
                         },
                      },
-                     normValue: "",
+                     value: "",
                   },
                ],
                callee: { '@type': "Import",

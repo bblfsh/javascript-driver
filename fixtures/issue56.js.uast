@@ -346,7 +346,7 @@
                                     col: 12,
                                  },
                               },
-                              normValue: "|",
+                              value: "|",
                            },
                         },
                         operator: { '@type': "uast:Operator",

@@ -55,6 +55,7 @@ var Suite = &fixtures.Suite{
 			"StringLiteral",
 			"BooleanLiteral",
 			"NumericLiteral",
+			"DirectiveLiteral",
 		}},
 	},
 }
