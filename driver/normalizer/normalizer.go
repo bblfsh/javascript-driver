@@ -33,24 +33,8 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{}),
 	),
 	// preserve raw string and regexp literals
-	Map(
-		Part("_", Obj{
-			uast.KeyType: String("StringLiteral"),
-			"value":      Any(),
-			"extra": Fields{
-				{Name: "raw", Op: Var("raw")},
-				{Name: "rawValue", Op: Var("norm")},
-				//TODO(bzz): make sure parenthesis mapping is consistent \w other drivers
-				{Name: "parenthesized", Drop: true, Op: Any()},
-				{Name: "parenStart", Drop: true, Op: Any()},
-			},
-		}),
-		Part("_", Obj{
-			uast.KeyType: String("StringLiteral"),
-			"value":      Var("raw"),
-			"normValue":  Var("norm"),
-		}),
-	),
+	preprocessString("StringLiteral"),
+	preprocessString("DirectiveLiteral"),
 	Map(
 		Part("_", Obj{
 			uast.KeyType: String("RegExpLiteral"),
@@ -71,6 +55,27 @@ var Preprocessors = []Mapping{
 		Part("_", Obj{"extra": Any()}),
 		Part("_", Obj{}),
 	),
+}
+
+func preprocessString(typ string) Mapping {
+	return Map(
+		Part("_", Obj{
+			uast.KeyType: String(typ),
+			"value":      Any(),
+			"extra": Fields{
+				{Name: "raw", Op: Var("raw")},
+				{Name: "rawValue", Op: Var("norm")},
+				//TODO(bzz): make sure parenthesis mapping is consistent \w other drivers
+				{Name: "parenthesized", Drop: true, Op: Any()},
+				{Name: "parenStart", Drop: true, Op: Any()},
+			},
+		}),
+		Part("_", Obj{
+			uast.KeyType:  String(typ),
+			uast.KeyToken: Var("raw"),
+			"value":       Var("norm"),
+		}),
+	)
 }
 
 // allNormalizedTypes are all uast.KeyType that are processed by current normalizer
@@ -135,8 +140,8 @@ var Normalizers = []Mapping{
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
-			{Name: "normValue", Op: Var("val")},
-			{Name: "value", Drop: true, Op: Check(singleQuote{}, Any())}, // only used in Annotated
+			{Name: "value", Op: Var("val")},
+			{Name: uast.KeyToken, Drop: true, Op: Check(singleQuote{}, Any())}, // only used in Annotated
 		},
 		Obj{
 			"Value":  Var("val"),
@@ -145,8 +150,8 @@ var Normalizers = []Mapping{
 	)),
 	MapSemantic("StringLiteral", uast.String{}, MapObj(
 		Fields{
-			{Name: "normValue", Op: Var("val")},
-			{Name: "value", Drop: true, Op: Any()}, // only used in Annotated
+			{Name: "value", Op: Var("val")},
+			{Name: uast.KeyToken, Drop: true, Op: Any()}, // only used in Annotated
 		},
 		Obj{
 			"Value": Var("val"),

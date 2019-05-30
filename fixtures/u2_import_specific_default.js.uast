@@ -58,7 +58,7 @@
                      col: 23,
                   },
                },
-               normValue: "file",
+               value: "file",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",

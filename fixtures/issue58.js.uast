@@ -255,7 +255,7 @@
                                                          col: 30,
                                                       },
                                                    },
-                                                   normValue: "Text",
+                                                   value: "Text",
                                                 },
                                              },
                                           ],

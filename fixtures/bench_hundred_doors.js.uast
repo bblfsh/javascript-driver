@@ -291,7 +291,7 @@
                                                       col: 38,
                                                    },
                                                 },
-                                                normValue: "Door %d is open",
+                                                value: "Door %d is open",
                                              },
                                              { '@type': "Identifier",
                                                 '@token': "door",

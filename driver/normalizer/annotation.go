@@ -146,7 +146,7 @@ var Annotations = []Mapping{
 		role.Expression, role.Literal, role.Regexp,
 	),
 	AnnotateType("NullLiteral", nil, role.Expression, role.Literal, role.Null),
-	literal("StringLiteral", role.Expression, role.Literal, role.String),
+	AnnotateType("StringLiteral", nil, role.Expression, role.Literal, role.String),
 	literal("BooleanLiteral", role.Expression, role.Literal, role.Boolean),
 	literal("NumericLiteral", role.Expression, role.Literal, role.Number),
 
@@ -272,12 +272,7 @@ var Annotations = []Mapping{
 	// Misc
 	AnnotateType("Decorator", nil, role.Annotation, role.Incomplete),
 	AnnotateType("Directive", nil, role.Incomplete),
-	AnnotateType("DirectiveLiteral",
-		FieldRoles{
-			"value": {Rename: uast.KeyToken},
-		},
-		role.Expression, role.Literal, role.Incomplete,
-	),
+	AnnotateType("DirectiveLiteral", nil, role.Expression, role.Literal, role.Incomplete),
 
 	// Expressions
 	AnnotateType("Super", nil, role.Expression, role.Identifier, role.Base),

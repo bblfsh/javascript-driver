@@ -58,7 +58,7 @@
                      col: 40,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -124,7 +124,7 @@
                      col: 36,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportNamespaceSpecifier",
@@ -190,7 +190,7 @@
                      col: 32,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -273,7 +273,7 @@
                      col: 37,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -356,7 +356,7 @@
                      col: 38,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -487,7 +487,7 @@
                      col: 44,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportSpecifier",
@@ -618,7 +618,7 @@
                      col: 47,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -732,7 +732,7 @@
                      col: 51,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [
                { '@type': "ImportDefaultSpecifier",
@@ -828,7 +828,7 @@
                      col: 21,
                   },
                },
-               normValue: "module-name",
+               value: "module-name",
             },
             specifiers: [],
          },
