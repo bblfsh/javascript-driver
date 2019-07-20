@@ -8,8 +8,8 @@ import (
 )
 
 // Native is the of list `transformer.Transformer` to apply to a native AST.
-// To learn more about the Transformers and the available ones take a look to:
-// https://godoc.org/github.com/bblfsh/sdk/v3/uast/transformer
+// To learn more about the Transformers and to see the available ones, read
+// https://godoc.org/github.com/bblfsh/sdk/uast/transformer.
 var Native = Transformers([][]Transformer{
 	// The main block of transformation rules.
 	{Mappings(Annotations...)},

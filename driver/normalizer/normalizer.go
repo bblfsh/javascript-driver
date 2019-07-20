@@ -21,7 +21,7 @@ var Preprocessors = []Mapping{
 	// ObjectToNode defines how to normalize common fields of native AST
 	// (like node type, token, positional information).
 	//
-	// https://godoc.org/github.com/bblfsh/sdk/v3/uast#ObjectToNode
+	// https://godoc.org/github.com/bblfsh/sdk/uast/transformer#ObjectToNode
 	ObjectToNode{
 		InternalTypeKey: "type",
 		OffsetKey:       "start",
