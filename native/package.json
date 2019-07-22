@@ -17,13 +17,13 @@
     "test-only": "ava"
   },
   "devDependencies": {
-    "ava": "^0.18.1",
+    "ava": "^2.2.0",
     "rimraf": "^2.5.4",
-    "rollup": "^0.41.4",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-multi-entry": "^2.0.1",
-    "rollup-plugin-node-resolve": "^2.0.0"
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
   "ava": {
     "files": [
@@ -34,6 +34,7 @@
     ]
   },
   "dependencies": {
+    "@babel/core": "7",
     "babylon": "^7.0.0-beta.34"
   }
 }
