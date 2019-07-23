@@ -512,6 +512,8 @@
                end: 110,
                exact: false,
                indexers: [],
+               inexact: false,
+               internalSlots: [],
                loc: {
                   end: {
                      column: 1,
@@ -807,9 +809,6 @@
                                              type: "Identifier",
                                           },
                                           end: 274,
-                                          extra: {
-                                             parenthesizedArgument: false,
-                                          },
                                           loc: {
                                              end: {
                                                 column: 20,
@@ -1008,6 +1007,7 @@
                                                 },
                                                 start: 397,
                                                 type: "NewExpression",
+                                                typeArguments: ~,
                                              },
                                              end: 462,
                                              loc: {
@@ -1076,9 +1076,6 @@
                                                    type: "Identifier",
                                                 },
                                                 end: 326,
-                                                extra: {
-                                                   parenthesizedArgument: false,
-                                                },
                                                 loc: {
                                                    end: {
                                                       column: 20,
@@ -1867,6 +1864,8 @@
                      end: 651,
                      exact: false,
                      indexers: [],
+                     inexact: false,
+                     internalSlots: [],
                      loc: {
                         end: {
                            column: 70,
@@ -1908,7 +1907,9 @@
                                  line: 26,
                               },
                            },
+                           method: false,
                            optional: true,
+                           proto: false,
                            start: 616,
                            static: false,
                            type: "ObjectTypeProperty",
@@ -1977,7 +1978,9 @@
                                  line: 26,
                               },
                            },
+                           method: false,
                            optional: true,
+                           proto: false,
                            start: 634,
                            static: false,
                            type: "ObjectTypeProperty",
@@ -2128,6 +2131,8 @@
                         variance: ~,
                      },
                   ],
+                  inexact: false,
+                  internalSlots: [],
                   loc: {
                      end: {
                         column: 1,
@@ -2337,6 +2342,7 @@
                                  },
                                  start: 1038,
                                  type: "NewExpression",
+                                 typeArguments: ~,
                               },
                               {
                                  end: 1060,
@@ -2899,6 +2905,8 @@
                                     end: 850,
                                     exact: false,
                                     indexers: [],
+                                    inexact: false,
+                                    internalSlots: [],
                                     loc: {
                                        end: {
                                           column: 10,
@@ -3449,6 +3457,7 @@
       ],
       directives: [],
       end: 1169,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

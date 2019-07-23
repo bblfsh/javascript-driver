@@ -88,6 +88,7 @@
       ],
       directives: [],
       end: 38,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

@@ -66,6 +66,7 @@
                      },
                      start: 15,
                      type: "NewExpression",
+                     typeArguments: ~,
                   },
                   loc: {
                      end: {
@@ -885,6 +886,7 @@
                      },
                      start: 281,
                      type: "NewExpression",
+                     typeArguments: ~,
                   },
                   loc: {
                      end: {
@@ -1692,6 +1694,7 @@
       ],
       directives: [],
       end: 531,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,
@@ -1702,7 +1705,7 @@
             line: 1,
          },
       },
-      sourceType: "module",
+      sourceType: "script",
       start: 0,
       type: "Program",
    },

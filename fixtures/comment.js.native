@@ -196,7 +196,6 @@
                         callee: {
                            computed: false,
                            end: 122,
-                           leadingComments: ~,
                            loc: {
                               end: {
                                  column: 16,
@@ -209,7 +208,6 @@
                            },
                            object: {
                               end: 112,
-                              leadingComments: ~,
                               loc: {
                                  end: {
                                     column: 6,
@@ -246,7 +244,6 @@
                            type: "MemberExpression",
                         },
                         end: 149,
-                        leadingComments: ~,
                         loc: {
                            end: {
                               column: 43,
@@ -260,7 +257,6 @@
                         start: 110,
                         type: "CallExpression",
                      },
-                     leadingComments: ~,
                      loc: {
                         end: {
                            column: 44,
@@ -277,7 +273,6 @@
                ],
                directives: [],
                end: 152,
-               leadingComments: ~,
                loc: {
                   end: {
                      column: 1,
@@ -293,7 +288,6 @@
             },
             end: 248,
             finalizer: ~,
-            guardedHandlers: [],
             handler: {
                body: {
                   body: [],
@@ -317,7 +311,6 @@
                         value: " like Unix's cp, keep going even if we can't create dest dir - innerComment",
                      },
                   ],
-                  leadingComments: ~,
                   loc: {
                      end: {
                         column: 1,
@@ -444,6 +437,7 @@
       ],
       directives: [],
       end: 249,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

@@ -99,6 +99,7 @@
       ],
       directives: [],
       end: 28,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

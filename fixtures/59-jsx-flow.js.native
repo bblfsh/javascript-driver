@@ -100,7 +100,6 @@
             specifiers: [
                {
                   end: 33,
-                  leadingComments: ~,
                   loc: {
                      end: {
                         column: 17,
@@ -113,7 +112,6 @@
                   },
                   local: {
                      end: 33,
-                     leadingComments: ~,
                      loc: {
                         end: {
                            column: 17,
@@ -208,7 +206,6 @@
             specifiers: [
                {
                   end: 64,
-                  leadingComments: ~,
                   loc: {
                      end: {
                         column: 10,
@@ -221,7 +218,6 @@
                   },
                   local: {
                      end: 64,
-                     leadingComments: ~,
                      loc: {
                         end: {
                            column: 10,
@@ -247,6 +243,7 @@
       ],
       directives: [],
       end: 76,
+      interpreter: ~,
       loc: {
          end: {
             column: 22,

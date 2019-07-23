@@ -65,6 +65,7 @@
       ],
       directives: [],
       end: 11,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

@@ -131,14 +131,12 @@
                   },
                },
                start: 48,
-               trailingComments: ~,
                type: "BlockStatement",
             },
             end: 62,
             generator: false,
             id: {
                end: 28,
-               leadingComments: ~,
                loc: {
                   end: {
                      column: 10,
@@ -309,6 +307,7 @@
       ],
       directives: [],
       end: 79,
+      interpreter: ~,
       loc: {
          end: {
             column: 16,

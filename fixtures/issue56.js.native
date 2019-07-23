@@ -398,6 +398,7 @@
                   },
                   start: 38,
                   type: "NewExpression",
+                  typeArguments: ~,
                },
                start: 0,
                type: "AssignmentExpression",
@@ -418,6 +419,7 @@
       ],
       directives: [],
       end: 158,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,
