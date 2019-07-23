@@ -2084,9 +2084,7 @@
                            },
                         },
                      ],
-                     trailingComments: ~,
                   },
-                  trailingComments: ~,
                },
             ],
             kind: "var",
@@ -2114,6 +2112,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

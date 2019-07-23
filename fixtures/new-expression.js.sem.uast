@@ -72,10 +72,12 @@
                   },
                   Name: "a",
                },
+               typeArguments: ~,
             },
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

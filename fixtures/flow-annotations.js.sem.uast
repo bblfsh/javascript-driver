@@ -976,7 +976,6 @@
                   },
                   Name: "PluginPass",
                },
-               leadingComments: ~,
                superClass: ~,
             },
             leadingComments: [
@@ -1032,6 +1031,7 @@
                callProperties: [],
                exact: false,
                indexers: [],
+               internalSlots: [],
                properties: [],
             },
             extends: [],
@@ -1050,6 +1050,7 @@
                },
                Name: "A",
             },
+            implements: [],
             mixins: [
                { '@type': "javascript:InterfaceExtends",
                   '@role': [Declaration, Incomplete, Subtype, Type],
@@ -1165,6 +1166,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

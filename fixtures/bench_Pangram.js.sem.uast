@@ -196,7 +196,6 @@
                                        Format: "",
                                        Value: "zqxjkvbpygfwmucldrhsnioate",
                                     },
-                                    trailingComments: ~,
                                  },
                               ],
                               kind: "var",
@@ -250,7 +249,6 @@
                                        col: 46,
                                     },
                                  },
-                                 leadingComments: ~,
                                  left: { '@type': "uast:Identifier",
                                     '@role': [Assignment, Binary, Left],
                                     '@pos': { '@type': "uast:Positions",
@@ -998,7 +996,6 @@
                      Name: "log",
                   },
                },
-               trailingComments: ~,
             },
             trailingComments: [
                { '@type': "uast:Comment",
@@ -1117,7 +1114,6 @@
                      },
                   },
                   computed: false,
-                  leadingComments: ~,
                   object: { '@type': "uast:Identifier",
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -1149,8 +1145,6 @@
                      Name: "log",
                   },
                },
-               leadingComments: ~,
-               trailingComments: ~,
             },
             leadingComments: [
                { '@type': "uast:Comment",
@@ -1197,6 +1191,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

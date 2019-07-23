@@ -1357,6 +1357,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "script",
    },
 }

@@ -102,6 +102,7 @@
                         },
                         Name: "Object",
                      },
+                     typeArguments: ~,
                   },
                },
             ],
@@ -445,6 +446,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

@@ -414,11 +414,13 @@
                      },
                      Name: "RegExp",
                   },
+                  typeArguments: ~,
                },
             },
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

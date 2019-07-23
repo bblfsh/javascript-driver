@@ -73,10 +73,12 @@
                      },
                   },
                },
+               typeArguments: ~,
             },
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }
