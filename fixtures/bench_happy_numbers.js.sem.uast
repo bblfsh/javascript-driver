@@ -1711,6 +1711,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

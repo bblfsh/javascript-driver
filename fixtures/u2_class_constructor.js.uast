@@ -283,6 +283,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

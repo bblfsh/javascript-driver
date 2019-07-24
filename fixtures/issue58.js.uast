@@ -456,6 +456,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

@@ -120,6 +120,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

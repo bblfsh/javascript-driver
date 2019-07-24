@@ -1,8 +1,9 @@
-const babylon = require('babylon');
+const babylon = require('@babel/parser');
 
 export const ALL_PLUGINS = [
   'jsx',
   'flow',
+  ['decorators', {"decoratorsBeforeExport": true, "legacy": true}],
   'doExpressions',
   'objectRestSpread',
   'decorators2',
@@ -20,7 +21,7 @@ export const ALL_PLUGINS = [
   'bigInt',
   'optionalCatchBinding',
   'throwExpressions',
-  'pipelineOperator',
+  ['pipelineOperator', {"proposal": "minimal"}],
   'nullishCoalescingOperator',
 ];
 

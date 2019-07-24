@@ -388,6 +388,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

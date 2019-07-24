@@ -47,6 +47,7 @@
                },
                start: 0,
                type: "NewExpression",
+               typeArguments: ~,
             },
             loc: {
                end: {
@@ -64,6 +65,7 @@
       ],
       directives: [],
       end: 9,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

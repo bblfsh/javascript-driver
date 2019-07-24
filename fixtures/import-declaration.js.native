@@ -1,6 +1,6 @@
 {
    comments: [],
-   end: 355,
+   end: 359,
    loc: {
       end: {
          column: 0,
@@ -84,11 +84,11 @@
             type: "ImportDeclaration",
          },
          {
-            end: 77,
+            end: 78,
             importKind: "value",
             loc: {
                end: {
-                  column: 36,
+                  column: 37,
                   line: 2,
                },
                start: {
@@ -97,31 +97,31 @@
                },
             },
             source: {
-               end: 76,
+               end: 77,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
                },
                loc: {
                   end: {
-                     column: 35,
+                     column: 36,
                      line: 2,
                   },
                   start: {
-                     column: 22,
+                     column: 23,
                      line: 2,
                   },
                },
-               start: 63,
+               start: 64,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [
                {
-                  end: 57,
+                  end: 58,
                   loc: {
                      end: {
-                        column: 16,
+                        column: 17,
                         line: 2,
                      },
                      start: {
@@ -130,19 +130,19 @@
                      },
                   },
                   local: {
-                     end: 57,
+                     end: 58,
                      loc: {
                         end: {
-                           column: 16,
+                           column: 17,
                            line: 2,
                         },
-                        identifierName: "name",
+                        identifierName: "name1",
                         start: {
                            column: 12,
                            line: 2,
                         },
                      },
-                     name: "name",
+                     name: "name1",
                      start: 53,
                      type: "Identifier",
                   },
@@ -154,7 +154,7 @@
             type: "ImportDeclaration",
          },
          {
-            end: 110,
+            end: 111,
             importKind: "value",
             loc: {
                end: {
@@ -167,7 +167,7 @@
                },
             },
             source: {
-               end: 109,
+               end: 110,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
@@ -182,16 +182,16 @@
                      line: 3,
                   },
                },
-               start: 96,
+               start: 97,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [
                {
-                  end: 88,
+                  end: 89,
                   importKind: ~,
                   imported: {
-                     end: 88,
+                     end: 89,
                      loc: {
                         end: {
                            column: 10,
@@ -204,7 +204,7 @@
                         },
                      },
                      name: "x",
-                     start: 87,
+                     start: 88,
                      type: "Identifier",
                   },
                   loc: {
@@ -218,7 +218,7 @@
                      },
                   },
                   local: {
-                     end: 88,
+                     end: 89,
                      loc: {
                         end: {
                            column: 10,
@@ -231,18 +231,18 @@
                         },
                      },
                      name: "x",
-                     start: 87,
+                     start: 88,
                      type: "Identifier",
                   },
-                  start: 87,
+                  start: 88,
                   type: "ImportSpecifier",
                },
             ],
-            start: 78,
+            start: 79,
             type: "ImportDeclaration",
          },
          {
-            end: 148,
+            end: 149,
             importKind: "value",
             loc: {
                end: {
@@ -255,7 +255,7 @@
                },
             },
             source: {
-               end: 147,
+               end: 148,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
@@ -270,16 +270,16 @@
                      line: 4,
                   },
                },
-               start: 134,
+               start: 135,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [
                {
-                  end: 126,
+                  end: 127,
                   importKind: ~,
                   imported: {
-                     end: 121,
+                     end: 122,
                      loc: {
                         end: {
                            column: 10,
@@ -292,7 +292,7 @@
                         },
                      },
                      name: "x",
-                     start: 120,
+                     start: 121,
                      type: "Identifier",
                   },
                   loc: {
@@ -306,7 +306,7 @@
                      },
                   },
                   local: {
-                     end: 126,
+                     end: 127,
                      loc: {
                         end: {
                            column: 15,
@@ -319,18 +319,18 @@
                         },
                      },
                      name: "y",
-                     start: 125,
+                     start: 126,
                      type: "Identifier",
                   },
-                  start: 120,
+                  start: 121,
                   type: "ImportSpecifier",
                },
             ],
-            start: 111,
+            start: 112,
             type: "ImportDeclaration",
          },
          {
-            end: 187,
+            end: 188,
             importKind: "value",
             loc: {
                end: {
@@ -343,7 +343,7 @@
                },
             },
             source: {
-               end: 186,
+               end: 187,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
@@ -358,16 +358,16 @@
                      line: 5,
                   },
                },
-               start: 173,
+               start: 174,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [
                {
-                  end: 160,
+                  end: 161,
                   importKind: ~,
                   imported: {
-                     end: 160,
+                     end: 161,
                      loc: {
                         end: {
                            column: 11,
@@ -380,7 +380,7 @@
                         },
                      },
                      name: "x1",
-                     start: 158,
+                     start: 159,
                      type: "Identifier",
                   },
                   loc: {
@@ -394,7 +394,7 @@
                      },
                   },
                   local: {
-                     end: 160,
+                     end: 161,
                      loc: {
                         end: {
                            column: 11,
@@ -407,17 +407,17 @@
                         },
                      },
                      name: "x1",
-                     start: 158,
+                     start: 159,
                      type: "Identifier",
                   },
-                  start: 158,
+                  start: 159,
                   type: "ImportSpecifier",
                },
                {
-                  end: 165,
+                  end: 166,
                   importKind: ~,
                   imported: {
-                     end: 165,
+                     end: 166,
                      loc: {
                         end: {
                            column: 16,
@@ -430,7 +430,7 @@
                         },
                      },
                      name: "x2",
-                     start: 163,
+                     start: 164,
                      type: "Identifier",
                   },
                   loc: {
@@ -444,7 +444,7 @@
                      },
                   },
                   local: {
-                     end: 165,
+                     end: 166,
                      loc: {
                         end: {
                            column: 16,
@@ -457,18 +457,18 @@
                         },
                      },
                      name: "x2",
-                     start: 163,
+                     start: 164,
                      type: "Identifier",
                   },
-                  start: 163,
+                  start: 164,
                   type: "ImportSpecifier",
                },
             ],
-            start: 149,
+            start: 150,
             type: "ImportDeclaration",
          },
          {
-            end: 232,
+            end: 233,
             importKind: "value",
             loc: {
                end: {
@@ -481,7 +481,7 @@
                },
             },
             source: {
-               end: 231,
+               end: 232,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
@@ -496,29 +496,29 @@
                      line: 6,
                   },
                },
-               start: 218,
+               start: 219,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [
                {
-                  end: 199,
+                  end: 200,
                   importKind: ~,
                   imported: {
-                     end: 199,
+                     end: 200,
                      loc: {
                         end: {
                            column: 11,
                            line: 6,
                         },
-                        identifierName: "x1",
+                        identifierName: "x3",
                         start: {
                            column: 9,
                            line: 6,
                         },
                      },
-                     name: "x1",
-                     start: 197,
+                     name: "x3",
+                     start: 198,
                      type: "Identifier",
                   },
                   loc: {
@@ -532,30 +532,30 @@
                      },
                   },
                   local: {
-                     end: 199,
+                     end: 200,
                      loc: {
                         end: {
                            column: 11,
                            line: 6,
                         },
-                        identifierName: "x1",
+                        identifierName: "x3",
                         start: {
                            column: 9,
                            line: 6,
                         },
                      },
-                     name: "x1",
-                     start: 197,
+                     name: "x3",
+                     start: 198,
                      type: "Identifier",
                   },
-                  start: 197,
+                  start: 198,
                   type: "ImportSpecifier",
                },
                {
-                  end: 210,
+                  end: 211,
                   importKind: ~,
                   imported: {
-                     end: 204,
+                     end: 205,
                      loc: {
                         end: {
                            column: 16,
@@ -568,7 +568,7 @@
                         },
                      },
                      name: "x2",
-                     start: 202,
+                     start: 203,
                      type: "Identifier",
                   },
                   loc: {
@@ -582,7 +582,7 @@
                      },
                   },
                   local: {
-                     end: 210,
+                     end: 211,
                      loc: {
                         end: {
                            column: 22,
@@ -595,22 +595,22 @@
                         },
                      },
                      name: "y2",
-                     start: 208,
+                     start: 209,
                      type: "Identifier",
                   },
-                  start: 202,
+                  start: 203,
                   type: "ImportSpecifier",
                },
             ],
-            start: 188,
+            start: 189,
             type: "ImportDeclaration",
          },
          {
-            end: 280,
+            end: 282,
             importKind: "value",
             loc: {
                end: {
-                  column: 47,
+                  column: 48,
                   line: 7,
                },
                start: {
@@ -619,31 +619,31 @@
                },
             },
             source: {
-               end: 279,
+               end: 281,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
                },
                loc: {
                   end: {
-                     column: 46,
+                     column: 47,
                      line: 7,
                   },
                   start: {
-                     column: 33,
+                     column: 34,
                      line: 7,
                   },
                },
-               start: 266,
+               start: 268,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [
                {
-                  end: 253,
+                  end: 255,
                   loc: {
                      end: {
-                        column: 20,
+                        column: 21,
                         line: 7,
                      },
                      start: {
@@ -652,85 +652,85 @@
                      },
                   },
                   local: {
-                     end: 253,
+                     end: 255,
                      loc: {
                         end: {
-                           column: 20,
+                           column: 21,
                            line: 7,
                         },
-                        identifierName: "defaultExport",
+                        identifierName: "defaultExport1",
                         start: {
                            column: 7,
                            line: 7,
                         },
                      },
-                     name: "defaultExport",
-                     start: 240,
+                     name: "defaultExport1",
+                     start: 241,
                      type: "Identifier",
                   },
-                  start: 240,
+                  start: 241,
                   type: "ImportDefaultSpecifier",
                },
                {
-                  end: 258,
+                  end: 260,
                   importKind: ~,
                   imported: {
-                     end: 258,
+                     end: 260,
                      loc: {
                         end: {
+                           column: 26,
+                           line: 7,
+                        },
+                        identifierName: "z",
+                        start: {
                            column: 25,
                            line: 7,
                         },
-                        identifierName: "x",
-                        start: {
-                           column: 24,
-                           line: 7,
-                        },
                      },
-                     name: "x",
-                     start: 257,
+                     name: "z",
+                     start: 259,
                      type: "Identifier",
                   },
                   loc: {
                      end: {
+                        column: 26,
+                        line: 7,
+                     },
+                     start: {
                         column: 25,
                         line: 7,
                      },
-                     start: {
-                        column: 24,
-                        line: 7,
-                     },
                   },
                   local: {
-                     end: 258,
+                     end: 260,
                      loc: {
                         end: {
+                           column: 26,
+                           line: 7,
+                        },
+                        identifierName: "z",
+                        start: {
                            column: 25,
                            line: 7,
                         },
-                        identifierName: "x",
-                        start: {
-                           column: 24,
-                           line: 7,
-                        },
                      },
-                     name: "x",
-                     start: 257,
+                     name: "z",
+                     start: 259,
                      type: "Identifier",
                   },
-                  start: 257,
+                  start: 259,
                   type: "ImportSpecifier",
                },
             ],
-            start: 233,
+            start: 234,
             type: "ImportDeclaration",
          },
          {
-            end: 332,
+            end: 336,
             importKind: "value",
             loc: {
                end: {
-                  column: 51,
+                  column: 53,
                   line: 8,
                },
                start: {
@@ -739,31 +739,31 @@
                },
             },
             source: {
-               end: 331,
+               end: 335,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
                },
                loc: {
                   end: {
-                     column: 50,
+                     column: 52,
                      line: 8,
                   },
                   start: {
-                     column: 37,
+                     column: 39,
                      line: 8,
                   },
                },
-               start: 318,
+               start: 322,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [
                {
-                  end: 301,
+                  end: 304,
                   loc: {
                      end: {
-                        column: 20,
+                        column: 21,
                         line: 8,
                      },
                      start: {
@@ -772,63 +772,63 @@
                      },
                   },
                   local: {
-                     end: 301,
+                     end: 304,
                      loc: {
                         end: {
-                           column: 20,
+                           column: 21,
                            line: 8,
                         },
-                        identifierName: "defaultExport",
+                        identifierName: "defaultExport2",
                         start: {
                            column: 7,
                            line: 8,
                         },
                      },
-                     name: "defaultExport",
-                     start: 288,
+                     name: "defaultExport2",
+                     start: 290,
                      type: "Identifier",
                   },
-                  start: 288,
+                  start: 290,
                   type: "ImportDefaultSpecifier",
                },
                {
-                  end: 312,
+                  end: 316,
                   loc: {
                      end: {
-                        column: 31,
+                        column: 33,
                         line: 8,
                      },
                      start: {
-                        column: 22,
+                        column: 23,
                         line: 8,
                      },
                   },
                   local: {
-                     end: 312,
+                     end: 316,
                      loc: {
                         end: {
-                           column: 31,
+                           column: 33,
                            line: 8,
                         },
-                        identifierName: "name",
+                        identifierName: "name2",
                         start: {
-                           column: 27,
+                           column: 28,
                            line: 8,
                         },
                      },
-                     name: "name",
-                     start: 308,
+                     name: "name2",
+                     start: 311,
                      type: "Identifier",
                   },
-                  start: 303,
+                  start: 306,
                   type: "ImportNamespaceSpecifier",
                },
             ],
-            start: 281,
+            start: 283,
             type: "ImportDeclaration",
          },
          {
-            end: 354,
+            end: 358,
             loc: {
                end: {
                   column: 21,
@@ -840,7 +840,7 @@
                },
             },
             source: {
-               end: 353,
+               end: 357,
                extra: {
                   raw: "\"module-name\"",
                   rawValue: "module-name",
@@ -855,17 +855,18 @@
                      line: 9,
                   },
                },
-               start: 340,
+               start: 344,
                type: "StringLiteral",
                value: "module-name",
             },
             specifiers: [],
-            start: 333,
+            start: 337,
             type: "ImportDeclaration",
          },
       ],
       directives: [],
-      end: 355,
+      end: 359,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

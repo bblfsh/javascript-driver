@@ -34,9 +34,6 @@
                   type: "Identifier",
                },
                end: 3,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 3,
@@ -135,9 +132,6 @@
                   type: "Identifier",
                },
                end: 13,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 3,
@@ -218,6 +212,7 @@
       ],
       directives: [],
       end: 20,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

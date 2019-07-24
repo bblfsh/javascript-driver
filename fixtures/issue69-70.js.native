@@ -260,7 +260,6 @@
             specifiers: [
                {
                   end: 33,
-                  leadingComments: ~,
                   loc: {
                      end: {
                         column: 17,
@@ -273,7 +272,6 @@
                   },
                   local: {
                      end: 33,
-                     leadingComments: ~,
                      loc: {
                         end: {
                            column: 17,
@@ -1566,6 +1564,8 @@
                end: 1110,
                exact: true,
                indexers: [],
+               inexact: false,
+               internalSlots: [],
                loc: {
                   end: {
                      column: 2,
@@ -1607,7 +1607,9 @@
                            line: 30,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 967,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -1708,7 +1710,9 @@
                            line: 31,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 993,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -1844,7 +1848,9 @@
                            line: 32,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 1030,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -1895,7 +1901,9 @@
                            line: 33,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 1047,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -1970,7 +1978,6 @@
                      end: 1106,
                      key: {
                         end: 1093,
-                        leadingComments: ~,
                         loc: {
                            end: {
                               column: 13,
@@ -2015,7 +2022,9 @@
                            line: 35,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 1082,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -2096,6 +2105,8 @@
                end: 1167,
                exact: true,
                indexers: [],
+               inexact: false,
+               internalSlots: [],
                loc: {
                   end: {
                      column: 2,
@@ -2137,7 +2148,9 @@
                            line: 39,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 1131,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -2188,7 +2201,9 @@
                            line: 40,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 1150,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -2534,6 +2549,8 @@
                            end: 1390,
                            exact: false,
                            indexers: [],
+                           inexact: false,
+                           internalSlots: [],
                            loc: {
                               end: {
                                  column: 41,
@@ -2575,7 +2592,9 @@
                                        line: 53,
                                     },
                                  },
+                                 method: false,
                                  optional: false,
+                                 proto: false,
                                  start: 1359,
                                  static: false,
                                  type: "ObjectTypeProperty",
@@ -6001,9 +6020,6 @@
                                                                                  type: "MemberExpression",
                                                                               },
                                                                               end: 2960,
-                                                                              extra: {
-                                                                                 parenthesizedArgument: false,
-                                                                              },
                                                                               loc: {
                                                                                  end: {
                                                                                     column: 30,
@@ -6207,7 +6223,6 @@
                                                                                           parenStart: 3151,
                                                                                           parenthesized: true,
                                                                                        },
-                                                                                       leadingComments: ~,
                                                                                        loc: {
                                                                                           end: {
                                                                                              column: 31,
@@ -6221,7 +6236,6 @@
                                                                                        openingElement: {
                                                                                           attributes: [],
                                                                                           end: 3183,
-                                                                                          leadingComments: ~,
                                                                                           loc: {
                                                                                              end: {
                                                                                                 column: 30,
@@ -6234,7 +6248,6 @@
                                                                                           },
                                                                                           name: {
                                                                                              end: 3182,
-                                                                                             leadingComments: ~,
                                                                                              loc: {
                                                                                                 end: {
                                                                                                    column: 29,
@@ -6401,9 +6414,6 @@
                                                                                  type: "MemberExpression",
                                                                               },
                                                                               end: 3057,
-                                                                              extra: {
-                                                                                 parenthesizedArgument: false,
-                                                                              },
                                                                               loc: {
                                                                                  end: {
                                                                                     column: 43,
@@ -7782,6 +7792,7 @@
       ],
       directives: [],
       end: 3794,
+      interpreter: ~,
       loc: {
          end: {
             column: 30,

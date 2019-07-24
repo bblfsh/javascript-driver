@@ -1572,6 +1572,7 @@
       ],
       directives: [],
       end: 177,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

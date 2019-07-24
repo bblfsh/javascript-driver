@@ -37,9 +37,6 @@
                   value: 0,
                },
                end: 2,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 2,
@@ -92,9 +89,6 @@
                   value: 0,
                },
                end: 6,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 2,
@@ -147,9 +141,6 @@
                   value: 0,
                },
                end: 10,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 2,
@@ -202,9 +193,6 @@
                   value: 0,
                },
                end: 14,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 2,
@@ -257,9 +245,6 @@
                   value: 0,
                },
                end: 24,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 8,
@@ -312,9 +297,6 @@
                   value: 0,
                },
                end: 32,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 6,
@@ -397,9 +379,6 @@
                   type: "MemberExpression",
                },
                end: 44,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 10,
@@ -485,9 +464,6 @@
                   type: "MemberExpression",
                },
                end: 59,
-               extra: {
-                  parenthesizedArgument: false,
-               },
                loc: {
                   end: {
                      column: 13,
@@ -519,6 +495,7 @@
       ],
       directives: [],
       end: 61,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

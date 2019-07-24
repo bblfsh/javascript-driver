@@ -51,6 +51,7 @@
          },
       ],
       end: 14,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

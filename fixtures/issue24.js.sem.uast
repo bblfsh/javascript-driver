@@ -364,6 +364,7 @@
                               },
                               Name: "Map",
                            },
+                           typeArguments: ~,
                         },
                         variance: ~,
                      },
@@ -3173,6 +3174,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

@@ -369,9 +369,6 @@
                                              type: "BinaryExpression",
                                           },
                                           end: 112,
-                                          extra: {
-                                             parenthesizedArgument: false,
-                                          },
                                           loc: {
                                              end: {
                                                 column: 16,
@@ -548,9 +545,6 @@
                                              type: "BinaryExpression",
                                           },
                                           end: 152,
-                                          extra: {
-                                             parenthesizedArgument: false,
-                                          },
                                           loc: {
                                              end: {
                                                 column: 16,
@@ -972,6 +966,7 @@
       ],
       directives: [],
       end: 256,
+      interpreter: ~,
       loc: {
          end: {
             column: 2,

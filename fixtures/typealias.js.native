@@ -47,6 +47,8 @@
                end: 137,
                exact: false,
                indexers: [],
+               inexact: false,
+               internalSlots: [],
                loc: {
                   end: {
                      column: 1,
@@ -88,7 +90,9 @@
                            line: 2,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 36,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -206,7 +210,9 @@
                            line: 3,
                         },
                      },
+                     method: false,
                      optional: false,
+                     proto: false,
                      start: 62,
                      static: false,
                      type: "ObjectTypeProperty",
@@ -215,6 +221,8 @@
                         end: 135,
                         exact: false,
                         indexers: [],
+                        inexact: false,
+                        internalSlots: [],
                         loc: {
                            end: {
                               column: 3,
@@ -256,7 +264,9 @@
                                     line: 4,
                                  },
                               },
+                              method: false,
                               optional: false,
+                              proto: false,
                               start: 77,
                               static: false,
                               type: "ObjectTypeProperty",
@@ -374,7 +384,9 @@
                                     line: 5,
                                  },
                               },
+                              method: false,
                               optional: false,
+                              proto: false,
                               start: 106,
                               static: false,
                               type: "ObjectTypeProperty",
@@ -479,6 +491,7 @@
       ],
       directives: [],
       end: 139,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

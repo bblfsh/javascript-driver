@@ -132,7 +132,6 @@
             specifiers: [
                {
                   end: 26,
-                  leadingComments: ~,
                   loc: {
                      end: {
                         column: 16,
@@ -145,7 +144,6 @@
                   },
                   local: {
                      end: 26,
-                     leadingComments: ~,
                      loc: {
                         end: {
                            column: 16,
@@ -331,6 +329,7 @@
                            },
                            start: 110,
                            type: "NewExpression",
+                           typeArguments: ~,
                         },
                         variance: ~,
                      },
@@ -622,7 +621,6 @@
                         end: 272,
                         key: {
                            end: 263,
-                           leadingComments: ~,
                            loc: {
                               end: {
                                  column: 5,
@@ -741,7 +739,6 @@
                         end: 351,
                         key: {
                            end: 335,
-                           leadingComments: ~,
                            loc: {
                               end: {
                                  column: 10,
@@ -3526,6 +3523,8 @@
                                        end: 1162,
                                        exact: false,
                                        indexers: [],
+                                       inexact: false,
+                                       internalSlots: [],
                                        loc: {
                                           end: {
                                              column: 5,
@@ -3567,7 +3566,9 @@
                                                    line: 52,
                                                 },
                                              },
+                                             method: false,
                                              optional: true,
+                                             proto: false,
                                              start: 1048,
                                              static: false,
                                              type: "ObjectTypeProperty",
@@ -3576,6 +3577,8 @@
                                                 end: 1097,
                                                 exact: false,
                                                 indexers: [],
+                                                inexact: false,
+                                                internalSlots: [],
                                                 loc: {
                                                    end: {
                                                       column: 55,
@@ -3617,7 +3620,9 @@
                                                             line: 52,
                                                          },
                                                       },
+                                                      method: false,
                                                       optional: false,
+                                                      proto: false,
                                                       start: 1056,
                                                       static: false,
                                                       type: "ObjectTypeProperty",
@@ -3626,6 +3631,8 @@
                                                          end: 1095,
                                                          exact: false,
                                                          indexers: [],
+                                                         inexact: false,
+                                                         internalSlots: [],
                                                          loc: {
                                                             end: {
                                                                column: 53,
@@ -3667,7 +3674,9 @@
                                                                      line: 52,
                                                                   },
                                                                },
+                                                               method: false,
                                                                optional: false,
+                                                               proto: false,
                                                                start: 1065,
                                                                static: false,
                                                                type: "ObjectTypeProperty",
@@ -3718,7 +3727,9 @@
                                                                      line: 52,
                                                                   },
                                                                },
+                                                               method: false,
                                                                optional: false,
+                                                               proto: false,
                                                                start: 1079,
                                                                static: false,
                                                                type: "ObjectTypeProperty",
@@ -3781,7 +3792,9 @@
                                                    line: 53,
                                                 },
                                              },
+                                             method: false,
                                              optional: true,
+                                             proto: false,
                                              start: 1105,
                                              static: false,
                                              type: "ObjectTypeProperty",
@@ -3790,6 +3803,8 @@
                                                 end: 1155,
                                                 exact: false,
                                                 indexers: [],
+                                                inexact: false,
+                                                internalSlots: [],
                                                 loc: {
                                                    end: {
                                                       column: 56,
@@ -3831,7 +3846,9 @@
                                                             line: 53,
                                                          },
                                                       },
+                                                      method: false,
                                                       optional: false,
+                                                      proto: false,
                                                       start: 1114,
                                                       static: false,
                                                       type: "ObjectTypeProperty",
@@ -3840,6 +3857,8 @@
                                                          end: 1153,
                                                          exact: false,
                                                          indexers: [],
+                                                         inexact: false,
+                                                         internalSlots: [],
                                                          loc: {
                                                             end: {
                                                                column: 54,
@@ -3881,7 +3900,9 @@
                                                                      line: 53,
                                                                   },
                                                                },
+                                                               method: false,
                                                                optional: false,
+                                                               proto: false,
                                                                start: 1123,
                                                                static: false,
                                                                type: "ObjectTypeProperty",
@@ -3932,7 +3953,9 @@
                                                                      line: 53,
                                                                   },
                                                                },
+                                                               method: false,
                                                                optional: false,
+                                                               proto: false,
                                                                start: 1137,
                                                                static: false,
                                                                type: "ObjectTypeProperty",
@@ -4169,6 +4192,7 @@
       ],
       directives: [],
       end: 1279,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

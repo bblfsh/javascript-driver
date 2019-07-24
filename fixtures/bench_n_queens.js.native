@@ -950,9 +950,6 @@
                                              type: "CallExpression",
                                           },
                                           end: 471,
-                                          extra: {
-                                             parenthesizedArgument: false,
-                                          },
                                           loc: {
                                              end: {
                                                 column: 57,
@@ -2308,6 +2305,7 @@
       ],
       directives: [],
       end: 898,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

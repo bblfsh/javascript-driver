@@ -158,7 +158,6 @@
                   },
                ],
                directives: [],
-               trailingComments: ~,
             },
             generator: false,
             id: { '@type': "Identifier",
@@ -176,7 +175,6 @@
                      col: 11,
                   },
                },
-               leadingComments: ~,
             },
             leadingComments: [
                { '@type': "CommentLine",
@@ -313,6 +311,7 @@
          },
       ],
       directives: [],
+      interpreter: ~,
       sourceType: "module",
    },
 }

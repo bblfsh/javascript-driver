@@ -1,3 +1,4 @@
-import something from 'somewhere';
+import test from 'ava';
 
-export default something != 42;
+export let something = 42;
+test('the module parses successfully', t => { t.pass(); });

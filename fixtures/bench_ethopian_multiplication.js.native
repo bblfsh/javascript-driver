@@ -1677,9 +1677,6 @@
                                                       type: "CallExpression",
                                                    },
                                                    end: 415,
-                                                   extra: {
-                                                      parenthesizedArgument: false,
-                                                   },
                                                    loc: {
                                                       end: {
                                                          column: 26,
@@ -2141,7 +2138,6 @@
                         },
                      ],
                      start: 10,
-                     trailingComments: ~,
                      type: "ObjectExpression",
                   },
                   loc: {
@@ -2155,7 +2151,6 @@
                      },
                   },
                   start: 4,
-                  trailingComments: ~,
                   type: "VariableDeclarator",
                },
             ],
@@ -2195,6 +2190,7 @@
       ],
       directives: [],
       end: 504,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,

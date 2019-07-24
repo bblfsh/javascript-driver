@@ -93,7 +93,6 @@
                                  raw: "\"zqxjkvbpygfwmucldrhsnioate\"",
                                  rawValue: "zqxjkvbpygfwmucldrhsnioate",
                               },
-                              leadingComments: ~,
                               loc: {
                                  end: {
                                     column: 46,
@@ -105,7 +104,6 @@
                                  },
                               },
                               start: 42,
-                              trailingComments: ~,
                               type: "StringLiteral",
                               value: "zqxjkvbpygfwmucldrhsnioate",
                            },
@@ -120,7 +118,6 @@
                               },
                            },
                            start: 32,
-                           trailingComments: ~,
                            type: "VariableDeclarator",
                         },
                      ],
@@ -161,10 +158,8 @@
                      end: 201,
                      expression: {
                         end: 201,
-                        leadingComments: ~,
                         left: {
                            end: 161,
-                           leadingComments: ~,
                            loc: {
                               end: {
                                  column: 5,
@@ -972,7 +967,6 @@
                   },
                },
                start: 307,
-               trailingComments: ~,
                type: "CallExpression",
             },
             loc: {
@@ -1068,7 +1062,6 @@
                callee: {
                   computed: false,
                   end: 372,
-                  leadingComments: ~,
                   loc: {
                      end: {
                         column: 11,
@@ -1081,7 +1074,6 @@
                   },
                   object: {
                      end: 368,
-                     leadingComments: ~,
                      loc: {
                         end: {
                            column: 7,
@@ -1118,7 +1110,6 @@
                   type: "MemberExpression",
                },
                end: 430,
-               leadingComments: ~,
                loc: {
                   end: {
                      column: 69,
@@ -1130,7 +1121,6 @@
                   },
                },
                start: 361,
-               trailingComments: ~,
                type: "CallExpression",
             },
             leadingComments: [
@@ -1185,6 +1175,7 @@
       ],
       directives: [],
       end: 440,
+      interpreter: ~,
       loc: {
          end: {
             column: 0,
