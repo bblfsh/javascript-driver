@@ -1,2 +1,2 @@
 import foo from 'file1';
-import { foo, bar } from 'file2';
+import { bar, baz } from 'file2';
