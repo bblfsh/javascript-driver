@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 92,
+   end: 101,
    loc: {
       end: {
          column: 0,
-         line: 12,
+         line: 13,
       },
       start: {
          column: 0,
@@ -384,7 +384,7 @@
                      line: 6,
                   },
                },
-               operator: "<<=",
+               operator: "**=",
                right: {
                   end: 47,
                   extra: {
@@ -452,7 +452,7 @@
                      line: 7,
                   },
                },
-               operator: ">>=",
+               operator: "<<=",
                right: {
                   end: 56,
                   extra: {
@@ -490,9 +490,9 @@
             type: "ExpressionStatement",
          },
          {
-            end: 67,
+            end: 66,
             expression: {
-               end: 66,
+               end: 65,
                left: {
                   end: 59,
                   loc: {
@@ -512,7 +512,7 @@
                },
                loc: {
                   end: {
-                     column: 8,
+                     column: 7,
                      line: 8,
                   },
                   start: {
@@ -520,24 +520,24 @@
                      line: 8,
                   },
                },
-               operator: ">>>=",
+               operator: ">>=",
                right: {
-                  end: 66,
+                  end: 65,
                   extra: {
                      raw: "0",
                      rawValue: 0,
                   },
                   loc: {
                      end: {
-                        column: 8,
-                        line: 8,
-                     },
-                     start: {
                         column: 7,
                         line: 8,
                      },
+                     start: {
+                        column: 6,
+                        line: 8,
+                     },
                   },
-                  start: 65,
+                  start: 64,
                   type: "NumericLiteral",
                   value: 0,
                },
@@ -546,7 +546,7 @@
             },
             loc: {
                end: {
-                  column: 9,
+                  column: 8,
                   line: 8,
                },
                start: {
@@ -558,11 +558,11 @@
             type: "ExpressionStatement",
          },
          {
-            end: 75,
+            end: 76,
             expression: {
-               end: 74,
+               end: 75,
                left: {
-                  end: 69,
+                  end: 68,
                   loc: {
                      end: {
                         column: 1,
@@ -575,22 +575,90 @@
                      },
                   },
                   name: "a",
-                  start: 68,
+                  start: 67,
                   type: "Identifier",
                },
                loc: {
                   end: {
-                     column: 6,
+                     column: 8,
                      line: 9,
                   },
                   start: {
                      column: 0,
                      line: 9,
+                  },
+               },
+               operator: ">>>=",
+               right: {
+                  end: 75,
+                  extra: {
+                     raw: "0",
+                     rawValue: 0,
+                  },
+                  loc: {
+                     end: {
+                        column: 8,
+                        line: 9,
+                     },
+                     start: {
+                        column: 7,
+                        line: 9,
+                     },
+                  },
+                  start: 74,
+                  type: "NumericLiteral",
+                  value: 0,
+               },
+               start: 67,
+               type: "AssignmentExpression",
+            },
+            loc: {
+               end: {
+                  column: 9,
+                  line: 9,
+               },
+               start: {
+                  column: 0,
+                  line: 9,
+               },
+            },
+            start: 67,
+            type: "ExpressionStatement",
+         },
+         {
+            end: 84,
+            expression: {
+               end: 83,
+               left: {
+                  end: 78,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 10,
+                     },
+                     identifierName: "a",
+                     start: {
+                        column: 0,
+                        line: 10,
+                     },
+                  },
+                  name: "a",
+                  start: 77,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 6,
+                     line: 10,
+                  },
+                  start: {
+                     column: 0,
+                     line: 10,
                   },
                },
                operator: "|=",
                right: {
-                  end: 74,
+                  end: 83,
                   extra: {
                      raw: "0",
                      rawValue: 0,
@@ -598,67 +666,67 @@
                   loc: {
                      end: {
                         column: 6,
-                        line: 9,
+                        line: 10,
                      },
                      start: {
                         column: 5,
-                        line: 9,
+                        line: 10,
                      },
                   },
-                  start: 73,
+                  start: 82,
                   type: "NumericLiteral",
                   value: 0,
                },
-               start: 68,
+               start: 77,
                type: "AssignmentExpression",
             },
             loc: {
                end: {
                   column: 7,
-                  line: 9,
+                  line: 10,
                },
                start: {
                   column: 0,
-                  line: 9,
+                  line: 10,
                },
             },
-            start: 68,
+            start: 77,
             type: "ExpressionStatement",
          },
          {
-            end: 83,
+            end: 92,
             expression: {
-               end: 82,
+               end: 91,
                left: {
-                  end: 77,
+                  end: 86,
                   loc: {
                      end: {
                         column: 1,
-                        line: 10,
+                        line: 11,
                      },
                      identifierName: "a",
                      start: {
                         column: 0,
-                        line: 10,
+                        line: 11,
                      },
                   },
                   name: "a",
-                  start: 76,
+                  start: 85,
                   type: "Identifier",
                },
                loc: {
                   end: {
                      column: 6,
-                     line: 10,
+                     line: 11,
                   },
                   start: {
                      column: 0,
-                     line: 10,
+                     line: 11,
                   },
                },
                operator: "^=",
                right: {
-                  end: 82,
+                  end: 91,
                   extra: {
                      raw: "0",
                      rawValue: 0,
@@ -666,67 +734,67 @@
                   loc: {
                      end: {
                         column: 6,
-                        line: 10,
+                        line: 11,
                      },
                      start: {
                         column: 5,
-                        line: 10,
+                        line: 11,
                      },
                   },
-                  start: 81,
+                  start: 90,
                   type: "NumericLiteral",
                   value: 0,
                },
-               start: 76,
+               start: 85,
                type: "AssignmentExpression",
             },
             loc: {
                end: {
                   column: 7,
-                  line: 10,
+                  line: 11,
                },
                start: {
                   column: 0,
-                  line: 10,
+                  line: 11,
                },
             },
-            start: 76,
+            start: 85,
             type: "ExpressionStatement",
          },
          {
-            end: 91,
+            end: 100,
             expression: {
-               end: 90,
+               end: 99,
                left: {
-                  end: 85,
+                  end: 94,
                   loc: {
                      end: {
                         column: 1,
-                        line: 11,
+                        line: 12,
                      },
                      identifierName: "a",
                      start: {
                         column: 0,
-                        line: 11,
+                        line: 12,
                      },
                   },
                   name: "a",
-                  start: 84,
+                  start: 93,
                   type: "Identifier",
                },
                loc: {
                   end: {
                      column: 6,
-                     line: 11,
+                     line: 12,
                   },
                   start: {
                      column: 0,
-                     line: 11,
+                     line: 12,
                   },
                },
                operator: "&=",
                right: {
-                  end: 90,
+                  end: 99,
                   extra: {
                      raw: "0",
                      rawValue: 0,
@@ -734,41 +802,41 @@
                   loc: {
                      end: {
                         column: 6,
-                        line: 11,
+                        line: 12,
                      },
                      start: {
                         column: 5,
-                        line: 11,
+                        line: 12,
                      },
                   },
-                  start: 89,
+                  start: 98,
                   type: "NumericLiteral",
                   value: 0,
                },
-               start: 84,
+               start: 93,
                type: "AssignmentExpression",
             },
             loc: {
                end: {
                   column: 7,
-                  line: 11,
+                  line: 12,
                },
                start: {
                   column: 0,
-                  line: 11,
+                  line: 12,
                },
             },
-            start: 84,
+            start: 93,
             type: "ExpressionStatement",
          },
       ],
       directives: [],
-      end: 92,
+      end: 101,
       interpreter: ~,
       loc: {
          end: {
             column: 0,
-            line: 12,
+            line: 13,
          },
          start: {
             column: 0,

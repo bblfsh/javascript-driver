@@ -1,10 +1,10 @@
 {
    comments: [],
-   end: 177,
+   end: 185,
    loc: {
       end: {
          column: 0,
-         line: 23,
+         line: 24,
       },
       start: {
          column: 0,
@@ -1150,9 +1150,9 @@
             type: "ExpressionStatement",
          },
          {
-            end: 130,
+            end: 131,
             expression: {
-               end: 129,
+               end: 130,
                left: {
                   end: 125,
                   extra: {
@@ -1175,7 +1175,7 @@
                },
                loc: {
                   end: {
-                     column: 5,
+                     column: 6,
                      line: 17,
                   },
                   start: {
@@ -1183,24 +1183,24 @@
                      line: 17,
                   },
                },
-               operator: "|",
+               operator: "**",
                right: {
-                  end: 129,
+                  end: 130,
                   extra: {
                      raw: "0",
                      rawValue: 0,
                   },
                   loc: {
                      end: {
-                        column: 5,
+                        column: 6,
                         line: 17,
                      },
                      start: {
-                        column: 4,
+                        column: 5,
                         line: 17,
                      },
                   },
-                  start: 128,
+                  start: 129,
                   type: "NumericLiteral",
                   value: 0,
                },
@@ -1209,7 +1209,7 @@
             },
             loc: {
                end: {
-                  column: 6,
+                  column: 7,
                   line: 17,
                },
                start: {
@@ -1221,11 +1221,11 @@
             type: "ExpressionStatement",
          },
          {
-            end: 137,
+            end: 138,
             expression: {
-               end: 136,
+               end: 137,
                left: {
-                  end: 132,
+                  end: 133,
                   extra: {
                      raw: "0",
                      rawValue: 0,
@@ -1240,7 +1240,7 @@
                         line: 18,
                      },
                   },
-                  start: 131,
+                  start: 132,
                   type: "NumericLiteral",
                   value: 0,
                },
@@ -1252,82 +1252,82 @@
                   start: {
                      column: 0,
                      line: 18,
+                  },
+               },
+               operator: "|",
+               right: {
+                  end: 137,
+                  extra: {
+                     raw: "0",
+                     rawValue: 0,
+                  },
+                  loc: {
+                     end: {
+                        column: 5,
+                        line: 18,
+                     },
+                     start: {
+                        column: 4,
+                        line: 18,
+                     },
+                  },
+                  start: 136,
+                  type: "NumericLiteral",
+                  value: 0,
+               },
+               start: 132,
+               type: "BinaryExpression",
+            },
+            loc: {
+               end: {
+                  column: 6,
+                  line: 18,
+               },
+               start: {
+                  column: 0,
+                  line: 18,
+               },
+            },
+            start: 132,
+            type: "ExpressionStatement",
+         },
+         {
+            end: 145,
+            expression: {
+               end: 144,
+               left: {
+                  end: 140,
+                  extra: {
+                     raw: "0",
+                     rawValue: 0,
+                  },
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 19,
+                     },
+                     start: {
+                        column: 0,
+                        line: 19,
+                     },
+                  },
+                  start: 139,
+                  type: "NumericLiteral",
+                  value: 0,
+               },
+               loc: {
+                  end: {
+                     column: 5,
+                     line: 19,
+                  },
+                  start: {
+                     column: 0,
+                     line: 19,
                   },
                },
                operator: "^",
                right: {
-                  end: 136,
-                  extra: {
-                     raw: "0",
-                     rawValue: 0,
-                  },
-                  loc: {
-                     end: {
-                        column: 5,
-                        line: 18,
-                     },
-                     start: {
-                        column: 4,
-                        line: 18,
-                     },
-                  },
-                  start: 135,
-                  type: "NumericLiteral",
-                  value: 0,
-               },
-               start: 131,
-               type: "BinaryExpression",
-            },
-            loc: {
-               end: {
-                  column: 6,
-                  line: 18,
-               },
-               start: {
-                  column: 0,
-                  line: 18,
-               },
-            },
-            start: 131,
-            type: "ExpressionStatement",
-         },
-         {
-            end: 144,
-            expression: {
-               end: 143,
-               left: {
-                  end: 139,
-                  extra: {
-                     raw: "0",
-                     rawValue: 0,
-                  },
-                  loc: {
-                     end: {
-                        column: 1,
-                        line: 19,
-                     },
-                     start: {
-                        column: 0,
-                        line: 19,
-                     },
-                  },
-                  start: 138,
-                  type: "NumericLiteral",
-                  value: 0,
-               },
-               loc: {
-                  end: {
-                     column: 5,
-                     line: 19,
-                  },
-                  start: {
-                     column: 0,
-                     line: 19,
-                  },
-               },
-               operator: "&",
-               right: {
-                  end: 143,
+                  end: 144,
                   extra: {
                      raw: "0",
                      rawValue: 0,
@@ -1342,11 +1342,11 @@
                         line: 19,
                      },
                   },
-                  start: 142,
+                  start: 143,
                   type: "NumericLiteral",
                   value: 0,
                },
-               start: 138,
+               start: 139,
                type: "BinaryExpression",
             },
             loc: {
@@ -1359,7 +1359,7 @@
                   line: 19,
                },
             },
-            start: 138,
+            start: 139,
             type: "ExpressionStatement",
          },
          {
@@ -1367,7 +1367,7 @@
             expression: {
                end: 151,
                left: {
-                  end: 146,
+                  end: 147,
                   extra: {
                      raw: "0",
                      rawValue: 0,
@@ -1382,13 +1382,13 @@
                         line: 20,
                      },
                   },
-                  start: 145,
+                  start: 146,
                   type: "NumericLiteral",
                   value: 0,
                },
                loc: {
                   end: {
-                     column: 6,
+                     column: 5,
                      line: 20,
                   },
                   start: {
@@ -1396,7 +1396,7 @@
                      line: 20,
                   },
                },
-               operator: "in",
+               operator: "&",
                right: {
                   end: 151,
                   extra: {
@@ -1405,11 +1405,11 @@
                   },
                   loc: {
                      end: {
-                        column: 6,
+                        column: 5,
                         line: 20,
                      },
                      start: {
-                        column: 5,
+                        column: 4,
                         line: 20,
                      },
                   },
@@ -1417,12 +1417,12 @@
                   type: "NumericLiteral",
                   value: 0,
                },
-               start: 145,
+               start: 146,
                type: "BinaryExpression",
             },
             loc: {
                end: {
-                  column: 7,
+                  column: 6,
                   line: 20,
                },
                start: {
@@ -1430,13 +1430,13 @@
                   line: 20,
                },
             },
-            start: 145,
+            start: 146,
             type: "ExpressionStatement",
          },
          {
-            end: 168,
+            end: 160,
             expression: {
-               end: 167,
+               end: 159,
                left: {
                   end: 154,
                   extra: {
@@ -1459,7 +1459,7 @@
                },
                loc: {
                   end: {
-                     column: 14,
+                     column: 6,
                      line: 21,
                   },
                   start: {
@@ -1467,24 +1467,24 @@
                      line: 21,
                   },
                },
-               operator: "instanceof",
+               operator: "in",
                right: {
-                  end: 167,
+                  end: 159,
                   extra: {
                      raw: "0",
                      rawValue: 0,
                   },
                   loc: {
                      end: {
-                        column: 14,
+                        column: 6,
                         line: 21,
                      },
                      start: {
-                        column: 13,
+                        column: 5,
                         line: 21,
                      },
                   },
-                  start: 166,
+                  start: 158,
                   type: "NumericLiteral",
                   value: 0,
                },
@@ -1493,7 +1493,7 @@
             },
             loc: {
                end: {
-                  column: 15,
+                  column: 7,
                   line: 21,
                },
                start: {
@@ -1509,25 +1509,28 @@
             expression: {
                end: 175,
                left: {
-                  end: 170,
+                  end: 162,
+                  extra: {
+                     raw: "0",
+                     rawValue: 0,
+                  },
                   loc: {
                      end: {
                         column: 1,
                         line: 22,
                      },
-                     identifierName: "a",
                      start: {
                         column: 0,
                         line: 22,
                      },
                   },
-                  name: "a",
-                  start: 169,
-                  type: "Identifier",
+                  start: 161,
+                  type: "NumericLiteral",
+                  value: 0,
                },
                loc: {
                   end: {
-                     column: 6,
+                     column: 14,
                      line: 22,
                   },
                   start: {
@@ -1535,30 +1538,33 @@
                      line: 22,
                   },
                },
-               operator: "|>",
+               operator: "instanceof",
                right: {
                   end: 175,
+                  extra: {
+                     raw: "0",
+                     rawValue: 0,
+                  },
                   loc: {
                      end: {
-                        column: 6,
+                        column: 14,
                         line: 22,
                      },
-                     identifierName: "a",
                      start: {
-                        column: 5,
+                        column: 13,
                         line: 22,
                      },
                   },
-                  name: "a",
                   start: 174,
-                  type: "Identifier",
+                  type: "NumericLiteral",
+                  value: 0,
                },
-               start: 169,
+               start: 161,
                type: "BinaryExpression",
             },
             loc: {
                end: {
-                  column: 7,
+                  column: 15,
                   line: 22,
                },
                start: {
@@ -1566,17 +1572,82 @@
                   line: 22,
                },
             },
-            start: 169,
+            start: 161,
+            type: "ExpressionStatement",
+         },
+         {
+            end: 184,
+            expression: {
+               end: 183,
+               left: {
+                  end: 178,
+                  loc: {
+                     end: {
+                        column: 1,
+                        line: 23,
+                     },
+                     identifierName: "a",
+                     start: {
+                        column: 0,
+                        line: 23,
+                     },
+                  },
+                  name: "a",
+                  start: 177,
+                  type: "Identifier",
+               },
+               loc: {
+                  end: {
+                     column: 6,
+                     line: 23,
+                  },
+                  start: {
+                     column: 0,
+                     line: 23,
+                  },
+               },
+               operator: "|>",
+               right: {
+                  end: 183,
+                  loc: {
+                     end: {
+                        column: 6,
+                        line: 23,
+                     },
+                     identifierName: "a",
+                     start: {
+                        column: 5,
+                        line: 23,
+                     },
+                  },
+                  name: "a",
+                  start: 182,
+                  type: "Identifier",
+               },
+               start: 177,
+               type: "BinaryExpression",
+            },
+            loc: {
+               end: {
+                  column: 7,
+                  line: 23,
+               },
+               start: {
+                  column: 0,
+                  line: 23,
+               },
+            },
+            start: 177,
             type: "ExpressionStatement",
          },
       ],
       directives: [],
-      end: 177,
+      end: 185,
       interpreter: ~,
       loc: {
          end: {
             column: 0,
-            line: 23,
+            line: 24,
          },
          start: {
             column: 0,
