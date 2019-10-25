@@ -1,4 +1,4 @@
-# JavaScript driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/javascript-driver.svg?branch=master)](https://travis-ci.org/bblfsh/javascript-driver) ![Native Version](https://img.shields.io/badge/javascript%20version-8-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.12-63afbf.svg)
+# JavaScript driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/javascript-driver.svg?branch=master)](https://travis-ci.org/bblfsh/javascript-driver) ![Native Version](https://img.shields.io/badge/javascript%20version-8-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.13-63afbf.svg)
 
 JavaScript driver for [babelfish](https://github.com/bblfsh/bblfshd).
 
@@ -8,7 +8,7 @@ Development Environment
 
 Requirements:
 - `docker`
-- Go 1.12+
+- Go 1.13+
 
 To initialize the build system execute: `go test ./driver`, at the root of the project. This will generate the `Dockerfile` for this driver.
 
